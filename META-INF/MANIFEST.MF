@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DrySign
+Bundle-SymbolicName: DrySign
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: DrySign
+Export-Package: baseinit,
+ config,
+ framework,
+ pageObjects,
+ reporter,
+ runner,
+ stepDefinitions,
+ util
+Import-Package: pageObjects,
+ runner

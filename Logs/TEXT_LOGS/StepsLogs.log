@@ -1,0 +1,20 @@
+2022-06-29 02:38:11,137 - baseinit.Base -INFO - Scenario Started: To verify set OTP option while login to drysign account from profile
+2022-06-29 02:38:11,154 - framework.Browser -INFO - Selected Browser is: chrome
+2022-06-29 02:38:17,165 - framework.Browser -INFO - Chrome Browser is Started 1078834804
+2022-06-29 02:38:58,732 - baseinit.Base -INFO - Scenario Completed: To verify set OTP option while login to drysign account from profile
+2022-06-29 02:38:58,732 - baseinit.Base -INFO - Scenario Status is: FAILED
+2022-06-29 02:43:31,798 - baseinit.Base -INFO - Scenario Started: To Verify the UI elements present on the View Plan button pop-up present on the Dashboard
+2022-06-29 02:43:31,815 - framework.Browser -INFO - Selected Browser is: chrome
+2022-06-29 02:43:37,832 - framework.Browser -INFO - Chrome Browser is Started 1214284410
+2022-06-29 02:44:17,068 - baseinit.Base -INFO - Scenario Completed: To Verify the UI elements present on the View Plan button pop-up present on the Dashboard
+2022-06-29 02:44:17,068 - baseinit.Base -INFO - Scenario Status is: FAILED
+2022-07-12 04:05:11,771 - baseinit.Base -INFO - Scenario Started: To Verify the Close icon functionality present on the View Plan pop-up screen present on the Dashboard
+2022-07-12 04:05:11,812 - framework.Browser -INFO - Selected Browser is: chrome
+2022-07-12 04:05:23,195 - framework.Browser -INFO - Chrome Browser is Started 1869177530
+2022-07-12 04:06:06,976 - baseinit.Base -INFO - Scenario Completed: To Verify the Close icon functionality present on the View Plan pop-up screen present on the Dashboard
+2022-07-12 04:06:06,976 - baseinit.Base -INFO - Scenario Status is: FAILED
+2022-07-12 04:07:41,098 - baseinit.Base -INFO - Scenario Started: To Verify the Close icon functionality present on the View Plan pop-up screen present on the Dashboard
+2022-07-12 04:07:41,139 - framework.Browser -INFO - Selected Browser is: chrome
+2022-07-12 04:07:49,299 - framework.Browser -INFO - Chrome Browser is Started 1312843412
+2022-07-12 04:08:30,966 - baseinit.Base -INFO - Scenario Completed: To Verify the Close icon functionality present on the View Plan pop-up screen present on the Dashboard
+2022-07-12 04:08:30,966 - baseinit.Base -INFO - Scenario Status is: FAILED
