@@ -5,6 +5,7 @@ Feature: To Verify Dashboard
   Background: 
     Given navigate to URL "https://drysign-qa.exela.global/#/"
     
+    
 
   @Dashboard1
   Scenario: To Verify the UI elements present on the View Plan button pop-up present on the Dashboard
@@ -46,12 +47,12 @@ Feature: To Verify Dashboard
   @Dashboard4
   Scenario: To Verify Subscribed Register user is able to Purchase the higher plan then the exisiting plan successfully through Upgrade Plan button present on View Plan pop-up
     When enter the user name as "sid87@mailinator.com"
-    #When enter the user name as "ingolesid5@gmail.com"
+    
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then user click on View Plan button
     Then Pop Up get displayed with elements
-    #Then existing plan details of the user should get displayed with Upgrade Plan button
+    
     And user click on Upgrade Plan button
     Then pop up should display only the higher plan than the exisiting
     And user click on the BuyNow button
@@ -62,12 +63,12 @@ Feature: To Verify Dashboard
     And enter expire year as "27"
     And enter cvv nunber as "789"
     Then user click on pay button
-    Then Verify approved plan and activated image is displayed
-    Then User navigate to URL "https://drysign-qa.exela.global/#/"
-    #Then user click on login button
+    #Then Verify approved plan and activated image is displayed
+  
+    Then user click on login button
     When enter the user name as "sid87@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on sign in button
     Then new plan details and its related features should get displayed
 
   @Dashboard5
@@ -108,33 +109,33 @@ Feature: To Verify Dashboard
   Scenario: To Verify on Refund for existing register user Buy Now button is displayed on the Dashboard
     When user click on terms and conditions
     When user click on here link
-    When enter the user name as "sid77@mailinator.com"
+    When enter the user name as "sid02@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then user should get display refund page
     And user enter name as "Sid Ingole"
-    And user enter emai id as "sid77@mailinator.com"
+    And user enter emai id as "sid02@mailinator.com"
     And user enter subscription plan as "INDIVIDUAL"
-    And user enter subscription id as "3529"
+    And user enter subscription id as "3610"
     And user click on confirm button	
     Then refund pop up get display
     And user click on confirm button which present on pop up
-    Then user should get display message as your refund has been successful
+    #Then user should get display message as your refund has been successful
     Then click on ok button
-    When enter the user name as "sid77@mailinator.com"
+    When enter the user name as "sid09@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on sign in button
     
     #And user click on continue with free version
     #Then user display three pie chart
     #Then display as "individual plan" with upgrade button
     #Then display as "professional plan" with Upgrade button
     #Then should display as "5 documents"
-    #And user click on continue with free version
+   
     
     Then user get display Buy Now button
-    And user click on the Buy Now button
-    Then all the available plans should get displayed to purchase for the user
+    #And user click on the Buy Now button
+    #Then all the available plans should get displayed to purchase for the user
    
    
     

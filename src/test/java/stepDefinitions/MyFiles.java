@@ -4,6 +4,7 @@ import framework.Elements;
 import framework.Waits;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import junit.framework.Assert;
 import pageObjects.USAMobileNoMandateObject;
 
 public class MyFiles {
@@ -27,14 +28,27 @@ public void user_search_data_from_the_generic_search_functionality_as(String fil
 
 @Then("user should get displayed relevant data successfully through partial or fully searched")
 public void user_should_get_displayed_relevant_data_successfully_through_partial_or_fully_searched() {
-	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.txtSignatory);
-	Elements.isDisplayed(USAMobileNoMandateObject.txtSignatory);
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.genricAction);
+	Elements.isDisplayed(USAMobileNoMandateObject.genricAction);
 }
 @When("user enter subject in subject column filter as {string}")
 public void user_enter_subject_in_subject_column_filter_as(String subject) {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.subjectColumn);
 	Elements.TypeText(USAMobileNoMandateObject.subjectColumn, subject);
  
+}
+@When("user enter sign type as  {string}")
+public void user_enter_sign_type_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Sign_Type);
+	Elements.TypeText(USAMobileNoMandateObject.Sign_Type, string);
+    
+}
+
+@When("user enter completed date as {string}")
+public void user_enter_completed_date_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Completed_Date);
+	Elements.TypeText(USAMobileNoMandateObject.Completed_Date, string);
+	
 }
 
 @When("user enter document name in document name column filter as {string}")
@@ -138,7 +152,7 @@ public void user_click_on_drafts_tab() {
 @When("user click on Delete icon under Action column")
 public void user_click_on_Delete_icon_under_Action_column() {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.iconDelete);
-	Elements.click(USAMobileNoMandateObject.iconDelete);
+	Elements.jclick(USAMobileNoMandateObject.iconDelete);
     
 }
 
@@ -173,7 +187,7 @@ public void user_click_in_confirm_button() {
 public void user_should_be_displayed_message_as_deleted_successfully() {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.msgDeletedSuccessfully);
 	Elements.isDisplayed(USAMobileNoMandateObject.msgDeletedSuccessfully);
-    
+	 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.msgDeletedSuccessfully),"Successfully deleted");  
    
 }
 

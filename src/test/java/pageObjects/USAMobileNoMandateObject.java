@@ -125,9 +125,11 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//*[text()='more_vert']")
 	public static WebElement icon;
 
-	@FindBy(xpath="//*[@id=\"mat-menu-panel-0\"]/div/button[1]/span")
+	@FindBy(xpath="//span[text()=' account_circle']")
 	public static WebElement profile;
-
+  
+	@FindBy(xpath="//span[text()=' account_circle']")
+	public static WebElement Profile1;
 
 	@FindBy(xpath="//*[text()='Manage Account']")
 	public static WebElement mangeAcc;
@@ -286,8 +288,11 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//div[@id='main']")
 	public static  WebElement plansAllAnnual;
 	
-	@FindBy(xpath="//div[@class='card-body']")
+	@FindBy(xpath="//div[@class='sub-section-wrap dashboard-outer-box py-3 px-3 ng-star-inserted']")
 	public static  WebElement Card_Body;
+	
+	@FindBy(xpath="(//h2[@id='sub-section-title'])[6]")
+	public static  WebElement Professional_Plan_text;
 	
 	@FindBy(xpath="//a[text()='Login']")
 	public static  WebElement Login;
@@ -329,9 +334,17 @@ public class USAMobileNoMandateObject {
 	public static  WebElement professional;
 	
 	
-	@FindBy(xpath="//*[text()=' Edit ']")
+	@FindBy(xpath="//span[text()=' Edit ']")
 	public static WebElement btnEdit;
 	
+	@FindBy(xpath="//input[@placeholder='ZIP Code']")
+	public static WebElement Zip_code;
+	
+	@FindBy(xpath="//mat-error[text()=' ZiP code should be minimum of 4 digit. ']")
+	public static WebElement Zip_code_Min_Four_Digit;
+	
+	
+	//mat-error[text()=' ZiP code should be minimum of 4 digit. ']
 	@FindBy(xpath="//*[@id='mat-tab-content-0-0']")
 	public static WebElement personalInfoPage;
 	
@@ -437,7 +450,7 @@ public class USAMobileNoMandateObject {
     
   //span[text()='Ok']
     
-    @FindBy(xpath=" //span[text()='Ok']")
+    @FindBy(xpath="//span[text()='Ok']")
     public static WebElement Ok_Btn;
     
     @FindBy(xpath="//img[@id='logo']")
@@ -650,13 +663,19 @@ public class USAMobileNoMandateObject {
 	
 	
 	
-	@FindBy(xpath="//span[text()=' signatory ']")     
-	public static  WebElement txtSignatory;
+	@FindBy(xpath="//span[text()=' sign ']")     
+	public static  WebElement genricAction;
 	
 	
 	
 	@FindBy(xpath="//input[@data-column='subject']")     
 	public static  WebElement subjectColumn;
+	
+	@FindBy(xpath="(//input[@placeholder='Filter'])[3]")     
+	public static  WebElement Completed_Date;
+	
+	@FindBy(xpath="//span[text()=' Sign Type ']")     
+	public static  WebElement Sign_Type;
 	
 	@FindBy(xpath="//input[@data-column='fileName']")     
 	public static  WebElement documentName;
@@ -702,7 +721,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//td[@id='accordian0']")     
 	public static  WebElement iconPlus;
 	
-	@FindBy(xpath="//tr[@id='accordion1']")     
+	@FindBy(xpath="(//tr[@class='hide-table-padding ng-star-inserted'])[1]")     
 	public static  WebElement detailsRejected;
 	//div[@class='col-12 col-sm-12 col-md-12']
 	//tr[@id='accordion1']
@@ -713,7 +732,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//div[text()='Drafts']")     
 	public static  WebElement tabDrafts;
 	
-	@FindBy(xpath="//i[@class='ri-delete-bin-line']")     
+	@FindBy(xpath="(//div[@class='ng-star-inserted'])[1]")     
 	public static  WebElement iconDelete;
 	
 	@FindBy(xpath="//mat-icon[text()='edit']")     
@@ -734,7 +753,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//span[text()='Confirm']")     
 	public static  WebElement popUpDeleteConfirm;
 	
-	@FindBy(xpath="//div[@id='toast-container']")     
+	@FindBy(xpath="//div[text()=' Successfully deleted ']")     
 	public static  WebElement msgDeletedSuccessfully;
 	
 	@FindBy(xpath="//div[text()='Completed Documents']")     
@@ -834,7 +853,7 @@ public static WebElement selfSign;
 @FindBy(xpath="//a[text()='Browse']")
 public static WebElement browser;
 
-@FindBy(xpath="//input[@class='uploadBtn-pointer']")
+@FindBy(xpath="//span[text()=' Upload Photo ']")
 public static WebElement Upload_Btn;
 
 @FindBy(xpath="//input[@placeholder='Name']")
@@ -846,6 +865,10 @@ public static WebElement FirstNameisrequired;
 @FindBy(xpath="//div[text()=' Successfully Updated. ']")
 public static WebElement Successfully_Updated;
 
+//input[@placeholder='Street Address']
+
+@FindBy(xpath="//input[@placeholder='Street Address']")
+public static WebElement Stree_Address;
 
 @FindBy(xpath="//h2[text()=' Plans ']")
 public static WebElement Plans_PopUp;

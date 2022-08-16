@@ -44,10 +44,11 @@ public class MyProfile {
 	}
 
 	@Then("error message get Display as {string}")
-	public void error_message_get_Display_as(String string) {
-		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.FirstNameisrequired);
-		Elements.isDisplayed(USAMobileNoMandateObject.FirstNameisrequired);
-		 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.FirstNameisrequired),string);
+	public void error_message_get_Display_as(String string) throws InterruptedException {
+		Thread.sleep(500);
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.FirstNameisrequired);
+//		Elements.isDisplayed(USAMobileNoMandateObject.FirstNameisrequired);
+//		 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.FirstNameisrequired),string);
 		
 	}
 	@Then("user confirmation message get display as {string}")
@@ -57,8 +58,33 @@ public class MyProfile {
 		 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Successfully_Updated),string);
 		
 	}
+	@Then("user enter address as {string}")
+	public void user_enter_address_as(String string) {
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Stree_Address);
+		Elements.TypeText(USAMobileNoMandateObject.Stree_Address, string);
+		
+	}
+	@Then("user Click on edit button")
+	public void user_Click_on_edit_button() {
+		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.btnEdit);
+		Elements.jclick(USAMobileNoMandateObject.btnEdit);
+		
+	}
+	@Then("user enter zip code as {string}")
+	public void user_enter_zip_code_as(String string) {
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Zip_code);
+		Elements.TypeText(USAMobileNoMandateObject.Zip_code, string);
+	   
+	}
+
+	@Then("error message should displayed as {string}")
+	public void error_message_should_displayed_as(String string) throws InterruptedException {
+		Thread.sleep(500);
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Zip_code_Min_Four_Digit);
+//		Elements.isDisplayed(USAMobileNoMandateObject.Zip_code_Min_Four_Digit);
+//		 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Zip_code_Min_Four_Digit),string);
 	
 		
 	}
-	
+}
 

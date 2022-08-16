@@ -60,9 +60,17 @@ public class externalCucumberOptionsTest {
 	        loadPropertiesFile();
 	       
 	        
-            junitRunner.run(RunnerTest.class);
+	        junitRunner.run(runner.RunnerTest.class);
+	         
+            junitRunner.run(runner.failedScenariosRunner.class);
 	        
-	        junitRunner.run(failedScenariosRunner.class);
+
+
+
+
+
+
+
 			
 			System.out.println("Execution process Completed");
 	}

@@ -336,11 +336,20 @@ public void enter_the_password_as(String password) {
 
 @When("user click on the sign in button")
 public void user_click_on_the_sign_in_button() throws InterruptedException {
-	Thread.sleep(5000);
+	//Thread.sleep(5000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.sub);
 	Elements.click(USAMobileNoMandateObject.sub);
 	Thread.sleep(2000);
  
+}
+
+@When("user click on sign in button")
+public void user_click_on_sign_in_button() throws InterruptedException {
+	Thread.sleep(5000);
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.sub);
+	Elements.jclick(USAMobileNoMandateObject.sub);
+	
+	
 }
 
 @When("dashboard window get display")
@@ -376,9 +385,16 @@ public void user_click_on_mat_icon() throws InterruptedException  {
 @When("user click on profile icon")
 public void user_click_on_profile_icon() throws InterruptedException {
 	Thread.sleep(10000);
-	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.profile);
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Profile1);
 	//USAMobileNoMandateObject.profile.click();
-	Elements.jclick(USAMobileNoMandateObject.profile);
+	Elements.jclick(USAMobileNoMandateObject.Profile1);
+	
+}
+@Then("user click profile icon")
+public void user_click_profile_icon() throws InterruptedException {
+	Thread.sleep(10000);
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Profile1);
+	Elements.jclick(USAMobileNoMandateObject.Profile1);
 	
 }
 
@@ -743,6 +759,10 @@ public void user_click_on_login_button() {
 public void new_plan_details_and_its_related_features_should_get_displayed() {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Card_Body);
 	Elements.isDisplayed(USAMobileNoMandateObject.Card_Body);
+	
+	
+//	Elements.isDisplayed(USAMobileNoMandateObject.Professional_Plan_text);
+//	Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Professional_Plan_text),"PROFESSIONAL PLAN");
 	
 }
 @Given("user navigate to URL {string}")

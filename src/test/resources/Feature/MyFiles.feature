@@ -91,7 +91,7 @@ Feature: To Verify My Files Tabs Functionality
   #Then document should get downloaded successfully from the Out for Signature Tab
   @MyFiles6
   Scenario: To verify functionality of draft documents
-    When enter the user name as "siddhantingole348@gmail.com"
+    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
@@ -110,7 +110,7 @@ Feature: To Verify My Files Tabs Functionality
   #need account which contain 3-4 draft doc
   @MyFiles7
   Scenario: To verify download functionality of rejected document of DrySign
-    When enter the user name as "sidhuingole4@gmail.com"
+    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
@@ -146,13 +146,13 @@ Feature: To Verify My Files Tabs Functionality
 
   @MyFiles10
   Scenario: To Verify the individual column filter search functionality in My Files
-    When enter the user name as "sidingole373@gmail.com"
+    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
-    And user enter subject in subject column filter as "signatory"
-    And user enter document name in document name column filter as "Signature.pdf"
-    And user enter assigned date in assigned date column filter as "04/29/2022 6:14:07 AM"
-    And user enter name in requested by column filter as "Siddhant Ing"
+    And user click on completed documents tab
+    And user enter subject in subject column filter as "sign"
+    And user enter sign type as "Group"
+    And user enter completed date as "08/09/2022"
     And user should get display the correct searched data for every column

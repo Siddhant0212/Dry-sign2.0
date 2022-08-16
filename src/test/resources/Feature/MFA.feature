@@ -71,7 +71,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     Then user click on verify button
     And user click on continue with free version
     And user click on mat icon
-    And user click on profile icon
+    And user click profile icon
     When user click on security tab
     When user enter different secure code in confirm secure code field as "555555"
     And user click on update button
