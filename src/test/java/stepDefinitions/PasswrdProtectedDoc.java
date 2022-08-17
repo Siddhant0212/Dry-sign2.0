@@ -194,7 +194,7 @@ public void user_click_on_drysign() {
 public void user_click_on_sign_document() {
 	Elements.switchToFrame(USAMobileNoMandateObject.bodyIframe);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Sign_Document);
-	Elements.click(USAMobileNoMandateObject.Sign_Document);
+	Elements.jclick(USAMobileNoMandateObject.Sign_Document);
 	
 }
 @Then("user get display pop up with message as {string}")

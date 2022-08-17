@@ -365,16 +365,16 @@ public void dashboard_window_get_display() {
 public void user_click_on_continue_with_free_version() throws InterruptedException {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickOnContWithfreeVersion);
 	Elements.jclick(USAMobileNoMandateObject.clickOnContWithfreeVersion);
-	Thread.sleep(2000);
+	Thread.sleep(15000);
 }
 
 @When("user click on mat icon")
 public void user_click_on_mat_icon() throws InterruptedException  {
-	Thread.sleep(15000);
+	
 	Waits.waitUntilElementLocated(50, USAMobileNoMandateObject.icon);
  	//Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.icon);
-    Elements.jclick(USAMobileNoMandateObject.icon);
-  
+    Elements.click(USAMobileNoMandateObject.icon);
+    Thread.sleep(15000);
  	
  	//WebDriverWait wait = new WebDriverWait(driver, 10);
  	//WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@formcontrolname='reportingDealPermission']")));
@@ -384,11 +384,11 @@ public void user_click_on_mat_icon() throws InterruptedException  {
 }
 @When("user click on profile icon")
 public void user_click_on_profile_icon() throws InterruptedException {
-	Thread.sleep(10000);
+	
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Profile1);
 	//USAMobileNoMandateObject.profile.click();
-	Elements.jclick(USAMobileNoMandateObject.Profile1);
-	
+	Elements.click(USAMobileNoMandateObject.Profile1);
+	Thread.sleep(15000);
 }
 @Then("user click profile icon")
 public void user_click_profile_icon() throws InterruptedException {
@@ -747,6 +747,12 @@ public void verify_approved_plan_and_activated_image_is_displayed() {
 	Elements.isDisplayed(USAMobileNoMandateObject.Card_Body);
 	
 }
+@Then("confirmation message get display as {string}")
+public void confirmation_message_get_display_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.PAYMENT_CONFIRMATION);
+	Elements.isDisplayed(USAMobileNoMandateObject.PAYMENT_CONFIRMATION);
+	Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.PAYMENT_CONFIRMATION),string);
+}
 
 @Then("user click on login button")
 public void user_click_on_login_button() {
@@ -871,6 +877,19 @@ public void user_click_on(String outforsignature) {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.outForSignature);
 	Elements.click(USAMobileNoMandateObject.outForSignature);
 }
+
+@Then("User enter email as {string}")
+public void user_enter_email_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
+	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid39");
+}
+
+@Then("user click on Mail")
+public void user_click_on_Mail() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.grpSignMail);
+	Elements.click(USAMobileNoMandateObject.grpSignMail);
+	
+}
 	
 	@When("user received mail as {string}")
 	public void user_received_mail_as(String mail) {
@@ -879,7 +898,7 @@ public void user_click_on(String outforsignature) {
 		USAMobileNoMandateObject obM = new USAMobileNoMandateObject(Base.driver);
 		
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
-		Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid28");
+		Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid39");
 		
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickGo);
 		Elements.click(USAMobileNoMandateObject.clickGo);
@@ -888,7 +907,7 @@ public void user_click_on(String outforsignature) {
 		Elements.click(USAMobileNoMandateObject.grpSignMail);
 		
 		Elements.switchToFrame(USAMobileNoMandateObject.bodyIframe);
-		Elements.click(USAMobileNoMandateObject.signDocument);
+		Elements.jclick(USAMobileNoMandateObject.signDocument);
 		
 
 		
@@ -918,13 +937,17 @@ public void user_click_on(String outforsignature) {
 	@Given("user click on signature")  // need to find correct xpath
 	public void user_click_on_signature() throws InterruptedException {
 		Thread.sleep(5000);
+		Elements.switchToFrame(USAMobileNoMandateObject.iFrame_Doc);
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickOnSignature);
 		Elements.jclick(USAMobileNoMandateObject.clickOnSignature);
 		
 	}
 
 	@Given("click on {string}")
-	public void click_on(String type) {
+	public void click_on(String type) throws InterruptedException {
+		Thread.sleep(5000);
+		//Elements.switchToFrame(USAMobileNoMandateObject.iFrame_Type);
+		Elements.switchToChild();
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickonType);
 		Elements.jclick(USAMobileNoMandateObject.clickonType);
 	   
@@ -932,38 +955,50 @@ public void user_click_on(String outforsignature) {
 
 	@Then("user select the signature")
 	public void user_select_the_signature() {
+		
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.selectSignature);
-		Elements.click(USAMobileNoMandateObject.selectSignature);
+		Elements.jclick(USAMobileNoMandateObject.selectSignature);
 		
 	}
 	@Then("user click save button")
 	public void user_click_save_button() {
-		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.selectSignature);
-		Elements.click(USAMobileNoMandateObject.selectSignature);
+		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Save_Doc);
+		Elements.click(USAMobileNoMandateObject.Save_Doc);
 	  
 	}
 
 	@Then("use click on {string}")
 	public void use_click_on(String finish) {
-		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.selectSignature);
-		Elements.click(USAMobileNoMandateObject.selectSignature);
+		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Finish_Doc);
+		Elements.jclick(USAMobileNoMandateObject.Finish_Doc);
 		
 	}
-	@Then("successfully signed document page get display")
-	public void successfully_signed_document_page_get_display() {
+//	@Then("Successfully message get display as {string}")
+//	public void successfully_message_get_display_as(String string) {
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.successfullySignedDocPage);
+//		Elements.isDisplayed(USAMobileNoMandateObject.successfullySignedDocPage);
+//		Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.successfullySignedDocPage),string);
+//	   
+//	}
+	@Then("successfully signed document page get display as{string}")
+	public void successfully_signed_document_page_get_display_as(String string) throws InterruptedException {
+		Thread.sleep(1000);
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.successfullySignedDocPage);
 		Elements.isDisplayed(USAMobileNoMandateObject.successfullySignedDocPage);
-	   
+		Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.successfullySignedDocPage),string);
+		
 	}
 
 	@Then("verify contact number field needs to be mandatory field with the asterix symbol")
-	public void verify_contact_number_field_needs_to_be_mandatory_field_with_the_asterix_symbol() {
+	public void verify_contact_number_field_needs_to_be_mandatory_field_with_the_asterix_symbol() throws InterruptedException {
+		
+		Thread.sleep(500);
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.astrixSymbol1);
 		Elements.isDisplayed(USAMobileNoMandateObject.astrixSymbol1);
 		Elements.click(USAMobileNoMandateObject.entPhoneNo);
 		Elements.click(USAMobileNoMandateObject.entPassword);
 		
-		 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.mobileNOIsMand),"Mobile number is mandatory.");
+		 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.mobileNOIsMand),"Mobile number is mandatory");
 		
 		
 	}

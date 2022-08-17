@@ -19,10 +19,32 @@ public class MyProfile {
 	
 	@Then("user click on upload button")
 	public void user_click_on_upload_button() throws InterruptedException {
-		Thread.sleep(4000);
+		Thread.sleep(15000);
+		
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upload_Btn);
 		Elements.jclick(USAMobileNoMandateObject.Upload_Btn);
 	}
+	
+	@Then("user not get displayed profile picture")
+	public void user_not_get_displayed_profile_picture() {
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Profile_Picture);
+		Elements.isDisplayed(USAMobileNoMandateObject.Profile_Picture);
+	}
+//	@Then("user upload invalid file as {string}")
+//	public void user_upload_invalid_file_as(String string) {
+//		
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.entPhoneNo);
+//		  Elements.TypeText(USAMobileNoMandateObject.entPhoneNo, mobilenumber);
+////			/Elements.isEnabled(USAMobileNoMandateObject.entPhoneNo);
+//			Thread.sleep(2000);
+//			
+//			String expectedNumber = mobilenumber;
+//			String actualNumber = Elements.getText(USAMobileNoMandateObject.entPhoneNo);
+//			Assert.assertNotSame(actualNumber, expectedNumber);
+//		 }
+//	}
+		
+	
 
 	@Then("user leave the name field blank")
 	public void user_leave_the_name_field_blank() throws InterruptedException {

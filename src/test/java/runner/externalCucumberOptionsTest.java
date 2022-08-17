@@ -7,22 +7,21 @@ import java.nio.file.Paths;
 import java.security.InvalidKeyException;
 import java.text.ParseException;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
+
+
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.runner.JUnitCore;
 
 import com.google.common.io.Files;
 import com.microsoft.azure.storage.CloudStorageAccount;
 import com.microsoft.azure.storage.StorageException;
-import com.microsoft.azure.storage.blob.CloudBlobClient;
+
 import com.microsoft.azure.storage.blob.CloudBlobContainer;
 
 import baseinit.Base;
 import config.PropertyFileReader;
 import framework.GenericActions;
 import util.PathHelper;
-
 
 
 
@@ -61,8 +60,8 @@ public class externalCucumberOptionsTest {
 	       
 	        
 	        junitRunner.run(runner.RunnerTest.class);
-	         
-            junitRunner.run(runner.failedScenariosRunner.class);
+	        
+	        junitRunner.run(runner.failedScenariosRunner.class);
 	        
 
 

@@ -34,7 +34,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//*[@formcontrolname='email']")
 	public static WebElement entEmail;
 	
-	@FindBy(xpath="//*[@formcontrolname='password']")
+	@FindBy(xpath="//input[@formcontrolname='password']")
 	public static WebElement entPassword;
 	
 	@FindBy(xpath="//*[@formcontrolname='confirmPassword']")
@@ -290,6 +290,11 @@ public class USAMobileNoMandateObject {
 	
 	@FindBy(xpath="//div[@class='sub-section-wrap dashboard-outer-box py-3 px-3 ng-star-inserted']")
 	public static  WebElement Card_Body;
+	
+	//h1[text()='PAYMENT CONFIRMATION']
+	
+	@FindBy(xpath="//h1[text()='PAYMENT CONFIRMATION']")
+	public static  WebElement PAYMENT_CONFIRMATION;
 	
 	@FindBy(xpath="(//h2[@id='sub-section-title'])[6]")
 	public static  WebElement Professional_Plan_text;
@@ -808,27 +813,42 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//input[@type='checkbox']")     
 	public static  WebElement checkBox;
 	
-	@FindBy(xpath="//span[text()='Accept']")     
+	@FindBy(xpath="//button[text()='Accept']")     
 	public static  WebElement acceptBtn;
 	
-	@FindBy(xpath="//span[text()='Ok']")     
+	@FindBy(xpath="//button[text()='Ok']")     
 	public static  WebElement okButn;
 	
 	@FindBy(xpath="//div[@class='annotation_placeholder']")     
 	public static  WebElement clickOnSignature;
 	
+	@FindBy(xpath="//iframe[@title='PSPDFKit']")     
+	public static  WebElement iFrame_Doc;
+	
+	@FindBy(xpath="//iframe[@id='ssIFrame_google']")     
+	public static  WebElement iFrame_Type;
+	
 
-	//div[text()='Signature']/ancestor::div[@class='PSPDFKit-5nyc19csr9cauvs7aqtdgt7n34']
-	@FindBy(xpath="//div[text()='TYPE']")     
+	//iframe[@id='ssIFrame_google']
+	@FindBy(xpath="(//div[@class='mat-tab-label-content'])[2]")     
 	public static  WebElement clickonType;
 	
-	@FindBy(xpath="(//div[@class='w-48 text-center sign-type-container sign-chips border p-2 mb-3 ng-star-inserted'])[1]")     
+	@FindBy(xpath="//span[@id='image-section-1']")     
 	public static  WebElement selectSignature;
 	
+	@FindBy(xpath="//button[text()='Save']")     
+	public static  WebElement Save_Doc;
+	
+	
+	@FindBy(xpath="//i[text()='Finish']")     
+	public static  WebElement Finish_Doc;
+	
+	
+
 	@FindBy(xpath="//h3[text()='You have successfully signed this document.']")     
 	public static  WebElement successfullySignedDocPage;
 	
-	@FindBy(xpath="(//span[@aria-hidden='true'])[5]")     
+	@FindBy(xpath="//div[@class='mat-form-field-suffix ng-tns-c153-24 ng-star-inserted']")     
 	public static  WebElement astrixSymbol1;
 	
 	//a[text()='Sign Document']
@@ -853,8 +873,14 @@ public static WebElement selfSign;
 @FindBy(xpath="//a[text()='Browse']")
 public static WebElement browser;
 
-@FindBy(xpath="//span[text()=' Upload Photo ']")
+@FindBy(xpath="//input[@id='input-file']")
 public static WebElement Upload_Btn;
+
+@FindBy(xpath="//div[@class='image-upload-circle ng-star-inserted']")
+public static WebElement Profile_Picture;
+
+
+//div[@class='image-upload-circle ng-star-inserted']
 
 @FindBy(xpath="//input[@placeholder='Name']")
 public static WebElement Name_field;

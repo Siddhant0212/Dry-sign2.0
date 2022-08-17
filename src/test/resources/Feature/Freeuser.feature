@@ -111,7 +111,8 @@ Feature: To Verify Free User functions
     And enter expire year as "27"
     And enter cvv nunber as "789"
     Then user click on pay button
-    Then Verify approved plan and activated image is displayed
+    #Then Verify approved plan and activated image is displayed
+    Then confirmation message get display as "PAYMENT CONFIRMATION"
     
     @FreeUser7
  Scenario: To Verify on cancel subscription if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))

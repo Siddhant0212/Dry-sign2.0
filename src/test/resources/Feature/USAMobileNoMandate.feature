@@ -1,4 +1,4 @@
-@Sid1
+@Mobile
 Feature: To Verify USA mobile number is Mandatory
 
   @Mobile1
@@ -70,33 +70,33 @@ Feature: To Verify USA mobile number is Mandatory
     Then profile page contain personal information should displayed correctly
     Then country field should not be editable
     And user click on save button
+    #Then user confirmation message get display as "Successfully Updated."
+  
+  #@Mobile6
+  #Scenario: To Verify the registartion process for the Google Sign-in user for mandatory mobile no. for USA region
+    #Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    #When click on the sign in with google
+    #And pop up get display
+    #And user enter the username as "sidingole8@gmail.com"
+    #And user click on next button
+    #And user enter password as "Malin@555"
+    #And user click on next button
+    #And dashboard window get display
+    #And Mobile number field get display on pop up
+    #And Enter the valid mobile number as "4442221111"
+    #And Click on the Ok button
 
-  @Mobile6
-  Scenario: To Verify the registartion process for the Google Sign-in user for mandatory mobile no. for USA region
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
-    When click on the sign in with google
-    And pop up get display
-    And user enter the username as "sidingole8@gmail.com"
-    And user click on next button
-    And user enter password as "Malin@555"
-    And user click on next button
-    And dashboard window get display
-    And Mobile number field get display on pop up
-    And Enter the valid mobile number as "4442221111"
-    And Click on the Ok button
 
-
- 
- @Mobile7
- Scenario: To Verify the registartion process for the Google Sign-in user for mandatory mobile no. for USA region
-  Given navigate to URL "https://drysign-qa.exela.global/#/login"
-    When click on the sign in with google
-    And pop up get display
-    And user enter the username as "sidingole8@gmail.com"
-    And user click on next button
-    And user enter password as "Malin@555"
-    And user click on next button
-    And dashboard window get display
+ #@Mobile7
+ #Scenario: To Verify the registartion process for the Google Sign-in user for mandatory mobile no. for USA region
+  #Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    #When click on the sign in with google
+    #And pop up get display
+    #And user enter the username as "sidingole8@gmail.com"
+    #And user click on next button
+    #And user enter password as "Malin@555"
+    #And user click on next button
+    #And dashboard window get display
  
  
   @Mobile8
@@ -119,15 +119,25 @@ Feature: To Verify USA mobile number is Mandatory
     #And user click on continue with free version
     #And user click on "out for signature"
     #And user click on plus icon
-    And user received mail as "sid25@mailinator.com"
+    Then user Navigate to URL "https://www.mailinator.com/v4/public/inboxes.jsp"
+    And User enter email as "sid39"
+    Then user click on Go button
+    Then user click on Mail 
+    And user click on sign document
     And user click on check box
     And user click on accept button
     And user clcik on ok button present on pop up
     And user click on signature
-    #And click on "TYPE"
-    #Then user select the signature
-    #And user click save button
-    #Then use click on "finish"
-    #Then successfully signed document page get display
-    #Then verify contact number field needs to be mandatory field with the asterix symbol
+    
+    #And user received mail as "sid39@mailinator.com"
+    #And user click on check box
+    #And user click on accept button
+    #And user clcik on ok button present on pop up
+    #And user click on signature
+    And click on "TYPE"
+    Then user select the signature
+    And user click save button
+    Then use click on "finish"
+    Then successfully signed document page get display as"You have successfully signed this document."
+    Then verify contact number field needs to be mandatory field with the asterix symbol
   

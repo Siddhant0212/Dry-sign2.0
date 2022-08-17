@@ -1,3 +1,5 @@
+@MyProfile
+
 Feature: To Verify My Profile Page
 
   @MyProfile1
@@ -21,8 +23,11 @@ Feature: To Verify My Profile Page
     And user click on continue with free version
     And user click on mat icon
     When user click on profile icon
-    Then user click on upload button
-    Then user click on upload photo button as "img.jpg"
+    Then user click on upload button 
+    Then upload profile picture as "img.jpg"
+    #Then user not get displayed profile picture
+   # Then user upload invalid file as "small.pdf"
+    #Then user click on upload photo button as "img.jpg"
     
    @MyProfile3
   Scenario: To verify  if user is able to see and click Edit Button
