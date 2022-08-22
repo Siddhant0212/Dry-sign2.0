@@ -660,9 +660,9 @@ public class DrySign {
 
 	@Then("user click on upload photo button as {string}")
 	public void user_click_on_upload_photo_button_as(String filename) throws InterruptedException {
-		//Elements.switchToChild();
+		
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upload_Btn);
-		Elements.click(USAMobileNoMandateObject.Upload_Btn);
+		Elements.jclick(USAMobileNoMandateObject.Upload_Btn);
 		Thread.sleep(5000);
 	    uploadFile(filename, "chrome");
 		Thread.sleep(5000);

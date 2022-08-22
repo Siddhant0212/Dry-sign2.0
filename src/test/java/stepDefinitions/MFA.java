@@ -8,6 +8,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -274,13 +277,19 @@ public void user_copy_the_text() throws InterruptedException {
 
 //TS7
 @When("user enter secure code as {string}")
-public void user_enter_secure_code_as(String securecode) throws InterruptedException {
+public void user_enter_secure_code_as(String securecode) throws InterruptedException, AWTException {
 	char[] enterSecureCode =securecode.toCharArray();
 	for(int i=0;i<=enterSecureCode.length-1;i++)
 	{
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)));
 	Elements.TypeText(USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)),String.valueOf( enterSecureCode[i]));
 	Thread.sleep(1000);
+	
+//	Robot robot = new Robot();
+//	robot.keyPress(KeyEvent.VK_DELETE);
+//	Thread.sleep(500);
+//	
+//	Thread.sleep(1000);
 	}
 	
 }
@@ -761,4 +770,45 @@ public void user_click_on_send_one_time_password() throws InterruptedException {
 		
 		
 	}
-}
+	@Then("user press delete button as {string}")
+	public void user_press_delete_button_as(String securecode) throws InterruptedException, AWTException {
+		
+//		char[] enterSecureCode =securecode.toCharArray();
+//		for(int i=0;i<=enterSecureCode.length-1;i++)
+//		{
+//		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)));
+//		Elements.TypeText(USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)),String.valueOf( enterSecureCode[i]));
+//		
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code1);
+			Elements.TypeText(USAMobileNoMandateObject.code1, securecode);
+			
+			
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code2);
+			Elements.TypeText(USAMobileNoMandateObject.code2, securecode);
+			
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code3);
+			Elements.TypeText(USAMobileNoMandateObject.code3, securecode);
+			
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code4);
+			Elements.TypeText(USAMobileNoMandateObject.code4, securecode);
+			
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code5);
+			Elements.TypeText(USAMobileNoMandateObject.code5, securecode);
+			
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code6);
+			Elements.TypeText(USAMobileNoMandateObject.code6, securecode);
+			
+			Thread.sleep(1000);
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_DELETE);
+		Thread.sleep(500);
+		
+		robot.keyPress(KeyEvent.VK_DELETE);
+		Thread.sleep(500);
+		
+		robot.keyPress(KeyEvent.VK_DELETE);
+		Thread.sleep(500);
+		
+		Thread.sleep(1000);
+		}
+	}

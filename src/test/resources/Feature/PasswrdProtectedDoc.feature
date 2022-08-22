@@ -11,8 +11,8 @@ Feature: To Verify Password Protected Document can be signed
    #
    #And user click on the sign in button
    #And user click on continue with free version
-   #When user click on group sign
-   #When user click on browser and upload "small.pdf"
+  # When user click on group sign
+  # When user click on browser and upload "small.pdf"
    #Then user get display message as "File uploaded successfully"
    #When user click on save and continue
    #And user click on Add More

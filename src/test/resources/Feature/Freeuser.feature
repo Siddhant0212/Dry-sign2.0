@@ -98,7 +98,7 @@ Feature: To Verify Free User functions
   @FreeUser6
  Scenario: To Verify if the user clicks on the upgrade button present on pricing plan page or on the pie-chart he is able to upgrade the new Plan through banchub page.
    Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid40@mailinator.com"
+    When enter the user name as "sid102@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
@@ -118,7 +118,7 @@ Feature: To Verify Free User functions
  Scenario: To Verify on cancel subscription if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
     
   Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid49@mailinator.com"
+    When enter the user name as "sid40@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then user should get display pop up
@@ -136,7 +136,7 @@ Feature: To Verify Free User functions
     Given navigate to URL "https://drysign-qa.exela.global/#/"
     When user click on terms and conditions
     When user click on here link
-    When enter the user name as "sid40@mailinator.com"
+    When enter the user name as "sid102@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then user should get display refund page
@@ -162,7 +162,7 @@ Feature: To Verify Free User functions
  Scenario: To Verify for the active free user, the document count is set to 5 everymonth and template count to 1
   
    Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid49@mailinator.com"
+    When enter the user name as "sid102@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
@@ -174,7 +174,7 @@ Feature: To Verify Free User functions
    @FreeUser10
  Scenario: To Verify Validity is displayed or not on the Dashboard when login by the free user
   Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid49@mailinator.com"
+    When enter the user name as "sid103@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
@@ -190,15 +190,19 @@ Feature: To Verify Free User functions
     @FreeUser12
  Scenario: To verify that the plan pop up doesn't close unless "continue to free verison" or upgrade button is clicked.
   Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid49@mailinator.com"
+    When enter the user name as "sid103@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version and pop up should get closed
+    Then user display three pie chart
+    Then display as "individual plan" with upgrade button
+    Then display as "professional plan" with Upgrade button
+    Then should display as "5 documents"
     
     @FreeUser13
  Scenario: To Verify for the new free user, on login every time the pricing plan is displayed in the pop-up window 
     Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid49@mailinator.com"
+    When enter the user name as "sid103@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
@@ -207,7 +211,7 @@ Feature: To Verify Free User functions
   @FreeUser14
  Scenario: To Verify for the new free user Dashboard Display
   Given navigate to URL "https://drysign-qa.exela.global/#/"
-   When enter the user name as "sid49@mailinator.com"
+   When enter the user name as "sid103@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then user should get display pop up

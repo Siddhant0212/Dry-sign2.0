@@ -348,8 +348,18 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//mat-error[text()=' ZiP code should be minimum of 4 digit. ']")
 	public static WebElement Zip_code_Min_Four_Digit;
 	
+	@FindBy(xpath=" //div[text()=' Please Note: Cancel Subscription is not available for free corporate Subscription plan users. ']")
+	public static WebElement  Cancel_Subscription_Is_Not_Available;
 	
+	 
 	//mat-error[text()=' ZiP code should be minimum of 4 digit. ']
+	
+	//div[text()='Personal Information']
+	
+	@FindBy(xpath="//div[text()='Personal Information']")
+	public static WebElement Personal_Information;
+
+	
 	@FindBy(xpath="//*[@id='mat-tab-content-0-0']")
 	public static WebElement personalInfoPage;
 	
@@ -493,7 +503,7 @@ public class USAMobileNoMandateObject {
     public static WebElement popContWithFreeVersion;
     
     
-	@FindBy(xpath="//*[text()='Security']")     
+	@FindBy(xpath="//div[text()='Security']")     
 	public static  WebElement tabSecurity;
 	
 	@FindBy(xpath="//span[text()='Email OTP ']")
@@ -787,7 +797,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//span[text()='Send']")     
 	public static  WebElement btnSend;
 
-	@FindBy(xpath="//div[@id='toast-container']")     
+	@FindBy(xpath="//div[text()=' Successfully Mail Sent ']")     
 	public static  WebElement successfullyMailSent;
 	
 	@FindBy(xpath="//a[text()='Out for Signature (1) ']")     
@@ -873,7 +883,7 @@ public static WebElement selfSign;
 @FindBy(xpath="//a[text()='Browse']")
 public static WebElement browser;
 
-@FindBy(xpath="//input[@id='input-file']")
+@FindBy(xpath="//span[text()=' Upload Photo ']/..")
 public static WebElement Upload_Btn;
 
 @FindBy(xpath="//div[@class='image-upload-circle ng-star-inserted']")

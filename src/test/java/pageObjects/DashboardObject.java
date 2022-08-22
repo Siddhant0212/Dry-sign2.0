@@ -40,4 +40,46 @@ public class DashboardObject {
 	return element;
 	}
 	
-}
+	@FindBy(xpath="//h2[text()=' Documents Received ']")
+	public static  WebElement Documents_Received;
+	
+			
+			@FindBy(xpath="(//*[text()='Documents'])[2]")
+			public static  WebElement Documents;
+			
+			@FindBy(xpath="//*[text()='8']")
+			public static  WebElement Eight_Documents;
+			
+			
+			@FindBy(xpath="//h2[text()=' Documents Sent ']")
+			public static  WebElement Documents_Sent;
+			
+			@FindBy(xpath="//*[text()='4']")
+			public static  WebElement Four_Documents;
+
+			@FindBy(xpath="//label[text()='Self Sign']")
+			public static WebElement selfSign;
+			
+			@FindBy(xpath="//span[text()='signature']")
+			public static WebElement signature;
+			
+					
+		    @FindBy(xpath="(//span[@class='PSPDFKit-6y44nrshuzvz454nzf891rm7u5'])[1]")
+		    public static WebElement Page;
+					
+			@FindBy(xpath="//label[text()='Group Sign']")
+			public static WebElement grpSignBtn;
+
+			@FindBy(xpath="(//span[text()='Upgrade'])[1]")
+			public static  WebElement btnUpgrade;
+			
+			@FindBy(xpath="(//span[text()='Upgrade'])[1]")
+			public static WebElement Upgrade5;
+
+
+
+
+}        
+
+
+

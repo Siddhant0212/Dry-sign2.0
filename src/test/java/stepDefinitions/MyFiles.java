@@ -11,10 +11,10 @@ public class MyFiles {
 	
 
 @When("user click on My Files")
-public void user_click_on_My_Files() {
-	
+public void user_click_on_My_Files() throws InterruptedException {
+	Thread.sleep(10000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickOnMyFiles);
-	Elements.click(USAMobileNoMandateObject.clickOnMyFiles);
+	Elements.jclick(USAMobileNoMandateObject.clickOnMyFiles);
   
 }
 
@@ -257,9 +257,20 @@ public void user_click_on_Send_button() {
 public void user_should_get_success_message_as_Email_successfully_sent() {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.successfullyMailSent);
 	Elements.isDisplayed(USAMobileNoMandateObject.successfullyMailSent);
+	Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.msgDeletedSuccessfully),"Successfully Mail Sent"); 
 }
-@When("user check received email on user side whose email id is entered")
-public void user_check_received_email_on_user_side_whose_email_id_is_entered() {
+@Then("user Enter email as {string}")
+public void user_Enter_email_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
+	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid103");
+	
+}
+@Then("click on the download link")
+public void click_on_the_download_link() throws InterruptedException {
+	Thread.sleep(5000);
+	Elements.switchToChild();
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.btnSend);
+	Elements.jclick(USAMobileNoMandateObject.btnSend);
 	
 }
 }

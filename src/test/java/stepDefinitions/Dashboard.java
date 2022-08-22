@@ -10,6 +10,8 @@ import framework.Waits;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import junit.framework.Assert;
+import pageObjects.DashboardObject;
 import pageObjects.USAMobileNoMandateObject;
 
 
@@ -142,6 +144,60 @@ public void all_the_available_plans_should_get_displayed_to_purchase_for_the_use
 	Elements.isDisplayed(USAMobileNoMandateObject.generalPlans);
 	
 }
-}
 
+@Then("Upgrade button should not display on dashboard to paid user as {string}")
+public void upgrade_button_should_not_display_on_dashboard_to_paid_user_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.btnViewPlan);
+	Elements.isDisplayed(USAMobileNoMandateObject.btnViewPlan);
+	Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.btnViewPlan),string);
+}
+@Then("user should display the correct document received count")
+public void user_should_display_the_correct_document_received_count() {
+	Waits.waitUntilElementLocated(30, DashboardObject.Documents_Received);
+	Elements.isDisplayed(DashboardObject.Eight_Documents);
+	Elements.isDisplayed(DashboardObject.Documents);
+	Assert.assertNotSame(Elements.getText(DashboardObject.Documents_Received)," Documents Received ");
+	
+}
+@Then("user should display the correct document sent count")
+public void user_should_display_the_correct_document_sent_count() {
+	Waits.waitUntilElementLocated(30, DashboardObject.Documents_Sent);
+	Elements.isDisplayed(DashboardObject.Documents_Sent);
+	Assert.assertNotSame(Elements.getText(DashboardObject.Documents_Sent),"Documents Sent");
+	
+	Elements.isDisplayed(DashboardObject.Four_Documents);
+	Assert.assertNotSame(Elements.getText(DashboardObject.Documents_Sent),"4");
+	Elements.isDisplayed(DashboardObject.Documents);
+	Assert.assertNotSame(Elements.getText(DashboardObject.Documents_Sent),"Documents");
+	
+	
+}
+@Then("user click on self sign")
+public void user_click_on_self_sign() throws InterruptedException {
+	Thread.sleep(15000);
+	Waits.waitUntilElementToClick(30,USAMobileNoMandateObject.selfSign);
+	Elements.jclick(USAMobileNoMandateObject.selfSign);
+	
+}
+@Then("User drag and drop the signature")
+public void user_drag_and_drop_the_signature() throws InterruptedException {
+	Waits.waitUntilElementLocated(30,DashboardObject.signature);
+	Elements.dragAndDrop(DashboardObject.signature,DashboardObject.Page);
+}
+@Then("user display self sign and group sign and it should be clickable")
+public void user_display_self_sign_and_group_sign_and_it_should_be_clickable() {
+	//Waits.waitUntilElementLocated(30, DashboardObject.selfSign);
+	Waits.waitUntilElementToClick(30,DashboardObject.selfSign );
+	Elements.isDisplayed(DashboardObject.selfSign);
+	
+	
+	//Waits.waitUntilElementLocated(30, DashboardObject.grpSignBtn);
+	Waits.waitUntilElementToClick(30,DashboardObject.grpSignBtn );
+	Elements.isDisplayed(DashboardObject.grpSignBtn);
+	
+	
+	
+	
+}
+}
 

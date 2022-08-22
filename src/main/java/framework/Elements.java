@@ -552,6 +552,56 @@ public class Elements {
 		Thread.sleep(500);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		}
-	
+	public static void secureCodeClear () throws AWTException, InterruptedException {
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_B);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_X);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_E);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_L);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_A);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_SHIFT);
+		robot.keyPress(KeyEvent.VK_G);
+		Thread.sleep(500);
+		robot.keyRelease(KeyEvent.VK_SHIFT);
+		robot.keyPress(KeyEvent.VK_E);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_S);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_T);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyPress(KeyEvent.VK_E);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_X);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_L);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_SHIFT);
+		robot.keyPress(KeyEvent.VK_3);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_G);
+		Thread.sleep(500);
+		robot.keyRelease(KeyEvent.VK_SHIFT);
+		robot.keyPress(KeyEvent.VK_E);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_S);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_T);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_SHIFT);
+		robot.keyPress(KeyEvent.VK_2);
+		Thread.sleep(500);
+		robot.keyRelease(KeyEvent.VK_SHIFT);
+		robot.keyPress(KeyEvent.VK_0);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_1);
+		Thread.sleep(500);
+		robot.keyPress(KeyEvent.VK_ENTER);
 
+}
 }

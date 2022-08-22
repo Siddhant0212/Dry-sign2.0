@@ -19,8 +19,8 @@ public class MyProfile {
 	
 	@Then("user click on upload button")
 	public void user_click_on_upload_button() throws InterruptedException {
-		Thread.sleep(15000);
-		
+		//Thread.sleep(15000);
+		Elements.switchToChild();
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upload_Btn);
 		Elements.jclick(USAMobileNoMandateObject.Upload_Btn);
 	}
@@ -108,5 +108,27 @@ public class MyProfile {
 	
 		
 	}
+
+@Then("cancel option not present for free user as {string}")
+public void cancel_option_not_present_for_free_user_as(String string) {
+	
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Cancel_Subscription);
+	Elements.isEnabled(USAMobileNoMandateObject.Cancel_Subscription);
+	
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Cancel_Subscription_Is_Not_Available);
+	Elements.isDisplayed(USAMobileNoMandateObject.Cancel_Subscription_Is_Not_Available);
+	 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Cancel_Subscription_Is_Not_Available),string);
+	
+}
+@Then("user click on security")
+public void user_click_on_security() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.tabSecurity);
+	Elements.click(USAMobileNoMandateObject.tabSecurity);
+}
+@Then("user click on personal information")
+public void user_click_on_personal_information() {
+	Waits.waitUntilElementToClick(30,USAMobileNoMandateObject.Personal_Information);
+	Elements.click(USAMobileNoMandateObject.Personal_Information);
+}
 }
 

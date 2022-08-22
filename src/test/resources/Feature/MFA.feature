@@ -225,7 +225,20 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     And user click on ok button
     
     
-    
+    @MFA9
+  Scenario: To verify the secure code box should get cleare on backspace and delete button from the keyboard.
+    When enter the user name as "sid102@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on mat icon
+    And user click profile icon
+    When user click on security tab
+    And user select on checkbox for setup secure code
+   # And user enter secure code as "222222"
+    #Then user get displayed confirm secure code text
+    #And user enter confirm secure code as "222222"
+   Then user press delete button as "2"
     
 
   #@MFA12

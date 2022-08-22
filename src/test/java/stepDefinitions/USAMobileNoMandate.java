@@ -43,6 +43,7 @@ public class USAMobileNoMandate {
 		XpathFreeUser ob5 = new XpathFreeUser(Base.driver);
 		XpasswrdProdoc ob6 = new XpasswrdProdoc (Base.driver);
 //		XpathMyProfile ob7 = new XpathMyProfile (Base.driver);
+		DashboardObject ob8 =new DashboardObject (Base.driver);
 		Thread.sleep(2000);
 	}
 	@When("user click on the signUp link")
@@ -370,11 +371,11 @@ public void user_click_on_continue_with_free_version() throws InterruptedExcepti
 
 @When("user click on mat icon")
 public void user_click_on_mat_icon() throws InterruptedException  {
-	
+	 Thread.sleep(10000);
 	Waits.waitUntilElementLocated(50, USAMobileNoMandateObject.icon);
  	//Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.icon);
-    Elements.click(USAMobileNoMandateObject.icon);
-    Thread.sleep(15000);
+    Elements.jclick(USAMobileNoMandateObject.icon);
+   
  	
  	//WebDriverWait wait = new WebDriverWait(driver, 10);
  	//WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@formcontrolname='reportingDealPermission']")));
@@ -387,7 +388,7 @@ public void user_click_on_profile_icon() throws InterruptedException {
 	
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Profile1);
 	//USAMobileNoMandateObject.profile.click();
-	Elements.click(USAMobileNoMandateObject.Profile1);
+	Elements.jclick(USAMobileNoMandateObject.Profile1);
 	Thread.sleep(15000);
 }
 @Then("user click profile icon")

@@ -35,13 +35,24 @@ Feature: To Verify My Files Tabs Functionality
     And user enter add subject as "Sign"
     And user enter Message "grpsign"
     And user click on Send button
-
-  #Then user should get success message as Email successfully sent
+    #Then user should get success message as Email successfully sent
+    Then user Navigate to URL "https://www.mailinator.com/v4/public/inboxes.jsp"
+    And user Enter email as "sid103"
+    Then user click on Go button
+    Then user click on Mail 
+    And user click on sign document
+    And user click on check box
+    And user click on accept button
+    And user clcik on ok button present on pop up
+    Then click on the download link
+    
   #When user check received email on user side whose email id is entered
   #Then document should get received
   #When user Download document
   #And open received document in email
   #Then Received document should have same content as in Completed Documents
+  
+  
   @MyFiles4
   Scenario: To verify functionality of View and Download the completed document of DrySign
     When enter the user name as "sid39@mailinator.com"

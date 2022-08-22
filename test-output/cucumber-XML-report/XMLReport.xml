@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="135.860488">
-<testcase classname="To Verify My Profile Page" name="To verify  if user is able to see and click profile on dashboard top right corner after login." time="135.860488">
-<failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (18ecce0a92d244384eacad08006f5bd7)] -&gt; xpath: //input[@id='input-file']] (tried for 30 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'INMH-PN-DT4253', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SIDDHA~1.IN\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:49377}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49377/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 18ecce0a92d244384eacad08006f5bd7&#13;&#10;&#9;at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)&#13;&#10;&#9;at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)&#13;&#10;&#9;at framework.Waits.waitUntilElementToClick(Waits.java:47)&#13;&#10;&#9;at stepDefinitions.MyProfile.user_click_on_upload_button(MyProfile.java:24)&#13;&#10;&#9;at ✽.user click on upload button(file:src/test/resources/Feature/MyProfile.feature:26)&#13;&#10;"><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/login".............passed
-When enter the user name as "sid76@mailinator.com"..........................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="96.911622">
+<testcase classname="To Check MFA(OTP/Secure Code) functionality" name="To verify the secure code box should get cleare on backspace and delete button from the keyboard." time="96.911622">
+<system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
+When enter the user name as "sid102@mailinator.com".........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the sign in button........................................passed
 And user click on continue with free version................................passed
 And user click on mat icon..................................................passed
-When user click on profile icon.............................................passed
-Then user click on upload button............................................failed
-Then upload profile picture as "img.jpg"....................................skipped
-
-StackTrace:
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (18ecce0a92d244384eacad08006f5bd7)] -> xpath: //input[@id='input-file']] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'INMH-PN-DT4253', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\SIDDHA~1.IN\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:49377}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49377/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 18ecce0a92d244384eacad08006f5bd7
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at framework.Waits.waitUntilElementToClick(Waits.java:47)
-	at stepDefinitions.MyProfile.user_click_on_upload_button(MyProfile.java:24)
-	at ✽.user click on upload button(file:src/test/resources/Feature/MyProfile.feature:26)
-]]></failure>
+And user click profile icon.................................................passed
+When user click on security tab.............................................passed
+And user select on checkbox for setup secure code...........................passed
+Then user press delete button as "2"........................................passed
+]]></system-out>
 </testcase>
 </testsuite>
