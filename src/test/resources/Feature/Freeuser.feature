@@ -216,7 +216,30 @@ Feature: To Verify Free User functions
     And user click on the sign in button
     Then user should get display pop up
     Then under free version "continue with free version" Button present
-  
+    
+    
+      @FreeUser15
+ Scenario: To verify for free user After 5 documents are utilized next document should not be allowed
+  Given navigate to URL "https://drysign-qa.exela.global/#/"
+   When enter the user name as "sid25@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+     And user click on continue with free version
+     Then user click on self sign
+     Then user click on browser
+     Then user get display error message as "You have reached the document upload count, please subscribe to upload more documents."
+    
+         @FreeUser16
+ Scenario: To verify If 1 template is utilized next template should not be allowed
+   Given navigate to URL "https://drysign-qa.exela.global/#/"
+   When enter the user name as "sid25@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+     And user click on continue with free version
+     And user click on Template tab
+     Then click on upload new template
+     Then user click on browser
+      Then user Get display error message as "You have reached the template upload count, please subscribe to upload more templates."
   
   
   

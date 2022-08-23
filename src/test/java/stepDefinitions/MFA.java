@@ -285,11 +285,32 @@ public void user_enter_secure_code_as(String securecode) throws InterruptedExcep
 	Elements.TypeText(USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)),String.valueOf( enterSecureCode[i]));
 	Thread.sleep(1000);
 	
-//	Robot robot = new Robot();
-//	robot.keyPress(KeyEvent.VK_DELETE);
-//	Thread.sleep(500);
-//	
-//	Thread.sleep(1000);
+
+	}
+	
+}
+@Then("enter secure code as {string}")
+public void enter_secure_code_as(String securecode) throws InterruptedException {
+	char[] enterSecureCode =securecode.toCharArray();
+	for(int i=0;i<=enterSecureCode.length-1;i++)
+	{
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Securecode(String.valueOf(i+1)));
+	Elements.TypeText(USAMobileNoMandateObject.Securecode(String.valueOf(i+1)),String.valueOf( enterSecureCode[i]));
+	Thread.sleep(1000);
+	
+
+	}
+ 
+}
+
+@Then("enter confirm secure code as {string}")
+public void enter_confirm_secure_code_as(String confirmsecurecode) throws InterruptedException {
+	char[] confirmSecureCode =confirmsecurecode.toCharArray();
+	for(int i=0;i<=confirmSecureCode.length-1;i++)
+	{
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.confirmSecureCode(String.valueOf(i+1)));
+	Elements.TypeText(USAMobileNoMandateObject.confirmSecureCode(String.valueOf(i+1)),String.valueOf( confirmSecureCode[i]));
+	Thread.sleep(1000);
 	}
 	
 }
@@ -811,4 +832,15 @@ public void user_click_on_send_one_time_password() throws InterruptedException {
 		
 		Thread.sleep(1000);
 		}
+	@Then("user should get display pop up as {string}")
+	public void user_should_get_display_pop_up_as(String string) {
+		Waits.waitUntilElementToClick(30, MFAObject.Successfully_secure_code_updated );
+		Elements.isDisplayed(MFAObject.Successfully_secure_code_updated );
+		
+	}
+	@Then("user click on submit button")
+	public void user_click_on_submit_button() {
+		Waits.waitUntilElementToClick(30, MFAObject.Submit_Btn);
+		Elements.click(MFAObject.Submit_Btn);
+	}
 	}

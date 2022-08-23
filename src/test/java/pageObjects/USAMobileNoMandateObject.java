@@ -667,6 +667,21 @@ public class USAMobileNoMandateObject {
 				
 		return element;
 	}
+	
+	public static WebElement Securecode(String string)
+	{
+		WebElement element = Base.driver.findElement(By.xpath("//mat-label[text()='Secure Code']/following-sibling::ng-otp-input//input[$]".replace("$", string)));
+				
+		return element;
+	}
+	
+	public static WebElement confirmSecureCode(String string)
+	{
+		WebElement element = Base.driver.findElement(By.xpath("//mat-label[text()='Confirm Secure Code']/following-sibling::ng-otp-input//input[$]".replace("$", string)));
+				
+		return element;
+	}
+	
 
 	
 //MYFILES

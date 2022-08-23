@@ -37,4 +37,33 @@ public class XpathMyProfile {
 	
 	@FindBy(xpath="//span[text()='First name is required.']")
     public static WebElement FirstNameisrequired;
+	
+	@FindBy(xpath="//div[text()='Payment Method']")
+    public static WebElement Payment_Method;
+	
+	@FindBy(xpath="//span[text()=' Update payment method ']")
+    public static WebElement Update_Payment_Method;
+	
+
+	@FindBy(xpath="//h2[text()='New Payment details has been updated']")
+    public static WebElement New_Payment_details_has_been_updated;
+	
+	@FindBy(xpath="//a[text()='Go To Dashboard']")
+    public static WebElement GoToDashboard;
+	
+	@FindBy(xpath="//input[@value='Cancel']")
+    public static WebElement CancelBtn;
+	
+	@FindBy(xpath="//h1[text()='PAYMENT FAILED']")
+    public static WebElement PAYMENT_FAILED;
+	
+	@FindBy(xpath="//a[text()='Go To Home']")
+    public static WebElement Go_To_Home;
+	
+	
+	//h1[text()='PAYMENT FAILED']
+	//a[text()='Go To Home']
+	//h2[text()='New Payment details has been updated']
+	//a[text()='Go To Dashboard']
+	//input[@value='Cancel']
 }

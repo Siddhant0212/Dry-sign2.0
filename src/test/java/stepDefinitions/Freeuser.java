@@ -8,6 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
 import pageObjects.USAMobileNoMandateObject;
+import pageObjects.XpathFreeUser;
 
 
 public class Freeuser {
@@ -196,6 +197,39 @@ public class Freeuser {
 		
 		Elements.isDisplayed(USAMobileNoMandateObject.Sign_Type_Draw_upload);
 		Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.Sign_Type_Draw_upload),string);
+	}
+	@Then("user click on browser")
+	public void user_click_on_browser() {
+		Waits.waitUntilElementToClick(30, XpathFreeUser.browser);
+		Elements.jclick(XpathFreeUser.browser);
+	}
+	@Then("user get display error message as {string}")
+	public void user_get_display_error_message_as(String string) {
+		Waits.waitUntilElementLocated(30, XpathFreeUser.You_have_reached_the_document_upload_count);
+		Elements.isDisplayed(XpathFreeUser.You_have_reached_the_document_upload_count);
+		Assert.assertNotSame(Elements.getText(XpathFreeUser.You_have_reached_the_document_upload_count),string);
+	}
+	@When("user click on Template tab")
+	public void user_click_on_Template_tab() {
+		Waits.waitUntilElementToClick(30, XpathFreeUser.Template);
+		Elements.click(XpathFreeUser.Template);
+	 
+	}
+
+	@Then("click on upload new template")
+	public void click_on_upload_new_template() throws InterruptedException {
+		Thread.sleep(1000);
+		Waits.waitUntilElementToClick(30, XpathFreeUser.Upload_New_Template);
+		Elements.jclick(XpathFreeUser.Upload_New_Template);
+	   
+	}
+
+	@Then("user Get display error message as {string}")
+	public void user_Get_display_error_message_as(String string) {
+		Waits.waitUntilElementLocated(30, XpathFreeUser.You_have_reached_the_template_upload_count);
+		Elements.isDisplayed(XpathFreeUser.You_have_reached_the_template_upload_count);
+		Assert.assertNotSame(Elements.getText(XpathFreeUser.You_have_reached_the_template_upload_count),string);
+		
 	}
 	
 }

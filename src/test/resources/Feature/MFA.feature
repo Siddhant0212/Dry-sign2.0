@@ -62,7 +62,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     And user click on ok button
     And user click on mat icon
     And user click on logout
-    Then user should get logout from application and redirect to login page
+    #Then user should get logout from application and redirect to login page
     
     When enter the user name as "sid31@mailinator.com"
     When enter the password as"Malin@555"
@@ -241,15 +241,31 @@ Feature: To Check MFA(OTP/Secure Code) functionality
    Then user press delete button as "2"
     
 
-  #@MFA12
-  #Scenario: To verify functionality of Forgot Secure code on entering correct credientials
-    #When enter the user name as "sid28@mailinator.com"
-    #When enter the password as"Malin@555"
-    #And user click on the sign in button
-    #And user click link on "Forgot Your Secure Code?"
-    #And user received email as "sid28@mailinator.com"
-    #Then enter the user name as "sid28@mailinator.com"
-    #Then enter the password as"Malin@555"
-    #And user enter secure code as "2"
-    #Then user get displayed confirm secure code text
-    #And user enter confirm secure code as "222222"
+  @MFA12
+  Scenario: To verify functionality of Forgot Secure code on entering correct credientials
+    When enter the user name as "sid28@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click link on "Forgot Your Secure Code?"
+    And user received email as "sid28@mailinator.com"
+    Then enter the user name as "sid28@mailinator.com"
+    Then enter the password as"Malin@555"
+    And enter secure code as "222222"
+    And enter confirm secure code as "222222"
+    Then user click on submit button
+    Then user should get display pop up as "Successfully user Sidd secure code updated"
+    
+    @MFA13
+    Scenario: To verify Functionality of forgot Secure code if incorrect credentials are entered
+    
+    When enter the user name as "sid28@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click link on "Forgot Your Secure Code?"
+    And user received email as "sid28@mailinator.com"
+    Then enter the user name as "sid28@mailinator.com"
+    Then enter the password as"Malin@555"
+    And enter secure code as "222222"
+    And enter confirm secure code as "333333"
+    Then user display error message as "Secure Code doest not match"
+    

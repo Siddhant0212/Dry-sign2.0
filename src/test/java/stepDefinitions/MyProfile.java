@@ -130,5 +130,50 @@ public void user_click_on_personal_information() {
 	Waits.waitUntilElementToClick(30,USAMobileNoMandateObject.Personal_Information);
 	Elements.click(USAMobileNoMandateObject.Personal_Information);
 }
+@Then("user click on payment method")
+public void user_click_on_payment_method() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.Payment_Method);
+	Elements.click(XpathMyProfile.Payment_Method);
+	
+}
+@Then("user click on update payment method")
+public void user_click_on_update_payment_method() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.Update_Payment_Method);
+	Elements.click(XpathMyProfile.Update_Payment_Method);
+	
+}
+@Then("user display as {string}")
+public void user_display_as(String string) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.New_Payment_details_has_been_updated);
+	Elements.isDisplayed(XpathMyProfile.New_Payment_details_has_been_updated);
+	 Assert.assertEquals(Elements.getText(XpathMyProfile.New_Payment_details_has_been_updated),string);
+	
+}
+
+@Then("user click on dashboard button")
+public void user_click_on_dashboard_button() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.GoToDashboard);
+	Elements.click(XpathMyProfile.GoToDashboard);
+}
+@Then("click on cancel button")
+public void click_on_cancel_button() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.CancelBtn);
+	Elements.click(XpathMyProfile.CancelBtn);
+	
+}
+@Then("payment get fail as {string}")
+public void payment_get_fail_as(String string) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.PAYMENT_FAILED);
+	Elements.isDisplayed(XpathMyProfile.PAYMENT_FAILED);
+	 Assert.assertEquals(Elements.getText(XpathMyProfile.PAYMENT_FAILED),string);
+ 
+}
+
+@Then("user click on go to home")
+public void user_click_on_go_to_home() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.Go_To_Home);
+	Elements.click(XpathMyProfile.Go_To_Home);
+	
+}
 }
 

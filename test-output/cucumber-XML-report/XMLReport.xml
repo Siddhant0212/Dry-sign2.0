@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="96.911622">
-<testcase classname="To Check MFA(OTP/Secure Code) functionality" name="To verify the secure code box should get cleare on backspace and delete button from the keyboard." time="96.911622">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="60.379227">
+<testcase classname="To Verify Free User functions" name="To verify If 1 template is utilized next template should not be allowed" time="60.379227">
 <system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
-When enter the user name as "sid102@mailinator.com".........................passed
+When enter the user name as "sid25@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the sign in button........................................passed
 And user click on continue with free version................................passed
-And user click on mat icon..................................................passed
-And user click profile icon.................................................passed
-When user click on security tab.............................................passed
-And user select on checkbox for setup secure code...........................passed
-Then user press delete button as "2"........................................passed
+And user click on Template tab..............................................passed
+Then click on upload new template...........................................passed
+Then user click on browser..................................................passed
+Then user Get display error message as "You have reached the template upload count, please subscribe to upload more templates.".passed
 ]]></system-out>
 </testcase>
 </testsuite>

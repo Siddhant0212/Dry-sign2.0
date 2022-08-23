@@ -108,7 +108,14 @@ public class MFAObject {
 				
 		return element;
 	}
+	
+	
 
+	@FindBy(xpath="//p[text()='Successfully user Sidd secure code updated']")     
+	public static  WebElement Successfully_secure_code_updated;
 	
+	@FindBy(xpath="//button[text()='Submit']")     
+	public static  WebElement Submit_Btn;
 	
+	//button[text()='Submit']
 }

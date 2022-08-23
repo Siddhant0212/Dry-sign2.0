@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:test-output/RerunCases/rerun.txt","json:test-output/cucumber-JSON-report/JSONReport.json","junit:test-output/cucumber-XML-report/XMLReport.xml","json:target/cucumber.json"},
 		 monochrome = true,
 		 dryRun = false
-		 ,tags = {"@MFA9"}
+		 ,tags = {"@FreeUser16"}
  )
 
 public class RunnerTest {

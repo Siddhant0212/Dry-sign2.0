@@ -3,18 +3,42 @@
     "line": 2,
     "elements": [
       {
-        "line": 4,
-        "name": "",
+        "start_timestamp": "2022-08-23T13:29:56.478Z",
+        "before": [
+          {
+            "result": {
+              "duration": 8496825500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Base.BrowsersetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 233,
+        "name": "To verify If 1 template is utilized next template should not be allowed",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
+        "id": "to-verify-free-user-functions;to-verify-if-1-template-is-utilized-next-template-should-not-be-allowed",
+        "after": [
+          {
+            "result": {
+              "duration": 1370442100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Base.closeBrowser(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 9561046000,
+              "duration": 7545105700,
               "status": "passed"
             },
-            "line": 5,
+            "line": 234,
             "name": "navigate to URL \"https://drysign-qa.exela.global/#/\"",
             "match": {
               "arguments": [
@@ -28,7 +52,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 67017200,
+                  "duration": 25657400,
                   "status": "passed"
                 },
                 "match": {
@@ -37,51 +61,18 @@
               }
             ],
             "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-08-22T14:23:14.283Z",
-        "before": [
+          },
           {
             "result": {
-              "duration": 10623162400,
+              "duration": 5395307900,
               "status": "passed"
             },
-            "match": {
-              "location": "Base.BrowsersetUp(Scenario)"
-            }
-          }
-        ],
-        "line": 229,
-        "name": "To verify the secure code box should get cleare on backspace and delete button from the keyboard.",
-        "description": "",
-        "id": "to-check-mfa(otp/secure-code)-functionality;to-verify-the-secure-code-box-should-get-cleare-on-backspace-and-delete-button-from-the-keyboard.",
-        "after": [
-          {
-            "result": {
-              "duration": 1609792700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Base.closeBrowser(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5566611400,
-              "status": "passed"
-            },
-            "line": 230,
-            "name": "enter the user name as \"sid102@mailinator.com\"",
+            "line": 235,
+            "name": "enter the user name as \"sid25@mailinator.com\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"sid102@mailinator.com\"",
+                  "val": "\"sid25@mailinator.com\"",
                   "offset": 23
                 }
               ],
@@ -90,7 +81,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 13457000,
+                  "duration": 12420500,
                   "status": "passed"
                 },
                 "match": {
@@ -102,10 +93,10 @@
           },
           {
             "result": {
-              "duration": 263968800,
+              "duration": 136387200,
               "status": "passed"
             },
-            "line": 231,
+            "line": 236,
             "name": "enter the password as\"Malin@555\"",
             "match": {
               "arguments": [
@@ -119,7 +110,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 4717000,
+                  "duration": 6061100,
                   "status": "passed"
                 },
                 "match": {
@@ -131,10 +122,10 @@
           },
           {
             "result": {
-              "duration": 2155061700,
+              "duration": 2182100000,
               "status": "passed"
             },
-            "line": 232,
+            "line": 237,
             "name": "user click on the sign in button",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_the_sign_in_button()"
@@ -142,7 +133,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 25554600,
+                  "duration": 7719800,
                   "status": "passed"
                 },
                 "match": {
@@ -154,10 +145,10 @@
           },
           {
             "result": {
-              "duration": 35679471400,
+              "duration": 33081190000,
               "status": "passed"
             },
-            "line": 233,
+            "line": 238,
             "name": "user click on continue with free version",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_continue_with_free_version()"
@@ -165,7 +156,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 9914800,
+                  "duration": 4624800,
                   "status": "passed"
                 },
                 "match": {
@@ -177,18 +168,18 @@
           },
           {
             "result": {
-              "duration": 10174478000,
+              "duration": 315677600,
               "status": "passed"
             },
-            "line": 234,
-            "name": "user click on mat icon",
+            "line": 239,
+            "name": "user click on Template tab",
             "match": {
-              "location": "USAMobileNoMandate.user_click_on_mat_icon()"
+              "location": "Freeuser.user_click_on_Template_tab()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 5646400,
+                  "duration": 5596200,
                   "status": "passed"
                 },
                 "match": {
@@ -200,18 +191,18 @@
           },
           {
             "result": {
-              "duration": 10145394100,
+              "duration": 1080319300,
               "status": "passed"
             },
-            "line": 235,
-            "name": "user click profile icon",
+            "line": 240,
+            "name": "click on upload new template",
             "match": {
-              "location": "USAMobileNoMandate.user_click_profile_icon()"
+              "location": "Freeuser.click_on_upload_new_template()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 269855200,
+                  "duration": 3930100,
                   "status": "passed"
                 },
                 "match": {
@@ -219,74 +210,51 @@
                 }
               }
             ],
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5969601300,
-              "status": "passed"
-            },
-            "line": 236,
-            "name": "user click on security tab",
-            "match": {
-              "location": "MFA.user_click_on_security_tab()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 10040200,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 189524300,
-              "status": "passed"
-            },
-            "line": 237,
-            "name": "user select on checkbox for setup secure code",
-            "match": {
-              "location": "MFA.user_select_on_checkbox_for_setup_secure_code()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 7637600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 4455945300,
+              "duration": 590691700,
               "status": "passed"
             },
             "line": 241,
-            "name": "user press delete button as \"2\"",
+            "name": "user click on browser",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"2\"",
-                  "offset": 28
-                }
-              ],
-              "location": "MFA.user_press_delete_button_as(String)"
+              "location": "Freeuser.user_click_on_browser()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 6755600,
+                  "duration": 3565700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 59135100,
+              "status": "passed"
+            },
+            "line": 242,
+            "name": "user Get display error message as \"You have reached the template upload count, please subscribe to upload more templates.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"You have reached the template upload count, please subscribe to upload more templates.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "Freeuser.user_Get_display_error_message_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4563300,
                   "status": "passed"
                 },
                 "match": {
@@ -299,22 +267,22 @@
         ],
         "tags": [
           {
-            "name": "@MFA"
+            "name": "@FreeUser"
           },
           {
-            "name": "@MFA9"
+            "name": "@FreeUser16"
           }
         ]
       }
     ],
-    "name": "To Check MFA(OTP/Secure Code) functionality",
+    "name": "To Verify Free User functions",
     "description": "",
-    "id": "to-check-mfa(otp/secure-code)-functionality",
+    "id": "to-verify-free-user-functions",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/MFA.feature",
+    "uri": "file:src/test/resources/Feature/Freeuser.feature",
     "tags": [
       {
-        "name": "@MFA",
+        "name": "@FreeUser",
         "type": "Tag",
         "location": {
           "line": 1,

@@ -49,7 +49,22 @@ public static WebElement deleteAccount;
 @FindBy(xpath="//p[@class='text strong ng-star-inserted']")
 public static WebElement popContWithFreeVersion;
 
-//p[@class='text strong ng-star-inserted']
+@FindBy(xpath="//div[text()=' You have reached the document upload count, please subscribe to upload more documents. ']")
+public static WebElement You_have_reached_the_document_upload_count;
+
+@FindBy(xpath="//a[text()='Browse']")
+public static WebElement browser;
+
+@FindBy(xpath="//span[text()='Template']")
+public static WebElement Template;
+
+@FindBy(xpath="//span[text()=' Upload New Template ']")
+public static WebElement Upload_New_Template;
+
+@FindBy(xpath="//div[text()=' You have reached the template upload count, please subscribe to upload more templates. ']")
+public static WebElement You_have_reached_the_template_upload_count;
+
+
 }
 
 

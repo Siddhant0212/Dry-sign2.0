@@ -101,3 +101,40 @@ Feature: To Verify My Profile Page
     Then user enter zip code as "444"
     Then user click on save button
     Then error message should displayed as "ZiP code should be minimum of 4 digit."
+    
+         @MyProfile10
+  Scenario: To verify update payment method functionality for paid user  
+    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    When enter the user name as "sid102@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    #And user click on continue with free version
+    And user click on mat icon
+    When user click on profile icon
+    Then user click on payment method 
+    Then user click on update payment method
+    And user enter name of the card as "Test"
+    And enter card number as "4242424242424242"
+    And enter expire month as "07"
+    And enter expire year as "27"
+    And enter cvv nunber as "789"
+    Then user click on pay button
+    Then user display as "New Payment details has been updated"
+    And user click on dashboard button
+    
+         @MyProfile11
+  Scenario: To verify update payment method functionality for paid user 
+   Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    When enter the user name as "sid102@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on mat icon
+    When user click on profile icon
+    Then user click on payment method 
+    Then user click on update payment method
+    And click on cancel button
+    Then payment get fail as "PAYMENT FAILED"
+    Then user click on go to home 
+    
+    
+    
