@@ -1,10 +1,14 @@
 package stepDefinitions;
 
+import java.util.Map;
+
 import framework.Elements;
 import framework.Waits;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
+import pageObjects.FeedbackRatingObject;
+import pageObjects.MyFilesObject;
 import pageObjects.USAMobileNoMandateObject;
 
 public class MyFiles {
@@ -273,4 +277,268 @@ public void click_on_the_download_link() throws InterruptedException {
 	Elements.jclick(USAMobileNoMandateObject.btnSend);
 	
 }
+@Then("user is able to click on pending tab")
+public void user_is_able_to_click_on_pending_tab() {
+	Waits.waitUntilElementToClick(30, MyFilesObject.Pending);
+	Elements.jclick(MyFilesObject.Pending);
+  
 }
+
+@Then("user is able to click on Signed tab")
+public void user_is_able_to_click_on_Signed_tab() {
+	Waits.waitUntilElementToClick(30, MyFilesObject.Signed);
+	Elements.jclick(MyFilesObject.Signed);
+	
+}
+@Then("user get display pending tab")
+public void user_get_display_pending_tab() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Pending);
+	Elements.isDisplayed(MyFilesObject.Pending);
+    
+}
+
+@Then("user display subject")
+public void user_display_subject() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Subject);
+	Elements.isDisplayed(MyFilesObject.Subject);
+    
+}
+
+@Then("user display document name")
+public void user_display_document_name() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Document_Name);
+	Elements.isDisplayed(MyFilesObject.Document_Name);
+    
+}
+
+@Then("user display assigned date")
+public void user_display_assigned_date() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Assigned_Date);
+	Elements.isDisplayed(MyFilesObject.Assigned_Date);
+    
+	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign);
+	Elements.isDisplayed(MyFilesObject.TimingSign);
+}
+
+@Then("user display requested by")
+public void user_display_requested_by() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Requested_By);
+	Elements.isDisplayed(MyFilesObject.Requested_By);
+    
+}
+
+@Then("user display action")
+public void user_display_action() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Action);
+	Elements.isDisplayed(MyFilesObject.Action);
+	
+}
+@Then("user click on action link")
+public void user_click_on_action_link() throws InterruptedException {
+	Thread.sleep(1000);
+	Waits.waitUntilElementToClick(30, MyFilesObject.sign);
+	Elements.click(MyFilesObject.sign);    
+}
+
+@Then("document should get display")
+public void document_should_get_display() throws InterruptedException {
+	Thread.sleep(2000);
+	Elements.switchToFrame(MyFilesObject.iframe);
+	Waits.waitUntilElementLocated(30, MyFilesObject.Doc_Display);
+	Elements.isDisplayed(MyFilesObject.Doc_Display);
+	
+}
+@Then("document should present in pending tab")
+public void document_should_present_in_pending_tab() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Doc_Present);
+	Elements.isDisplayed(MyFilesObject.Doc_Present);
+	
+}
+@Then("user display Assigned Date")
+public void user_display_Assigned_Date() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Assigned_Date);
+	Elements.isDisplayed(MyFilesObject.Assigned_Date);
+//	Elements.VerifyTextEquals(MyFilesObject.TimingSign," 08/17/2022 1:07:58 AM ");
+//	Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign)," 08/17/2022 1:07:58 AM"); 
+}
+@Then("date display in format as {string}")
+public void date_display_in_format_as(String string) {
+	
+	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign);
+	Elements.isDisplayed(MyFilesObject.TimingSign);
+	Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign),"08/17/2022 1:07:58 AM");
+}
+@Then("date Display in format as {string}")
+public void date_Display_in_format_as(String string) {
+	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign1);
+	Elements.isDisplayed(MyFilesObject.TimingSign1);
+	Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign1),"08/17/2022 12:01:58 AM");
+	
+}
+
+@Then("user display Completed Date")
+public void user_display_Completed_Date() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Completed_Date);
+	Elements.isDisplayed(MyFilesObject.Completed_Date);
+   
+}
+
+@Then("user display date in format as {string}")
+public void user_display_date_in_format_as(String string) {
+	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign3);
+	Elements.isDisplayed(MyFilesObject.TimingSign3);
+	Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign3),"08/09/2022 2:59:02 AM");
+	
+}
+@Then("user click on out for signature tab")
+public void user_click_on_out_for_signature_tab() {
+	Waits.waitUntilElementToClick(30, MyFilesObject.OutforSignature);
+	Elements.jclick(MyFilesObject.OutforSignature);
+   
+}
+
+@Then("user Display date in format as {string}")
+public void user_Display_date_in_format_as(String string) {
+	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign4);
+	Elements.isDisplayed(MyFilesObject.TimingSign4);
+	Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign4),"08/24/2022 2:55:23 AM");
+	
+}
+@Then("user display Date&Time")
+public void user_display_Date_Time() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Date_Time);
+	Elements.isDisplayed(MyFilesObject.Date_Time);
+    
+}
+
+@Then("user Display Date in format as {string}")
+public void user_Display_Date_in_format_as(String string) {
+	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign5);
+	Elements.isDisplayed(MyFilesObject.TimingSign5);
+	Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign5),"08/16/2022, 11:24:02 AM");
+}
+@Then("user Display Date in Format as {string}")
+public void user_Display_Date_in_Format_as(String string) {
+	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign6);
+	Elements.isDisplayed(MyFilesObject.TimingSign6);
+	Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign6),"08/16/2022 11:06:55 AM");
+}
+@Then("details get display")
+public void details_get_display(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+	for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+		Thread.sleep(5000);
+		
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField("Envelope Id:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField("Envelope Id:"));
+
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField("Document Name:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField("Below Average"));
+
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField("Requested By:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField("Requested By:"));
+
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField("Signatories:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField("Signatories:"));
+		
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField("Subject:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField("Subject:"));
+		
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField("Message:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField("Message:"));
+	}
+	
+}
+@Then("user clicking on minus icon recorded details should get closed")
+public void user_clicking_on_minus_icon_recorded_details_should_get_closed() throws InterruptedException {
+	Waits.waitUntilElementToClick(30, MyFilesObject.minusicon);
+	Elements.click(MyFilesObject.minusicon);
+	Thread.sleep(2000);
+}
+@When("user click on another details plus icon")
+public void user_click_on_another_details_plus_icon() {
+	Waits.waitUntilElementToClick(30, MyFilesObject.plusIcon1);
+	Elements.click(MyFilesObject.plusIcon1);
+	
+   
+}
+
+@Then("new details get display")
+public void new_details_get_display(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+	for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+		Thread.sleep(5000);
+		
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField1("Envelope Id:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField1("Envelope Id:"));
+
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField1("Document Name:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField1("Below Average"));
+
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField1("Requested By:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField1("Requested By:"));
+
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField1("Signatories:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField1("Signatories:"));
+		
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField1("Subject:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField1("Subject:"));
+		
+		Waits.waitUntilElementLocated(30, MyFilesObject.DetailsField1("Message:"));
+		Elements.isDisplayed(MyFilesObject.DetailsField1("Message:"));
+	
+	
+}
+}
+	@Then("click in reassign")
+	public void click_in_reassign() {
+		Waits.waitUntilElementToClick(30, MyFilesObject.Reassign);
+		Elements.click(MyFilesObject.Reassign);
+	}
+
+	@Then("pop up get Display as {string}")
+	public void pop_up_get_Display_as(String string) {
+		Waits.waitUntilElementLocated(30, MyFilesObject.Are_you_sure_you_want);
+		Elements.isDisplayed(MyFilesObject.Are_you_sure_you_want);
+		Assert.assertEquals(Elements.getText(MyFilesObject.Are_you_sure_you_want),string);
+	
+	}
+
+	@Then("user click on {string} button")
+	public void user_click_on_button(String string) {
+		Waits.waitUntilElementToClick(30, MyFilesObject.Yes);
+		Elements.click(MyFilesObject.Yes);
+	}
+
+	@Then("another pop get display as {string}")
+	public void another_pop_get_display_as(String string) {
+		Waits.waitUntilElementLocated(30, MyFilesObject.Reassign1);
+		Elements.isDisplayed(MyFilesObject.Reassign1);
+		//Assert.assertEquals(Elements.getText(MyFilesObject.Reassign1),string);
+		
+	}
+	@Then("enter name as {string}")
+	public void enter_name_as(String name) {
+		Waits.waitUntilElementLocated(30, MyFilesObject.Enter_Name);
+		Elements.TypeText(MyFilesObject.Enter_Name, name);
+	}
+
+	@Then("enter email Address as {string}")
+	public void enter_email_Address_as(String emailaddress) {
+		Waits.waitUntilElementLocated(30, MyFilesObject.Email_Address);
+		Elements.TypeText(MyFilesObject.Email_Address, emailaddress);
+		
+	}
+	@Then("user click on {string}Button")
+	public void user_click_on_Button(String string) {
+		Waits.waitUntilElementToClick(30, MyFilesObject.Confirm);
+		Elements.click(MyFilesObject.Confirm);
+	}
+
+	@Then("validation message get display as {string}")
+	public void validation_message_get_display_as(String string) {
+		Waits.waitUntilElementLocated(30, MyFilesObject.This_email_addressal_ready_exists);
+		Elements.isDisplayed(MyFilesObject.This_email_addressal_ready_exists);
+		Assert.assertEquals(Elements.getText(MyFilesObject.This_email_addressal_ready_exists),string);
+}
+
+}
+

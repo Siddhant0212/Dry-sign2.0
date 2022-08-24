@@ -1,44 +1,20 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-08-23T13:29:56.478Z",
-        "before": [
-          {
-            "result": {
-              "duration": 8496825500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Base.BrowsersetUp(Scenario)"
-            }
-          }
-        ],
-        "line": 233,
-        "name": "To verify If 1 template is utilized next template should not be allowed",
+        "line": 3,
+        "name": "",
         "description": "",
-        "id": "to-verify-free-user-functions;to-verify-if-1-template-is-utilized-next-template-should-not-be-allowed",
-        "after": [
-          {
-            "result": {
-              "duration": 1370442100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Base.closeBrowser(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 7545105700,
+              "duration": 7652937801,
               "status": "passed"
             },
-            "line": 234,
+            "line": 4,
             "name": "navigate to URL \"https://drysign-qa.exela.global/#/\"",
             "match": {
               "arguments": [
@@ -52,7 +28,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 25657400,
+                  "duration": 13285000,
                   "status": "passed"
                 },
                 "match": {
@@ -61,18 +37,51 @@
               }
             ],
             "keyword": "Given "
-          },
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-08-24T14:17:21.675Z",
+        "before": [
           {
             "result": {
-              "duration": 5395307900,
+              "duration": 8490199000,
               "status": "passed"
             },
-            "line": 235,
-            "name": "enter the user name as \"sid25@mailinator.com\"",
+            "match": {
+              "location": "Base.BrowsersetUp(Scenario)"
+            }
+          }
+        ],
+        "line": 280,
+        "name": "To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List.",
+        "description": "",
+        "id": "to-verify-my-files-tabs-functionality;to-verify-on-re-assign-in-out-for-signature-tab--the-record-cannot-be-re-assigned-to-the-same-signatory-who-is-already-in-the-list.",
+        "after": [
+          {
+            "result": {
+              "duration": 1554072700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Base.closeBrowser(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5409286099,
+              "status": "passed"
+            },
+            "line": 281,
+            "name": "enter the user name as \"sid39@mailinator.com\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"sid25@mailinator.com\"",
+                  "val": "\"sid39@mailinator.com\"",
                   "offset": 23
                 }
               ],
@@ -81,7 +90,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 12420500,
+                  "duration": 6085199,
                   "status": "passed"
                 },
                 "match": {
@@ -93,10 +102,10 @@
           },
           {
             "result": {
-              "duration": 136387200,
+              "duration": 128403600,
               "status": "passed"
             },
-            "line": 236,
+            "line": 282,
             "name": "enter the password as\"Malin@555\"",
             "match": {
               "arguments": [
@@ -110,7 +119,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 6061100,
+                  "duration": 5523099,
                   "status": "passed"
                 },
                 "match": {
@@ -122,10 +131,10 @@
           },
           {
             "result": {
-              "duration": 2182100000,
+              "duration": 2137965499,
               "status": "passed"
             },
-            "line": 237,
+            "line": 283,
             "name": "user click on the sign in button",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_the_sign_in_button()"
@@ -133,7 +142,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 7719800,
+                  "duration": 5942799,
                   "status": "passed"
                 },
                 "match": {
@@ -145,10 +154,10 @@
           },
           {
             "result": {
-              "duration": 33081190000,
+              "duration": 33578075300,
               "status": "passed"
             },
-            "line": 238,
+            "line": 284,
             "name": "user click on continue with free version",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_continue_with_free_version()"
@@ -156,7 +165,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 4624800,
+                  "duration": 4989599,
                   "status": "passed"
                 },
                 "match": {
@@ -168,18 +177,18 @@
           },
           {
             "result": {
-              "duration": 315677600,
+              "duration": 10115660701,
               "status": "passed"
             },
-            "line": 239,
-            "name": "user click on Template tab",
+            "line": 285,
+            "name": "user click on My Files",
             "match": {
-              "location": "Freeuser.user_click_on_Template_tab()"
+              "location": "MyFiles.user_click_on_My_Files()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 5596200,
+                  "duration": 4204199,
                   "status": "passed"
                 },
                 "match": {
@@ -191,18 +200,41 @@
           },
           {
             "result": {
-              "duration": 1080319300,
+              "duration": 626932299,
               "status": "passed"
             },
-            "line": 240,
-            "name": "click on upload new template",
+            "line": 286,
+            "name": "user click on out for signature tab",
             "match": {
-              "location": "Freeuser.click_on_upload_new_template()"
+              "location": "MyFiles.user_click_on_out_for_signature_tab()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 3930100,
+                  "duration": 3633200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2098143400,
+              "status": "passed"
+            },
+            "line": 287,
+            "name": "user click on plus icon",
+            "match": {
+              "location": "MyFiles.user_click_on_plus_icon()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 6787200,
                   "status": "passed"
                 },
                 "match": {
@@ -214,18 +246,18 @@
           },
           {
             "result": {
-              "duration": 590691700,
+              "duration": 711269300,
               "status": "passed"
             },
-            "line": 241,
-            "name": "user click on browser",
+            "line": 288,
+            "name": "click in reassign",
             "match": {
-              "location": "Freeuser.user_click_on_browser()"
+              "location": "MyFiles.click_in_reassign()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 3565700,
+                  "duration": 7019800,
                   "status": "passed"
                 },
                 "match": {
@@ -237,24 +269,198 @@
           },
           {
             "result": {
-              "duration": 59135100,
+              "duration": 65827300,
               "status": "passed"
             },
-            "line": 242,
-            "name": "user Get display error message as \"You have reached the template upload count, please subscribe to upload more templates.\"",
+            "line": 289,
+            "name": "pop up get Display as \"Are you sure you want to reassign eSign authority to another signatory?\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"You have reached the template upload count, please subscribe to upload more templates.\"",
-                  "offset": 34
+                  "val": "\"Are you sure you want to reassign eSign authority to another signatory?\"",
+                  "offset": 22
                 }
               ],
-              "location": "Freeuser.user_Get_display_error_message_as(String)"
+              "location": "MyFiles.pop_up_get_Display_as(String)"
             },
             "after": [
               {
                 "result": {
-                  "duration": 4563300,
+                  "duration": 7055600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 158998200,
+              "status": "passed"
+            },
+            "line": 290,
+            "name": "user click on \"YES\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"YES\"",
+                  "offset": 14
+                }
+              ],
+              "location": "MyFiles.user_click_on_button(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4843900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 548643100,
+              "status": "passed"
+            },
+            "line": 291,
+            "name": "another pop get display as \"Reassign\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Reassign\"",
+                  "offset": 27
+                }
+              ],
+              "location": "MyFiles.another_pop_get_display_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3978499,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 122154699,
+              "status": "passed"
+            },
+            "line": 292,
+            "name": "enter name as \"Sid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sid\"",
+                  "offset": 14
+                }
+              ],
+              "location": "MyFiles.enter_name_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3752000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 179821600,
+              "status": "passed"
+            },
+            "line": 293,
+            "name": "enter email Address as \"sid103@mailinator.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sid103@mailinator.com\"",
+                  "offset": 23
+                }
+              ],
+              "location": "MyFiles.enter_email_Address_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 26129100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 116481700,
+              "status": "passed"
+            },
+            "line": 294,
+            "name": "user click on \"CONFIRM\"Button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CONFIRM\"",
+                  "offset": 14
+                }
+              ],
+              "location": "MyFiles.user_click_on_Button(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4100600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 54447600,
+              "status": "passed"
+            },
+            "line": 295,
+            "name": "validation message get display as \"This email address already exists in your previously assigned list.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"This email address already exists in your previously assigned list.\"",
+                  "offset": 34
+                }
+              ],
+              "location": "MyFiles.validation_message_get_display_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4046299,
                   "status": "passed"
                 },
                 "match": {
@@ -267,28 +473,16 @@
         ],
         "tags": [
           {
-            "name": "@FreeUser"
-          },
-          {
-            "name": "@FreeUser16"
+            "name": "@MyFiles18"
           }
         ]
       }
     ],
-    "name": "To Verify Free User functions",
+    "name": "To Verify My Files Tabs Functionality",
     "description": "",
-    "id": "to-verify-free-user-functions",
+    "id": "to-verify-my-files-tabs-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/Freeuser.feature",
-    "tags": [
-      {
-        "name": "@FreeUser",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/Feature/MyFiles.feature",
+    "tags": []
   }
 ]

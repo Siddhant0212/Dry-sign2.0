@@ -22,6 +22,7 @@ import pageObjects.DashboardObject;
 import pageObjects.DeleteObject;
 import pageObjects.FeedbackRatingObject;
 import pageObjects.MFAObject;
+import pageObjects.MyFilesObject;
 import pageObjects.XpasswrdProdoc;
 import pageObjects.USAMobileNoMandateObject;
 
@@ -42,9 +43,10 @@ public class USAMobileNoMandate {
 		DeleteObject ob4 = new DeleteObject(Base.driver);
 		XpathFreeUser ob5 = new XpathFreeUser(Base.driver);
 		XpasswrdProdoc ob6 = new XpasswrdProdoc (Base.driver);
-//		XpathMyProfile ob7 = new XpathMyProfile (Base.driver);
+		XpathMyProfile ob7 = new XpathMyProfile (Base.driver);
 		DashboardObject ob8 =new DashboardObject (Base.driver);
 		XpathMyProfile ob9 = new XpathMyProfile (Base.driver);
+		MyFilesObject ob10 = new MyFilesObject (Base.driver);
 		Thread.sleep(2000);
 	}
 	@When("user click on the signUp link")

@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="60.379227">
-<testcase classname="To Verify Free User functions" name="To verify If 1 template is utilized next template should not be allowed" time="60.379227">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="73.905523">
+<testcase classname="To Verify My Files Tabs Functionality" name="To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List." time="73.905523">
 <system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
-When enter the user name as "sid25@mailinator.com"..........................passed
+When enter the user name as "sid39@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the sign in button........................................passed
 And user click on continue with free version................................passed
-And user click on Template tab..............................................passed
-Then click on upload new template...........................................passed
-Then user click on browser..................................................passed
-Then user Get display error message as "You have reached the template upload count, please subscribe to upload more templates.".passed
+And user click on My Files..................................................passed
+And user click on out for signature tab.....................................passed
+Then user click on plus icon................................................passed
+Then click in reassign......................................................passed
+Then pop up get Display as "Are you sure you want to reassign eSign authority to another signatory?".passed
+Then user click on "YES" button.............................................passed
+Then another pop get display as "Reassign"..................................passed
+Then enter name as "Sid"....................................................passed
+Then enter email Address as "sid103@mailinator.com".........................passed
+Then user click on "CONFIRM"Button..........................................passed
+Then validation message get display as "This email address already exists in your previously assigned list.".passed
 ]]></system-out>
 </testcase>
 </testsuite>

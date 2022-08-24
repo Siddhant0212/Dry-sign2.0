@@ -167,3 +167,129 @@ Feature: To Verify My Files Tabs Functionality
     And user enter sign type as "Group"
     And user enter completed date as "08/09/2022"
     And user should get display the correct searched data for every column
+    
+    
+          @MyFiles11
+  Scenario: To verify When we send document to same User which is logged in 
+    When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    Then document should present in pending tab
+    
+    
+    
+    
+      @MyFiles12
+  Scenario: To Verify the generic Data should load immediatly in all tabs
+    When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    Then user is able to click on pending tab 
+    Then user is able to click on Signed tab 
+    
+       @MyFiles13
+  Scenario: To verify that all field are displaying proper or not.
+   When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    Then user get display pending tab
+    Then user display subject
+    Then user display document name
+    Then user display assigned date
+    Then user display requested by
+    Then user display action
+    Then user click on action link 
+    And user click on check box
+    And user click on accept button
+    And user clcik on ok button present on pop up
+    Then document should get display
+    
+       @MyFiles14
+  Scenario: To verify generic Date display proper or not
+     When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    Then user get display pending tab
+    Then user display Assigned Date
+    Then date display in format as "08/17/2022 1:07:58 AM"
+    
+    And user click on signed tab
+    Then user display Assigned Date
+    Then date Display in format as "08/17/2022 12:01:58 AM"
+    
+    And user click on completed documents tab
+    Then user display Completed Date
+    Then user display date in format as "08/09/2022 2:59:02 AM"
+    
+    And user click on out for signature tab
+    Then user display Assigned Date
+    Then user Display date in format as "08/24/2022 2:55:23 AM"
+    
+    And user click on drafts tab
+    Then user display Date&Time
+    Then user Display Date in format as "08/16/2022, 11:24:02 AM"
+    
+    And user click on rejected tab
+    Then user display Assigned Date
+    Then user Display Date in Format as "08/16/2022 11:06:55 AM"
+    
+         @MyFiles15
+  Scenario: To Verify the Expand and Collapse (+/-) document record functioanlity in Signed , Completed Documents, Out for Signature and Rejected Tab
+      When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    And user click on completed documents tab
+    Then user click on plus icon
+    Then details get display 
+    |Envelope Id:|        
+      |Document Name:|
+      |Requested By:|
+      |Signatories:|
+      |Subject:|
+      |Message:|
+      
+    And user clicking on minus icon recorded details should get closed
+    Then user click on plus icon
+    Then details get display 
+       |Envelope Id:|        
+      |Document Name:|
+      |Requested By:|
+      |Signatories:|
+      |Subject:|
+      |Message:|
+      When user click on another details plus icon
+      Then new details get display
+      |Envelope Id:|        
+      |Document Name:|
+      |Requested By:|
+      |Signatories:|
+      |Subject:|
+      |Message:|
+     
+       @MyFiles18
+  Scenario: To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List.
+    When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    And user click on out for signature tab
+    Then user click on plus icon
+    Then click in reassign 
+    Then pop up get Display as "Are you sure you want to reassign eSign authority to another signatory?"
+    Then user click on "YES" button
+    Then another pop get display as "Reassign"
+    Then enter name as "Sid"
+    Then enter email Address as "sid103@mailinator.com"
+    Then user click on "CONFIRM"Button
+    Then validation message get display as "This email address already exists in your previously assigned list."
