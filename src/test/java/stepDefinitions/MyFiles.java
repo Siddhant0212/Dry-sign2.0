@@ -539,6 +539,101 @@ public void new_details_get_display(io.cucumber.datatable.DataTable dataTable) t
 		Elements.isDisplayed(MyFilesObject.This_email_addressal_ready_exists);
 		Assert.assertEquals(Elements.getText(MyFilesObject.This_email_addressal_ready_exists),string);
 }
+	@Then("user click on View icon")
+	public void user_click_on_View_icon() {
+		Waits.waitUntilElementToClick(30, MyFilesObject.iconView);
+		Elements.click(MyFilesObject.iconView);
+		
+	}
+	
+	@Then("Document should get display")
+	public void Document_should_get_display() {
+		Waits.waitUntilElementLocated(30, MyFilesObject.Doc_Display1);
+		Elements.isDisplayed(MyFilesObject.Doc_Display1);
+		
 
+}
+	@Then("user click on close icon")
+	public void user_click_on_close_icon() {
+		Waits.waitUntilElementToClick(30, MyFilesObject.closeIcon);
+		Elements.click(MyFilesObject.closeIcon);
+		
+		
+	}
+
+@Then("user display Sign Type")
+public void user_display_Sign_Type() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Sign_Type);
+	Elements.isDisplayed(MyFilesObject.Sign_Type);
+}
+@Then("user click on mail icon")
+public void user_click_on_mail_icon() {
+	Waits.waitUntilElementToClick(30, MyFilesObject.mail_outline);
+	Elements.isDisplayed(MyFilesObject.mail_outline);
+	
+}
+@Then("user display Document Name")
+public void user_display_Document_Name() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Document_Name);
+	Elements.isDisplayed(MyFilesObject.Document_Name);
+	
+}
+@Then("user display title")
+public void user_display_title() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Title);
+	Elements.isDisplayed(MyFilesObject.Title);
+	
+}
+@Then("user display Rejected Date")
+public void user_display_Rejected_Date() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Rejected_Date);
+	Elements.isDisplayed(MyFilesObject.Rejected_Date);
+}
+
+@Then("user display Rejected By")
+public void user_display_Rejected_By() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Rejected_By);
+	Elements.isDisplayed(MyFilesObject.Rejected_By);
+	
+}
+@Then("Previous and next icon should get display")
+public void previous_and_next_icon_should_get_display() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Previous);
+	Elements.isDisplayed(MyFilesObject.Previous);
+}
+
+@Then("page numeric value display next to the previous icon")
+public void page_numeric_value_display_next_to_the_previous_icon() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Next);
+	Elements.isDisplayed(MyFilesObject.Next);
+}
+
+@Then("page default value is one")
+public void page_default_value_is_one() {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Default_one);
+	Elements.isDisplayed(MyFilesObject.Default_one);
+	Assert.assertEquals(Elements.getText(MyFilesObject.Default_one),"1");
+}
+@Then("default page should be first as {string}")
+public void default_page_should_be_first_as(String string) {
+	Waits.waitUntilElementLocated(30, MyFilesObject.Displaying_item);
+	Elements.isDisplayed(MyFilesObject.Displaying_item);
+	Assert.assertEquals(Elements.getText(MyFilesObject.Displaying_item),string);
+    
+}
+
+@Then("on first page previous arrow icon should be disabled")
+public void on_first_page_previous_arrow_icon_should_be_disabled() {
+	Waits.waitUntilElementToClick(30, MyFilesObject.Previous);
+	Elements.isEnabled(MyFilesObject.Previous);
+  
+}
+
+@Then("on last page next arror icon should be disabled")
+public void on_last_page_next_arror_icon_should_be_disabled() {
+	Waits.waitUntilElementToClick(30, MyFilesObject.Next);
+	Elements.isEnabled(MyFilesObject.Next);
+	
+}
 }
 

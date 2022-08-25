@@ -1,9 +1,12 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import baseinit.Base;
 
 public class XpathMyProfile {
 	public XpathMyProfile(WebDriver driver)
@@ -60,7 +63,28 @@ public class XpathMyProfile {
 	@FindBy(xpath="//a[text()='Go To Home']")
     public static WebElement Go_To_Home;
 	
+	@FindBy(xpath="//span[text()=' account_circle']")
+	public static WebElement Profile1;
 	
+	@FindBy(xpath="//div[text()='Personal Information']")
+	public static WebElement Personal_Information;
+	
+	public static WebElement basicInformation(String data)
+	{
+	String Xpath = "//mat-form-field[@appearance='outline']";
+	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+	return element;
+	}
+	
+	
+	@FindBy(xpath="//input[@placeholder='ZIP Code']")
+	public static WebElement Zip_code;
+	
+	@FindBy(xpath="//span[text()='Email OTP ']")
+	public static  WebElement emailOtp;
+	
+	@FindBy(xpath="//span[text()='Setup Secure Code ']")
+	public static  WebElement setupSecureCode;
 	
 	
 	//h1[text()='PAYMENT FAILED']

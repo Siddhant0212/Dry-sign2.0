@@ -1,51 +1,13 @@
 [
   {
-    "line": 1,
+    "line": 3,
     "elements": [
       {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 7652937801,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "navigate to URL \"https://drysign-qa.exela.global/#/\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"https://drysign-qa.exela.global/#/\"",
-                  "offset": 16
-                }
-              ],
-              "location": "USAMobileNoMandate.navigate_to_URL(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 13285000,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-08-24T14:17:21.675Z",
+        "start_timestamp": "2022-08-25T13:51:16.012Z",
         "before": [
           {
             "result": {
-              "duration": 8490199000,
+              "duration": 7472616100,
               "status": "passed"
             },
             "match": {
@@ -53,14 +15,14 @@
             }
           }
         ],
-        "line": 280,
-        "name": "To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List.",
+        "line": 76,
+        "name": "To Verify the UI elements present on the Edit profile pop-up screen",
         "description": "",
-        "id": "to-verify-my-files-tabs-functionality;to-verify-on-re-assign-in-out-for-signature-tab--the-record-cannot-be-re-assigned-to-the-same-signatory-who-is-already-in-the-list.",
+        "id": "to-verify-my-profile-page;to-verify-the-ui-elements-present-on-the-edit-profile-pop-up-screen",
         "after": [
           {
             "result": {
-              "duration": 1554072700,
+              "duration": 1314767000,
               "status": "passed"
             },
             "match": {
@@ -73,15 +35,44 @@
         "steps": [
           {
             "result": {
-              "duration": 5409286099,
+              "duration": 7430448200,
               "status": "passed"
             },
-            "line": 281,
-            "name": "enter the user name as \"sid39@mailinator.com\"",
+            "line": 77,
+            "name": "navigate to URL \"https://drysign-qa.exela.global/#/login\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"sid39@mailinator.com\"",
+                  "val": "\"https://drysign-qa.exela.global/#/login\"",
+                  "offset": 16
+                }
+              ],
+              "location": "USAMobileNoMandate.navigate_to_URL(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 27383900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5336819800,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "enter the user name as \"sid76@mailinator.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sid76@mailinator.com\"",
                   "offset": 23
                 }
               ],
@@ -90,7 +81,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 6085199,
+                  "duration": 12968900,
                   "status": "passed"
                 },
                 "match": {
@@ -102,10 +93,10 @@
           },
           {
             "result": {
-              "duration": 128403600,
+              "duration": 133048800,
               "status": "passed"
             },
-            "line": 282,
+            "line": 79,
             "name": "enter the password as\"Malin@555\"",
             "match": {
               "arguments": [
@@ -119,7 +110,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 5523099,
+                  "duration": 4836200,
                   "status": "passed"
                 },
                 "match": {
@@ -131,10 +122,10 @@
           },
           {
             "result": {
-              "duration": 2137965499,
+              "duration": 2181867000,
               "status": "passed"
             },
-            "line": 283,
+            "line": 80,
             "name": "user click on the sign in button",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_the_sign_in_button()"
@@ -142,7 +133,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 5942799,
+                  "duration": 28408900,
                   "status": "passed"
                 },
                 "match": {
@@ -154,10 +145,10 @@
           },
           {
             "result": {
-              "duration": 33578075300,
+              "duration": 32939333100,
               "status": "passed"
             },
-            "line": 284,
+            "line": 81,
             "name": "user click on continue with free version",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_continue_with_free_version()"
@@ -165,7 +156,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 4989599,
+                  "duration": 16404600,
                   "status": "passed"
                 },
                 "match": {
@@ -177,18 +168,18 @@
           },
           {
             "result": {
-              "duration": 10115660701,
+              "duration": 15148896300,
               "status": "passed"
             },
-            "line": 285,
-            "name": "user click on My Files",
+            "line": 82,
+            "name": "user click on mat icon",
             "match": {
-              "location": "MyFiles.user_click_on_My_Files()"
+              "location": "USAMobileNoMandate.user_click_on_mat_icon()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 4204199,
+                  "duration": 5439500,
                   "status": "passed"
                 },
                 "match": {
@@ -200,18 +191,231 @@
           },
           {
             "result": {
-              "duration": 626932299,
+              "duration": 15309724500,
               "status": "passed"
             },
-            "line": 286,
-            "name": "user click on out for signature tab",
+            "line": 83,
+            "name": "user click on profile icon",
             "match": {
-              "location": "MyFiles.user_click_on_out_for_signature_tab()"
+              "location": "USAMobileNoMandate.user_click_on_profile_icon()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 3633200,
+                  "duration": 16552500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60779000,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "user should display personal information",
+            "match": {
+              "location": "MyProfile.user_should_display_personal_information()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3979100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 114791300,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "user click on edit button",
+            "match": {
+              "location": "USAMobileNoMandate.user_click_on_edit_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 5890500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 48883851900,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "following details get display",
+            "match": {
+              "location": "MyProfile.following_details_get_display(DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4064600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "First Name"
+                ]
+              },
+              {
+                "cells": [
+                  "Last Name"
+                ]
+              },
+              {
+                "cells": [
+                  "Email"
+                ]
+              },
+              {
+                "cells": [
+                  "Country Code"
+                ]
+              },
+              {
+                "cells": [
+                  "Contact Number"
+                ]
+              },
+              {
+                "cells": [
+                  "Street Address"
+                ]
+              },
+              {
+                "cells": [
+                  "United States"
+                ]
+              },
+              {
+                "cells": [
+                  "State"
+                ]
+              },
+              {
+                "cells": [
+                  "City"
+                ]
+              },
+              {
+                "cells": [
+                  "ZIP Code"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2110946700,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "user click on save button",
+            "match": {
+              "location": "USAMobileNoMandate.user_click_on_save_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 14105100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 84696300,
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "user should display personal information",
+            "match": {
+              "location": "MyProfile.user_should_display_personal_information()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 5170400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 89376400,
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "user click on security",
+            "match": {
+              "location": "MyProfile.user_click_on_security()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4771900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 38085000,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "user able to click on checkbox for email OTP",
+            "match": {
+              "location": "MyProfile.user_able_to_click_on_checkbox_for_email_OTP()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3892600,
                   "status": "passed"
                 },
                 "match": {
@@ -223,18 +427,18 @@
           },
           {
             "result": {
-              "duration": 2098143400,
+              "duration": 38631400,
               "status": "passed"
             },
-            "line": 287,
-            "name": "user click on plus icon",
+            "line": 103,
+            "name": "user able to click on checkbox for setup secure code",
             "match": {
-              "location": "MyFiles.user_click_on_plus_icon()"
+              "location": "MyProfile.user_able_to_click_on_checkbox_for_setup_secure_code()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 6787200,
+                  "duration": 4433800,
                   "status": "passed"
                 },
                 "match": {
@@ -242,247 +446,33 @@
                 }
               }
             ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 711269300,
-              "status": "passed"
-            },
-            "line": 288,
-            "name": "click in reassign",
-            "match": {
-              "location": "MyFiles.click_in_reassign()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 7019800,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 65827300,
-              "status": "passed"
-            },
-            "line": 289,
-            "name": "pop up get Display as \"Are you sure you want to reassign eSign authority to another signatory?\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Are you sure you want to reassign eSign authority to another signatory?\"",
-                  "offset": 22
-                }
-              ],
-              "location": "MyFiles.pop_up_get_Display_as(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 7055600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 158998200,
-              "status": "passed"
-            },
-            "line": 290,
-            "name": "user click on \"YES\" button",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"YES\"",
-                  "offset": 14
-                }
-              ],
-              "location": "MyFiles.user_click_on_button(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 4843900,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 548643100,
-              "status": "passed"
-            },
-            "line": 291,
-            "name": "another pop get display as \"Reassign\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Reassign\"",
-                  "offset": 27
-                }
-              ],
-              "location": "MyFiles.another_pop_get_display_as(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 3978499,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 122154699,
-              "status": "passed"
-            },
-            "line": 292,
-            "name": "enter name as \"Sid\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Sid\"",
-                  "offset": 14
-                }
-              ],
-              "location": "MyFiles.enter_name_as(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 3752000,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 179821600,
-              "status": "passed"
-            },
-            "line": 293,
-            "name": "enter email Address as \"sid103@mailinator.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"sid103@mailinator.com\"",
-                  "offset": 23
-                }
-              ],
-              "location": "MyFiles.enter_email_Address_as(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 26129100,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 116481700,
-              "status": "passed"
-            },
-            "line": 294,
-            "name": "user click on \"CONFIRM\"Button",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"CONFIRM\"",
-                  "offset": 14
-                }
-              ],
-              "location": "MyFiles.user_click_on_Button(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 4100600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 54447600,
-              "status": "passed"
-            },
-            "line": 295,
-            "name": "validation message get display as \"This email address already exists in your previously assigned list.\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"This email address already exists in your previously assigned list.\"",
-                  "offset": 34
-                }
-              ],
-              "location": "MyFiles.validation_message_get_display_as(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 4046299,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@MyFiles18"
+            "name": "@MyProfile"
+          },
+          {
+            "name": "@MyProfile05"
           }
         ]
       }
     ],
-    "name": "To Verify My Files Tabs Functionality",
+    "name": "To Verify My Profile Page",
     "description": "",
-    "id": "to-verify-my-files-tabs-functionality",
+    "id": "to-verify-my-profile-page",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/MyFiles.feature",
-    "tags": []
+    "uri": "file:src/test/resources/Feature/MyProfile.feature",
+    "tags": [
+      {
+        "name": "@MyProfile",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

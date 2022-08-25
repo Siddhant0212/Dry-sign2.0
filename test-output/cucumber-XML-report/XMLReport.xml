@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="73.905523">
-<testcase classname="To Verify My Files Tabs Functionality" name="To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List." time="73.905523">
-<system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
-When enter the user name as "sid39@mailinator.com"..........................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="138.893512">
+<testcase classname="To Verify My Profile Page" name="To Verify the UI elements present on the Edit profile pop-up screen" time="138.893512">
+<system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/login".............passed
+When enter the user name as "sid76@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the sign in button........................................passed
 And user click on continue with free version................................passed
-And user click on My Files..................................................passed
-And user click on out for signature tab.....................................passed
-Then user click on plus icon................................................passed
-Then click in reassign......................................................passed
-Then pop up get Display as "Are you sure you want to reassign eSign authority to another signatory?".passed
-Then user click on "YES" button.............................................passed
-Then another pop get display as "Reassign"..................................passed
-Then enter name as "Sid"....................................................passed
-Then enter email Address as "sid103@mailinator.com".........................passed
-Then user click on "CONFIRM"Button..........................................passed
-Then validation message get display as "This email address already exists in your previously assigned list.".passed
+And user click on mat icon..................................................passed
+When user click on profile icon.............................................passed
+Then user should display personal information...............................passed
+Then user click on edit button..............................................passed
+Then following details get display..........................................passed
+Then user click on save button..............................................passed
+Then user should display personal information...............................passed
+Then user click on security.................................................passed
+And user able to click on checkbox for email OTP............................passed
+And user able to click on checkbox for setup secure code....................passed
 ]]></system-out>
 </testcase>
 </testsuite>

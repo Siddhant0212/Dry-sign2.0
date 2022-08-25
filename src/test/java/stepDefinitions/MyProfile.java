@@ -1,6 +1,8 @@
 package stepDefinitions;
 
 
+import java.util.Map;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -11,6 +13,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
+import pageObjects.MyFilesObject;
 import pageObjects.USAMobileNoMandateObject;
 import pageObjects.XpathMyProfile;
 
@@ -68,9 +71,9 @@ public class MyProfile {
 	@Then("error message get Display as {string}")
 	public void error_message_get_Display_as(String string) throws InterruptedException {
 		Thread.sleep(500);
-//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.FirstNameisrequired);
-//		Elements.isDisplayed(USAMobileNoMandateObject.FirstNameisrequired);
-//		 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.FirstNameisrequired),string);
+    Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.FirstNameisrequired);
+	Elements.isDisplayed(USAMobileNoMandateObject.FirstNameisrequired);
+	 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.FirstNameisrequired),string);
 		
 	}
 	@Then("user confirmation message get display as {string}")
@@ -123,7 +126,7 @@ public void cancel_option_not_present_for_free_user_as(String string) {
 @Then("user click on security")
 public void user_click_on_security() {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.tabSecurity);
-	Elements.click(USAMobileNoMandateObject.tabSecurity);
+	Elements.jclick(USAMobileNoMandateObject.tabSecurity);
 }
 @Then("user click on personal information")
 public void user_click_on_personal_information() {
@@ -174,6 +177,73 @@ public void user_click_on_go_to_home() {
 	Waits.waitUntilElementToClick(30,XpathMyProfile.Go_To_Home);
 	Elements.click(XpathMyProfile.Go_To_Home);
 	
+}
+@Then("user Should display profile icon")
+public void user_Should_display_profile_icon() {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Profile1);
+	Elements.isDisplayed(XpathMyProfile.Profile1);
+}
+@Then("user should display personal information tab by default as {string}")
+public void user_should_display_personal_information_tab_by_default_as(String string) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Personal_Information);
+	Elements.isDisplayed(XpathMyProfile.Personal_Information);
+	Assert.assertEquals(Elements.getText(XpathMyProfile.Personal_Information),string);
+}
+@Then("user should display personal information")
+public void user_should_display_personal_information() {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Personal_Information);
+	Elements.isDisplayed(XpathMyProfile.Personal_Information);
+}
+
+@Then("following details get display")
+public void following_details_get_display(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+	for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+		Thread.sleep(5000);
+		
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("First Name"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("First Name"));
+
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("Last Name"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("Last Name"));
+
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("Email"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("Email"));
+		
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("Country Code"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("Country Code"));
+
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("Contact Number"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("Contact Number"));
+		
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("Street Address"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("Street Address"));
+
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("United States"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("United States"));
+
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("State"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("State"));
+		
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("City"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("City"));
+
+		Waits.waitUntilElementLocated(30, XpathMyProfile.basicInformation("ZIP Code"));
+		Elements.isDisplayed(XpathMyProfile.basicInformation("ZIP Code"));
+}
+}
+@Then("user click on zip")
+public void user_click_on_zip() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.Zip_code);
+	Elements.click(XpathMyProfile.Zip_code);
+}
+@Then("user able to click on checkbox for email OTP")
+public void user_able_to_click_on_checkbox_for_email_OTP() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.emailOtp);
+}
+
+@Then("user able to click on checkbox for setup secure code")
+public void user_able_to_click_on_checkbox_for_setup_secure_code() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.setupSecureCode);
 }
 }
 

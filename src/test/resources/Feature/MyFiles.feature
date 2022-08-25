@@ -193,23 +193,76 @@ Feature: To Verify My Files Tabs Functionality
     
        @MyFiles13
   Scenario: To verify that all field are displaying proper or not.
-   When enter the user name as "sid39@mailinator.com"
+   #When enter the user name as "sid39@mailinator.com"
+    #When enter the password as"Malin@555"
+    #And user click on the sign in button
+    #And user click on continue with free version
+    #And user click on My Files
+    #Then user get display pending tab
+    #Then user display subject
+    #Then user display document name
+    #Then user display assigned date
+    #Then user display requested by
+    #Then user display action
+    #Then user click on action link 
+    #And user click on check box
+    #And user click on accept button
+    #And user clcik on ok button present on pop up
+    #Then document should get display
+    
+    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
-    Then user get display pending tab
+    And user click on signed tab
     Then user display subject
     Then user display document name
-    Then user display assigned date
+    Then user display Assigned Date
+    Then date Display in format as "08/17/2022 12:01:58 AM"
     Then user display requested by
     Then user display action
-    Then user click on action link 
-    And user click on check box
-    And user click on accept button
-    And user clcik on ok button present on pop up
-    Then document should get display
+    And user click on View icon 
+    Then Document should get display
+    Then user click on close icon
+    When user click on Download icon
     
+     And user click on completed documents tab
+      Then user display subject
+      Then user display Sign Type
+      Then user display Completed Date
+      Then user display date in format as "08/09/2022 2:59:02 AM"
+      Then user display action
+      And user click on View icon 
+      Then Document should get display
+      Then user click on close icon
+      When user click on Download icon
+      Then user click on mail icon
+      
+       And user click on out for signature tab
+       Then user display subject
+       Then user display Document Name
+       Then user display Assigned Date
+       Then user Display date in format as "08/24/2022 2:55:23 AM"
+       Then user display action
+        When user click on Download icon
+      
+      And user click on drafts tab
+      Then user display title
+      Then user display Sign Type
+      Then user display Date&Time
+      Then user display action
+      
+      And user click on rejected tab
+      Then user display subject
+      Then user display Document Name
+      Then user display Assigned Date
+      Then user display Rejected Date
+      Then user display Rejected By
+      Then user display action
+      
+      
        @MyFiles14
   Scenario: To verify generic Date display proper or not
      When enter the user name as "sid39@mailinator.com"
@@ -275,7 +328,21 @@ Feature: To Verify My Files Tabs Functionality
       |Signatories:|
       |Subject:|
       |Message:|
-     
+      
+       @MyFiles16
+  Scenario: To Verify the Pagination functionality in all the Tabs in My Files Section
+    When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    Then Previous and next icon should get display
+    Then page numeric value display next to the previous icon
+    Then page default value is one
+    Then default page should be first as "Displaying item : 1 - 4 of 4"
+    Then on first page previous arrow icon should be disabled
+    Then on last page next arror icon should be disabled
+    
        @MyFiles18
   Scenario: To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List.
     When enter the user name as "sid39@mailinator.com"

@@ -143,6 +143,60 @@ public class MyFilesObject {
 	@FindBy(xpath="//span[text()='This email address already exists in your previously assigned list.']")     
 	public static  WebElement This_email_addressal_ready_exists;
 	
+	@FindBy(xpath="(//mat-icon[text()='remove_red_eye'])[1]")     
+	public static  WebElement iconView;
+	
+	@FindBy(xpath="//*[@class='canvasWrapper']")     
+	public static  WebElement Doc_Display1;
+	
+	@FindBy(xpath="//mat-icon[text()='close']")     
+	public static  WebElement closeIcon;
+	
+	@FindBy(xpath="//span[text()=' Sign Type ']")     
+	public static  WebElement Sign_Type;
+	
+	
+	@FindBy(xpath="//mat-icon[text()='mail_outline']")     
+	public static  WebElement mail_outline;
+	
+	@FindBy(xpath="//span[text()=' Title ']")     
+	public static  WebElement Title;
+	
+	@FindBy(xpath="//span[text()=' Rejected Date ']")     
+	public static  WebElement Rejected_Date;
+	
+	@FindBy(xpath="//span[text()=' Rejected By ']")     
+	public static  WebElement Rejected_By;
+	
+	
+	
+	@FindBy(xpath="//span[text()='Prev']")     
+	public static  WebElement Previous;
+	
+	@FindBy(xpath="//span[text()='Next']")     
+	public static  WebElement Next;
+	
+	@FindBy(xpath="//span[text()='1']")     
+	public static  WebElement Default_one;
+	
+	@FindBy(xpath="//div[text()=' Displaying item : 1 - 4 of 4 ']")     
+	public static  WebElement Displaying_item ;
+	
+	
+	
+	//div[text()=' Displaying item : 1 - 4 of 4 ']
+	//span[text()='1']
+	//span[text()='Next']
+	//span[text()='Prev']
+	//span[text()=' Rejected By ']
+	//span[text()=' Rejected Date ']
+	//span[text()=' Title ']
+	//span[text()=' Document Name ']
+	//mat-icon[text()='mail_outline']
+	//span[text()=' Sign Type ']
+	//mat-icon[text()='close']
+	
+	//*[@class='canvasWrapper']
 	//span[text()='This email address already exists in your previously assigned list.']
 	//p[text()='Are you sure you want to reassign eSign authority to another signatory?']
 	//mat-label[text()='Email Address']
