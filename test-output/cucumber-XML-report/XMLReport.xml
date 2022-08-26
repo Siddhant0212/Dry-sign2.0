@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="138.893512">
-<testcase classname="To Verify My Profile Page" name="To Verify the UI elements present on the Edit profile pop-up screen" time="138.893512">
-<system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/login".............passed
-When enter the user name as "sid76@mailinator.com"..........................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="40.249781">
+<testcase classname="To Verify Dashboard" name="To Verify the UI elements present on the View Plan button pop-up present on the Dashboard" time="40.249781">
+<system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
+When enter the user name as "sid12@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the sign in button........................................passed
-And user click on continue with free version................................passed
-And user click on mat icon..................................................passed
-When user click on profile icon.............................................passed
-Then user should display personal information...............................passed
-Then user click on edit button..............................................passed
-Then following details get display..........................................passed
-Then user click on save button..............................................passed
-Then user should display personal information...............................passed
-Then user click on security.................................................passed
-And user able to click on checkbox for email OTP............................passed
-And user able to click on checkbox for setup secure code....................passed
+And dashboard window get display............................................passed
+Then View Plan buttons should be present....................................passed
+Then user click on View Plan button.........................................passed
+Then Pop Up get displayed with Elements.....................................passed
+Then user get display upgrade plan button...................................passed
+Then user click on close icon...............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -556,7 +556,7 @@ public void new_details_get_display(io.cucumber.datatable.DataTable dataTable) t
 	@Then("user click on close icon")
 	public void user_click_on_close_icon() {
 		Waits.waitUntilElementToClick(30, MyFilesObject.closeIcon);
-		Elements.click(MyFilesObject.closeIcon);
+		Elements.jclick(MyFilesObject.closeIcon);
 		
 		
 	}

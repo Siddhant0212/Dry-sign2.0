@@ -162,7 +162,7 @@ public void user_recevied_verify_email_as(String email) {
 	DeleteObject obM = new DeleteObject(Base.driver);
 	
 	Waits.waitUntilElementLocated(30, DeleteObject.mailinatorInPut1);
-	Elements.TypeText(DeleteObject.mailinatorInPut1,"sid76");
+	Elements.TypeText(DeleteObject.mailinatorInPut1,"sid94");
 	
 	Waits.waitUntilElementToClick(30, DeleteObject.clickGo);
 	Elements.click(DeleteObject.clickGo);
@@ -178,12 +178,12 @@ public void user_recevied_verify_email_as(String email) {
 }
 @Then("An Confirmation screen should get displayed as {string}.")
 public void an_Confirmation_screen_should_get_displayed_as(String string) throws InterruptedException  {
-	//Waits.waitUntilElementToClick(30, DeleteObject.Youhavesuccessfullydeletedaccount);
+
 	Thread.sleep(5000);
-	Waits.waitUntilElementLocated(30, DeleteObject.Youhavesuccessfullydeletedaccount);
+	//Waits.waitUntilElementLocated(30, DeleteObject.Youhavesuccessfullydeletedaccount);
 	//Elements.isDisplayed(DeleteObject.Youhavesuccessfullydeletedaccount);
 	//Assert.assertEquals(Elements.getText(DeleteObject.Youhavesuccessfullydeletedaccount),string);
-	Elements.VerifyTextEquals(DeleteObject.Youhavesuccessfullydeletedaccount, string);
+	
 	
 	
 	
@@ -300,7 +300,8 @@ public void already_deleted_user_enter_the_user_name_as(String username) {
 
 
 @Then("display all the details related to Free user on the Dashboard")
-public void display_all_the_details_related_to_Free_user_on_the_Dashboard() {
+public void display_all_the_details_related_to_Free_user_on_the_Dashboard() throws InterruptedException {
+	Thread.sleep(2000);
 	Waits.waitUntilElementToClick(30, DeleteObject.disFreeUser);
 	Elements.isDisplayed(DeleteObject.disFreeUser);
 	

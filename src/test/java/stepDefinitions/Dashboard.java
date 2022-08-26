@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
 import pageObjects.DashboardObject;
+import pageObjects.MyFilesObject;
 import pageObjects.USAMobileNoMandateObject;
 
 
@@ -194,10 +195,35 @@ public void user_display_self_sign_and_group_sign_and_it_should_be_clickable() {
 	//Waits.waitUntilElementLocated(30, DashboardObject.grpSignBtn);
 	Waits.waitUntilElementToClick(30,DashboardObject.grpSignBtn );
 	Elements.isDisplayed(DashboardObject.grpSignBtn);
+
+}
+@Then("Pop Up get displayed with Elements")
+public void pop_Up_get_isplayed_with_Elements(io.cucumber.datatable.DataTable dataTable) {
+	
+	Waits.waitUntilElementLocated(30, DashboardObject.textField("Self Sign"));
+	Elements.isDisplayed(DashboardObject.textField("Self Sign"));
+
+	Waits.waitUntilElementLocated(30, DashboardObject.textField("Group Sign"));
+	Elements.isDisplayed(DashboardObject.textField("Group Sign"));
+
+	Waits.waitUntilElementLocated(30, DashboardObject.textField("Signature: Type,Draw and upload"));
+	Elements.isDisplayed(DashboardObject.textField("Signature: Type,Draw and upload"));
+
+	Waits.waitUntilElementLocated(30, DashboardObject.textField("Upload Pdf using Google Drive"));
+	Elements.isDisplayed(DashboardObject.textField("Upload Pdf using Google Drive"));
+	
+	Waits.waitUntilElementLocated(30, DashboardObject.textField("Upload PDF using Dropbox"));
+	Elements.isDisplayed(DashboardObject.textField("Upload PDF using Dropbox"));
+	
+	Waits.waitUntilElementLocated(30, DashboardObject.textField("Upload PDF using OneDrive"));
+	Elements.isDisplayed(DashboardObject.textField("Upload PDF using OneDrive"));
 	
 	
-	
-	
+}
+@Then("user get display upgrade plan button")
+public void user_get_display_upgrade_plan_button() {
+	Waits.waitUntilElementToClick(30,DashboardObject.btnUpgradePlan );
+	Elements.isDisplayed(DashboardObject.btnUpgradePlan);
 }
 }
 

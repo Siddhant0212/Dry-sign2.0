@@ -134,15 +134,17 @@ public void user_click_on_personal_information() {
 	Elements.click(USAMobileNoMandateObject.Personal_Information);
 }
 @Then("user click on payment method")
-public void user_click_on_payment_method() {
+public void user_click_on_payment_method() throws InterruptedException {
+	Thread.sleep(1000);
 	Waits.waitUntilElementToClick(30,XpathMyProfile.Payment_Method);
-	Elements.click(XpathMyProfile.Payment_Method);
+	Elements.jclick(XpathMyProfile.Payment_Method);
 	
 }
 @Then("user click on update payment method")
-public void user_click_on_update_payment_method() {
+public void user_click_on_update_payment_method() throws InterruptedException {
+	Thread.sleep(1000);
 	Waits.waitUntilElementToClick(30,XpathMyProfile.Update_Payment_Method);
-	Elements.click(XpathMyProfile.Update_Payment_Method);
+	Elements.jclick(XpathMyProfile.Update_Payment_Method);
 	
 }
 @Then("user display as {string}")
@@ -234,16 +236,63 @@ public void following_details_get_display(io.cucumber.datatable.DataTable dataTa
 @Then("user click on zip")
 public void user_click_on_zip() {
 	Waits.waitUntilElementToClick(30,XpathMyProfile.Zip_code);
+	//Waits.waitUntilElementLocated(30, XpathMyProfile.Zip_code);
 	Elements.click(XpathMyProfile.Zip_code);
 }
 @Then("user able to click on checkbox for email OTP")
 public void user_able_to_click_on_checkbox_for_email_OTP() {
-	Waits.waitUntilElementToClick(30,XpathMyProfile.emailOtp);
+	//Waits.waitUntilElementToClick(30,XpathMyProfile.emailOtp);
+	Waits.waitUntilElementLocated(30, XpathMyProfile.emailOtp);
+	Elements.isEnabled(XpathMyProfile.emailOtp);
 }
 
 @Then("user able to click on checkbox for setup secure code")
 public void user_able_to_click_on_checkbox_for_setup_secure_code() {
-	Waits.waitUntilElementToClick(30,XpathMyProfile.setupSecureCode);
+	
+	Waits.waitUntilElementLocated(30, XpathMyProfile.setupSecureCode);
+	Elements.isEnabled(XpathMyProfile.setupSecureCode);
+}
+@Then("user enter Fname as {string}")
+public void user_enter_Fname_as(String string) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Name_field);
+	Elements.TypeText(XpathMyProfile.Name_field, string);
+}
+
+@Then("user enter Lname as {string}")
+public void user_enter_Lname_as(String string) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Last_Name);
+	Elements.TypeText(XpathMyProfile.Last_Name, string);
+}
+
+@Then("user click on mail tab then error get display for mandatory field as {string}")
+public void user_click_on_mail_tab_then_error_get_display_for_mandatory_field_as(String string) {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.Last_Name);
+	Elements.jclick(XpathMyProfile.Last_Name);
+	
+//	Waits.waitUntilElementLocated(30, XpathMyProfile.Lastnameisrequired);
+//	Elements.isDisplayed(XpathMyProfile.Lastnameisrequired);
+//	 Assert.assertEquals(Elements.getText(XpathMyProfile.Lastnameisrequired),string);
+}
+
+@Then("user enter Email as {string}")
+public void user_enter_Email_as(String string) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Email_Address);
+	Elements.TypeText(XpathMyProfile.Email_Address, string);
+   
+}
+
+@Then("user enter Contact Number as {string}")
+public void user_enter_Contact_Number_as(String string) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Contact_Number);
+	Elements.TypeText(XpathMyProfile.Contact_Number, string);
+	
+
+	
+}
+@Then("update payment method should be disable")
+public void update_payment_method_should_be_disable() {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Update_Payment_Method);
+	Elements.isEnabled(XpathMyProfile.Update_Payment_Method);
 }
 }
 

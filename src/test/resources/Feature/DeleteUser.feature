@@ -16,10 +16,10 @@ Feature: To Verify Delete User Functionality
   @Delete2
   Scenario: To Verify the Delete Account button functionality on the Manage Account Tab in Profile Page
     Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid76@mailinator.com"
+    When enter the user name as "sid94@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
-    And user click on continue with free version
+    #And user click on continue with free version
     And user click on mat icon
     And user click on profile icon
     And user click on manage account
@@ -27,19 +27,20 @@ Feature: To Verify Delete User Functionality
     And user click on delete account
     And Pop up get display
     Then user should get displayed Cancel button
+    Then user should get displayed Delete Account button
+    When user click on the cancel button
     
-    
-    #Then user should get displayed Delete Account button
-    #When user click on the cancel button
-    #Then verify that delete confrmation pop up screen should get closed
-
+    And user click on delete account
     And user again click on the delete account
+    
+    
+    
     And user select the check box
     And user click on confirm button
-    Then user should get display another pop up
+    #Then user should get display another pop up
     When user Click on Ok button present on the pop up
-    And user recevied verify email as "sid76@mailinator.com"
-    #Then An Confirmation screen should get displayed as "You have successfully deleted the account.".
+    And user recevied verify email as "sid94@mailinator.com"
+    Then An Confirmation screen should get displayed as "You have successfully deleted the account.".
 
   #Then pop-up should get closed
   #When user open the mail to check if the Delete account mail is received or not

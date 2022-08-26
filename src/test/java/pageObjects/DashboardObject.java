@@ -76,9 +76,19 @@ public class DashboardObject {
 			@FindBy(xpath="(//span[text()='Upgrade'])[1]")
 			public static WebElement Upgrade5;
 
+			public static WebElement textField(String data)
+			{
+			String Xpath = "//*[@class='ng-star-inserted']";
+			WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+			return element;
+			}
+            
+			@FindBy(xpath="//button[text()='Upgrade Plan']")
+			public static  WebElement btnUpgradePlan;
 
-
-
+			
+			@FindBy(xpath="//mat-icon[text()='close']")     
+			public static  WebElement closeIcon;
 }        
 
 

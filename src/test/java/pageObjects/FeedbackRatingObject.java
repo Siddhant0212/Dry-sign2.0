@@ -97,5 +97,8 @@ public class FeedbackRatingObject {
 	@FindBy(xpath="//span[text()='Please enter a message.']")
 	public static WebElement Please_EnterMsg;
 	
-	//span[text()='Please enter a message.']
+	
+	@FindBy(xpath="//*[@id='Ellipse_141']")
+	public static WebElement Emoji4;
+	//*[@id='Ellipse_141']
 }

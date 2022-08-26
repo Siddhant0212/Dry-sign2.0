@@ -70,7 +70,7 @@ Feature: To Verify USA mobile number is Mandatory
     Then profile page contain personal information should displayed correctly
     Then country field should not be editable
     And user click on save button
-    #Then user confirmation message get display as "Successfully Updated."
+    Then user confirmation message get display as "Successfully Updated."
   
   #@Mobile6
   #Scenario: To Verify the registartion process for the Google Sign-in user for mandatory mobile no. for USA region
@@ -120,7 +120,7 @@ Feature: To Verify USA mobile number is Mandatory
     #And user click on "out for signature"
     #And user click on plus icon
     Then user Navigate to URL "https://www.mailinator.com/v4/public/inboxes.jsp"
-    And User enter email as "sid39"
+    And User enter email as "sid103"
     Then user click on Go button
     Then user click on Mail 
     And user click on sign document

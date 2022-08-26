@@ -27,11 +27,14 @@ Feature: To Verify Feedback Works
       |Average|
       |Good|
       |Very Good|
+      
+      
     
-    #And user click on the smiley
-    #And user enter message as "good"
-    #And user click on send button
-    #Then user should get displayed message as feedback submitted successfully
+    And user click on the smiley
+    And user enter message as "good"
+    And user click on send button
+    Then user should get displayed message as feedback submitted successfully
+    Then data along with the rating should be successfully saved in the Dashboard
   
   @Feedback3
   Scenario: To Verify the rating (Smiley) is highlighted to (5 - Very Good)  on DrySign Dashboard at first time login

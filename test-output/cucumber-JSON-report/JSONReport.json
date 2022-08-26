@@ -1,13 +1,51 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-08-25T13:51:16.012Z",
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9236351500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "navigate to URL \"https://drysign-qa.exela.global/#/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://drysign-qa.exela.global/#/\"",
+                  "offset": 16
+                }
+              ],
+              "location": "USAMobileNoMandate.navigate_to_URL(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 12376000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-08-26T13:19:07.659Z",
         "before": [
           {
             "result": {
-              "duration": 7472616100,
+              "duration": 9958356500,
               "status": "passed"
             },
             "match": {
@@ -15,14 +53,14 @@
             }
           }
         ],
-        "line": 76,
-        "name": "To Verify the UI elements present on the Edit profile pop-up screen",
+        "line": 8,
+        "name": "To Verify the UI elements present on the View Plan button pop-up present on the Dashboard",
         "description": "",
-        "id": "to-verify-my-profile-page;to-verify-the-ui-elements-present-on-the-edit-profile-pop-up-screen",
+        "id": "to-verify-dashboard;to-verify-the-ui-elements-present-on-the-view-plan-button-pop-up-present-on-the-dashboard",
         "after": [
           {
             "result": {
-              "duration": 1314767000,
+              "duration": 1728386300,
               "status": "passed"
             },
             "match": {
@@ -35,44 +73,15 @@
         "steps": [
           {
             "result": {
-              "duration": 7430448200,
+              "duration": 5459653700,
               "status": "passed"
             },
-            "line": 77,
-            "name": "navigate to URL \"https://drysign-qa.exela.global/#/login\"",
+            "line": 9,
+            "name": "enter the user name as \"sid12@mailinator.com\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"https://drysign-qa.exela.global/#/login\"",
-                  "offset": 16
-                }
-              ],
-              "location": "USAMobileNoMandate.navigate_to_URL(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 27383900,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 5336819800,
-              "status": "passed"
-            },
-            "line": 78,
-            "name": "enter the user name as \"sid76@mailinator.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"sid76@mailinator.com\"",
+                  "val": "\"sid12@mailinator.com\"",
                   "offset": 23
                 }
               ],
@@ -81,7 +90,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 12968900,
+                  "duration": 6340600,
                   "status": "passed"
                 },
                 "match": {
@@ -93,10 +102,10 @@
           },
           {
             "result": {
-              "duration": 133048800,
+              "duration": 136799300,
               "status": "passed"
             },
-            "line": 79,
+            "line": 10,
             "name": "enter the password as\"Malin@555\"",
             "match": {
               "arguments": [
@@ -110,7 +119,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 4836200,
+                  "duration": 5022600,
                   "status": "passed"
                 },
                 "match": {
@@ -122,10 +131,10 @@
           },
           {
             "result": {
-              "duration": 2181867000,
+              "duration": 2137131700,
               "status": "passed"
             },
-            "line": 80,
+            "line": 11,
             "name": "user click on the sign in button",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_the_sign_in_button()"
@@ -133,7 +142,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 28408900,
+                  "duration": 13052400,
                   "status": "passed"
                 },
                 "match": {
@@ -145,18 +154,18 @@
           },
           {
             "result": {
-              "duration": 32939333100,
+              "duration": 5842988400,
               "status": "passed"
             },
-            "line": 81,
-            "name": "user click on continue with free version",
+            "line": 12,
+            "name": "dashboard window get display",
             "match": {
-              "location": "USAMobileNoMandate.user_click_on_continue_with_free_version()"
+              "location": "USAMobileNoMandate.dashboard_window_get_display()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 16404600,
+                  "duration": 5901500,
                   "status": "passed"
                 },
                 "match": {
@@ -168,64 +177,18 @@
           },
           {
             "result": {
-              "duration": 15148896300,
+              "duration": 4645235500,
               "status": "passed"
             },
-            "line": 82,
-            "name": "user click on mat icon",
+            "line": 14,
+            "name": "View Plan buttons should be present",
             "match": {
-              "location": "USAMobileNoMandate.user_click_on_mat_icon()"
+              "location": "USAMobileNoMandate.view_Plan_buttons_should_be_present()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 5439500,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 15309724500,
-              "status": "passed"
-            },
-            "line": 83,
-            "name": "user click on profile icon",
-            "match": {
-              "location": "USAMobileNoMandate.user_click_on_profile_icon()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 16552500,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 60779000,
-              "status": "passed"
-            },
-            "line": 84,
-            "name": "user should display personal information",
-            "match": {
-              "location": "MyProfile.user_should_display_personal_information()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 3979100,
+                  "duration": 4373300,
                   "status": "passed"
                 },
                 "match": {
@@ -237,18 +200,18 @@
           },
           {
             "result": {
-              "duration": 114791300,
+              "duration": 110666400,
               "status": "passed"
             },
-            "line": 85,
-            "name": "user click on edit button",
+            "line": 15,
+            "name": "user click on View Plan button",
             "match": {
-              "location": "USAMobileNoMandate.user_click_on_edit_button()"
+              "location": "USAMobileNoMandate.user_click_on_View_Plan_button()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 5890500,
+                  "duration": 5577900,
                   "status": "passed"
                 },
                 "match": {
@@ -260,18 +223,18 @@
           },
           {
             "result": {
-              "duration": 48883851900,
+              "duration": 678906900,
               "status": "passed"
             },
-            "line": 86,
-            "name": "following details get display",
+            "line": 17,
+            "name": "Pop Up get displayed with Elements",
             "match": {
-              "location": "MyProfile.following_details_get_display(DataTable)"
+              "location": "Dashboard.pop_Up_get_isplayed_with_Elements(DataTable)"
             },
             "after": [
               {
                 "result": {
-                  "duration": 4064600,
+                  "duration": 3777200,
                   "status": "passed"
                 },
                 "match": {
@@ -282,52 +245,32 @@
             "rows": [
               {
                 "cells": [
-                  "First Name"
+                  "Self Sign"
                 ]
               },
               {
                 "cells": [
-                  "Last Name"
+                  "Group Sign"
                 ]
               },
               {
                 "cells": [
-                  "Email"
+                  "Signature: Type,Draw and upload"
                 ]
               },
               {
                 "cells": [
-                  "Country Code"
+                  "Upload Pdf using Google Drive"
                 ]
               },
               {
                 "cells": [
-                  "Contact Number"
+                  "Upload PDF using Dropbox"
                 ]
               },
               {
                 "cells": [
-                  "Street Address"
-                ]
-              },
-              {
-                "cells": [
-                  "United States"
-                ]
-              },
-              {
-                "cells": [
-                  "State"
-                ]
-              },
-              {
-                "cells": [
-                  "City"
-                ]
-              },
-              {
-                "cells": [
-                  "ZIP Code"
+                  "Upload PDF using OneDrive"
                 ]
               }
             ],
@@ -335,18 +278,18 @@
           },
           {
             "result": {
-              "duration": 2110946700,
+              "duration": 62856600,
               "status": "passed"
             },
-            "line": 99,
-            "name": "user click on save button",
+            "line": 24,
+            "name": "user get display upgrade plan button",
             "match": {
-              "location": "USAMobileNoMandate.user_click_on_save_button()"
+              "location": "Dashboard.user_get_display_upgrade_plan_button()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 14105100,
+                  "duration": 4040000,
                   "status": "passed"
                 },
                 "match": {
@@ -358,18 +301,18 @@
           },
           {
             "result": {
-              "duration": 84696300,
+              "duration": 78695200,
               "status": "passed"
             },
-            "line": 100,
-            "name": "user should display personal information",
+            "line": 25,
+            "name": "user click on close icon",
             "match": {
-              "location": "MyProfile.user_should_display_personal_information()"
+              "location": "MyFiles.user_click_on_close_icon()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 5170400,
+                  "duration": 3603600,
                   "status": "passed"
                 },
                 "match": {
@@ -378,95 +321,26 @@
               }
             ],
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 89376400,
-              "status": "passed"
-            },
-            "line": 101,
-            "name": "user click on security",
-            "match": {
-              "location": "MyProfile.user_click_on_security()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 4771900,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 38085000,
-              "status": "passed"
-            },
-            "line": 102,
-            "name": "user able to click on checkbox for email OTP",
-            "match": {
-              "location": "MyProfile.user_able_to_click_on_checkbox_for_email_OTP()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 3892600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 38631400,
-              "status": "passed"
-            },
-            "line": 103,
-            "name": "user able to click on checkbox for setup secure code",
-            "match": {
-              "location": "MyProfile.user_able_to_click_on_checkbox_for_setup_secure_code()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 4433800,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@MyProfile"
+            "name": "@Dashboard"
           },
           {
-            "name": "@MyProfile05"
+            "name": "@Dashboard1"
           }
         ]
       }
     ],
-    "name": "To Verify My Profile Page",
+    "name": "To Verify Dashboard",
     "description": "",
-    "id": "to-verify-my-profile-page",
+    "id": "to-verify-dashboard",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/MyProfile.feature",
+    "uri": "file:src/test/resources/Feature/Dashboard.feature",
     "tags": [
       {
-        "name": "@MyProfile",
+        "name": "@Dashboard",
         "type": "Tag",
         "location": {
           "line": 1,

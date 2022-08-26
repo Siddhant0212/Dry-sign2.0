@@ -198,4 +198,16 @@ public void user_should_get_display_Message_box() {
 			Assert.assertEquals(Elements.getText(FeedbackRatingObject.Please_EnterMsg),"Please enter a message.");
 		
 		}
+		@Then("user should get displayed message as feedback submitted successfully")
+		public void user_should_get_displayed_message_as_feedback_submitted_successfully() {
+			Waits.waitUntilElementToClick(30, FeedbackRatingObject.dispOnSuccessFeed);
+			Elements.isDisplayed(FeedbackRatingObject.dispOnSuccessFeed);
+			Assert.assertEquals(Elements.getText(FeedbackRatingObject.dispOnSuccessFeed),"Feedback submitted successfully.");
+		}
+
+		@Then("data along with the rating should be successfully saved in the Dashboard")
+		public void data_along_with_the_rating_should_be_successfully_saved_in_the_Dashboard() {
+			Waits.waitUntilElementLocated(30, FeedbackRatingObject.Emoji4);
+			Elements.isDisplayed(FeedbackRatingObject.Emoji4);
+		}
 }

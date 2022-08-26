@@ -24,7 +24,10 @@ public class DeleteObject {
 	
 	
 	       
-	
+	 @FindBy(xpath="//span[text()=' Delete Account ']")
+	    public static WebElement deleteAccount;
+	 
+	 
 	@FindBy(xpath="//span[text()='Dashboard']")
 	public static WebElement dashboard;
 
@@ -55,7 +58,7 @@ public class DeleteObject {
 	@FindBy(xpath="//*[@id='mat-dialog-title-2']")
 	public static WebElement popUpwithOk;
 	
-	@FindBy(xpath="	//*[text()='OK']")
+	@FindBy(xpath="//span[text()='OK']")
 	public static WebElement popUpOk;
 	
 	@FindBy(xpath="//*[@id='mat-radio-2-input']")

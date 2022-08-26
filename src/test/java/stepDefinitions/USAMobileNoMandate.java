@@ -650,7 +650,9 @@ public void pop_Up_get_displayed_with_elements() {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.HierarchicalSignatures);
 	Elements.isDisplayed(USAMobileNoMandateObject.HierarchicalSignatures);
 	Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.HierarchicalSignatures),"Hierarchical Signatures");
-
+}
+	
+		
 	
 	
 	 
@@ -658,7 +660,7 @@ public void pop_Up_get_displayed_with_elements() {
 	
 	
 	
-	}
+	
 @Then("existing plan details of the user should get displayed with Upgrade Plan button")
 public void existing_plan_details_of_the_user_should_get_displayed_with_Upgrade_Plan_button() {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.btnUpgradePlan);
@@ -885,7 +887,7 @@ public void user_click_on(String outforsignature) {
 @Then("User enter email as {string}")
 public void user_enter_email_as(String string) {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
-	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid39");
+	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid103");
 }
 
 @Then("user click on Mail")

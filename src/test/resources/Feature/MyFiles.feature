@@ -193,29 +193,29 @@ Feature: To Verify My Files Tabs Functionality
     
        @MyFiles13
   Scenario: To verify that all field are displaying proper or not.
-   #When enter the user name as "sid39@mailinator.com"
-    #When enter the password as"Malin@555"
-    #And user click on the sign in button
-    #And user click on continue with free version
-    #And user click on My Files
-    #Then user get display pending tab
-    #Then user display subject
-    #Then user display document name
-    #Then user display assigned date
-    #Then user display requested by
-    #Then user display action
-    #Then user click on action link 
-    #And user click on check box
-    #And user click on accept button
-    #And user clcik on ok button present on pop up
-    #Then document should get display
-    
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid39@mailinator.com"
+   When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
+    Then user get display pending tab
+    Then user display subject
+    Then user display document name
+    Then user display assigned date
+    Then user display requested by
+    Then user display action
+    Then user click on action link 
+    And user click on check box
+    And user click on accept button
+    And user clcik on ok button present on pop up
+    Then document should get display
+    
+    #Given navigate to URL "https://drysign-qa.exela.global/#/"
+    #When enter the user name as "sid39@mailinator.com"
+    #When enter the password as"Malin@555"
+    #And user click on the sign in button
+    #And user click on continue with free version
+    #And user click on My Files
     And user click on signed tab
     Then user display subject
     Then user display document name

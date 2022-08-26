@@ -13,7 +13,19 @@ Feature: To Verify Dashboard
     #And individual plan get display
     Then View Plan buttons should be present
     Then user click on View Plan button
-    Then Pop Up get displayed with elements
+    #Then Pop Up get displayed with elements
+    Then Pop Up get displayed with Elements
+      |Self Sign |        
+      |Group Sign|
+      |Signature: Type,Draw and upload|
+      |Upload Pdf using Google Drive|
+      |Upload PDF using Dropbox|
+      |Upload PDF using OneDrive|
+ Then user get display upgrade plan button 
+ Then user click on close icon
+
+
+
 
   @Dashboard2
   Scenario: To Verify the Close icon functionality present on the View Plan pop-up screen present on the Dashboard
@@ -21,7 +33,13 @@ Feature: To Verify Dashboard
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then user click on View Plan button
-    Then Pop Up get displayed with elements
+      Then Pop Up get displayed with Elements
+      |Self Sign |        
+      |Group Sign|
+      |Signature: Type,Draw and upload|
+      |Upload Pdf using Google Drive|
+      |Upload PDF using Dropbox|
+      |Upload PDF using OneDrive|
     Then existing plan details of the user should get displayed with Upgrade Plan button
     Then user verify that close icon is present on the pop up
 
@@ -33,7 +51,13 @@ Feature: To Verify Dashboard
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then user click on View Plan button
-    Then Pop Up get displayed with elements
+      Then Pop Up get displayed with Elements
+      |Self Sign |        
+      |Group Sign|
+      |Signature: Type,Draw and upload|
+      |Upload Pdf using Google Drive|
+      |Upload PDF using Dropbox|
+      |Upload PDF using OneDrive|
     Then existing plan details of the user should get displayed with Upgrade Plan button
     And user click on Upgrade Plan button
     Then pop up should display only the higher plan than the exisiting

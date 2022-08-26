@@ -86,7 +86,25 @@ public class XpathMyProfile {
 	@FindBy(xpath="//span[text()='Setup Secure Code ']")
 	public static  WebElement setupSecureCode;
 	
+	@FindBy(xpath="//input[@placeholder='Last Name']")
+	public static  WebElement Last_Name;
 	
+	@FindBy(xpath="//input[@placeholder='Email Address']")
+	public static  WebElement Email_Address;
+	
+	@FindBy(xpath="//span[text()='Last name is required.']")
+	public static  WebElement Lastnameisrequired;
+	
+	
+	@FindBy(xpath="//input[@placeholder='Contact Number']")
+	public static  WebElement Contact_Number;
+	
+	
+	
+	//input[@placeholder='Email Address']
+	//span[text()='Last name is required.']
+	//input[@placeholder='Email Address']
+	//input[@placeholder='Last Name']
 	//h1[text()='PAYMENT FAILED']
 	//a[text()='Go To Home']
 	//h2[text()='New Payment details has been updated']
