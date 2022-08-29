@@ -52,6 +52,9 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="(//span[@aria-hidden='true'])[3]")
 	public static WebElement astrix_ymbol;
 	
+	@FindBy(xpath="(//*[local-name()='text'])[10]")
+	public static WebElement Days_Text;
+	
 	
 	
 	
@@ -898,7 +901,7 @@ public static WebElement selfSign;
 @FindBy(xpath="//a[text()='Browse']")
 public static WebElement browser;
 
-@FindBy(xpath="//span[text()=' Upload Photo ']/..")
+@FindBy(xpath="//span[text()=' Upload Photo ']/..")    //input[@name='file']
 public static WebElement Upload_Btn;
 
 @FindBy(xpath="//div[@class='image-upload-circle ng-star-inserted']")

@@ -5,6 +5,10 @@ package stepDefinitions;
 import static org.junit.Assert.assertEquals;
 
 import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -358,10 +362,11 @@ public void user_click_on_sign_in_button() throws InterruptedException {
 
 @When("dashboard window get display")
 public void dashboard_window_get_display() {
-	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.dashboard);
-    Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.dashboard),"Dashboard");
-  
-
+	Elements.calculateDays();
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Days_Text);
+	//System.out.println(USAMobileNoMandateObject.Days_Text.getText());
+int number	= Integer.parseInt(USAMobileNoMandateObject.Days_Text.getText());
+    Assert.assertEquals(number, Elements.calculateDays()+238);
 }
 
 
@@ -384,15 +389,17 @@ public void user_click_on_mat_icon() throws InterruptedException  {
  	//WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@formcontrolname='reportingDealPermission']")));
  	//((JavascriptExecutor)Base.driver).executeScript("arguments[0].click();", XpathUserFre.icon);
 		
- 
+  //*[local-name()='tspan'][text()='Days Left']/../../text
 }
 @When("user click on profile icon")
-public void user_click_on_profile_icon() throws InterruptedException {
+public void user_click_on_profile_icon() throws InterruptedException, AWTException {
 	
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Profile1);
 	//USAMobileNoMandateObject.profile.click();
 	Elements.jclick(USAMobileNoMandateObject.Profile1);
 	Thread.sleep(15000);
+
+			
 }
 @Then("user click profile icon")
 public void user_click_profile_icon() throws InterruptedException {

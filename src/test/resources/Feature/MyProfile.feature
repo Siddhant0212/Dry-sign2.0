@@ -141,7 +141,7 @@ Feature: To Verify My Profile Page
     And user click on mat icon
     When user click on profile icon
     #Then user click on upload button
-    Then user click on upload photo button as "SeekPng.com_avatar-png_1149972.png"
+    Then user click on upload photo button browser as "img.jpg"
     
      @MyProfile2
   Scenario: To verify  if user is able to see and click profile on dashboard top right corner after login.

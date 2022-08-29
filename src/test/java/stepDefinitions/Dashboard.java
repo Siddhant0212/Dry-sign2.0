@@ -159,6 +159,8 @@ public void user_should_display_the_correct_document_received_count() {
 	Elements.isDisplayed(DashboardObject.Documents);
 	Assert.assertNotSame(Elements.getText(DashboardObject.Documents_Received)," Documents Received ");
 	
+	
+	
 }
 @Then("user should display the correct document sent count")
 public void user_should_display_the_correct_document_sent_count() {
@@ -222,8 +224,41 @@ public void pop_Up_get_isplayed_with_Elements(io.cucumber.datatable.DataTable da
 }
 @Then("user get display upgrade plan button")
 public void user_get_display_upgrade_plan_button() {
-	Waits.waitUntilElementToClick(30,DashboardObject.btnUpgradePlan );
+	Waits.waitUntilElementLocated(30,DashboardObject.btnUpgradePlan );
 	Elements.isDisplayed(DashboardObject.btnUpgradePlan);
 }
+@Then("user click on Signature edit")
+public void user_click_on_Signature_edit() {
+	Waits.waitUntilElementToClick(30,DashboardObject.Signature_Edit);
+	Elements.click(DashboardObject.Signature_Edit);
+}
+@Then("user click Save button")
+public void user_click_Save_button() {
+	Waits.waitUntilElementToClick(30,DashboardObject.Save_Btn);
+	Elements.click(DashboardObject.Save_Btn);
+}
+@Then("message get display as {string}")
+public void message_get_display_as(String string) {
+	Waits.waitUntilElementLocated(30,DashboardObject.Signature_saved);
+	Elements.click(DashboardObject.Signature_saved);
+	Assert.assertEquals(Elements.getText(DashboardObject.Signature_saved),string);
+}
+@Then("user click on upload")
+public void user_click_on_upload() throws InterruptedException {
+	//Elements.switchToFrame(DashboardObject.iFrame_Type);
+	Elements.switchToChild();
+	Waits.waitUntilElementToClick(30,DashboardObject.Upload_Button);
+	Elements.jclick(DashboardObject.Upload_Button);
+}
+@Then("Error message get display as {string}")
+public void error_message_get_display_as(String string) throws InterruptedException {
+	Thread.sleep(2000);
+	Waits.waitUntilElementLocated(30,DashboardObject.Filesizeexceedsthemaximum);
+	Elements.isDisplayed(DashboardObject.Filesizeexceedsthemaximum);
+	Assert.assertEquals(Elements.getText(DashboardObject.Filesizeexceedsthemaximum),string);
+}
+
+	
+
 }
 

@@ -4,6 +4,8 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -13,6 +15,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -604,4 +607,22 @@ public class Elements {
 		robot.keyPress(KeyEvent.VK_ENTER);
 
 }
+	public static void pressEnter(WebElement element){
+		element.sendKeys(Keys.ENTER);
+		}
+	
+		public static int  calculateDays() {
+
+			Calendar calOne = Calendar.getInstance();
+		      int dayOfYear = calOne.get(Calendar.DAY_OF_YEAR);
+		      int year = calOne.get(Calendar.YEAR);
+		      Calendar calTwo = new GregorianCalendar(year, 11, 31);
+		      int day = calTwo.get(Calendar.DAY_OF_YEAR);
+		      //System.out.println("Days in current year: "+day);
+		      int total_days = day - dayOfYear;
+		    //  System.out.println("Total " + total_days + " days remaining in current year");
+		     // System.out.println(year);
+		      return total_days;
+		     
+	}
 }

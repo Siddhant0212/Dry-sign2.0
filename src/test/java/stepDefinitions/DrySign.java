@@ -19,6 +19,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
+import pageObjects.DashboardObject;
 import pageObjects.DrySignObjects;
 import pageObjects.USAMobileNoMandateObject;
 import pageObjects.XpathMyProfile;
@@ -658,11 +659,11 @@ public class DrySign {
 			Thread.sleep(5000);
 			}
 
-	@Then("user click on upload photo button as {string}")
-	public void user_click_on_upload_photo_button_as(String filename) throws InterruptedException {
+	@Then("user click on upload photo button browser as {string}")
+	public void user_click_on_upload_photo_button_browser_as(String filename)  throws InterruptedException {
 		
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upload_Btn);
-		Elements.jclick(USAMobileNoMandateObject.Upload_Btn);
+		Elements.pressEnter(USAMobileNoMandateObject.Upload_Btn);
 		Thread.sleep(5000);
 	    uploadFile(filename, "chrome");
 		Thread.sleep(5000);
@@ -671,5 +672,14 @@ public class DrySign {
 	public void upload_profile_picture_as(String string) throws InterruptedException {
 		  uploadFile(string, "chrome");
 			Thread.sleep(5000);
+	}
+	@Then("user click on upload and browser option as {string}")
+	public void user_click_on_upload_and_browser_option_as(String filename)  throws InterruptedException {
+	
+		Waits.waitUntilElementToClick(30, DashboardObject.Upload_Option);
+		Elements.click(DashboardObject.Upload_Option);
+		Thread.sleep(5000);
+	    uploadFile(filename, "chrome");
+		Thread.sleep(5000);
 	}
 }

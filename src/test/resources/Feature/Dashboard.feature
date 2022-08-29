@@ -217,6 +217,42 @@ Feature: To Verify Dashboard
     And user click on the sign in button
     And user click on continue with free version
     Then user should display the correct document sent count
+    
+      @Dashboard013
+  Scenario: To verify that user is  able to Draw/Type/Upload Signature on dashboard
+    When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    Then user click on Signature edit
+     And click on "TYPE"
+     Then user select the signature
+     And user click Save button
+     Then message get display as "Signature saved."
+     
+       @Dashboard14
+  Scenario: To verify that the Signature upload file max size is 50 kb 
+    When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    Then user click on Signature edit
+    Then user click on upload
+    Then user click on upload and browser option as "signature.png"
+    And user click Save button
+    Then message get display as "Signature saved."
+    
+     @Dashboard15
+  Scenario: To verify that the Signature upload file size is more than 50 kb 
+    When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    Then user click on Signature edit
+    Then user click on upload
+    Then user click on upload and browser option as "signature-scan.png"
+    #And user click Save button
+    Then Error message get display as "File size exceeds the maximum limit of 50KB."
 
   @Dashboard13
   Scenario: To verify that user is  able to Draw/Type/Upload Signature on dashboard
@@ -239,6 +275,9 @@ Feature: To Verify Dashboard
     And user click on continue with free version
     And dashboard window get display
     Then verify that Feedback rating UI should be present
+    
+    
+ 
 
   @Dashboard17
   Scenario: To verify Self sign and Group sign options are present or not on Dashboard
@@ -248,6 +287,16 @@ Feature: To Verify Dashboard
     And user click on continue with free version
     And dashboard window get display
     Then user display self sign and group sign and it should be clickable
+    
+     @Dashboard18
+  Scenario: To verify that used/remaining document count and days is displaying on dashboard correct or not
+    
+    When enter the user name as "sid12@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    Then dashboard window get display
+    
+    
 
   @Dashboard19
   Scenario: To Verify if the Account is Inactive, user should be able to purchase plan from Buy Now button present on Dashboard

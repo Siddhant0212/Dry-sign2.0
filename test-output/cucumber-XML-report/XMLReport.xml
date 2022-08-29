@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="40.249781">
-<testcase classname="To Verify Dashboard" name="To Verify the UI elements present on the View Plan button pop-up present on the Dashboard" time="40.249781">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="41.526855">
+<testcase classname="To Verify Dashboard" name="To verify that used/remaining document count and days is displaying on dashboard correct or not" time="41.526855">
 <system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
 When enter the user name as "sid12@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the sign in button........................................passed
-And dashboard window get display............................................passed
-Then View Plan buttons should be present....................................passed
-Then user click on View Plan button.........................................passed
-Then Pop Up get displayed with Elements.....................................passed
-Then user get display upgrade plan button...................................passed
-Then user click on close icon...............................................passed
+Then dashboard window get display...........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

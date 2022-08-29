@@ -89,6 +89,30 @@ public class DashboardObject {
 			
 			@FindBy(xpath="//mat-icon[text()='close']")     
 			public static  WebElement closeIcon;
+			
+			@FindBy(xpath="(//mat-icon[@class='mat-icon notranslate material-icons mat-icon-no-color'])[9]")     
+			public static  WebElement Signature_Edit;
+			
+			@FindBy(xpath="//span[text()='Save']")     
+			public static  WebElement Save_Btn;
+			
+			@FindBy(xpath="//div[text()=' Signature saved. ']")     
+			public static  WebElement Signature_saved;
+			
+			@FindBy(xpath="(//div[@class='mat-tab-label-content'])[3]")     
+			public static  WebElement Upload_Button;
+			
+			@FindBy(xpath="//img[@mattooltip='Upload']")     
+			public static  WebElement Upload_Option;
+			
+			@FindBy(xpath="//iframe[@id='ssIFrame_google']")     
+			public static  WebElement iFrame_Type;
+			
+			
+			@FindBy(xpath="//div[text()=' File size exceeds the maximum limit of 50KB. ']")     
+			public static  WebElement Filesizeexceedsthemaximum;
+			
+			
 }        
 
 

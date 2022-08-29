@@ -1,6 +1,11 @@
 package stepDefinitions;
 
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -21,11 +26,23 @@ public class MyProfile {
 	
 	
 	@Then("user click on upload button")
-	public void user_click_on_upload_button() throws InterruptedException {
-		//Thread.sleep(15000);
+	public void user_click_on_upload_button() throws InterruptedException, AWTException {
+		Thread.sleep(1000);
 		Elements.switchToChild();
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upload_Btn);
 		Elements.jclick(USAMobileNoMandateObject.Upload_Btn);
+		Thread.sleep(15000);
+		
+		Robot robot = new Robot();
+		StringSelection ss = new StringSelection("Downloads/SeekPng.com_avatar-png_1149972.png");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+				
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
 	@Then("user not get displayed profile picture")
