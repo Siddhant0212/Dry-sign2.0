@@ -9,6 +9,7 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.text.ParseException;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -361,12 +362,15 @@ public void user_click_on_sign_in_button() throws InterruptedException {
 }
 
 @When("dashboard window get display")
-public void dashboard_window_get_display() {
-	Elements.calculateDays();
+public void dashboard_window_get_display() throws ParseException {
+	// Elements.calculateDays();
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Days_Text);
-	//System.out.println(USAMobileNoMandateObject.Days_Text.getText());
-int number	= Integer.parseInt(USAMobileNoMandateObject.Days_Text.getText());
-    Assert.assertEquals(number, Elements.calculateDays()+238);
+	System.out.println(USAMobileNoMandateObject.Days_Text.getText());
+	int number = Integer.parseInt(USAMobileNoMandateObject.Days_Text.getText());
+	long num = Elements.calculateDays();
+	int num1 = (int) num;
+	int remaining = 365 - num1;
+	Assert.assertEquals(number, remaining);
 }
 
 

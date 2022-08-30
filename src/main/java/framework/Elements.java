@@ -3,8 +3,16 @@ package framework;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.Temporal;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
@@ -12,6 +20,8 @@ import java.util.Random;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.joda.time.DateTime;
+import org.joda.time.Days;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -26,8 +36,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import baseinit.Base;
 
 public class Elements {
+	
 
 	public Logger log = Logger.getLogger(Elements.class);
+	
+	public static int count =4;
 
 	public static void TypeText(WebElement element, String data) {
 		element.clear();
@@ -611,18 +624,24 @@ public class Elements {
 		element.sendKeys(Keys.ENTER);
 		}
 	
-		public static int  calculateDays() {
+	
+		public static long calculateDays() throws ParseException {
+			
+			Date dNow = new Date();
+	        DateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
+	        Date registrationDate=ft.parse("2022-08-26");
+	        Date currentDate=ft.parse(ft.format(dNow));
+	        long diff = currentDate.getTime() - registrationDate.getTime();
+	        long differenceDates = diff / (24 * 60 * 60 * 1000);
+	        System.out.println(differenceDates);
+	        
+	        return differenceDates;
+		}
+		
 
-			Calendar calOne = Calendar.getInstance();
-		      int dayOfYear = calOne.get(Calendar.DAY_OF_YEAR);
-		      int year = calOne.get(Calendar.YEAR);
-		      Calendar calTwo = new GregorianCalendar(year, 11, 31);
-		      int day = calTwo.get(Calendar.DAY_OF_YEAR);
-		      //System.out.println("Days in current year: "+day);
-		      int total_days = day - dayOfYear;
-		    //  System.out.println("Total " + total_days + " days remaining in current year");
-		     // System.out.println(year);
-		      return total_days;
-		     
+		public static String localDateToString(LocalDate date) {
+			DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd MM yyyy");
+			return date.format(myFormat).toString();
+		}
 	}
-}
+

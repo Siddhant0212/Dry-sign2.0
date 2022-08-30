@@ -1,5 +1,9 @@
 package stepDefinitions;
 
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+
 import baseinit.Base;
 import framework.Elements;
 import framework.Waits;
@@ -135,12 +139,22 @@ public class Freeuser {
 	}
 		@Then("user should not display as {string} option")
 		public void user_should_not_display_as_option(String string) {
-			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.FREEVERSION);
-			Elements.isDisplayed(USAMobileNoMandateObject.FREEVERSION);
-			Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.FREEVERSION),string);
+	//Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.FREEVERSION);
+//			Elements.isDisplayed(USAMobileNoMandateObject.FREEVERSION);
+//			Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.FREEVERSION),string);
+			
+			Waits.setImplicitWait(10);
+			List<WebElement> tabs=USAMobileNoMandateObject.Days_left;
+
+			if(tabs.size()>0) {
+				Assert.assertTrue(false);
+				
+			}
+			else {
+				Assert.assertTrue(true);
+			}
 		}
 		
-	
 	@Then("user should display document count zero")
 	public void user_should_display_document_count_zero() {
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Zero_Documents);

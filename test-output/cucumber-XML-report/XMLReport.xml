@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="41.526855">
-<testcase classname="To Verify Dashboard" name="To verify that used/remaining document count and days is displaying on dashboard correct or not" time="41.526855">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="45.565946">
+<testcase classname="To Verify Dashboard" name="To verify that used/remaining document count and days is displaying on dashboard correct or not" time="45.565946">
 <system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
 When enter the user name as "sid12@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed

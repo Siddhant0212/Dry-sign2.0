@@ -3,8 +3,9 @@ Feature: To Verify Free User functions
 
 
 
+
   @FreeUser1
-  Scenario: To Verify for the new free user, on login everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
+  Scenario: To Verify for paid user the "switch to free user" button text is changed to "Switch to free version"
    Given navigate to URL "https://drysign-qa.exela.global/#/"
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
