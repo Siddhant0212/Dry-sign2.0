@@ -1,9 +1,12 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import baseinit.Base;
 
 public class XpathFreeUser {
 	public XpathFreeUser(WebDriver driver)
@@ -63,6 +66,14 @@ public static WebElement Upload_New_Template;
 
 @FindBy(xpath="//div[text()=' You have reached the template upload count, please subscribe to upload more templates. ']")
 public static WebElement You_have_reached_the_template_upload_count;
+
+
+public static WebElement textField(String data)
+{
+String Xpath = "//*[@class='ng-star-inserted']";
+WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+return element;
+}
 
 
 }

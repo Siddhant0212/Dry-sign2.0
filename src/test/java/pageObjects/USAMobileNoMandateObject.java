@@ -121,13 +121,26 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//*[text()=' Continue With Free Version ']")
 	public static WebElement clickOnContWithfreeVersion;
 	
+	@FindAll({
+		@FindBy(xpath="//*[text()=' Continue With Free Version ']")
+	})
+	public static List<WebElement> clickOnContWithfreeVersion1;
 	
+	
+	@FindAll({
+		@FindBy(xpath="//upgrade-plan[@class='ng-star-inserted']")
+	})
+	public static List<WebElement> Dash_Popup;
 	       
 	
 	@FindBy(xpath="//span[text()='Dashboard']")
 	public static WebElement dashboard;
+	
+	@FindBy(xpath="(//span[text()='Dashboard'])[2]")
+	public static WebElement dashboard2;
 
-
+	
+	
 	@FindBy(xpath="//*[text()='more_vert']")
 	public static WebElement icon;
 
@@ -768,7 +781,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//div[text()='Drafts']")     
 	public static  WebElement tabDrafts;
 	
-	@FindBy(xpath="(//div[@class='ng-star-inserted'])[1]")     
+	@FindBy(xpath="//i[@class='ri-delete-bin-line']")     
 	public static  WebElement iconDelete;
 	
 	@FindBy(xpath="//mat-icon[text()='edit']")     
@@ -777,7 +790,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//div[@id='uploaded-doc-wrapper']")     
 	public static  WebElement redirectScreen;
 	
-	@FindBy(xpath="//h1[text()=' Delete documents from drafts ']")     
+	@FindBy(xpath="//p[text()='Are you sure you wish to delete this document?']")     
 	public static  WebElement popUpDelete;
 	
 	@FindBy(xpath="//span[text()='Cancel']")     
@@ -856,7 +869,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//iframe[@title='PSPDFKit']")     
 	public static  WebElement iFrame_Doc;
 	
-	@FindBy(xpath="//iframe[@id='ssIFrame_google']")     
+	@FindBy(xpath="//iframe[@id='ssIFrame_google']")     //div[text()='Type'] (//div[@class='mat-tab-label-content'])[2]
 	public static  WebElement iFrame_Type;
 	
 

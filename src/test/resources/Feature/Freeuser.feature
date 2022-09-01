@@ -180,6 +180,7 @@ Feature: To Verify Free User functions
     And user click on the sign in button
     And user click on continue with free version
     Then user should not display as "validity" option
+    
    @FreeUser11
  Scenario: To Verify Dashboard for paid users, coporate users and enterprise users is not changed.
     Given navigate to URL "https://drysign-qa.exela.global/#/"
@@ -187,6 +188,7 @@ Feature: To Verify Free User functions
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then Post login the Plan the pre dashboard pop up screen should not get displayed as "continue with free version"
+    Then for paid user no change on dashboard
     
     @FreeUser12
  Scenario: To verify that the plan pop up doesn't close unless "continue to free verison" or upgrade button is clicked.
@@ -207,6 +209,10 @@ Feature: To Verify Free User functions
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
+    Then user display three pie chart
+    Then display as "individual plan" with upgrade button
+    Then display as "professional plan" with Upgrade button
+    Then should display as "5 documents"
     Then upgrade button should get display 
   
   @FreeUser14
@@ -216,7 +222,11 @@ Feature: To Verify Free User functions
     When enter the password as"Malin@555"
     And user click on the sign in button
     Then user should get display pop up
-    Then under free version "continue with free version" Button present
+   #Then under free version "continue with free version" Button present
+      Then Pop Up get displayed with Elements
+      |Self Sign |        
+      |Group Sign|
+      |Signature: Type,Draw and upload|
     
     
       @FreeUser15

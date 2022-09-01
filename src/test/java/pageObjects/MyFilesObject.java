@@ -23,6 +23,11 @@ public class MyFilesObject {
 	@FindBy(xpath="//span[text()=' Subject ']")
     public static WebElement Subject;
 	
+	@FindBy(xpath="(//input[@placeholder='Filter'])[1]")
+    public static WebElement Subject_Search;
+	
+	
+	
 	@FindBy(xpath="//span[text()=' Document Name ']")
     public static WebElement Document_Name;
 	
@@ -112,6 +117,21 @@ public class MyFilesObject {
 	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
 	return element;
 	}
+	
+	public static WebElement Ascedingorder(String data)
+	{
+	String Xpath = "//span[@class='data-el ng-star-inserted']";
+	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+	return element;
+	}
+	
+	
+	@FindBy(xpath="(//mat-icon[text()='arrow_drop_up'])[4]")     
+	public static  WebElement Arrow_drop_up;
+	
+	@FindBy(xpath="(//mat-icon[text()='arrow_drop_down'])[4]")     
+	public static  WebElement Arrow_drop_down;
+	
 	
 	@FindBy(xpath="//td[@id='accordian0']")     
 	public static  WebElement minusicon;

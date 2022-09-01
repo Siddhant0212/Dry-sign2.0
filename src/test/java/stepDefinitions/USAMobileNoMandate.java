@@ -964,6 +964,7 @@ public void user_click_on_Mail() {
 	public void click_on(String type) throws InterruptedException {
 		Thread.sleep(5000);
 		//Elements.switchToFrame(USAMobileNoMandateObject.iFrame_Type);
+
 		Elements.switchToChild();
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickonType);
 		Elements.jclick(USAMobileNoMandateObject.clickonType);

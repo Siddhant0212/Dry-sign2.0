@@ -2,6 +2,28 @@ Feature: To Verify My Files Tabs Functionality
 
   Background: 
     Given navigate to URL "https://drysign-qa.exela.global/#/"
+    
+     @MyFiles1
+  Scenario: To verify functionality of sign on Pending document of DrySign
+     When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    Then user get display pending tab
+    Then user display action
+    Then user click on action link 
+    And user click on check box
+    And user click on accept button
+    And user clcik on ok button present on pop up
+    #Then document should get display
+    And user click on signature
+    And click on "TYPE"
+    Then user select the signature
+    And user click save button
+    Then use click on "finish"
+    Then successfully signed document page get display as"You have successfully signed this document."
+    Then verify contact number field needs to be mandatory field with the asterix symbol
 
   @MyFiles2
   Scenario: To verify download functionality of signed document of DrySign
@@ -110,10 +132,11 @@ Feature: To Verify My Files Tabs Functionality
     And user click on drafts tab
     And user click on Edit icon to view Self sign or Group sign
     Then user should get redirect to same screen
+    And user Click on Dashboard
     And user click on My Files
     And user click on drafts tab
     When user click on Delete icon under Action column
-    Then user should get displayed pop up
+    Then user should get displayed pop up as "Are you sure you wish to delete this document?"
     Then pop should contain confirm and cancel button
     When user click in confirm button
     Then user should be displayed message as deleted successfully
@@ -136,6 +159,9 @@ Feature: To Verify My Files Tabs Functionality
     #Then Rejected details and document should display correctly
     When user click on plus icon
     Then the details of the rejected document should be displayed
+    
+      @MyFiles08
+  Scenario: To Verify the generic Search functionality present on all the Tabs in the My Files 
 
   @MyFiles8
   Scenario: To Verify the generic Search functionality present on all the Tabs in the My Files
@@ -144,16 +170,54 @@ Feature: To Verify My Files Tabs Functionality
     And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
+    Then user get display pending tab
+    And user search data from the generic search functionality as "grp"
+    And user click on signed tab
+    And user search data from the generic search functionality as "grp"
     And user click on completed documents tab
     And user search data from the generic search functionality as "sign"
-    Then user should get displayed relevant data successfully through partial or fully searched
+    And user click on out for signature tab
+    And user search data from the generic search functionality as "grp"
+    And user click on drafts tab
+    And user search data from the generic search functionality as "Timo"
+    And user click on rejected tab
+    And user search data from the generic search functionality as "grp"
+    
+  
 
   @MyFiles9
   Scenario: To Verify the column sorting functioanlity is working in MY Files
+     When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
-    And user Sort the data by clicking on the arrow icon upward or downward
-    Then user should sort column data correctly through ascending for descending order
+    Then user display requested by
+    Then user click on upward arrow 
+    Then Display ascending order
+    |Ds5050 Test|
+    |Ds5050 Test|
+    |Sid Ingole|
+    |Sid Ingole|
+    |Sid Ingole|
+    |Sidd Ing|
+    |Sidd Ing|
+    Then user click on downward arrow
+    Then Display descending order
+    |Sidd Ing|
+    |Sidd Ing|
+    |Sid Ingole|
+    |Sid Ingole|
+    |Sid Ingole|
+    |Ds5050 Test|
+    |Ds5050 Test|
+    
+    
+    
+    
+    
+    #And user Sort the data by clicking on the arrow icon upward or downward
+    #Then user should sort column data correctly through ascending for descending order
 
   @MyFiles10
   Scenario: To Verify the individual column filter search functionality in My Files

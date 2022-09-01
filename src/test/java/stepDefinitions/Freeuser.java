@@ -11,6 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
+import pageObjects.DashboardObject;
 import pageObjects.USAMobileNoMandateObject;
 import pageObjects.XpathFreeUser;
 
@@ -62,6 +63,9 @@ public class Freeuser {
 	public void user_should_get_display_pop_up() {
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Plans_PopUp);
 		Elements.isDisplayed(USAMobileNoMandateObject.Plans_PopUp);
+		
+		Waits.waitUntilElementLocated(30, DashboardObject.textField("Self Sign"));
+		Elements.isDisplayed(DashboardObject.textField("Self Sign"));
 		
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.FREE_VERSION);
 		Elements.isDisplayed(USAMobileNoMandateObject.FREE_VERSION);
@@ -176,11 +180,39 @@ public class Freeuser {
 	}
 	@Then("Post login the Plan the pre dashboard pop up screen should not get displayed as {string}")
 	public void post_login_the_Plan_the_pre_dashboard_pop_up_screen_should_not_get_displayed_as(String string) {
-		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Individual_Plan);
-		Elements.isDisplayed(USAMobileNoMandateObject.Individual_Plan);
-		Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.Individual_Plan),string);
+		
+		
+		List<WebElement> popup=USAMobileNoMandateObject.Dash_Popup;
+		if(popup.size()>0) {
+			Assert.assertTrue(false);
+			
+		}
+		else {
+			Assert.assertTrue(true);
+		}
+		
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.clickOnContWithfreeVersion);
+//		Elements.isDisplayed(USAMobileNoMandateObject.clickOnContWithfreeVersion);
+		
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Individual_Plan);
+//		Elements.isDisplayed(USAMobileNoMandateObject.Individual_Plan);
+		//Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.Individual_Plan),string);
 		
 	}
+	
+	@Then("for paid user no change on dashboard")
+	public void for_paid_user_no_change_on_dashboard() {
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.INDIVIDUAL);
+		Elements.isDisplayed(USAMobileNoMandateObject.INDIVIDUAL);
+		Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.INDIVIDUAL),"INDIVIDUAL PLAN");
+		
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.btnViewPlan);
+	    Elements.isDisplayed(USAMobileNoMandateObject.btnViewPlan);
+		
+		
+	}
+	
+	
 	@When("user click on continue with free version and pop up should get closed")
 	public void user_click_on_continue_with_free_version_and_pop_up_should_get_closed()  throws InterruptedException {
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickOnContWithfreeVersion);

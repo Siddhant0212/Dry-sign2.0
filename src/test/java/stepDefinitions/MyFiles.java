@@ -24,8 +24,8 @@ public void user_click_on_My_Files() throws InterruptedException {
 
 @When("user search data from the generic search functionality as {string}")
 public void user_search_data_from_the_generic_search_functionality_as(String filename) {
-	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.searchBox);
-	Elements.TypeText(USAMobileNoMandateObject.searchBox, filename);
+	Waits.waitUntilElementLocated(30, MyFilesObject.Subject_Search);
+	Elements.TypeText(MyFilesObject.Subject_Search, filename);
 	
     
 }
@@ -146,6 +146,14 @@ public void the_details_of_the_rejected_document_should_be_displayed() {
 	Elements.isDisplayed(USAMobileNoMandateObject.detailsRejected);
 	
 }
+@Then("user Click on Dashboard")
+public void user_Click_on_Dashboard() throws InterruptedException {
+	Thread.sleep(5000);
+	//Elements.switchToChild();
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.dashboard2);
+	Elements.jclick(USAMobileNoMandateObject.dashboard2);
+	
+}
 @When("user click on drafts tab")
 public void user_click_on_drafts_tab() {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.tabDrafts);
@@ -160,10 +168,11 @@ public void user_click_on_Delete_icon_under_Action_column() {
     
 }
 
-@Then("user should get displayed pop up")
-public void user_should_get_displayed_pop_up() {
+@Then("user should get displayed pop up as {string}")
+public void user_should_get_displayed_pop_up_as(String string) {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.popUpDelete);
 	Elements.isDisplayed(USAMobileNoMandateObject.popUpDelete);
+	Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.popUpDelete),string);
     
 }
 
@@ -635,5 +644,81 @@ public void on_last_page_next_arror_icon_should_be_disabled() {
 	Elements.isEnabled(MyFilesObject.Next);
 	
 }
+@Then("user click on upward arrow")
+public void user_click_on_upward_arrow() throws InterruptedException {
+	Thread.sleep(2000);
+	Waits.waitUntilElementToClick(30, MyFilesObject.Arrow_drop_up);
+	Elements.jclick(MyFilesObject.Arrow_drop_up);
+}
+
+		
+		@Then("Display ascending order")
+		public void display_ascending_order(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+			for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+				Thread.sleep(5000);
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Ds5050 Test"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Ds5050 Test"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Ds5050 Test"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Ds5050 Test"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sid Ingole"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sid Ingole"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sid Ingole"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sid Ingole"));
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sid Ingole"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sid Ingole"));
+				
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sidd Ing"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sidd Ing"));
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sidd Ing"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sidd Ing"));
+			
+		}
+}
+		@Then("user click on downward arrow")
+		public void user_click_on_downward_arrow() {
+			Waits.waitUntilElementToClick(30, MyFilesObject.Arrow_drop_down);
+			Elements.jclick(MyFilesObject.Arrow_drop_down);
+			
+		}
+		
+		@Then("Display descending order")
+		public void display_descending_order(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+			for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+				Thread.sleep(5000);
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sidd Ing"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sidd Ing"));
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sidd Ing"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sidd Ing"));
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sid Ingole"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sid Ingole"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sid Ingole"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sid Ingole"));
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Sid Ingole"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Sid Ingole"));
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Ds5050 Test"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Ds5050 Test"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Ascedingorder("Ds5050 Test"));
+				Elements.isDisplayed(MyFilesObject.Ascedingorder("Ds5050 Test"));
+				
+		}
+		
+			
+		}
+		
+		
 }
 
