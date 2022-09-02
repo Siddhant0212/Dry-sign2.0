@@ -76,5 +76,11 @@ public class XpasswrdProdoc {
   //*[@type='password']
      @FindBy(xpath="//*[text()='Sign Document']")
     public static WebElement signDocu;
+     
+     @FindBy(xpath="//h3[text()='Document is not completely prepared by the originator.']")
+     public static WebElement Document_is_not_completely;
+     
+     @FindBy(xpath="//input[@id='inbox_field']")     
+ 	public static  WebElement mailinatorInPut1;
 
 }

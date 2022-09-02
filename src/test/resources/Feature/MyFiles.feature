@@ -192,6 +192,7 @@ Feature: To Verify My Files Tabs Functionality
     And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
+    Then user get display pending tab
     Then user display requested by
     Then user click on upward arrow 
     Then Display ascending order
@@ -202,6 +203,8 @@ Feature: To Verify My Files Tabs Functionality
     |Sid Ingole|
     |Sidd Ing|
     |Sidd Ing|
+    And user click on signed tab
+    Then user is able to click on pending tab 
     Then user click on downward arrow
     Then Display descending order
     |Sidd Ing|
@@ -213,11 +216,6 @@ Feature: To Verify My Files Tabs Functionality
     |Ds5050 Test|
     
     
-    
-    
-    
-    #And user Sort the data by clicking on the arrow icon upward or downward
-    #Then user should sort column data correctly through ascending for descending order
 
   @MyFiles10
   Scenario: To Verify the individual column filter search functionality in My Files
@@ -226,11 +224,19 @@ Feature: To Verify My Files Tabs Functionality
     And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
-    And user click on completed documents tab
-    And user enter subject in subject column filter as "sign"
-    And user enter sign type as "Group"
-    And user enter completed date as "08/09/2022"
-    And user should get display the correct searched data for every column
+    Then user get display pending tab
+    And user search data from the generic search functionality as "grp"
+    Then user search data into document name as "TimoManual.pdf (1) (2).pdf"
+    Then user search data into assigned date as "08/29/2022 10:39:17 PM"
+    Then user search data into requested by as "Ds5050 Test"
+    
+    
+    
+    #And user click on completed documents tab
+    #And user enter subject in subject column filter as "sign"
+    #And user enter sign type as "Group"
+    #And user enter completed date as "08/09/2022"
+    #And user should get display the correct searched data for every column
     
     
           @MyFiles11

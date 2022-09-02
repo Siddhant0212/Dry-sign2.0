@@ -1,7 +1,7 @@
 package stepDefinitions;
 
 import java.io.File;
-
+import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -19,6 +19,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.DeleteObject;
+import pageObjects.MyFilesObject;
 import pageObjects.USAMobileNoMandateObject;
 import pageObjects.XpasswrdProdoc;
 
@@ -191,19 +192,21 @@ public void user_click_on_drysign() {
 }
 
 @Then("user click on sign document")
-public void user_click_on_sign_document() {
+public void user_click_on_sign_document() throws InterruptedException {
 	Elements.switchToFrame(USAMobileNoMandateObject.bodyIframe);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Sign_Document);
 	Elements.jclick(USAMobileNoMandateObject.Sign_Document);
+	Thread.sleep(5000);
 	
 }
 @Then("user get display pop up with message as {string}")
 public void user_get_display_pop_up_with_message_as(String string) throws InterruptedException {
-	Elements.switchToChild();
+	//Elements.switchToChild();
+	//Elements.switchToFrame(USAMobileNoMandateObject.IFrame1);
 	Waits.waitUntilElementLocated(30,USAMobileNoMandateObject.PleaseEnterThePassword);
 	Elements.isDisplayed(USAMobileNoMandateObject.PleaseEnterThePassword);
 	Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.PleaseEnterThePassword),string);
-//	Elements.VerifyTextEquals(USAMobileNoMandateObject.PleaseEnterThePassword, string);
+
 	
 }
 @Then("user enter Password as {string}")
@@ -232,9 +235,18 @@ public void user_should_get_display_error_message_as(String string) {
 	
 }
 @Then("user correct password as {string}")
-public void user_correct_password_as(String string) {
+public void user_correct_password_as(String string) throws InterruptedException {
+	//Elements.switchToFrame(USAMobileNoMandateObject.IFrame1);
+	Elements.switchToChild();
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.EnterPassword);
 	Elements.TypeText(USAMobileNoMandateObject.EnterPassword,string);
+}
+
+@Then("click on Submit button")
+public void click_on_Submit_button() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Submit_Btn);
+	Elements.click(USAMobileNoMandateObject.Submit_Btn);
+	
 }
 @Then("user should display in asteric symbol or circular dots")
 public void user_should_display_in_asteric_symbol_or_circular_dots() {
@@ -322,5 +334,69 @@ public void user_email_id_as(String string) {
 //public void user_click_on_next_button() {
 //	Waits.waitUntilElementLocated(30, XpasswrdProdoc.userName);
 //	Elements.click(XpasswrdProdoc.btnNext);
+
+
+@Given("user Enter email id as {string}")
+public void user_Enter_email_id_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
+	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid15");
 	
 }
+@Then("user get display Error Message as {string}")
+public void user_get_display_Error_Message_as(String string) throws InterruptedException {
+
+	Elements.switchToChild();
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Document_is_not_completely);
+	Elements.isDisplayed(USAMobileNoMandateObject.Document_is_not_completely);
+	Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Document_is_not_completely),string);
+	//Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign6),"08/16/2022 11:06:55 AM");
+}
+@Given("User Enter email id as {string}")
+public void User_Enter_email_id_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
+	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid101");
+	
+}
+@Then("user click on remove")
+public void user_click_on_remove() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Remove3);
+	Elements.jclick(USAMobileNoMandateObject.Remove3);
+}
+
+@Then("user click on Confirm Btn")
+public void user_click_on_Confirm_Btn() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.popUpDeleteConfirm);
+	Elements.jclick(USAMobileNoMandateObject.popUpDeleteConfirm);
+	
+}
+@Then("click on Ok button")
+public void click_on_Ok_button() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.tabSecurityOk);
+	Elements.jclick(USAMobileNoMandateObject.tabSecurityOk);
+}
+@Given("user Enter email Id as {string}")
+public void user_Enter_email_Id_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
+	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid15");
+}
+@Then("mail is not present")
+public void mail_is_not_present() {
+	Waits.setImplicitWait(10);
+
+	List<WebElement> tabs=USAMobileNoMandateObject.malinatorMail;
+	if(tabs.size()>0) {
+		Assert.assertTrue(false);
+		
+	}
+	else {
+		Assert.assertTrue(true);
+	}
+}
+@When("user click on Out for signature tab")
+public void user_click_on_Out_for_signature_tab() throws InterruptedException {
+	
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.OutforSignature);
+	Elements.jclick(USAMobileNoMandateObject.OutforSignature);
+}
+}
+

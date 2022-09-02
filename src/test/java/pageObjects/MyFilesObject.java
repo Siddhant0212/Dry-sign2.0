@@ -26,6 +26,15 @@ public class MyFilesObject {
 	@FindBy(xpath="(//input[@placeholder='Filter'])[1]")
     public static WebElement Subject_Search;
 	
+	@FindBy(xpath="(//input[@placeholder='Filter'])[2]")
+    public static WebElement Subject_Search2;
+	
+	@FindBy(xpath="(//input[@placeholder='Filter'])[3]")
+    public static WebElement Subject_Search3;
+	
+	@FindBy(xpath="(//input[@placeholder='Filter'])[4]")
+    public static WebElement Subject_Search4;
+	
 	
 	
 	@FindBy(xpath="//span[text()=' Document Name ']")

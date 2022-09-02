@@ -300,9 +300,10 @@ public void user_is_able_to_click_on_Signed_tab() {
 	
 }
 @Then("user get display pending tab")
-public void user_get_display_pending_tab() {
+public void user_get_display_pending_tab() throws InterruptedException {
 	Waits.waitUntilElementLocated(30, MyFilesObject.Pending);
 	Elements.isDisplayed(MyFilesObject.Pending);
+	Thread.sleep(5000);
     
 }
 
@@ -400,7 +401,9 @@ public void user_display_date_in_format_as(String string) {
 	
 }
 @Then("user click on out for signature tab")
-public void user_click_on_out_for_signature_tab() {
+public void user_click_on_out_for_signature_tab() throws InterruptedException {
+	Thread.sleep(10000);
+	
 	Waits.waitUntilElementToClick(30, MyFilesObject.OutforSignature);
 	Elements.jclick(MyFilesObject.OutforSignature);
    
@@ -716,6 +719,27 @@ public void user_click_on_upward_arrow() throws InterruptedException {
 				
 		}
 		
+			
+		}
+		@Then("user search data into document name as {string}")
+		public void user_search_data_into_document_name_as(String string) throws InterruptedException {
+			Thread.sleep(2000);
+			Waits.waitUntilElementLocated(30, MyFilesObject.Subject_Search2);
+			Elements.TypeText(MyFilesObject.Subject_Search2, string);
+		}
+		
+		@Then("user search data into assigned date as {string}")
+		public void user_search_data_into_assigned_date_as(String string) throws InterruptedException {
+			Thread.sleep(2000);
+			Waits.waitUntilElementLocated(30, MyFilesObject.Subject_Search3);
+			Elements.TypeText(MyFilesObject.Subject_Search3, string);
+			
+		}
+		@Then("user search data into requested by as {string}")
+		public void user_search_data_into_requested_by_as(String string) throws InterruptedException {
+			Thread.sleep(2000);
+			Waits.waitUntilElementLocated(30, MyFilesObject.Subject_Search4);
+			Elements.TypeText(MyFilesObject.Subject_Search4, string);
 			
 		}
 		

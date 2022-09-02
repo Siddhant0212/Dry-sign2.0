@@ -254,6 +254,16 @@ public class USAMobileNoMandateObject {
 		@FindBy(xpath="//input[@type='password']")
 		public static  WebElement EnterPassword;
 		
+		@FindBy(xpath="//iframe[@id='ssIFrame_google']")
+		public static  WebElement IFrame1;
+		
+		@FindBy(xpath="//button[text()='Submit']")
+		public static  WebElement Submit_Btn;
+		
+		
+		//button[text()='Submit']
+		//iframe[@id='ssIFrame_google']
+		
 		@FindBy(xpath="//span[text()='Submit']")
 		public static  WebElement clickSubmit;
 		
@@ -278,6 +288,11 @@ public class USAMobileNoMandateObject {
 		
 		@FindBy(xpath="//span[text()='Yes']")
 		public static  WebElement Yes_Btn;
+		
+		@FindBy(xpath="(//a[@mattooltip='Remove'])[3]")
+		public static  WebElement Remove3;
+		
+		
 		
 		@FindBy(xpath="//input[@formcontrolname='newName']")
 		public static  WebElement New_Name;
@@ -554,6 +569,9 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//input[@id='inbox_field']")     
 	public static  WebElement mailinatorInPut1;
 	
+	@FindBy(xpath="//h3[text()='Document is not completely prepared by the originator.']")
+    public static WebElement Document_is_not_completely;
+	
 	@FindBy(xpath="//div[text()=' Please enter the Valid Secure Code ']")     
 	public static  WebElement Pls_Enter_Valid_Secure_Code;
 	
@@ -572,7 +590,10 @@ public class USAMobileNoMandateObject {
 	
 	
 	
-	//a[text()=' Resend One Time Password ']
+	@FindAll({
+		@FindBy(xpath="//tr[@ng-repeat='email in emails']")
+	})
+	public static List<WebElement> malinatorMail;
 	
 	
 	@FindBy(xpath="//a[text()=' Resend One Time Password ']")     
@@ -581,7 +602,7 @@ public class USAMobileNoMandateObject {
 	
 	
 	
-	
+
 	
 	
 	
