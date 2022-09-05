@@ -843,4 +843,49 @@ public void user_click_on_send_one_time_password() throws InterruptedException {
 		Waits.waitUntilElementToClick(30, MFAObject.Submit_Btn);
 		Elements.click(MFAObject.Submit_Btn);
 	}
+	@Then("user delete that secure code")
+	public void user_delete_that_secure_code() throws InterruptedException {
+		//char[] enterSecureCode =securecode.toCharArray();
+		for(int i=5;i>=0;i--)
+		{
+		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)));
+		Elements.pressDelete(USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)));
+		Thread.sleep(1000);
+		
+
+		}
+	
 	}
+	@When("user login via secure code As {string}")
+	public void user_login_via_secure_code_As(String enterSecureCode) throws InterruptedException {
+	
+		
+//		for(int i=5;i<=5;i++)
+//		{
+//		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)));
+//		Elements.pressTab1(USAMobileNoMandateObject.SecurePassword(String.valueOf(i+1)));
+//		Thread.sleep(1000);
+		
+	        Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code1);
+	 	    Elements.pressTab1(USAMobileNoMandateObject.code1);
+		
+		    Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code2);
+			Elements.pressTab1(USAMobileNoMandateObject.code2);
+			
+	     	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code3);
+			Elements.pressTab1(USAMobileNoMandateObject.code3);
+			
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code4);
+			Elements.pressTab1(USAMobileNoMandateObject.code4);
+			
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code5);
+			Elements.pressTab1(USAMobileNoMandateObject.code5);
+			
+			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code6);
+			Elements.pressTab1(USAMobileNoMandateObject.code6);
+			
+			Thread.sleep(2000);
+		
+	}
+	}
+	

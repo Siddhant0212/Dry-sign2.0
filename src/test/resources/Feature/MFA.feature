@@ -235,11 +235,23 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     And user click profile icon
     When user click on security tab
     And user select on checkbox for setup secure code
-   # And user enter secure code as "222222"
+    #And user click on ok button present on pop up
+    And user enter secure code as "222222"
+    Then user delete that secure code 
+    
     #Then user get displayed confirm secure code text
     #And user enter confirm secure code as "222222"
-   Then user press delete button as "2"
+    #Then user press delete button as "2"
     
+       @MFA10
+  Scenario: To check that verify button get click on Keyboard Enter key
+        When enter the user name as "sid32@mailinator.com"
+        When enter the password as"Malin@555"
+        And user click on the sign in button
+        And user login via secure code As "2"
+        And user click on verify button
+        And user click on continue with free version
+        
 
   @MFA12
   Scenario: To verify functionality of Forgot Secure code on entering correct credientials

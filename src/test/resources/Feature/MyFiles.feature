@@ -5,7 +5,7 @@ Feature: To Verify My Files Tabs Functionality
     
      @MyFiles1
   Scenario: To verify functionality of sign on Pending document of DrySign
-     When enter the user name as "sid39@mailinator.com"
+    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
@@ -37,7 +37,7 @@ Feature: To Verify My Files Tabs Functionality
     And user should get display document
     Then user click on Close icon
     When user click on Download icon
-    Then Document should get downloaded on local storage
+    Then Document should get downloaded on local storage as "Holidays List 2022 Updated.pdf" 
     #When user open downloaded document
     #And check signature details
     #Then All signature details and document should display correctly

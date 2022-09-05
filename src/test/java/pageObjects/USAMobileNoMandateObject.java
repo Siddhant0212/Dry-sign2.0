@@ -696,7 +696,7 @@ public class USAMobileNoMandateObject {
 	
 	public static WebElement SecurePassword(String string1)
 	{
-		WebElement element = Base.driver.findElement(By.xpath("//label[text()='Enter Secure Code']/following-sibling::ng-otp-input//input[$]".replace("$", string1)));
+		WebElement element = Base.driver.findElement(By.xpath("//label[text()='Enter Secure Code']/following-sibling::ng-otp-input[1]//input[$]".replace("$", string1)));
 				
 		return element;
 	}

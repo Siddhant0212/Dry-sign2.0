@@ -38,14 +38,17 @@ public class Waits {
 				//wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(element)));
 				wait.until(ExpectedConditions.visibilityOfAllElements(element));	
 		}
+		  
+		  
 
 		  public static void waitUntilElementToClick(int time,WebElement element){
-			  
+			for(int i=1;i<=5;i++)  {
 			  
 		  WebDriverWait wait=new WebDriverWait(Base.driver,time);
 		 // wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(element)));	
 		  wait.until(ExpectedConditions.elementToBeClickable(element)); 
 		  
+			}
 			  
 				  } 
 				  

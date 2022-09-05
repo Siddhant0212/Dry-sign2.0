@@ -123,13 +123,14 @@ public void user_click_on_Close_icon() {
 public void user_click_on_Download_icon() {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.cloudDownload);
 	Elements.click(USAMobileNoMandateObject.cloudDownload);
+	
  
 }
 
-@Then("Document should get downloaded on local storage")
-public void document_should_get_downloaded_on_local_storage() {
-	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.downloadDocDisplay);
-	Elements.isDisplayed(USAMobileNoMandateObject.downloadDocDisplay);
+@Then("Document should get downloaded on local storage as {string}")
+public void document_should_get_downloaded_on_local_storage_as(String string) throws InterruptedException {
+	  Thread.sleep(10000);
+      Assert.assertTrue(Elements.isFileDownloaded(string));;
     
 }
 

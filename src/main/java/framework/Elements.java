@@ -3,6 +3,7 @@ package framework;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -34,6 +35,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import baseinit.Base;
+import io.cucumber.java.en.Then;
+
 
 public class Elements {
 	
@@ -643,5 +646,25 @@ public class Elements {
 			DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd MM yyyy");
 			return date.format(myFormat).toString();
 		}
+		public static void pressDelete(WebElement element){
+			element.sendKeys(Keys.BACK_SPACE);
+			}
+		
+		public static void pressTab1(WebElement element){
+			element.sendKeys(Keys.ENTER);
+			}
+		
+		public static boolean isFileDownloaded(String fileName) {
+			boolean flag = false;
+			File dir = new File(System.getProperty("user.dir") + "\\DownloadedFiles\\");
+			File[] dir_contents = dir.listFiles();
+			for (int i = 0; i < dir_contents.length; i++) {
+			if (dir_contents[i].getName().contains(fileName))
+			return flag = true;
+			}
+			return flag;
+			}
+		
+		
 	}
 
