@@ -1,8 +1,13 @@
 package stepDefinitions;
 
+import java.io.IOException;
 import java.util.Map;
 
+import org.apache.tika.exception.TikaException;
+import org.xml.sax.SAXException;
+
 import framework.Elements;
+import framework.GenericActions;
 import framework.Waits;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,6 +15,7 @@ import junit.framework.Assert;
 import pageObjects.FeedbackRatingObject;
 import pageObjects.MyFilesObject;
 import pageObjects.USAMobileNoMandateObject;
+import util.Xls_Reader;
 
 public class MyFiles {
 	
@@ -120,19 +126,37 @@ public void user_click_on_Close_icon() {
 }
 
 @When("user click on Download icon")
-public void user_click_on_Download_icon() {
+public void user_click_on_Download_icon() throws IOException, SAXException, TikaException {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.cloudDownload);
 	Elements.click(USAMobileNoMandateObject.cloudDownload);
+	
+	  String content=Elements.readPDFInURL();
+      if (content.contains("Sid")) {
+    	 Assert.assertTrue(true); 
+      } else {
+    	  Assert.assertTrue(false); 
+      }
 	
  
 }
 
 @Then("Document should get downloaded on local storage as {string}")
-public void document_should_get_downloaded_on_local_storage_as(String string) throws InterruptedException {
+public void document_should_get_downloaded_on_local_storage_as(String string) throws InterruptedException, IOException, SAXException, TikaException {
 	  Thread.sleep(10000);
       Assert.assertTrue(Elements.isFileDownloaded(string));;
+      
+      
+      String content=Elements.readPDFInURL();
+      if (content.contains("Sid")) {
+    	 Assert.assertTrue(true); 
+      } else {
+    	  Assert.assertTrue(false); 
+      }
+  }
+      
+      
     
-}
+
 
 @When("user click on plus icon")
 public void user_click_on_plus_icon() throws InterruptedException {
@@ -241,25 +265,28 @@ public void pop_up_get_displayed() throws InterruptedException {
 	Elements.isDisplayed(USAMobileNoMandateObject.sendEmailPopUp);
 }
 @When("user enter recipient email address as {string}")
-public void user_enter_recipient_email_address_as(String emailadd) {
+public void user_enter_recipient_email_address_as(String emailadd) throws InterruptedException {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.recipientEmailAddress);
 	Elements.jTypeText(USAMobileNoMandateObject.recipientEmailAddress, emailadd);
+	Thread.sleep(2000);
 }
 @Then("user enter CC email address as {string}")
-public void user_enter_CC_email_address_as(String ccemail) {
+public void user_enter_CC_email_address_as(String ccemail) throws InterruptedException {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.cCEmail);
 	Elements.jTypeText(USAMobileNoMandateObject.cCEmail, ccemail);
-	
+	Thread.sleep(2000);
 }
 @When("user enter add subject as {string}")
-public void user_enter_add_subject_as(String sign) {
+public void user_enter_add_subject_as(String sign) throws InterruptedException {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.addSubject);
 	Elements.jTypeText(USAMobileNoMandateObject.addSubject, sign);
+	Thread.sleep(2000);
 }
 @When("user enter Message {string}")
-public void user_enter_Message(String grpsign) {
+public void user_enter_Message(String grpsign) throws InterruptedException {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.msgBox);
 	Elements.jTypeText(USAMobileNoMandateObject.msgBox, grpsign);
+	Thread.sleep(2000);
 	
 }
 @When("user click on Send button")
@@ -743,7 +770,94 @@ public void user_click_on_upward_arrow() throws InterruptedException {
 			Elements.TypeText(MyFilesObject.Subject_Search4, string);
 			
 		}
-		
-		
+		@Then("user get display status as {string}")
+		public void user_get_display_status_as(String string) {
+			Waits.waitUntilElementLocated(30, MyFilesObject.Pending_Status);
+			Elements.isDisplayed(MyFilesObject.Pending_Status);
+			Assert.assertEquals(Elements.getText(MyFilesObject.Pending_Status),string);
+			
+		}
+		@Then("user click on info icon")
+		public void user_click_on_info_icon() throws InterruptedException {
+			Thread.sleep(2000);
+			Waits.waitUntilElementToClick(30, MyFilesObject.Info);
+			Elements.click(MyFilesObject.Info);
+		}
+
+		@Then("Pop up get display as {string} and recent added get display")
+		public void pop_up_get_display_as_and_recent_added_get_display(String string) throws InterruptedException {
+			Thread.sleep(5000);
+			Waits.waitUntilElementLocated(30, MyFilesObject.Recent_Action);
+			Elements.isDisplayed(MyFilesObject.Recent_Action);
+			//Assert.assertEquals(Elements.getText(MyFilesObject.Recent_Action),string);
+			
+			Waits.waitUntilElementLocated(30, MyFilesObject.Records);
+			Elements.isDisplayed(MyFilesObject.Records);
+			
+			Waits.waitUntilElementToClick(30, MyFilesObject.Close);
+			Elements.click(MyFilesObject.Close);
+			
+			
+			
+		}
+		@Then("user click on notify icon")
+		public void user_click_on_notify_icon() {
+			Waits.waitUntilElementToClick(30, MyFilesObject.Notify);
+			Elements.click(MyFilesObject.Notify);
+			
+		}
+		@Then("success message get display as {string}")
+		public void success_message_get_display_as(String string) {
+			Waits.waitUntilElementLocated(30, MyFilesObject.Succesfull_Text);
+			Elements.isDisplayed(MyFilesObject.Succesfull_Text);
+			//Assert.assertEquals(Elements.getText(MyFilesObject.Succesfull_Text),string);
+		}
+		@Then("user click on remove icon")
+		public void user_click_on_remove_icon() {
+			Waits.waitUntilElementToClick(30, MyFilesObject.Remove);
+			Elements.click(MyFilesObject.Remove);
+		 
+		}
+
+		@Then("user click on confirm")
+		public void user_click_on_confirm() {
+			Waits.waitUntilElementToClick(30, MyFilesObject.Confirm);
+			Elements.click(MyFilesObject.Confirm);
+			
+		}
+		@Then("succefully remove message display as {string}")
+		public void succefully_remove_message_display_as(String string) {
+			Waits.waitUntilElementLocated(30, MyFilesObject.Succesfull_Text);
+			Elements.isDisplayed(MyFilesObject.Succesfull_Text);
+		}
+
+		@Then("click OK button")
+		public void click_OK_button() {
+			Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.tabSecurityOk);
+			Elements.click(USAMobileNoMandateObject.tabSecurityOk);
+			
+		}
+		@Then("Document should get downloaded on Local storage as {string}")
+		public void document_should_get_downloaded_on_Local_storage_as(String string) throws InterruptedException {
+			Thread.sleep(10000);
+		      Assert.assertTrue(Elements.isFileDownloaded(string));;
+		}
+		@Then("details get Display")
+		public void details_get_Display(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+			for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+				Thread.sleep(5000);
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Rejectedorder("Signatories:"));
+				Elements.isDisplayed(MyFilesObject.Rejectedorder("Signatories:"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Rejectedorder("Message:"));
+				Elements.isDisplayed(MyFilesObject.Rejectedorder("Message:"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Rejectedorder("Rejected Comment:"));
+				Elements.isDisplayed(MyFilesObject.Rejectedorder("Rejected Comment:"));
+		}
+			
+		}
 }
+
 

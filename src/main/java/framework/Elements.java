@@ -33,9 +33,21 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.xml.sax.SAXException;
 
 import baseinit.Base;
 import io.cucumber.java.en.Then;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.tika.exception.TikaException;
+// Importing Apache POI classes
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.pdf.PDFParser;
+import org.apache.tika.sax.BodyContentHandler;
 
 
 public class Elements {
@@ -664,7 +676,41 @@ public class Elements {
 			}
 			return flag;
 			}
-		
-		
-	}
 
+		 public static String readPDFInURL() throws IOException, SAXException, TikaException  {
+
+					
+					BodyContentHandler contenthandler
+						= new BodyContentHandler();
+
+					
+					File f = new File("C:\\Users\\Siddhant.Ingole.IN\\eclipse-workspace\\DS-2.0\\DownloadedFiles\\Holidays List 2022 Updated.pdf");
+
+					
+					FileInputStream fstream = new FileInputStream(f);
+
+				
+					Metadata data = new Metadata();
+
+					
+					ParseContext context = new ParseContext();
+
+					
+					PDFParser pdfparser = new PDFParser();
+
+					
+					pdfparser.parse(fstream, contenthandler, data,
+									context);
+
+				
+					System.out.println("Extracting contents :"
+									+ contenthandler.toString());
+					
+					String content = contenthandler.toString();
+					return content ;
+				}
+			
+}
+		 
+	
+	

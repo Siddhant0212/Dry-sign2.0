@@ -134,6 +134,13 @@ public class MyFilesObject {
 	return element;
 	}
 	
+	public static WebElement Rejectedorder(String data)
+	{
+	String Xpath = "//div[@class='ng-star-inserted']";
+	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+	return element;
+	}
+	
 	
 	@FindBy(xpath="(//mat-icon[text()='arrow_drop_up'])[4]")     
 	public static  WebElement Arrow_drop_up;
@@ -142,6 +149,32 @@ public class MyFilesObject {
 	public static  WebElement Arrow_drop_down;
 	
 	
+			
+			@FindBy(xpath="(//a[@mattooltip='Info'])[1]")     
+			public static  WebElement Info;
+			
+			@FindBy(xpath="//h1[text()=' Recent Action ']")     
+			public static  WebElement Recent_Action;
+			
+			@FindBy(xpath="//td[@class='no-records ng-star-inserted']")     
+			public static  WebElement Records;
+			
+			@FindBy(xpath="(//a[@mattooltip='Notify'])[1]")     
+			public static  WebElement Notify;
+			
+			@FindBy(xpath="//mat-icon[text()='close']")     
+			public static  WebElement Close;
+			
+			@FindBy(xpath="//p[@class='text strong ng-star-inserted']")     
+			public static  WebElement Succesfull_Text;
+			
+			@FindBy(xpath="(//a[@mattooltip='Remove'])[1]")     
+			public static  WebElement Remove;
+			
+			//p[@class='text strong ng-star-inserted']
+			//p[@class='text strong ng-star-inserted']
+			
+			
 	@FindBy(xpath="//td[@id='accordian0']")     
 	public static  WebElement minusicon;
 	
@@ -210,6 +243,11 @@ public class MyFilesObject {
 	
 	@FindBy(xpath="//div[text()=' Displaying item : 1 - 4 of 4 ']")     
 	public static  WebElement Displaying_item ;
+	
+	@FindBy(xpath="//span[text()='Pending']")     
+	public static  WebElement Pending_Status ;
+	
+	//span[text()='Pending']
 	
 	
 	

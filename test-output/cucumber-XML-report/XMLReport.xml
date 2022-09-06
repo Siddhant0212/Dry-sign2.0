@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="106.86842">
-<testcase classname="To Verify My Files Tabs Functionality" name="To verify download functionality of signed document of DrySign" time="106.86842">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="111.621037">
+<testcase classname="To Verify My Files Tabs Functionality" name="To verify download functionality of rejected document of DrySign" time="111.621037">
 <system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
 When enter the user name as "sid39@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the sign in button........................................passed
 And user click on continue with free version................................passed
 And user click on My Files..................................................passed
-And user click on signed tab................................................passed
+And user click on rejected tab..............................................passed
 And user click on View icon under Action column.............................passed
-And user should get display document........................................passed
+And user get display document rejected......................................passed
 Then user click on Close icon...............................................passed
 When user click on Download icon............................................passed
-Then Document should get downloaded on local storage as "Holidays List 2022 Updated.pdf".passed
+Then Document should get downloaded on Local storage as "TimoManual.pdf (1) (2).pdf".passed
+Then user click on plus icon................................................passed
+Then details get Display....................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7864875700,
+              "duration": 7601881800,
               "status": "passed"
             },
             "line": 4,
@@ -28,7 +28,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 18792700,
+                  "duration": 17243800,
                   "status": "passed"
                 },
                 "match": {
@@ -41,11 +41,11 @@
         ]
       },
       {
-        "start_timestamp": "2022-09-05T12:25:45.682Z",
+        "start_timestamp": "2022-09-06T13:08:06.976Z",
         "before": [
           {
             "result": {
-              "duration": 8709281600,
+              "duration": 8867494200,
               "status": "passed"
             },
             "match": {
@@ -53,14 +53,14 @@
             }
           }
         ],
-        "line": 29,
-        "name": "To verify download functionality of signed document of DrySign",
+        "line": 194,
+        "name": "To verify download functionality of rejected document of DrySign",
         "description": "",
-        "id": "to-verify-my-files-tabs-functionality;to-verify-download-functionality-of-signed-document-of-drysign",
+        "id": "to-verify-my-files-tabs-functionality;to-verify-download-functionality-of-rejected-document-of-drysign",
         "after": [
           {
             "result": {
-              "duration": 1332969300,
+              "duration": 1408061000,
               "status": "passed"
             },
             "match": {
@@ -73,10 +73,10 @@
         "steps": [
           {
             "result": {
-              "duration": 5393686800,
+              "duration": 5270875500,
               "status": "passed"
             },
-            "line": 30,
+            "line": 195,
             "name": "enter the user name as \"sid39@mailinator.com\"",
             "match": {
               "arguments": [
@@ -90,7 +90,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 9304000,
+                  "duration": 6208500,
                   "status": "passed"
                 },
                 "match": {
@@ -102,10 +102,10 @@
           },
           {
             "result": {
-              "duration": 186161800,
+              "duration": 149379100,
               "status": "passed"
             },
-            "line": 31,
+            "line": 196,
             "name": "enter the password as\"Malin@555\"",
             "match": {
               "arguments": [
@@ -119,7 +119,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 6162500,
+                  "duration": 4689100,
                   "status": "passed"
                 },
                 "match": {
@@ -131,10 +131,10 @@
           },
           {
             "result": {
-              "duration": 2350826000,
+              "duration": 2260013000,
               "status": "passed"
             },
-            "line": 32,
+            "line": 197,
             "name": "user click on the sign in button",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_the_sign_in_button()"
@@ -142,7 +142,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 7493900,
+                  "duration": 6907300,
                   "status": "passed"
                 },
                 "match": {
@@ -154,10 +154,10 @@
           },
           {
             "result": {
-              "duration": 38596191900,
+              "duration": 33783439200,
               "status": "passed"
             },
-            "line": 33,
+            "line": 198,
             "name": "user click on continue with free version",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_continue_with_free_version()"
@@ -165,7 +165,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 6993600,
+                  "duration": 5392800,
                   "status": "passed"
                 },
                 "match": {
@@ -177,10 +177,10 @@
           },
           {
             "result": {
-              "duration": 10282546100,
+              "duration": 10272138100,
               "status": "passed"
             },
-            "line": 34,
+            "line": 199,
             "name": "user click on My Files",
             "match": {
               "location": "MyFiles.user_click_on_My_Files()"
@@ -188,7 +188,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 5272900,
+                  "duration": 4322500,
                   "status": "passed"
                 },
                 "match": {
@@ -200,18 +200,18 @@
           },
           {
             "result": {
-              "duration": 814685400,
+              "duration": 499995500,
               "status": "passed"
             },
-            "line": 35,
-            "name": "user click on signed tab",
+            "line": 200,
+            "name": "user click on rejected tab",
             "match": {
-              "location": "MyFiles.user_click_on_signed_tab()"
+              "location": "MyFiles.user_click_on_rejected_tab()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 3991100,
+                  "duration": 4907100,
                   "status": "passed"
                 },
                 "match": {
@@ -223,10 +223,10 @@
           },
           {
             "result": {
-              "duration": 5513528100,
+              "duration": 5092834400,
               "status": "passed"
             },
-            "line": 36,
+            "line": 201,
             "name": "user click on View icon under Action column",
             "match": {
               "location": "MyFiles.user_click_on_View_icon_under_Action_column()"
@@ -234,7 +234,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 5101200,
+                  "duration": 4370600,
                   "status": "passed"
                 },
                 "match": {
@@ -246,18 +246,18 @@
           },
           {
             "result": {
-              "duration": 14717698000,
+              "duration": 10604503300,
               "status": "passed"
             },
-            "line": 37,
-            "name": "user should get display document",
+            "line": 202,
+            "name": "user get display document rejected",
             "match": {
-              "location": "MyFiles.user_should_get_display_document()"
+              "location": "MyFiles.user_get_display_document_rejected()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 208237400,
+                  "duration": 5846500,
                   "status": "passed"
                 },
                 "match": {
@@ -269,10 +269,10 @@
           },
           {
             "result": {
-              "duration": 350481900,
+              "duration": 886761700,
               "status": "passed"
             },
-            "line": 38,
+            "line": 203,
             "name": "user click on Close icon",
             "match": {
               "location": "MyFiles.user_click_on_Close_icon()"
@@ -280,7 +280,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 8055400,
+                  "duration": 4383300,
                   "status": "passed"
                 },
                 "match": {
@@ -292,10 +292,10 @@
           },
           {
             "result": {
-              "duration": 363774400,
+              "duration": 2047878600,
               "status": "passed"
             },
-            "line": 39,
+            "line": 204,
             "name": "user click on Download icon",
             "match": {
               "location": "MyFiles.user_click_on_Download_icon()"
@@ -303,7 +303,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 3933600,
+                  "duration": 38079200,
                   "status": "passed"
                 },
                 "match": {
@@ -315,24 +315,24 @@
           },
           {
             "result": {
-              "duration": 10042480400,
+              "duration": 10020786800,
               "status": "passed"
             },
-            "line": 40,
-            "name": "Document should get downloaded on local storage as \"Holidays List 2022 Updated.pdf\"",
+            "line": 205,
+            "name": "Document should get downloaded on Local storage as \"TimoManual.pdf (1) (2).pdf\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Holidays List 2022 Updated.pdf\"",
+                  "val": "\"TimoManual.pdf (1) (2).pdf\"",
                   "offset": 51
                 }
               ],
-              "location": "MyFiles.document_should_get_downloaded_on_local_storage_as(String)"
+              "location": "MyFiles.document_should_get_downloaded_on_Local_storage_as(String)"
             },
             "after": [
               {
                 "result": {
-                  "duration": 5711000,
+                  "duration": 4966000,
                   "status": "passed"
                 },
                 "match": {
@@ -341,11 +341,74 @@
               }
             ],
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2292083000,
+              "status": "passed"
+            },
+            "line": 206,
+            "name": "user click on plus icon",
+            "match": {
+              "location": "MyFiles.user_click_on_plus_icon()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4812800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10380833800,
+              "status": "passed"
+            },
+            "line": 207,
+            "name": "details get Display",
+            "match": {
+              "location": "MyFiles.details_get_Display(DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 6093500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Signatories:"
+                ]
+              },
+              {
+                "cells": [
+                  "Message:"
+                ]
+              },
+              {
+                "cells": [
+                  "Rejected Comment:"
+                ]
+              }
+            ],
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@MyFiles2"
+            "name": "@MyFiles7"
           }
         ]
       }

@@ -38,26 +38,27 @@ Feature: To Verify My Files Tabs Functionality
     Then user click on Close icon
     When user click on Download icon
     Then Document should get downloaded on local storage as "Holidays List 2022 Updated.pdf" 
+    
+    
     #When user open downloaded document
     #And check signature details
     #Then All signature details and document should display correctly
 
   @MyFiles3
   Scenario: To verify email functionality for sending completed documents of DrySign
-    When enter the user name as "sid39@mailinator.com"
+   When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
     And user click on completed documents tab
     And user click on Email icon for Completed Documents
-    Then pop up get displayed
-    And user enter recipient email address as "sid31@mailinator.com"
+    And user enter recipient email address as "sid103@mailinator.com"
     And user enter CC email address as "sid32@mailinator.com"
     And user enter add subject as "Sign"
     And user enter Message "grpsign"
     And user click on Send button
-    #Then user should get success message as Email successfully sent
+    Then user should get success message as Email successfully sent
     Then user Navigate to URL "https://www.mailinator.com/v4/public/inboxes.jsp"
     And user Enter email as "sid103"
     Then user click on Go button
@@ -66,7 +67,31 @@ Feature: To Verify My Files Tabs Functionality
     And user click on check box
     And user click on accept button
     And user clcik on ok button present on pop up
-    Then click on the download link
+    
+    
+    #When enter the user name as "sid39@mailinator.com"
+    #When enter the password as"Malin@555"
+    #And user click on the sign in button
+    #And user click on continue with free version
+    #And user click on My Files
+    #And user click on completed documents tab
+    #And user click on Email icon for Completed Documents
+    #Then pop up get displayed
+    #And user enter recipient email address as "sid31@mailinator.com"
+    #And user enter CC email address as "sid32@mailinator.com"
+    #And user enter add subject as "Sign"
+    #And user enter Message "grpsign"
+    #And user click on Send button
+    #Then user should get success message as Email successfully sent
+    #Then user Navigate to URL "https://www.mailinator.com/v4/public/inboxes.jsp"
+    #And user Enter email as "sid103"
+    #Then user click on Go button
+    #Then user click on Mail 
+    #And user click on sign document
+    #And user click on check box
+    #And user click on accept button
+    #And user clcik on ok button present on pop up
+    #Then click on the download link
     
   #When user check received email on user side whose email id is entered
   #Then document should get received
@@ -88,17 +113,39 @@ Feature: To Verify My Files Tabs Functionality
     And user should get display document
     Then user click on Close icon
     When user click on Download icon
-    Then Document should get downloaded on local storage
+    Then Document should get downloaded on local storage as "Holidays List 2022 Updated.pdf" 
 
   @MyFiles5
   Scenario: To verify functionality of checking status of document which is Out for Signature of DrySign
-    When enter the user name as "sidhuingole4@gmail.com"
+    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
     And user click on My Files
     And user click on out for signature tab
-    And user click on plus icon under out for signature
+    When user click on plus icon
+    Then user get display status as "Pending"
+    And user click on info icon
+    Then Pop up get display as "Recent Action" and recent added get display
+    And user click on notify icon
+    Then click in reassign
+    Then pop up get Display as "Are you sure you want to reassign eSign authority to another signatory?"
+    Then user click on "YES" button
+    Then another pop get display as "Reassign"
+    Then enter name as "Sid"
+    Then enter email Address as "sid103@mailinator.com"
+    Then user click on "CONFIRM"Button
+    Then success message get display as "Email has been sent to sid (sid12@mailinator.com) successfully."
+    Then click on ok button
+    And user click on remove icon
+    Then user click on confirm
+    Then succefully remove message display as "The signatory (sid103@mailinator.com) has been removed successfully."
+    Then click OK button 
+    And user clicking on minus icon recorded details should get closed
+    When user click on Download icon
+    Then Document should get downloaded on local storage as "Holidays List 2022 Updated.pdf" 
+    
+    
 
   #Then user should get display a status as Signed after signed a document
   #Then also user should get displayed as pending until user sign on it
@@ -122,6 +169,7 @@ Feature: To Verify My Files Tabs Functionality
   #Then user should get display pop which contain successful message ok button
   #When user click on the Download icon
   #Then document should get downloaded successfully from the Out for Signature Tab
+  
   @MyFiles6
   Scenario: To verify functionality of draft documents
     When enter the user name as "sid39@mailinator.com"
@@ -154,11 +202,17 @@ Feature: To Verify My Files Tabs Functionality
     And user get display document rejected
     Then user click on Close icon
     When user click on Download icon
-    Then Document should get downloaded on local storage
+    Then Document should get downloaded on Local storage as "TimoManual.pdf (1) (2).pdf"
+    Then user click on plus icon
+    Then details get Display 
+    |Signatories:|
+    |Message:|
+    |Rejected Comment:|
+     
     #When user Open downloaded document and check
     #Then Rejected details and document should display correctly
-    When user click on plus icon
-    Then the details of the rejected document should be displayed
+    #When user click on plus icon
+    #Then the details of the rejected document should be displayed
     
       @MyFiles08
   Scenario: To Verify the generic Search functionality present on all the Tabs in the My Files 
