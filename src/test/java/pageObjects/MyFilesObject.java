@@ -142,6 +142,14 @@ public class MyFilesObject {
 	}
 	
 	
+	public static WebElement Assigneddate(String data)
+	{
+	String Xpath = "//td[@class='assignedDate ng-star-inserted']";
+	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+	return element;
+	}
+	
+	
 	@FindBy(xpath="(//mat-icon[text()='arrow_drop_up'])[4]")     
 	public static  WebElement Arrow_drop_up;
 	

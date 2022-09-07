@@ -334,12 +334,6 @@ Feature: To Verify My Files Tabs Functionality
     And user clcik on ok button present on pop up
     Then document should get display
     
-    #Given navigate to URL "https://drysign-qa.exela.global/#/"
-    #When enter the user name as "sid39@mailinator.com"
-    #When enter the password as"Malin@555"
-    #And user click on the sign in button
-    #And user click on continue with free version
-    #And user click on My Files
     And user click on signed tab
     Then user display subject
     Then user display document name
@@ -389,7 +383,7 @@ Feature: To Verify My Files Tabs Functionality
       
        @MyFiles14
   Scenario: To verify generic Date display proper or not
-     When enter the user name as "sid39@mailinator.com"
+    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the sign in button
     And user click on continue with free version
@@ -398,25 +392,25 @@ Feature: To Verify My Files Tabs Functionality
     Then user display Assigned Date
     Then date display in format as "08/17/2022 1:07:58 AM"
     
-    And user click on signed tab
-    Then user display Assigned Date
-    Then date Display in format as "08/17/2022 12:01:58 AM"
-    
-    And user click on completed documents tab
-    Then user display Completed Date
-    Then user display date in format as "08/09/2022 2:59:02 AM"
-    
-    And user click on out for signature tab
-    Then user display Assigned Date
-    Then user Display date in format as "08/24/2022 2:55:23 AM"
-    
-    And user click on drafts tab
-    Then user display Date&Time
-    Then user Display Date in format as "08/16/2022, 11:24:02 AM"
-    
-    And user click on rejected tab
-    Then user display Assigned Date
-    Then user Display Date in Format as "08/16/2022 11:06:55 AM"
+    #And user click on signed tab
+    #Then user display Assigned Date
+    #Then date Display in format as "08/17/2022 12:01:58 AM"
+    #
+    #And user click on completed documents tab
+    #Then user display Completed Date
+    #Then user display date in format as "08/09/2022 2:59:02 AM"
+    #
+    #And user click on out for signature tab
+    #Then user display Assigned Date
+    #Then user Display date in format as "08/24/2022 2:55:23 AM"
+    #
+    #And user click on drafts tab
+    #Then user display Date&Time
+    #Then user Display Date in format as "08/16/2022, 11:24:02 AM"
+    #
+    #And user click on rejected tab
+    #Then user display Assigned Date
+    #Then user Display Date in Format as "08/16/2022 11:06:55 AM"
     
          @MyFiles15
   Scenario: To Verify the Expand and Collapse (+/-) document record functioanlity in Signed , Completed Documents, Out for Signature and Rejected Tab
@@ -466,6 +460,35 @@ Feature: To Verify My Files Tabs Functionality
     Then default page should be first as "Displaying item : 1 - 4 of 4"
     Then on first page previous arrow icon should be disabled
     Then on last page next arror icon should be disabled
+    
+        @MyFiles17
+  Scenario: To Verify it takes Server time by  on the Assigned Date and Signed Date column in all Tabs
+    When enter the user name as "sid39@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the sign in button
+    And user click on continue with free version
+    And user click on My Files
+    Then user get display pending tab
+    Then server time for assigned date
+      |09/02/2022 7:18:28 AM|        
+      |09/01/2022 3:37:46 AM|
+      |08/29/2022 10:39:17 PM|
+    And user click on signed tab
+    Then server time for assigned date
+      |08/17/2022 12:01:58 AM|        
+      |08/17/2022 12:44:41 AM|
+     Then server time for signed date
+      |08/17/2022, 7:01:46 AM|        
+      |08/17/2022, 7:44:29 AM|
+      And user click on out for signature tab
+      Then server time for assigned date
+       |08/24/2022 2:55:23 AM|   
+      And user click on rejected tab     
+       Then server time for assigned date
+       |09/01/2022 3:35:20 AM|        
+       |08/16/2022 11:06:55 AM|
+       
+      
     
        @MyFiles18
   Scenario: To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List.

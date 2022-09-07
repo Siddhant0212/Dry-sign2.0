@@ -404,7 +404,8 @@ public void date_display_in_format_as(String string) {
 	
 	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign);
 	Elements.isDisplayed(MyFilesObject.TimingSign);
-	Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign),"08/17/2022 1:07:58 AM");
+	Elements.validateDateFormat(string);
+	//Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign),"08/17/2022 1:07:58 AM");
 }
 @Then("date Display in format as {string}")
 public void date_Display_in_format_as(String string) {
@@ -858,6 +859,34 @@ public void user_click_on_upward_arrow() throws InterruptedException {
 		}
 			
 		}
-}
+		@Then("server time for assigned date")
+		public void server_time_for_assigned_date(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+			for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+				Thread.sleep(5000);
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Assigneddate("09/02/2022 7:18:28 AM"));
+				Elements.isDisplayed(MyFilesObject.Assigneddate("09/02/2022 7:18:28 AM"));
 
+				Waits.waitUntilElementLocated(30, MyFilesObject.Assigneddate("09/01/2022 3:37:46 AM"));
+				Elements.isDisplayed(MyFilesObject.Assigneddate("09/01/2022 3:37:46 AM"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Assigneddate("08/29/2022 10:39:17 PM"));
+				Elements.isDisplayed(MyFilesObject.Assigneddate("08/29/2022 10:39:17 PM"));
+		}
+
+		}
+		@Then("server time for signed date")
+		public void server_time_for_signed_date(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+			for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+				Thread.sleep(5000);
+				
+				Waits.waitUntilElementLocated(30, MyFilesObject.Assigneddate("08/17/2022, 7:01:46 AM"));
+				Elements.isDisplayed(MyFilesObject.Assigneddate("08/17/2022, 7:01:46 AM"));
+
+				Waits.waitUntilElementLocated(30, MyFilesObject.Assigneddate("08/17/2022, 7:44:29 AM"));
+				Elements.isDisplayed(MyFilesObject.Assigneddate("08/17/2022, 7:44:29 AM"));
+		}
+			
+		}
+}
 

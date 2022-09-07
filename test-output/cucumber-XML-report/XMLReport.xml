@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="111.621037">
-<testcase classname="To Verify My Files Tabs Functionality" name="To verify download functionality of rejected document of DrySign" time="111.621037">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="89.97725">
+<testcase classname="To Verify My Files Tabs Functionality" name="To verify that all field are displaying proper or not." time="89.97725">
 <system-out><![CDATA[Given navigate to URL "https://drysign-qa.exela.global/#/"..................passed
 When enter the user name as "sid39@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the sign in button........................................passed
 And user click on continue with free version................................passed
 And user click on My Files..................................................passed
-And user click on rejected tab..............................................passed
-And user click on View icon under Action column.............................passed
-And user get display document rejected......................................passed
-Then user click on Close icon...............................................passed
+Then user get display pending tab...........................................passed
+And user click on signed tab................................................passed
+Then user display subject...................................................passed
+Then user display document name.............................................passed
+Then user display Assigned Date.............................................passed
+Then date Display in format as "08/17/2022 12:01:58 AM".....................passed
+Then user display requested by..............................................passed
+Then user display action....................................................passed
+And user click on View icon.................................................passed
+Then Document should get display............................................passed
+Then user click on close icon...............................................passed
 When user click on Download icon............................................passed
-Then Document should get downloaded on Local storage as "TimoManual.pdf (1) (2).pdf".passed
-Then user click on plus icon................................................passed
-Then details get Display....................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

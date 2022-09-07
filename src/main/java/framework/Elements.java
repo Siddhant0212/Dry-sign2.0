@@ -9,14 +9,18 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.time.temporal.Temporal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Set;
 
@@ -709,6 +713,23 @@ public class Elements {
 					String content = contenthandler.toString();
 					return content ;
 				}
+		 
+		 
+		 public static Date validateDateFormat(String dateToValdate) {
+
+			    SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HHmmss");
+			    //To make strict date format validation
+			    formatter.setLenient(false);
+			    Date parsedDate = null;
+			    try {
+			        parsedDate = formatter.parse(dateToValdate);
+			        System.out.println("++validated DATE TIME ++"+formatter.format(parsedDate));
+
+			    } catch (ParseException e) {
+			        //Handle exception
+			    }
+			    return parsedDate;
+			}
 			
 }
 		 
