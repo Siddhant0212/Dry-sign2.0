@@ -118,6 +118,11 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//span[text()='Sign In']")
 	public static WebElement sub;
 	
+	@FindBy(xpath="//button[text()='Login']")
+	public static WebElement Login_btn;
+	
+	//button[text()='Login']
+	
 	@FindBy(xpath="//*[text()=' Continue With Free Version ']")
 	public static WebElement clickOnContWithfreeVersion;
 	

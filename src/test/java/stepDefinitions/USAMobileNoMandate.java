@@ -343,6 +343,20 @@ public void enter_the_password_as(String password) {
   
 }
 
+@When("user click on Login button")
+public void user_click_on_Login_button() throws InterruptedException {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Login_btn);
+	Elements.click(USAMobileNoMandateObject.Login_btn);
+	Thread.sleep(2000);
+	
+}
+
+@Then("plan should get renew and validity start from day of renewed")
+public void plan_should_get_renew_and_validity_start_from_day_of_renewed() throws ParseException {
+	Elements.calculateDays1();
+
+}
+
 @When("user click on the sign in button")
 public void user_click_on_the_sign_in_button() throws InterruptedException {
 	//Thread.sleep(5000);

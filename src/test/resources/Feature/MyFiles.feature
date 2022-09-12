@@ -392,25 +392,25 @@ Feature: To Verify My Files Tabs Functionality
     Then user display Assigned Date
     Then date display in format as "08/17/2022 1:07:58 AM"
     
-    #And user click on signed tab
-    #Then user display Assigned Date
-    #Then date Display in format as "08/17/2022 12:01:58 AM"
-    #
-    #And user click on completed documents tab
-    #Then user display Completed Date
-    #Then user display date in format as "08/09/2022 2:59:02 AM"
-    #
-    #And user click on out for signature tab
-    #Then user display Assigned Date
-    #Then user Display date in format as "08/24/2022 2:55:23 AM"
-    #
-    #And user click on drafts tab
-    #Then user display Date&Time
-    #Then user Display Date in format as "08/16/2022, 11:24:02 AM"
-    #
-    #And user click on rejected tab
-    #Then user display Assigned Date
-    #Then user Display Date in Format as "08/16/2022 11:06:55 AM"
+    And user click on signed tab
+    Then user display Assigned Date
+    Then date Display in format as "08/17/2022 12:01:58 AM"
+    
+    And user click on completed documents tab
+    Then user display Completed Date
+    Then user display date in format as "08/09/2022 2:59:02 AM"
+    
+    And user click on out for signature tab
+    Then user display Assigned Date
+    Then user Display date in format as "08/24/2022 2:55:23 AM"
+    
+    And user click on drafts tab
+    Then user display Date&Time
+    Then user Display Date in format as "08/16/2022, 11:24:02 AM"
+    
+    And user click on rejected tab
+    Then user display Assigned Date
+    Then user Display Date in Format as "08/16/2022 11:06:55 AM"
     
          @MyFiles15
   Scenario: To Verify the Expand and Collapse (+/-) document record functioanlity in Signed , Completed Documents, Out for Signature and Rejected Tab

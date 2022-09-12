@@ -657,6 +657,41 @@ public class Elements {
 	        return differenceDates;
 		}
 		
+		public static void calculateDays1() throws ParseException {
+			
+			
+//			DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+//			Date registrationDate=dateFormat.parse("09/12/2022");
+//			
+//			 //get current date time with Date()
+//			 Date date = new Date();
+//			 
+//			 // Now format the date
+//			 String date1= dateFormat.format(date);
+//			 
+//			 // Print the Date
+//		 System.out.println(date1);
+		 
+		// Create object of SimpleDateFormat class and decide the format
+		 DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy ");
+		 
+		 //get current date time with Date()
+		 Date date = new Date();
+		 
+		 // Now format the date
+		 String date1= dateFormat.format(date);
+		 
+		 // Print the Date
+		 System.out.println(date1);
+			
+
+
+		}
+			 
+			
+			
+		
+		
 
 		public static String localDateToString(LocalDate date) {
 			DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd MM yyyy");
