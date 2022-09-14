@@ -3,7 +3,7 @@ Feature: To Verify USA mobile number is Mandatory
 
   @Mobile1
   Scenario: To Verify the contact no. field is mandatory field on the SignUp/Registration page for USA region
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
     And user display registration form
     Then user should display following fields
@@ -15,14 +15,14 @@ Feature: To Verify USA mobile number is Mandatory
       | Password         |
       | Confirm Password |
     Then user display Sign up button
-    Then verify contact no. field needs to be mandatory field with the asterix symbol
+    Then verify contact no. field needs to be mandatory field with the asterix symbol as "Mobile number is mandatory"
 
  
  
  
   @Mobile2
   Scenario: To Verify the contact no. is of max. 10 digit for the USA region
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
     And user display registration form
     Then it should not allow to enter more than ten digits as "22277775555"
@@ -33,7 +33,7 @@ Feature: To Verify USA mobile number is Mandatory
  
   @Mobile3
   Scenario: To Verify the alphabets and special characters cannot be entered in the contact no. field for the USA region
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
     And user display registration form
     Then alphabets and special charcters should not get allowed to enter as "Ab@defgh"
@@ -43,12 +43,12 @@ Feature: To Verify USA mobile number is Mandatory
  
   @Mobile4
   Scenario: To Verify the Duplicate phone no is allowed during the registration of free and paid user
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
     And user display registration form
     And enter first name as "Siddhant"
     And enter last name as "Ingole"
-    And enter company name as "Pes"
+    #And enter company name as "Pes"
     And enter mobile number as "8882224444"
     And enter email as "sid30@mailinator.com"
     And enter password as "Malin@555"
@@ -59,15 +59,22 @@ Feature: To Verify USA mobile number is Mandatory
 
   @Mobile5
   Scenario: To Verify on the profile page the mobile no. and country information is saved or not  correctly.
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
-    When enter the user name as "sid25@mailinator.com"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
+    When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user click on edit button
-    Then profile page contain personal information should displayed correctly
+    Then user should display personal information with following fields
+      | firstName        |
+      | lastName         |
+      | Mobile Number    |
+      | Email            |                                       
+                                               
+
+    
     Then country field should not be editable
     And user click on save button
     Then user confirmation message get display as "Successfully Updated."
@@ -101,7 +108,7 @@ Feature: To Verify USA mobile number is Mandatory
  
   @Mobile8
   Scenario: To Verify the field validation for the mobile no.
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When user click on the signUp link
     And user display registration form
     Then user verify that mobile number get displayed in correct format as "(888) 222-4444"

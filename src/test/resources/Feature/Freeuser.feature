@@ -6,17 +6,18 @@ Feature: To Verify Free User functions
 
   @FreeUser1
   Scenario: To Verify for paid user the "switch to free user" button text is changed to "Switch to free version"
-   Given navigate to URL "https://drysign-qa.exela.global/#/"
+   Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    And user click on mat icon
+    And user click on the Login button
+   #And user click on the sign in button
+    #And user click on mat icon
     And user click on profile icon
     And user click on manage account
     Then Delete Account button should be present
     And user click on delete account
     And Pop up get display
-    Then On the Delete pop up the text on the button as " You can continue with our Free Version instead."
+    Then On the Delete pop up the text on the button as "Are you sure you want to delete your account? Deleting your account will also delete all your data. You can continue with our Free Version instead."
 
   # Given user navigate to URL "https://drysign-qa.exela.global/#/"
   #  When user is on Login page
@@ -51,7 +52,7 @@ Feature: To Verify Free User functions
     Then user display three pie chart
     Then display as "individual plan" with upgrade button
     Then display as "professional plan" with Upgrade button
-    Then should display as "5 documents"
+    Then should display as "5" documents
     
    @FreeUser3
   Scenario: To Verify for the new free user, on login everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
@@ -68,7 +69,7 @@ Feature: To Verify Free User functions
     Then user display three pie chart
     Then display as "individual plan" with upgrade button
     Then display as "professional plan" with Upgrade button
-    Then should display as "5 documents"
+    Then should display as "5" documents
     
     @FreeUser4
   Scenario: To Verify for the new free user, on login everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
@@ -85,26 +86,28 @@ Feature: To Verify Free User functions
     Then user display three pie chart
     Then display as "individual plan" with upgrade button
     Then display as "professional plan" with Upgrade button
-    Then should display as "5 documents"
+    Then should display as "5" documents
   
   @FreeUser5
   Scenario: To Verify if the document count gets exhausted before 1month of time for the free user
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid25@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
     Then user should display document count zero
   
   @FreeUser6
  Scenario: To Verify if the user clicks on the upgrade button present on pricing plan page or on the pie-chart he is able to upgrade the new Plan through banchub page.
-   Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid102@mailinator.com"
+   Given navigate to URL "https://drysign-dev.exela.global/#/"
+    When enter the user name as "sid87@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
     Then user click on Upgrade button 
-    Then user click on buy now button
+    And click on Upgrade 
     Then user navigate to payment page
     And user enter name of the card as "Test"
     And enter card number as "4242424242424242"
@@ -118,59 +121,64 @@ Feature: To Verify Free User functions
     @FreeUser7
  Scenario: To Verify on cancel subscription if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
     
-  Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid40@mailinator.com"
+  Given navigate to URL "https://drysign-dev.exela.global/#/"
+    When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     Then user should get display pop up
     Then under free version "continue with free version" button present
     Then under individual "upgrade" button present
     Then under professional "upgrade" button present
     And user click on continue with free version
-    Then user display three pie chart
-    Then display as "individual plan" with upgrade button
-    Then display as "professional plan" with Upgrade button
-    Then should display as "5 documents"
+    #Then user display three pie chart
+    Then display as "Individual Plan" with upgrade button
+    Then display as "Professional Plan" with Upgrade button
+    Then should display as "5" documents
     
      @FreeUser8
  Scenario: To Verify on Refund if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When user click on terms and conditions
     When user click on here link
-    When enter the user name as "sid102@mailinator.com"
+    When enter the user name as "sid87@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     Then user should get display refund page
-    And user enter name as "Siddhu Ingole"
-    And user enter emai id as "sid13@mailinator.com"
-    And user enter subscription plan as "INDIVIDUAL"
-    And user enter subscription id as "3526"
+    #And user enter name as "Siddhu Ingole"
+    #And user enter emai id as "sid13@mailinator.com"
+    #And user enter subscription plan as "INDIVIDUAL"
+    #And user enter subscription id as "3526"
     And user click on confirm button	
     Then refund pop up get display
     And user click on confirm button which present on pop up
     Then user should get display message as your refund has been successful
     Then click on ok button
-    When enter the user name as "sid40@mailinator.com"
+    When enter the user name as "sid87@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    Then user display three pie chart
-    Then display as "individual plan" with upgrade button
-    Then display as "professional plan" with Upgrade button
-    Then should display as "5 documents"
+    #Then user display three pie chart
+    Then display as "Individual Plan" with upgrade button
+    Then display as "Professional Plan" with Upgrade button
+    Then should display as "5" documents
   
    @FreeUser9
  Scenario: To Verify for the active free user, the document count is set to 5 everymonth and template count to 1
   
-   Given navigate to URL "https://drysign-qa.exela.global/#/"
-    When enter the user name as "sid102@mailinator.com"
+   Given navigate to URL "https://drysign-dev.exela.global/#/"
+    When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    Then user display three pie chart
-    Then display as "individual plan" with upgrade button
-    Then display as "professional plan" with Upgrade button
-    Then should display as "5 documents"
+    
+    #Then user display three pie chart
+    Then display as "Individual Plan" with upgrade button
+    Then display as "Professional Plan" with Upgrade button
+    Then should display as "5" documents
   
    @FreeUser10
  Scenario: To Verify Validity is displayed or not on the Dashboard when login by the free user
@@ -200,7 +208,7 @@ Feature: To Verify Free User functions
     Then user display three pie chart
     Then display as "individual plan" with upgrade button
     Then display as "professional plan" with Upgrade button
-    Then should display as "5 documents"
+    Then should display as "5" documents
     
     @FreeUser13
  Scenario: To Verify for the new free user, on login every time the pricing plan is displayed in the pop-up window 
@@ -212,7 +220,7 @@ Feature: To Verify Free User functions
     Then user display three pie chart
     Then display as "individual plan" with upgrade button
     Then display as "professional plan" with Upgrade button
-    Then should display as "5 documents"
+    Then should display as "5" documents
     Then upgrade button should get display 
   
   @FreeUser14

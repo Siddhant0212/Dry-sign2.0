@@ -18,8 +18,11 @@ public class USAMobileNoMandateObject {
 		PageFactory.initElements(driver, this);
 	}
 //TS1	
-	@FindBy(xpath="//*[text()='Sign Up']")
+	@FindBy(xpath="//a[text()='Sign Up']")
 	public static WebElement signUpButton;
+	
+	@FindBy(xpath="//button[text()='Sign Up']")
+	public static WebElement signUpButton1;
 	
 	@FindBy(xpath="//*[@formcontrolname='firstName']")
 	public static WebElement entFirstName;
@@ -43,13 +46,13 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//*[@formcontrolname='confirmPassword']")
 	public static WebElement entConfirmPassword;
 	
-	@FindBy(xpath="//*[@class='mat-checkbox-inner-container']")
+	@FindBy(xpath="//div[@class='mat-checkbox-inner-container']")
 	public static WebElement clickCheckBox;
 	
 	@FindBy(xpath="//*[@class='mat-checkbox-inner-container']")
 	public static WebElement successOnSignUp;
 	
-	@FindBy(xpath="(//span[@aria-hidden='true'])[4]")
+	@FindBy(xpath="(//mat-icon[@aria-hidden='true'])[5]")
 	public static WebElement astrixSymbol;
 	
 	@FindBy(xpath="(//span[@aria-hidden='true'])[3]")
@@ -64,7 +67,7 @@ public class USAMobileNoMandateObject {
 	
 	public static WebElement Field(String data)
 	{
-	String Xpath = "//input[@formcontrolname='$']";
+	String Xpath = "//input[@formcontrolname='firstName']";
 	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
 	return element;
 	}
@@ -93,16 +96,16 @@ public class USAMobileNoMandateObject {
 	}
 	
 	
-	@FindBy(xpath="//div[@class='login-info pt-5']")
+	@FindBy(xpath="//div[@class='login-info']")
 	public static WebElement loginInfo;
 	
-	@FindBy(xpath="//span[text()='Mobile number is mandatory.']")
+	@FindBy(xpath="//span[text()='Mobile number is mandatory']")
 	public static WebElement mobileNOIsMand;
 	
 	@FindBy(xpath="//*[text()='Enter valid Mobile number.']")
 	public static WebElement entValidMoNumber;
 	
-	@FindBy(xpath="//div[text()=' Mobile number already registered. ']")
+	@FindBy(xpath="//p[text()='Mobile number already registered.']")
 	public static WebElement mobNoAlreadyReg;
 	
 	//*[@aria-label='Invalid username or password']
@@ -123,7 +126,7 @@ public class USAMobileNoMandateObject {
 	
 	//button[text()='Login']
 	
-	@FindBy(xpath="//*[text()=' Continue With Free Version ']")
+	@FindBy(xpath="//button[text()=' Continue With Free Version ']")
 	public static WebElement clickOnContWithfreeVersion;
 	
 	@FindAll({
@@ -152,10 +155,10 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//span[text()=' account_circle']")
 	public static WebElement profile;
   
-	@FindBy(xpath="//span[text()=' account_circle']")
+	@FindBy(xpath="//span[@class='exela-icon-profile d-flex fs-24 ng-star-inserted']")
 	public static WebElement Profile1;
 
-	@FindBy(xpath="//*[text()='Manage Account']")
+	@FindBy(xpath="//span[text()='MANAGE ACCOUNT']")
 	public static WebElement mangeAcc;
 	
 	@FindBy(xpath="//span[text()=' Cancel Subscription ']")
@@ -174,6 +177,9 @@ public class USAMobileNoMandateObject {
 	
 	@FindBy(xpath="//span[text()=' Buy Now ']")
 	public static  WebElement btnBuyNow;
+	
+	@FindBy(xpath="//button[text()=' Upgrade ']")
+	public static WebElement Upgrade;
 	
 	
 	@FindBy(xpath="//span[text()='Buy Now']")
@@ -378,7 +384,7 @@ public class USAMobileNoMandateObject {
 	public static  WebElement professional;
 	
 	
-	@FindBy(xpath="//span[text()=' Edit ']")
+	@FindBy(xpath="//span[text()='EDIT PROFILE']")
 	public static WebElement btnEdit;
 	
 	@FindBy(xpath="//input[@placeholder='ZIP Code']")
@@ -406,7 +412,7 @@ public class USAMobileNoMandateObject {
 	public static WebElement countryCode;
 	
 	
-	@FindBy(xpath="//span[text()=' Save ']")
+	@FindBy(xpath="//button[text()=' Save ']")
 	public static WebElement btnSave;
 	
 	@FindBy(xpath="//input[@name='CreditCardHolderName']")
@@ -437,14 +443,14 @@ public class USAMobileNoMandateObject {
     public static WebElement userName;
          
  
-    @FindBy(xpath="//*[text()='Sign in']")
+    @FindBy(xpath="//span[text()='Sign in']")
     public static WebElement popUp;
 
     @FindBy(xpath="//span[text()='Next']")
     public static WebElement btnNext;
 
 
-    @FindBy(xpath="//*[text()='Enter your password']")
+    @FindBy(xpath="//div[text()='Enter your password']")
     public static WebElement pass;
 
     @FindBy(xpath="//input[@formcontrolname='phone']")
@@ -453,7 +459,7 @@ public class USAMobileNoMandateObject {
     @FindBy(xpath="//*[text()='OK']")
     public static WebElement okButton;
     
-    @FindBy(xpath="//*[text()='Next']")
+    @FindBy(xpath="//span[text()='Next']")
     public static WebElement clickNext;
     
     @FindBy(xpath="//a[text()='Terms and Conditions']")
@@ -464,7 +470,7 @@ public class USAMobileNoMandateObject {
     
   //span[text()='Confirm']
     
-    @FindBy(xpath="//div[@class='main-content-fixed-header bg-white']")
+    @FindBy(xpath="//div[@class='container-fluid']")
     public static WebElement refundPage;
     
  
@@ -472,7 +478,7 @@ public class USAMobileNoMandateObject {
     public static WebElement entName;
   
     
-    @FindBy(xpath="//input[@placeholder='Email id']")
+    @FindBy(xpath="//input[@placeholder='Email ID']")
     public static WebElement entEmailId;
   
     @FindBy(xpath="//input[@placeholder='Subscription Plan']")
@@ -482,7 +488,7 @@ public class USAMobileNoMandateObject {
     @FindBy(xpath="//input[@placeholder='Subscription ID']")
     public static WebElement entSubscriptionId;
     
-    @FindBy(xpath="//span[text()='Confirm']")
+    @FindBy(xpath="//button[text()='Confirm']")
     public static WebElement confirmBtnOnRefund;
     
     @FindBy(xpath="//button[@tabindex='-1'][2]")
@@ -504,7 +510,7 @@ public class USAMobileNoMandateObject {
     
   //span[text()='Ok']
     
-    @FindBy(xpath="//span[text()='Ok']")
+    @FindBy(xpath="//button[text()='Ok']")
     public static WebElement Ok_Btn;
     
     @FindBy(xpath="//img[@id='logo']")
@@ -527,7 +533,7 @@ public class USAMobileNoMandateObject {
     public static WebElement contactNumber;
  
     
-    @FindBy(xpath="//span[text()=' Delete Account ']")
+    @FindBy(xpath="//button[text()=' Delete Account ']")
     public static WebElement deleteAccount;
     
     @FindBy(xpath="//h1[text()=' Deleting Your Account ']")
@@ -958,7 +964,7 @@ public static WebElement Name_field;
 @FindBy(xpath="//span[text()='First name is required.']")
 public static WebElement FirstNameisrequired;
 
-@FindBy(xpath="//div[text()=' Successfully Updated. ']")
+@FindBy(xpath="//p[text()='Successfully Updated.']")
 public static WebElement Successfully_Updated;
 
 //input[@placeholder='Street Address']
@@ -978,10 +984,10 @@ public static WebElement INDIVIDUAL;
 @FindBy(xpath="//h2[text()=' PROFESSIONAL ']")
 public static WebElement PROFESSIONAL;
 
-@FindBy(xpath="(//span[text()=' Upgrade '])[1]")
+@FindBy(xpath="(//button[text()=' Upgrade '])[1]")
 public static WebElement Upgrade1;
 
-@FindBy(xpath="(//span[text()=' Upgrade '])[2]")
+@FindBy(xpath="(//button[text()=' Upgrade '])[2]")
 public static WebElement Upgrade2;
 
 @FindBy(xpath="(//span[text()=' Upgrade '])[3]")
@@ -998,22 +1004,25 @@ public static WebElement Pie_Chart1;
 @FindBy(xpath="//div[@class='col-12 col-sm-12 col-md-6 pe-md-0']")
 public static WebElement Pie_Chart2;
 
-@FindBy(xpath="(//span[text()='Upgrade'])[1]")
+@FindBy(xpath="(//button[text()='Upgrade Plan'])[1]")
 public static WebElement Upgrade5;
 
-@FindBy(xpath="(//span[text()='Upgrade'])[2]")
+@FindBy(xpath="//button[text()='Upgrade Plan']")
+public static WebElement Upgrade_Plan;
+
+@FindBy(xpath="(//button[text()='Upgrade Plan'])[2]")
 public static WebElement Upgrade6;
 
-@FindBy(xpath="//h2[text()=' INDIVIDUAL Plan']")
+@FindBy(xpath="//h3[text()='Individual Plan']")
 public static WebElement INDIVIDUAL_Plan;
 
-@FindBy(xpath="//h2[text()=' PROFESSIONAL Plan']")
+@FindBy(xpath="//h3[text()='Professional Plan']")
 public static WebElement PROFESSIONAL_Plan;
 
-@FindBy(xpath="(//*[@style='user-select: none;'])[5]")
+@FindBy(xpath="(//div[@class='circle-count-length-1'])[3]")
 public static WebElement Five_Documents;
 
-@FindBy(xpath="(//*[@style='user-select: none;'])[5]")
+@FindBy(xpath="(//div[@class='px-4 mt-4 ng-star-inserted'])[4]")
 public static WebElement Zero_Documents;
 
 @FindBy(xpath="//h2[@id='sub-section-title']")

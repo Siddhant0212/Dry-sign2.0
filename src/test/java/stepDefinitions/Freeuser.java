@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
 import pageObjects.DashboardObject;
+import pageObjects.DeleteObject;
 import pageObjects.USAMobileNoMandateObject;
 import pageObjects.XpathFreeUser;
 
@@ -22,8 +23,8 @@ public class Freeuser {
 	@When("user click on delete account")
 	public void user_click_on_delete_account() throws InterruptedException {
 		Thread.sleep(2000);
-		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.deleteAccount);
-		Elements.jclick(USAMobileNoMandateObject.deleteAccount);
+		Waits.waitUntilElementToClick(30, DeleteObject.delAcc);
+		Elements.jclick(DeleteObject.delAcc);
 		
 		
 	    
@@ -57,7 +58,7 @@ public class Freeuser {
 	public void on_the_Delete_pop_up_the_text_on_the_button_as(String string) {
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.deleteYourAccountPopUp);
 		Elements.isDisplayed(USAMobileNoMandateObject.deleteYourAccountPopUp);
-		Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.deleteYourAccountPopUp),"Are you sure you want to delete your account? Deleting your account will also delete all your data. You can continue with our Free Version instead.");
+		Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.deleteYourAccountPopUp),string);
 	}
 	@Then("user should get display pop up")
 	public void user_should_get_display_pop_up() {
@@ -98,11 +99,16 @@ public class Freeuser {
 
 	@Then("under professional {string} button present")
 	public void under_professional_button_present(String string) {
-		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Upgrade3);
-		Elements.isDisplayed(USAMobileNoMandateObject.Upgrade3);
 		
-		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Upgrade4);
-		Elements.isDisplayed(USAMobileNoMandateObject.Upgrade4);
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Upgrade2);
+		Elements.isDisplayed(USAMobileNoMandateObject.Upgrade2);
+		
+		
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Upgrade3);
+//		Elements.isDisplayed(USAMobileNoMandateObject.Upgrade3);
+//		
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Upgrade4);
+//		Elements.isDisplayed(USAMobileNoMandateObject.Upgrade4);
 		
 	}
 	@Then("user display three pie chart")
@@ -135,12 +141,13 @@ public class Freeuser {
 		Elements.isDisplayed(USAMobileNoMandateObject.Upgrade6);
 
 	}
-	@Then("should display as {string}")
-	public void should_display_as(String string) {
+	@Then("should display as {string} documents")
+	public void should_display_as_documents(String string) {
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Five_Documents);
 		Elements.isDisplayed(USAMobileNoMandateObject.Five_Documents);
 	
 	}
+	
 		@Then("user should not display as {string} option")
 		public void user_should_not_display_as_option(String string) {
 	//Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.FREEVERSION);
@@ -166,16 +173,16 @@ public class Freeuser {
 	}
 	@Then("user click on Upgrade button")
 	public void user_click_on_Upgrade_button() {
-		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upgrade5);
-		Elements.jclick(USAMobileNoMandateObject.Upgrade5);
+		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upgrade_Plan);
+		Elements.jclick(USAMobileNoMandateObject.Upgrade_Plan);
 	  
 		
 	}
 
 	@Then("user click on buy now button")
 	public void user_click_on_buy_now_button() {
-		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.btnBuyNow);
-		Elements.jclick(USAMobileNoMandateObject.btnBuyNow);
+		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upgrade);
+		Elements.jclick(USAMobileNoMandateObject.Upgrade);
 		
 	}
 	@Then("Post login the Plan the pre dashboard pop up screen should not get displayed as {string}")

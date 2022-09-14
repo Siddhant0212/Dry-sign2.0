@@ -23,6 +23,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
@@ -765,6 +767,18 @@ public class Elements {
 			    }
 			    return parsedDate;
 			}
+		 public static void isMobileNumberValid() {
+			
+			 
+			 final String PHONE_REGEX = "^\\+([0-9\\-]?){9,11}[0-9]$";
+			 final Pattern pattern = Pattern.compile(PHONE_REGEX);
+			 String phone = "(888) 222-4444";      
+			 phone=phone.replaceAll("[\\-\\+]", "");
+			 System.out.println(phone);
+			 final Matcher matcher = pattern.matcher(phone);
+			 System.out.println(matcher.matches()); 
+			 
+		 }
 			
 }
 		 

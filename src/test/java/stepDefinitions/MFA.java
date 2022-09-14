@@ -155,6 +155,7 @@ public void user_click_on_send_one_time_password_button() {
 
 @Then("user Navigate to URL {string}")
 public void user_Navigate_to_URL(String string) {
+	
 	Base.driver.switchTo().newWindow(WindowType.TAB);
 	Base.driver.navigate().to("https://www.mailinator.com/v4/public/inboxes.jsp");
 	USAMobileNoMandateObject obM = new USAMobileNoMandateObject(Base.driver);

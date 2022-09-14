@@ -3,49 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 50314991900,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "navigate to URL \"https://drysign-qa.exela.global/#/\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"https://drysign-qa.exela.global/#/\"",
-                  "offset": 16
-                }
-              ],
-              "location": "USAMobileNoMandate.navigate_to_URL(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 92257700,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2022-09-12T11:25:57.512Z",
+        "start_timestamp": "2022-09-14T13:41:38.108Z",
         "before": [
           {
             "result": {
-              "duration": 52686122400,
+              "duration": 10715701600,
               "status": "passed"
             },
             "match": {
@@ -53,16 +15,15 @@
             }
           }
         ],
-        "line": 8,
-        "name": "To verify functionality of Auto Renewal if documents are over and validity is still due",
+        "line": 102,
+        "name": "To Verify if the user clicks on the upgrade button present on pricing plan page or on the pie-chart he is able to upgrade the new Plan through banchub page.",
         "description": "",
-        "id": "to-verify-auto-renewal-(recurrsive)-functionality;to-verify-functionality-of-auto-renewal-if-documents-are-over-and-validity-is-still-due",
+        "id": "to-verify-free-user-functions;to-verify-if-the-user-clicks-on-the-upgrade-button-present-on-pricing-plan-page-or-on-the-pie-chart-he-is-able-to-upgrade-the-new-plan-through-banchub-page.",
         "after": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.\nBuild info: version: \u00274.1.1\u0027, revision: \u0027e8fcc2cecf\u0027\nSystem info: host: \u0027INMH-PN-DT4253\u0027, ip: \u0027192.168.1.9\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [3e9ed045eb47ee38843fcec5ddf45106, quit {}]\nCapabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\\Users\\SIDDHA~1.IN\\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:58433}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58433/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 3e9ed045eb47ee38843fcec5ddf45106\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:132)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:439)\r\n\tat org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:287)\r\n\tat baseinit.Base.closeBrowser(Base.java:78)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:50)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:144)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:174)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\r\n\tat org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)\r\n\tat org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)\r\n\tat org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)\r\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)\r\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)\r\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)\r\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)\r\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)\r\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)\r\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:95)\r\n\tat org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:91)\r\n\tat org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:60)\r\n\tat org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)\r\nCaused by: java.util.concurrent.ExecutionException: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.\nBuild info: version: \u00274.1.1\u0027, revision: \u0027e8fcc2cecf\u0027\nSystem info: host: \u0027INMH-PN-DT4253\u0027, ip: \u0027192.168.1.9\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: driver.version: unknown\r\n\tat java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)\r\n\tat java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:128)\r\n\t... 59 more\r\nCaused by: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.\nBuild info: version: \u00274.1.1\u0027, revision: \u0027e8fcc2cecf\u0027\nSystem info: host: \u0027INMH-PN-DT4253\u0027, ip: \u0027192.168.1.9\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:174)\r\n\tat org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:127)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$2(DriverCommandExecutor.java:122)\r\n\tat java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\r\n\tat java.lang.Thread.run(Thread.java:748)\r\n",
-              "duration": 22205141400,
-              "status": "failed"
+              "duration": 1499307400,
+              "status": "passed"
             },
             "match": {
               "location": "Base.closeBrowser(Scenario)"
@@ -74,15 +35,44 @@
         "steps": [
           {
             "result": {
-              "duration": 6280360500,
+              "duration": 9116612400,
               "status": "passed"
             },
-            "line": 25,
-            "name": "enter the user name as \"sidDB@mailinator.com\"",
+            "line": 103,
+            "name": "navigate to URL \"https://drysign-dev.exela.global/#/\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"sidDB@mailinator.com\"",
+                  "val": "\"https://drysign-dev.exela.global/#/\"",
+                  "offset": 16
+                }
+              ],
+              "location": "USAMobileNoMandate.navigate_to_URL(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 18084100,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5433857100,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "enter the user name as \"sid87@mailinator.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sid87@mailinator.com\"",
                   "offset": 23
                 }
               ],
@@ -91,7 +81,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 23514100,
+                  "duration": 7198300,
                   "status": "passed"
                 },
                 "match": {
@@ -103,10 +93,10 @@
           },
           {
             "result": {
-              "duration": 357706700,
+              "duration": 186407200,
               "status": "passed"
             },
-            "line": 26,
+            "line": 105,
             "name": "enter the password as\"Malin@555\"",
             "match": {
               "arguments": [
@@ -120,7 +110,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 14393800,
+                  "duration": 4650100,
                   "status": "passed"
                 },
                 "match": {
@@ -132,18 +122,18 @@
           },
           {
             "result": {
-              "duration": 2542499500,
+              "duration": 5273080300,
               "status": "passed"
             },
-            "line": 27,
-            "name": "user click on the sign in button",
+            "line": 106,
+            "name": "user click on the Login button",
             "match": {
-              "location": "USAMobileNoMandate.user_click_on_the_sign_in_button()"
+              "location": "AutoRenewal.user_click_on_the_Login_button()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 10672700,
+                  "duration": 7206000,
                   "status": "passed"
                 },
                 "match": {
@@ -155,18 +145,284 @@
           },
           {
             "result": {
-              "duration": 1164400,
+              "duration": 36312306300,
               "status": "passed"
             },
-            "line": 29,
-            "name": "plan should get renew and validity start from day of renewed",
+            "line": 108,
+            "name": "user click on continue with free version",
             "match": {
-              "location": "USAMobileNoMandate.plan_should_get_renew_and_validity_start_from_day_of_renewed()"
+              "location": "USAMobileNoMandate.user_click_on_continue_with_free_version()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 9099500,
+                  "duration": 5220900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 342525900,
+              "status": "passed"
+            },
+            "line": 109,
+            "name": "user click on Upgrade button",
+            "match": {
+              "location": "Freeuser.user_click_on_Upgrade_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4568000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8505948100,
+              "status": "passed"
+            },
+            "line": 110,
+            "name": "click on Upgrade",
+            "match": {
+              "location": "AutoRenewal.click_on_Upgrade()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 5932200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15104063200,
+              "status": "passed"
+            },
+            "line": 111,
+            "name": "user navigate to payment page",
+            "match": {
+              "location": "USAMobileNoMandate.user_navigate_to_payment_page()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4636000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 240836800,
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "user enter name of the card as \"Test\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Test\"",
+                  "offset": 31
+                }
+              ],
+              "location": "USAMobileNoMandate.user_enter_name_of_the_card_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4492500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 390770300,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "enter card number as \"4242424242424242\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"4242424242424242\"",
+                  "offset": 21
+                }
+              ],
+              "location": "USAMobileNoMandate.enter_card_number_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4284700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 220640100,
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "enter expire month as \"07\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"07\"",
+                  "offset": 22
+                }
+              ],
+              "location": "USAMobileNoMandate.enter_expire_month_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3739400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 252594100,
+              "status": "passed"
+            },
+            "line": 115,
+            "name": "enter expire year as \"27\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"27\"",
+                  "offset": 21
+                }
+              ],
+              "location": "USAMobileNoMandate.enter_expire_year_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4609000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 263213100,
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "enter cvv nunber as \"789\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"789\"",
+                  "offset": 20
+                }
+              ],
+              "location": "USAMobileNoMandate.enter_cvv_nunber_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 5987500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2249573800,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "user click on pay button",
+            "match": {
+              "location": "USAMobileNoMandate.user_click_on_pay_button()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3848800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6750916200,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "confirmation message get display as \"PAYMENT CONFIRMATION\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PAYMENT CONFIRMATION\"",
+                  "offset": 36
+                }
+              ],
+              "location": "USAMobileNoMandate.confirmation_message_get_display_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 5319800,
                   "status": "passed"
                 },
                 "match": {
@@ -179,22 +435,22 @@
         ],
         "tags": [
           {
-            "name": "@AutoRenewal"
+            "name": "@FreeUser"
           },
           {
-            "name": "@AutoRenewal3"
+            "name": "@FreeUser6"
           }
         ]
       }
     ],
-    "name": "To Verify Auto Renewal (Recurrsive) functionality",
+    "name": "To Verify Free User functions",
     "description": "",
-    "id": "to-verify-auto-renewal-(recurrsive)-functionality",
+    "id": "to-verify-free-user-functions",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/AutoRenewal.feature",
+    "uri": "file:src/test/resources/Feature/Freeuser.feature",
     "tags": [
       {
-        "name": "@AutoRenewal",
+        "name": "@FreeUser",
         "type": "Tag",
         "location": {
           "line": 1,
