@@ -101,7 +101,7 @@ Feature: To Verify Free User functions
   @FreeUser6
  Scenario: To Verify if the user clicks on the upgrade button present on pricing plan page or on the pie-chart he is able to upgrade the new Plan through banchub page.
    Given navigate to URL "https://drysign-dev.exela.global/#/"
-    When enter the user name as "sid87@mailinator.com"
+    When enter the user name as "sid201@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button
@@ -182,56 +182,75 @@ Feature: To Verify Free User functions
   
    @FreeUser10
  Scenario: To Verify Validity is displayed or not on the Dashboard when login by the free user
-  Given navigate to URL "https://drysign-qa.exela.global/#/"
+  Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid103@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
     Then user should not display as "validity" option
     
    @FreeUser11
  Scenario: To Verify Dashboard for paid users, coporate users and enterprise users is not changed.
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     Then Post login the Plan the pre dashboard pop up screen should not get displayed as "continue with free version"
     Then for paid user no change on dashboard
     
     @FreeUser12
  Scenario: To verify that the plan pop up doesn't close unless "continue to free verison" or upgrade button is clicked.
-  Given navigate to URL "https://drysign-qa.exela.global/#/"
+  Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid103@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version and pop up should get closed
-    Then user display three pie chart
-    Then display as "individual plan" with upgrade button
-    Then display as "professional plan" with Upgrade button
+    #Then user display three pie chart
+    Then display as "Individual Plan" with upgrade button
+    Then display as "Professional Plan" with Upgrade button
     Then should display as "5" documents
     
     @FreeUser13
  Scenario: To Verify for the new free user, on login every time the pricing plan is displayed in the pop-up window 
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid103@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    Then user display three pie chart
-    Then display as "individual plan" with upgrade button
-    Then display as "professional plan" with Upgrade button
+    #Then user display three pie chart
+    Then display as "Individual Plan" with upgrade button
+    Then display as "Professional Plan" with Upgrade button
     Then should display as "5" documents
-    Then upgrade button should get display 
+    Then upgrade button should get display as "Upgrade Plan,Upgrade Plan"
   
   @FreeUser14
  Scenario: To Verify for the new free user Dashboard Display
-  Given navigate to URL "https://drysign-qa.exela.global/#/"
+  Given navigate to URL "https://drysign-dev.exela.global/#/"
    When enter the user name as "sid103@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    Then user should get display pop up
-   #Then under free version "continue with free version" Button present
-      Then Pop Up get displayed with Elements
+    And user click on the Login button
+    #And user click on the sign in button
+    #Then user should get display pop up
+   Then under Free Version "continue with free version" Button present
+   Then Pop Up get displayed with Elements
+      |5 Documents|
+      |Self Sign |        
+      |Group Sign|
+      |Signature: Type,Draw and upload|
+      
+    Then under individual "Upgrade" button present
+    Then Pop Up get displayed with Elements
+      |20 Documents|
+      |Self Sign |        
+      |Group Sign|
+      |Signature: Type,Draw and upload|
+    Then under professional "Upgrade" button present
+     Then Pop Up get displayed with Elements
+      |300 Documents|
       |Self Sign |        
       |Group Sign|
       |Signature: Type,Draw and upload|
@@ -239,10 +258,11 @@ Feature: To Verify Free User functions
     
       @FreeUser15
  Scenario: To verify for free user After 5 documents are utilized next document should not be allowed
-  Given navigate to URL "https://drysign-qa.exela.global/#/"
+  Given navigate to URL "https://drysign-dev.exela.global/#/"
    When enter the user name as "sid25@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
      And user click on continue with free version
      Then user click on self sign
      Then user click on browser
@@ -250,15 +270,17 @@ Feature: To Verify Free User functions
     
          @FreeUser16
  Scenario: To verify If 1 template is utilized next template should not be allowed
-   Given navigate to URL "https://drysign-qa.exela.global/#/"
+   Given navigate to URL "https://drysign-dev.exela.global/#/"
    When enter the user name as "sid25@mailinator.com"
-    When enter the password as"Malin@555"
-    And user click on the sign in button
-     And user click on continue with free version
-     And user click on Template tab
-     Then click on upload new template
-     Then user click on browser
-      Then user Get display error message as "You have reached the template upload count, please subscribe to upload more templates."
+   When enter the password as"Malin@555"
+   And user click on the Login button
+   #And user click on the sign in button
+   And user click on continue with free version
+   And user click on Template tab
+   Then click on Add New Template
+   #Then click on upload new template
+   Then user click on browser
+   Then user Get display error message as "You have reached the template upload count, please subscribe to upload more templates."
   
   
   

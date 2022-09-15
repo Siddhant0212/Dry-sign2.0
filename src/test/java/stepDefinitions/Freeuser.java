@@ -11,6 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
+import pageObjects.AutoRenewalObject;
 import pageObjects.DashboardObject;
 import pageObjects.DeleteObject;
 import pageObjects.USAMobileNoMandateObject;
@@ -85,6 +86,12 @@ public class Freeuser {
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.clickOnContWithfreeVersion);
 		Elements.isDisplayed(USAMobileNoMandateObject.clickOnContWithfreeVersion);
 	
+	}
+	@Then("under Free Version {string} Button present")
+	public void under_Free_Version_Button_present(String string) throws InterruptedException {
+		Thread.sleep(5000);
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.clickOnContWithfreeVersion);
+		Elements.isDisplayed(USAMobileNoMandateObject.clickOnContWithfreeVersion);
 	}
 
 	@Then("under individual {string} button present")
@@ -209,12 +216,12 @@ public class Freeuser {
 	
 	@Then("for paid user no change on dashboard")
 	public void for_paid_user_no_change_on_dashboard() {
-		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.INDIVIDUAL);
-		Elements.isDisplayed(USAMobileNoMandateObject.INDIVIDUAL);
-		Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.INDIVIDUAL),"INDIVIDUAL PLAN");
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.INDIVIDUAL_Plan1);
+		Elements.isDisplayed(USAMobileNoMandateObject.INDIVIDUAL_Plan1);
+		Assert.assertNotSame(Elements.getText(USAMobileNoMandateObject.RemaininDocumentsandDays),"Remaining Documents and Days");
 		
-		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.btnViewPlan);
-	    Elements.isDisplayed(USAMobileNoMandateObject.btnViewPlan);
+		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Cardbody);
+	    Elements.isDisplayed(USAMobileNoMandateObject.Cardbody);
 		
 		
 	}
@@ -226,9 +233,24 @@ public class Freeuser {
 		Elements.jclick(USAMobileNoMandateObject.clickOnContWithfreeVersion);
 		Thread.sleep(2000);
 		
+		Waits.setImplicitWait(10);
+		List<WebElement> tabs=USAMobileNoMandateObject.Continue_WithFree_Version;
+
+		if(tabs.size()>0) {
+			Assert.assertTrue(false);
+			
+		}
+		else {
+			Assert.assertTrue(true);
+		}
 	}
-	@Then("upgrade button should get display")
-	public void upgrade_button_should_get_display() {
+	
+		
+	
+	@Then("upgrade button should get display as {string}")
+	public void upgrade_button_should_get_display_as(String string) throws InterruptedException {
+		Thread.sleep(20000);
+		Elements.scrollIntoView(AutoRenewalObject.Upgrade_Plan);
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Upgrade5);
 		Elements.isDisplayed(USAMobileNoMandateObject.Upgrade5);
 		
@@ -268,6 +290,12 @@ public class Freeuser {
 		Elements.click(XpathFreeUser.Template);
 	 
 	}
+	@Then("click on Add New Template")
+	public void click_on_Add_New_Template() throws InterruptedException {
+		Thread.sleep(5000);
+		Waits.waitUntilElementToClick(30, XpathFreeUser.Add_New_Template);
+		Elements.click(XpathFreeUser.Add_New_Template);
+	}
 
 	@Then("click on upload new template")
 	public void click_on_upload_new_template() throws InterruptedException {
@@ -278,7 +306,8 @@ public class Freeuser {
 	}
 
 	@Then("user Get display error message as {string}")
-	public void user_Get_display_error_message_as(String string) {
+	public void user_Get_display_error_message_as(String string)  {
+
 		Waits.waitUntilElementLocated(30, XpathFreeUser.You_have_reached_the_template_upload_count);
 		Elements.isDisplayed(XpathFreeUser.You_have_reached_the_template_upload_count);
 		Assert.assertNotSame(Elements.getText(XpathFreeUser.You_have_reached_the_template_upload_count),string);

@@ -124,7 +124,12 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//button[text()='Login']")
 	public static WebElement Login_btn;
 	
-	//button[text()='Login']
+	@FindAll({
+		@FindBy(xpath="//button[text()=' Continue With Free Version ']")
+	})
+	public static List<WebElement> Continue_WithFree_Version;
+	
+	
 	
 	@FindBy(xpath="//button[text()=' Continue With Free Version ']")
 	public static WebElement clickOnContWithfreeVersion;
@@ -187,6 +192,13 @@ public class USAMobileNoMandateObject {
 	
 	@FindBy(xpath="//span[text()='View Plan']")
 	public static  WebElement btnViewPlan;
+	
+	@FindBy(xpath="(//div[@class='card-body'])[3]")
+	public static  WebElement Cardbody;
+	
+	@FindBy(xpath="//div[text()='Remaining Documents and Days']")
+	public static  WebElement RemaininDocumentsandDays;
+	
 	
 	@FindBy(xpath="//span[text()='Plan']")
 	public static  WebElement indiPlan;
@@ -981,6 +993,11 @@ public static WebElement FREE_VERSION;
 @FindBy(xpath="//h2[text()=' INDIVIDUAL ']")
 public static WebElement INDIVIDUAL;
 
+@FindBy(xpath="//h2[@class='fs-18 text-center text-lowercase m-0 font500']")
+public static WebElement INDIVIDUAL_Plan1;
+
+
+
 @FindBy(xpath="//h2[text()=' PROFESSIONAL ']")
 public static WebElement PROFESSIONAL;
 
@@ -1055,7 +1072,7 @@ public static WebElement Sign_In;
 
 
 @FindAll({
-	@FindBy(xpath="(//*[@fill='#000000'])[37]")
+	@FindBy(xpath="(//div[@class='processText mb-1 mt-3 ng-star-inserted'])[4]")
 })
 public static List<WebElement> Days_left;
 
