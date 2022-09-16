@@ -4,37 +4,39 @@ Feature: To Verify My Profile Page
 
   @MyProfile01
   Scenario: To verify View profile option availability on dashboard right most corner
-     Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     Then user Should display profile icon
     
     @MyProfile02
   Scenario: To verify On click of view profile,  personal information tab is displayed or not
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
-    Then user should display personal information tab by default as "PERSONAL INFORMATION" 
+    Then user should display personal information tab by default as "Personal Information" 
     
      @MyProfile03
   Scenario: Verify personal information tab functionality
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user should display personal information
     Then following details get display
-    
       |First Name|        
       |Last Name|
       |Email|
@@ -49,15 +51,18 @@ Feature: To Verify My Profile Page
       
       @MyProfile04
   Scenario: To verify Saved information is displayed properly on personal information page
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user should display personal information
     Then user click on edit button
+    Then user click on save button
+    Then pop up Get display as "Successfully Updated."
     Then following details get display
     
       |First Name|        
@@ -71,6 +76,7 @@ Feature: To Verify My Profile Page
       |State|
       |City|
       |ZIP Code|
+     
       
         @MyProfile05
   Scenario: To Verify the UI elements present on the Edit profile pop-up screen

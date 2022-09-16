@@ -63,7 +63,7 @@ public class XpathMyProfile {
 	@FindBy(xpath="//a[text()='Go To Home']")
     public static WebElement Go_To_Home;
 	
-	@FindBy(xpath="//span[text()=' account_circle']")
+	@FindBy(xpath="//a[@mattooltip='View Profile']")
 	public static WebElement Profile1;
 	
 	@FindBy(xpath="//div[text()='Personal Information']")

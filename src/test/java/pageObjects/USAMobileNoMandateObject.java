@@ -427,6 +427,11 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//button[text()=' Save ']")
 	public static WebElement btnSave;
 	
+	@FindBy(xpath="//p[text()='Successfully Updated.']")
+	public static WebElement SuccessfullyUpdated;
+	
+	//p[text()='Successfully Updated.']
+	
 	@FindBy(xpath="//input[@name='CreditCardHolderName']")
 	public static WebElement txtCardHolderName;
 

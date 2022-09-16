@@ -258,7 +258,7 @@ Feature: To Verify Free User functions
     
       @FreeUser15
  Scenario: To verify for free user After 5 documents are utilized next document should not be allowed
-  Given navigate to URL "https://drysign-dev.exela.global/#/"
+   Given navigate to URL "https://drysign-dev.exela.global/#/"
    When enter the user name as "sid25@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button

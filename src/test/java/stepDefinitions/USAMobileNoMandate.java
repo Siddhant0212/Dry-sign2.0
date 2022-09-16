@@ -517,6 +517,14 @@ public void user_click_on_save_button() throws InterruptedException {
 	Elements.jclick(USAMobileNoMandateObject.btnSave);
 	Thread.sleep(2000);
 }
+@Then("pop up Get display as {string}")
+public void pop_up_Get_display_as(String string) {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.SuccessfullyUpdated);
+	Elements.isDisplayed(USAMobileNoMandateObject.SuccessfullyUpdated);
+	 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.SuccessfullyUpdated),"Dashboard");
+}
+
+
 	
 	@Then("user display message as {string}")
 	public void user_display_message_as(String string) throws InterruptedException {
