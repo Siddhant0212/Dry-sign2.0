@@ -190,11 +190,13 @@ public void an_Confirmation_screen_should_get_displayed_as(String string) throws
 }
 //TS3
 @Then("user should get display the validation message as {string}")
-public void user_should_get_display_the_validation_message_as(String errormessage) {
-	Waits.waitUntilElementToClick(30, DeleteObject.InvalidUsernameOrPassword);
-	Elements.isDisplayed(DeleteObject.InvalidUsernameOrPassword);
-	Assert.assertEquals(Elements.getText(DeleteObject.InvalidUsernameOrPassword),"Invalid username or password");
-	
+public void user_should_get_display_the_validation_message_as(String errormessage) throws InterruptedException {
+	//Elements.switchToChild();
+	//Elements.switchToFrame(DeleteObject.ssIFrame_google);
+	Waits.waitUntilElementLocated(30,DeleteObject.Notregistereduser);
+	Elements.isDisplayed(DeleteObject.Notregistereduser);
+	Assert.assertEquals(Elements.getText(DeleteObject.Notregistereduser),errormessage);
+	Thread.sleep(10000);
 
 	
 	
@@ -222,9 +224,10 @@ public void user_click_on_the_send_reset_email() {
 
 @Then("user should get displayed message as {string}")
 public void user_should_get_displayed_message_as(String string) {
-	Waits.waitUntilElementToClick(30, DeleteObject.InvalidEmailOrUserDoesNotExist);
-	Elements.isDisplayed(DeleteObject.InvalidEmailOrUserDoesNotExist);
-	Assert.assertEquals(Elements.getText(DeleteObject.InvalidEmailOrUserDoesNotExist),"Invalid email or user does not exist");
+	Waits.waitUntilElementLocated(30, DeleteObject.InvalidEmailOrUserDoesNotExist);
+//	Elements.isDisplayed(DeleteObject.InvalidEmailOrUserDoesNotExist);
+//	Assert.assertEquals(Elements.getText(DeleteObject.errorPopUp),"Invalid email or user does not exist");
+	Elements.VerifyTextEquals(DeleteObject.errorPopUp, string);
 
 	
 	

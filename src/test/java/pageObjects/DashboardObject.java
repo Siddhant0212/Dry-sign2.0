@@ -40,8 +40,25 @@ public class DashboardObject {
 	return element;
 	}
 	
+	@FindBy(xpath="//div[@class='circle-count-length-2']")
+	public static  WebElement Documents_Received1;
+	
 	@FindBy(xpath="//h2[text()=' Documents Received ']")
 	public static  WebElement Documents_Received;
+	
+	
+	
+	public static WebElement documentReceivedSent(String data)
+	{
+	String Xpath = "//div[@class='ng-star-inserted']";
+	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+	return element;
+	}
+	
+	
+	
+	
+	
 	
 			
 			@FindBy(xpath="(//*[text()='Documents'])[2]")
@@ -54,7 +71,7 @@ public class DashboardObject {
 			@FindBy(xpath="//h2[text()=' Documents Sent ']")
 			public static  WebElement Documents_Sent;
 			
-			@FindBy(xpath="//*[text()='4']")
+			@FindBy(xpath="(//div[@class='circle-count-length-1'])[1]")
 			public static  WebElement Four_Documents;
 
 			@FindBy(xpath="//label[text()='Self Sign']")
@@ -85,18 +102,30 @@ public class DashboardObject {
             
 			@FindBy(xpath="//button[text()='Upgrade Plan']")
 			public static  WebElement btnUpgradePlan;
+			
+			@FindBy(xpath="//button[text()=' Upgrade Plan ']")
+			public static  WebElement UpgradePlan;
+			
+			public static WebElement newField(String data)
+			{
+			String Xpath = "//li[@class='ng-star-inserted']";
+			WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+			return element;
+			}
+			
+			
 
 			
 			@FindBy(xpath="//mat-icon[text()='close']")     
 			public static  WebElement closeIcon;
 			
-			@FindBy(xpath="(//mat-icon[@class='mat-icon notranslate material-icons mat-icon-no-color'])[9]")     
-			public static  WebElement Signature_Edit;
+			@FindBy(xpath="//label[text()='Signature']")     
+			public static  WebElement Signature;
 			
-			@FindBy(xpath="//span[text()='Save']")     
+			@FindBy(xpath="//button[text()='Save']")     
 			public static  WebElement Save_Btn;
 			
-			@FindBy(xpath="//div[text()=' Signature saved. ']")     
+			@FindBy(xpath="//p[text()='Signature saved.']")     
 			public static  WebElement Signature_saved;
 			
 			@FindBy(xpath="(//div[@class='mat-tab-label-content'])[3]")     
@@ -112,6 +141,11 @@ public class DashboardObject {
 			@FindBy(xpath="//div[text()=' File size exceeds the maximum limit of 50KB. ']")     
 			public static  WebElement Filesizeexceedsthemaximum;
 			
+			@FindBy(xpath="//button[text()='View Details']")
+			public static  WebElement View_Details;
+			
+			@FindBy(xpath="//button[text()=' Cancel ']")
+			public static  WebElement Cancel;
 			
 }        
 

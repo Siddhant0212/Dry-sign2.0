@@ -52,8 +52,13 @@ public class MyFilesObject {
 	@FindBy(xpath="//span[text()=' 08/17/2022 1:07:58 AM ']")
     public static WebElement TimingSign;
 	
-	@FindBy(xpath="//a[text()=' sign ']")
+	@FindBy(xpath="//i[@class='fs-32 exela-icon-action lineHeight']")
     public static WebElement sign;
+	
+	@FindBy(xpath="//a[text()=' Hello sign ']")
+    public static WebElement Hello_sign;
+	
+	
 	
 	@FindBy(xpath="//div[@class='PSPDFKit-56n1nqnnrb1vp96tz5hfxdeh29']")
     public static WebElement Doc_Display;
@@ -74,7 +79,7 @@ public class MyFilesObject {
 	@FindBy(xpath="//span[text()=' 08/09/2022 2:59:02 AM ']")
     public static WebElement TimingSign3;
 	
-	@FindBy(xpath="//div[text()='Out for Signature']")
+	@FindBy(xpath="//div[text()='Out for Sign']")
 	public static  WebElement OutforSignature;
 	
 	@FindBy(xpath="//span[text()=' 08/24/2022 2:55:23 AM ']")
@@ -84,10 +89,10 @@ public class MyFilesObject {
 	public static  WebElement Date_Time;
 	
 	
-	@FindBy(xpath="//span[text()=' 08/16/2022, 11:24:02 AM ']")
+	@FindBy(xpath="(//span[@class='data-el ng-star-inserted'])[3]")
 	public static  WebElement TimingSign5;
 	
-	@FindBy(xpath="//span[text()=' 08/16/2022 11:06:55 AM ']")
+	@FindBy(xpath="(//span[@class='data-el ng-star-inserted'])[3]")
 	public static  WebElement TimingSign6;
 	
 	
@@ -114,7 +119,7 @@ public class MyFilesObject {
 	
 	public static WebElement DetailsField(String data)
 	{
-	String Xpath = "//div[@class='ng-star-inserted']";
+	String Xpath = "//div[@class='column-collapse-data ng-star-inserted']";
 	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
 	return element;
 	}
@@ -192,25 +197,25 @@ public class MyFilesObject {
 	@FindBy(xpath="//a[@mattooltip='Reassign']")     
 	public static  WebElement Reassign;
 	
-	@FindBy(xpath="//span[text()='Yes']")     
+	@FindBy(xpath="//button[text()='Yes']")     
 	public static  WebElement Yes;
 	
 	@FindBy(xpath="//h1[text()=' Reassign ']")     
 	public static  WebElement Reassign1;
 	
-	@FindBy(xpath="//span[text()='Confirm']")     
+	@FindBy(xpath="//button[text()='Confirm']")     
 	public static  WebElement Confirm;
 	
-	@FindBy(xpath="//input[@placeholder='Add CC']")     
+	@FindBy(xpath="//input[@placeholder='Name']")     
 	public static  WebElement Enter_Name;
 	
-	@FindBy(xpath="//input[@placeholder='Recipient Email Address']")     
+	@FindBy(xpath="//input[@placeholder='Email ID']")     
 	public static  WebElement Email_Address;
 	
 	@FindBy(xpath="//p[text()='Are you sure you want to reassign eSign authority to another signatory?']")     
 	public static  WebElement Are_you_sure_you_want;
 	
-	@FindBy(xpath="//span[text()='This email address already exists in your previously assigned list.']")     
+	@FindBy(xpath="//p[@class='text strong ng-star-inserted']")     
 	public static  WebElement This_email_addressal_ready_exists;
 	
 	@FindBy(xpath="(//mat-icon[text()='remove_red_eye'])[1]")     
@@ -249,7 +254,7 @@ public class MyFilesObject {
 	@FindBy(xpath="//span[text()='1']")     
 	public static  WebElement Default_one;
 	
-	@FindBy(xpath="//div[text()=' Displaying item : 1 - 4 of 4 ']")     
+	@FindBy(xpath="(//span[@class='fs-14'])[2]")     
 	public static  WebElement Displaying_item ;
 	
 	@FindBy(xpath="//span[text()='Pending']")     

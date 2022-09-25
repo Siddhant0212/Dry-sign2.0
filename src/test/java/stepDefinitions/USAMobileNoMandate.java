@@ -331,13 +331,12 @@ public void navigate_to(String string) {
 @When("enter the user name as {string}")
 public void enter_the_user_name_as(String username) throws InterruptedException {
 	
-//	Base.driver.navigate().to("https://drysign-qa.exela.global/#/login");
-//	USAMobileNoMandateObject obM = new USAMobileNoMandateObject(Base.driver);
+
 	Elements.switchToChild();
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.emailId);
 	Elements.TypeText(USAMobileNoMandateObject.emailId, username);
       
-        //Thread.sleep(2500);
+     
 
 }
 
@@ -521,7 +520,7 @@ public void user_click_on_save_button() throws InterruptedException {
 public void pop_up_Get_display_as(String string) {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.SuccessfullyUpdated);
 	Elements.isDisplayed(USAMobileNoMandateObject.SuccessfullyUpdated);
-	 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.SuccessfullyUpdated),"Dashboard");
+	 Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.SuccessfullyUpdated),"Successfully Updated.");
 }
 
 
@@ -532,7 +531,7 @@ public void pop_up_Get_display_as(String string) {
 //		Elements.isDisplayed(DeleteObject.yourAccountHasBeenCreated);
 //		Assert.assertEquals(Elements.getText(DeleteObject.yourAccountHasBeenCreated),string);
 		Waits.waitUntilElementLocated(30, DeleteObject.yourAccountHasBeenCreated);
-		Elements.VerifyTextEquals(DeleteObject.yourAccountHasBeenCreated, string);
+		Elements.VerifyTextEquals(DeleteObject.yourAccountHasBeenCreated2, string);
 		
 	}
 	
@@ -601,6 +600,13 @@ public void user_verify_that_mobile_number_get_displayed_in_correct_format_as(St
 	Elements.isMobileNumberValid();
 	
 }
+@Then("user click on Cross icon")
+public void user_click_on_Cross_icon() throws InterruptedException {
+	
+	Thread.sleep(5000);
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.exelaIconClose);
+	Elements.click(USAMobileNoMandateObject.exelaIconClose);
+}
 //Dashboard
 @When("user click on logout")
 public void user_click_on_logout() throws InterruptedException {
@@ -635,8 +641,8 @@ public void paid_user_is_on_dashboard_page() {
 }
 @When("user get displayed the View Plan or Buy Now button is present")
 public void user_get_displayed_the_View_Plan_or_Buy_Now_button_is_present() {
-	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.btnViewPlan);
-	Elements.isDisplayed(USAMobileNoMandateObject.btnViewPlan);
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.View_Details);
+	Elements.isDisplayed(USAMobileNoMandateObject.View_Details);
 	  
 	}
 @When("individual plan get display")
@@ -657,6 +663,9 @@ public void user_click_on_View_Plan_button() {
 	Elements.jclick(USAMobileNoMandateObject.btnViewPlan);
 	
 }
+
+
+
 @Then("Pop Up get displayed with elements")
 public void pop_Up_get_displayed_with_elements() {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.elements);
@@ -734,8 +743,8 @@ public void existing_plan_details_of_the_user_should_get_displayed_with_Upgrade_
 }
 @Then("user verify that close icon is present on the pop up")
 public void user_verify_that_close_icon_is_present_on_the_pop_up() {
-	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.closeIcon);
-	Elements.isDisplayed(USAMobileNoMandateObject.closeIcon);
+//	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.closeIcon);
+	//Elements.isDisplayed(USAMobileNoMandateObject.closeIcon);
 	
 }
 @Then("user click on Upgrade Plan button")
@@ -751,10 +760,22 @@ public void pop_up_should_display_only_the_higher_plan_than_the_exisiting() {
 	Elements.isDisplayed(USAMobileNoMandateObject.professional);
 	
 }
+
+@Then("user click on the Upgrade button")
+public void user_click_on_the_Upgrade_button() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upgrade);
+	Elements.click(USAMobileNoMandateObject.Upgrade);
+}
+@Then("user Click On upgrade plan button")
+public void user_Click_On_upgrade_plan_button() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.btnUpgradePlan);
+	Elements.click(USAMobileNoMandateObject.btnUpgradePlan);
+}
 @Then("user click on the BuyNow button")
-public void user_click_on_the_BuyNow_button() {
+public void user_click_on_the_BuyNow_button() throws InterruptedException {
+	Thread.sleep(5000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.buyNowGeneralPlan);
-	Elements.click(USAMobileNoMandateObject.buyNowGeneralPlan);
+	Elements.Mouseclick(USAMobileNoMandateObject.buyNowGeneralPlan);
 	
 }
 
@@ -828,17 +849,17 @@ public void confirmation_message_get_display_as(String string) throws Interrupte
 }
 
 @Then("user click on login button")
-public void user_click_on_login_button()  {
-	
-	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Login);
-	Elements.jclick(USAMobileNoMandateObject.Login);
+public void user_click_on_login_button() throws InterruptedException  {
+//	Thread.sleep(5000);
+//	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Login);
+//	Elements.jclick(USAMobileNoMandateObject.Login);
     
 }
 
 @Then("new plan details and its related features should get displayed")
 public void new_plan_details_and_its_related_features_should_get_displayed() {
-	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Card_Body);
-	Elements.isDisplayed(USAMobileNoMandateObject.Card_Body);
+//	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Card_Body);
+//	Elements.isDisplayed(USAMobileNoMandateObject.Card_Body);
 	
 	
 //	Elements.isDisplayed(USAMobileNoMandateObject.Professional_Plan_text);

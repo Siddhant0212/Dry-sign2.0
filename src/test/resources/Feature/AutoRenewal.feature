@@ -8,6 +8,8 @@ Feature: To Verify Auto Renewal (Recurrsive) functionality
     When enter the user name as "sidDB@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
+    
+    
     #And user click on the sign in button
     And click on Upgrade Plan
     And click on Upgrade 

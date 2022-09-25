@@ -80,12 +80,13 @@ Feature: To Verify My Profile Page
       
         @MyProfile05
   Scenario: To Verify the UI elements present on the Edit profile pop-up screen
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+   #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user should display personal information
     Then user click on edit button
@@ -102,61 +103,74 @@ Feature: To Verify My Profile Page
       |State|
       |City|
       |ZIP Code|
-    Then user click on save button
-    Then user should display personal information
-    Then user click on security 
+  
+  
     And user able to click on checkbox for email OTP
     And user able to click on checkbox for setup secure code
+    Then display as "cancel" and "save" button
+   
+    Then click on cross icon
+    Then user goto the dashboard screen
     
-    #Then user leave the name field blank
-    #Then user click on zip 
-    #Then error message get Display as "First name is required." 
+    When user click on profile icon
+    Then user should display personal information
+    Then user click on edit button
+    And user click on Cancel button 
+    Then user goto the profile screen 
+    
+
     
             @MyProfile06
   Scenario: To verify the Save button functionality present on the Edit Profile Screen
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user should display personal information
     Then user click on edit button
     Then user enter Fname as "sidd"
     Then user enter Lname as "Ing"
     #Then user enter Email as "sid76@mailinator.com"
-    Then user enter Contact Number as "6767676767"
+    #Then user enter Contact Number as "6767676767"
     Then user click on save button
     Then user confirmation message get display as "Successfully Updated."
     Then user click on edit button
-    Then user enter Lname as ""
-    Then user click on mail tab then error get display for mandatory field as "Last name is required."
+    Then user enter LName as ""
+    Then user click on save button
+    Then user click on mail tab then error get display for mandatory field as "Last name is required"
     Then user click on save button
     Then user confirmation message get display as "Successfully Updated."
     
     
     
-  @MyProfile1
+  @MyProfile07
   Scenario: To verify  if user is able to see and click profile on dashboard top right corner after login.
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
-    #Then user click on upload button
+    Then user should display personal information
+    Then user click on edit button
+    Then user click on upload plus button
     Then user click on upload photo button browser as "img.jpg"
     
      @MyProfile2
   Scenario: To verify  if user is able to see and click profile on dashboard top right corner after login.
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user click on upload photo button as "SeekPng.com_avatar-png_1149972.png"
     Then user not get displayed profile picture
@@ -195,12 +209,13 @@ Feature: To Verify My Profile Page
     
    @MyProfile3
   Scenario: To verify  if user is able to see and click Edit Button
-   Given navigate to URL "https://drysign-qa.exela.global/#/login"
+   Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user click on edit button
     Then user leave the name field blank
@@ -211,12 +226,13 @@ Feature: To Verify My Profile Page
     
       @MyProfile4
   Scenario: To verify  if user is able to see and click Cancel Button
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user click on edit button
     Then user leave the name field blank
@@ -225,12 +241,13 @@ Feature: To Verify My Profile Page
        @MyProfile5
   Scenario: To verify  if user is able to see and click Cancel Button
   
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
     Then user click on edit button
     Then user enter zip code as "444"
@@ -239,29 +256,33 @@ Feature: To Verify My Profile Page
     
            @MyProfile09
   Scenario: To verify Update payment method functionality for free user 
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
-    When enter the user name as "sid87@mailinator.com"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
+    When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    And user click on mat icon
+    And user click on the Login button
+    And user click on continue with free version
+    #And user click on the sign in button
+    #And user click on mat icon
     When user click on profile icon
     And user click on manage account
-    And click on cancel subscription button
-    And user click on confirm button
-    Then user click on payment method 
+    #And click on cancel subscription button
+    #And user click on confirm button
+    #Then user click on payment method 
     Then update payment method should be disable
    
     
-         @MyProfile10
+         @MyProfile010
   Scenario: To verify update payment method functionality for paid user  
-    Given navigate to URL "https://drysign-qa.exela.global/#/login"
-    When enter the user name as "sid102@mailinator.com"
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
+    When enter the user name as "sid202@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
+    #And user click on the sign in button
     #And user click on continue with free version
-    And user click on mat icon
+    #And user click on mat icon
     When user click on profile icon
-    Then user click on payment method 
+    And user click on manage account
+    #Then user click on payment method 
     Then user click on update payment method
     And user enter name of the card as "Test"
     And enter card number as "4242424242424242"
@@ -272,15 +293,17 @@ Feature: To Verify My Profile Page
     Then user display as "New Payment details has been updated"
     And user click on dashboard button
     
-         @MyProfile11
+         @MyProfile011
   Scenario: To verify update payment method functionality for paid user 
-   Given navigate to URL "https://drysign-qa.exela.global/#/login"
+   Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid102@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    And user click on mat icon
+    And user click on the Login button
+    #And user click on the sign in button
+    #And user click on mat icon
     When user click on profile icon
-    Then user click on payment method 
+    And user click on manage account
+    #Then user click on payment method 
     Then user click on update payment method
     And click on cancel button
     Then payment get fail as "PAYMENT FAILED"

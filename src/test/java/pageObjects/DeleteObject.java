@@ -45,9 +45,10 @@ public class DeleteObject {
 	public static WebElement delAcc;
 
 	//TS2
-	@FindBy(xpath="//*[@id='cancel']")
+	@FindBy(xpath="//button[@id='cancel']")
 	public static WebElement btnCancel;
-	@FindBy(xpath="//*[text()='Delete Account']")
+	
+	@FindBy(xpath="//button[text()='Delete Account']")
 	public static WebElement btnDeleteAcc;
 	
 	//*[text()='Delete Account']
@@ -58,10 +59,10 @@ public class DeleteObject {
 	@FindBy(xpath="//*[@id='mat-dialog-title-2']")
 	public static WebElement popUpwithOk;
 	
-	@FindBy(xpath="//span[text()='OK']")
+	@FindBy(xpath="//button[text()='OK']")
 	public static WebElement popUpOk;
 	
-	@FindBy(xpath="//*[@id='mat-radio-2-input']")
+	@FindBy(xpath="//input[@id='mat-radio-2-input']")
 	public static WebElement clickOnCheckBox;
 	
 	@FindBy(xpath="//*[text()='Confirm']")
@@ -86,8 +87,8 @@ public class DeleteObject {
 	@FindBy(xpath="//a[text()='DELETE ACCOUNT']")     
 	public static  WebElement Delete_Account;
 	
-	@FindBy(xpath="//div[text()=' Invalid username or password ']")     
-	public static  WebElement InvalidUsernameOrPassword ;
+	@FindBy(xpath="//p[text()='Not a registered user.']")     
+	public static  WebElement Notregistereduser;
 	
 	@FindBy(xpath="//div[@class='my-5 text-center']//p[text()='You have successfully deleted the account.']")     
 	public static  WebElement Youhavesuccessfullydeletedaccount ;
@@ -96,8 +97,11 @@ public class DeleteObject {
 	@FindBy(xpath="//img[@src='assets/images/icon-success-msg.png']")     
 	public static  WebElement Ticklogo ;
 	
+	@FindBy(xpath="//iframe[@id='ssIFrame_google']")     
+	public static  WebElement ssIFrame_google ;
 	
-	//img[@src='assets/images/icon-success-msg.png']
+	
+	
 	//p[text()='You have successfully deleted the account.']
 	
 	//TS3
@@ -105,20 +109,26 @@ public class DeleteObject {
 	public static WebElement invalidUserOrPass;
 	//*[@id='toast-container']
 	//TS4
-	@FindBy(xpath="//*[text()='Forgot Password? ']")
+	@FindBy(xpath="//a[text()='Forgot Password ']")
 	public static WebElement clickForgotPass;
 	
-	@FindBy(xpath="//*[@formcontrolname='email']")
+	@FindBy(xpath="//input[@formcontrolname='email']")
 	public static WebElement enterEmailAdd;
 	
-	@FindBy(xpath="//*[text()='Send Reset Email']")
+	@FindBy(xpath="//button[text()='Submit']")
 	public static WebElement clickSendResetEmail;
 	
 	//*[text()='Send Reset Email']
 	
-	@FindBy(xpath="//div[text()=' Invalid email or user does not exist ']")
+	@FindBy(xpath="//p[text()='Invalid email or user does not exist']")
 	public static WebElement InvalidEmailOrUserDoesNotExist;
 	
+	@FindBy(xpath="//app-pop-up[@class='ng-star-inserted']")
+	public static WebElement errorPopUp;
+	
+	
+	
+	//div[text()=' Invalid email or user does not exist ']
 	@FindBy(xpath="//img[@class='ng-star-inserted']")
 	public static WebElement crossLogo;
 	//img[@class='ng-star-inserted']
@@ -156,8 +166,11 @@ public class DeleteObject {
 	public static WebElement successOnSignUp;
 	
 	
-	@FindBy(xpath="//div[@class='toast-top-right toast-container']//div[@role='alertdialog']")
+	@FindBy(xpath="//p[@class='text strong ng-star-inserted']")
 	public static WebElement yourAccountHasBeenCreated;
+	
+	@FindBy(xpath="//p[text()='YOUR ACCOUNT HAS BEEN CREATED!  You will soon receive an email with a link to activate your new account.']")
+	public static WebElement yourAccountHasBeenCreated2;
 	
 	
 	
@@ -165,7 +178,7 @@ public class DeleteObject {
 	//TS6
 	//*[@class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 dashboard-align']
 	
-	@FindBy(xpath="//*[@class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 dashboard-align']")
+	@FindBy(xpath="//div[@class='section-wrap col-12 mt-2 ng-star-inserted']")
 	public static WebElement disFreeUser;
 	
 	@FindBy(xpath="//*[text()=' Continue With Free Version ']")

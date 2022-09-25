@@ -45,6 +45,8 @@ public class MyProfile {
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	
+
+	
 	@Then("user not get displayed profile picture")
 	public void user_not_get_displayed_profile_picture() {
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Profile_Picture);
@@ -173,9 +175,14 @@ public void user_display_as(String string) {
 }
 
 @Then("user click on dashboard button")
-public void user_click_on_dashboard_button() {
+public void user_click_on_dashboard_button() throws InterruptedException {
 	Waits.waitUntilElementToClick(30,XpathMyProfile.GoToDashboard);
 	Elements.click(XpathMyProfile.GoToDashboard);
+	
+	Thread.sleep(5000);
+	
+	Waits.waitUntilElementLocated(30, XpathMyProfile.NewPaymentDetails);
+	Elements.isDisplayed(XpathMyProfile.NewPaymentDetails);
 }
 @Then("click on cancel button")
 public void click_on_cancel_button() {
@@ -187,7 +194,7 @@ public void click_on_cancel_button() {
 public void payment_get_fail_as(String string) {
 	Waits.waitUntilElementLocated(30, XpathMyProfile.PAYMENT_FAILED);
 	Elements.isDisplayed(XpathMyProfile.PAYMENT_FAILED);
-	 Assert.assertEquals(Elements.getText(XpathMyProfile.PAYMENT_FAILED),string);
+	 Assert.assertEquals(Elements.getText(XpathMyProfile.Unabletoauthorisepayment),"Unable to authorise payment:Payment cancelled by the user");
  
 }
 
@@ -274,21 +281,42 @@ public void user_enter_Fname_as(String string) {
 	Waits.waitUntilElementLocated(30, XpathMyProfile.Name_field);
 	Elements.TypeText(XpathMyProfile.Name_field, string);
 }
+@Then("display as {string} and {string} button")
+public void display_as_and_button(String string, String string2) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Cancel_Btn);
+	Elements.isDisplayed(XpathMyProfile.Cancel_Btn);
+	
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.btnSave);
+	Elements.isDisplayed(USAMobileNoMandateObject.btnSave);
+}
 
 @Then("user enter Lname as {string}")
 public void user_enter_Lname_as(String string) {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Last_Name);
+	Elements.TypeText(XpathMyProfile.Last_Name,string);
+	
+//	Waits.waitUntilElementLocated(30, XpathMyProfile.Last_Name);
+//	Elements.isDisplayed(XpathMyProfile.Last_Name);
+//	 Assert.assertEquals(Elements.getText(XpathMyProfile.Last_Name),string);
+	
+}
+@Then("user enter LName as {string}")
+public void user_enter_LName_as(String string) {
+	
 	Waits.waitUntilElementLocated(30, XpathMyProfile.Last_Name);
 	Elements.TypeText(XpathMyProfile.Last_Name, string);
 }
 
 @Then("user click on mail tab then error get display for mandatory field as {string}")
 public void user_click_on_mail_tab_then_error_get_display_for_mandatory_field_as(String string) {
-	Waits.waitUntilElementToClick(30,XpathMyProfile.Last_Name);
-	Elements.jclick(XpathMyProfile.Last_Name);
+
+	//Assert.assertSame(Elements.isTextPresent("Value is required and can't be empty"), "Msg is absent/wrong/misspelled");
 	
-//	Waits.waitUntilElementLocated(30, XpathMyProfile.Lastnameisrequired);
-//	Elements.isDisplayed(XpathMyProfile.Lastnameisrequired);
-//	 Assert.assertEquals(Elements.getText(XpathMyProfile.Lastnameisrequired),string);
+
+	 
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Lastnameisrequired);
+	Elements.isDisplayed(XpathMyProfile.Lastnameisrequired);
+	 Assert.assertEquals(Elements.getText(XpathMyProfile.Lastnameisrequired),string);
 }
 
 @Then("user enter Email as {string}")
@@ -310,6 +338,35 @@ public void user_enter_Contact_Number_as(String string) {
 public void update_payment_method_should_be_disable() {
 	Waits.waitUntilElementLocated(30, XpathMyProfile.Update_Payment_Method);
 	Elements.isEnabled(XpathMyProfile.Update_Payment_Method);
+}
+@Then("user click on Cancel button")
+public void user_click_on_Cancel_button() throws InterruptedException {
+	Thread.sleep(5000);
+	Waits.waitUntilElementToClick(30,XpathMyProfile.Cancel_Btn);
+	Elements.click(XpathMyProfile.Cancel_Btn);
+}
+
+@Then("user goto the profile screen")
+public void user_goto_the_profile_screen() {
+	Waits.waitUntilElementLocated(30, XpathMyProfile.Profile_Page);
+	Elements.isDisplayed(XpathMyProfile.Profile_Page);
+}
+@Then("click on cross icon")
+public void click_on_cross_icon() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.Iconclose);
+	Elements.click(XpathMyProfile.Iconclose);
+}
+@Then("user goto the dashboard screen")
+public void user_goto_the_dashboard_screen() {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.rightSideContent);
+	Elements.isDisplayed(XpathMyProfile.rightSideContent);
+}
+
+@Then("user click on upload plus button")
+public void user_click_on_upload_plus_button() throws InterruptedException {
+	Thread.sleep(10000);
+	Waits.waitUntilElementToClick(30,XpathMyProfile.AddProfileImage);
+	Elements.mouseDoubleclick(XpathMyProfile.AddProfileImage);
 }
 }
 

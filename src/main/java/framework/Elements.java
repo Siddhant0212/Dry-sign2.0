@@ -56,6 +56,7 @@ import org.apache.tika.parser.pdf.PDFParser;
 import org.apache.tika.sax.BodyContentHandler;
 
 
+
 public class Elements {
 	
 
@@ -721,8 +722,8 @@ public class Elements {
 		 public static String readPDFInURL() throws IOException, SAXException, TikaException  {
 
 					
-					BodyContentHandler contenthandler
-						= new BodyContentHandler();
+			 BodyContentHandler contenthandler
+				= new BodyContentHandler();
 
 					
 					File f = new File("C:\\Users\\Siddhant.Ingole.IN\\eclipse-workspace\\DS-2.0\\DownloadedFiles\\Holidays List 2022 Updated.pdf");

@@ -2,17 +2,19 @@
 Feature: To Verify Dashboard
 
   Background: 
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
 
   @Dashboard1
   Scenario: To Verify the UI elements present on the View Plan button pop-up present on the Dashboard
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    And dashboard window get display
+    And user click on the Login button
+    #And user click on the sign in button
+    #And dashboard window get display
     #And individual plan get display
-    Then View Plan buttons should be present
-    Then user click on View Plan button
+    #Then View Plan buttons should be present
+    #Then user click on View Plan button
+    Then user click on View Details button
     #Then Pop Up get displayed with elements
     Then Pop Up get displayed with Elements
       |Self Sign |        
@@ -22,7 +24,8 @@ Feature: To Verify Dashboard
       |Upload PDF using Dropbox|
       |Upload PDF using OneDrive|
  Then user get display upgrade plan button 
- Then user click on close icon
+ #Then user click on close icon
+  Then user click on Cancel Button
 
 
 
@@ -31,8 +34,8 @@ Feature: To Verify Dashboard
   Scenario: To Verify the Close icon functionality present on the View Plan pop-up screen present on the Dashboard
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    Then user click on View Plan button
+    And user click on the Login button
+   Then user click on View Details button
       Then Pop Up get displayed with Elements
       |Self Sign |        
       |Group Sign|
@@ -40,7 +43,8 @@ Feature: To Verify Dashboard
       |Upload Pdf using Google Drive|
       |Upload PDF using Dropbox|
       |Upload PDF using OneDrive|
-    Then existing plan details of the user should get displayed with Upgrade Plan button
+      Then user get display upgrade plan button 
+    #Then existing plan details of the user should get displayed with Upgrade Plan button
     Then user verify that close icon is present on the pop up
 
   @Dashboard3
@@ -49,8 +53,8 @@ Feature: To Verify Dashboard
 
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    Then user click on View Plan button
+    And user click on the Login button
+    Then user click on View Details button
       Then Pop Up get displayed with Elements
       |Self Sign |        
       |Group Sign|
@@ -58,19 +62,42 @@ Feature: To Verify Dashboard
       |Upload Pdf using Google Drive|
       |Upload PDF using Dropbox|
       |Upload PDF using OneDrive|
-    Then existing plan details of the user should get displayed with Upgrade Plan button
+    Then user get display upgrade plan button 
     And user click on Upgrade Plan button
     Then pop up should display only the higher plan than the exisiting
+    Then Pop Up get displayed with Elements
+      | 25 Templates  |        
+      | 600 Documents |
+      |Upload PDF using Google Drive |        
+      |Upload PDF using Dropbox|
+      |Upload PDF using OneDrive|  
+      |Self Sign |         
+      |Group Sign|
 
   @Dashboard4
   Scenario: To Verify Subscribed Register user is able to Purchase the higher plan then the exisiting plan successfully through Upgrade Plan button present on View Plan pop-up
     When enter the user name as "sid87@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    Then user click on View Plan button
-    Then Pop Up get displayed with elements
-    And user click on Upgrade Plan button
-    Then pop up should display only the higher plan than the exisiting
+    And user click on the Login button
+    #Then user click on View Details button
+     #Then Pop Up get displayed with Elements
+      #|Self Sign |        
+      #|Group Sign|
+      #|Signature: Type,Draw and upload|
+      #|Upload Pdf using Google Drive|
+      #|Upload PDF using Dropbox|
+      #|Upload PDF using OneDrive|
+    #Then user get display upgrade plan button
+    #Then pop up should display only the higher plan than the exisiting
+    #Then Pop Up get displayed with Elements
+      #| 25 Templates  |        
+      #| 600 Documents |
+      #|Upload PDF using Google Drive |        
+      #|Upload PDF using Dropbox|
+      #|Upload PDF using OneDrive|  
+      #|Self Sign |         
+      #|Group Sign|
+     Then user Click On upgrade plan button
     And user click on the BuyNow button
     Then user navigate to payment page
     And user enter name of the card as "Test"
@@ -79,38 +106,44 @@ Feature: To Verify Dashboard
     And enter expire year as "27"
     And enter cvv nunber as "789"
     Then user click on pay button
+    Then confirmation message get display as "PAYMENT CONFIRMATION"
     #Then Verify approved plan and activated image is displayed
     Then user click on login button
-    When enter the user name as "sid87@mailinator.com"
-    When enter the password as"Malin@555"
-    And user click on sign in button
-    Then new plan details and its related features should get displayed
+    When enter the User name as "sid87@mailinator.com"
+    When enter the Password as"Malin@555"
+    And user click on the Login Button
+    Then new plan details and its related features should get Displayed
+      |600|        
+      
+    
 
   @Dashboard5
   Scenario: To Verify the View Plan or Buy now button is present or not on the Dashboard for the Premium/corporate registered users
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user get displayed the View Plan or Buy Now button is present
 
   @Dashboard6
   Scenario: To Verify on Cancel Subscription or Refund for existing register user Buy Now button is displayed on the Dashboard
     When enter the user name as "sid87@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    And user click on mat icon
+    And user click on the Login button
+   #And user click on mat icon
     And user click on profile icon
     And user click on manage account
     And click on cancel subscription button
     And user click on confirm button
     #Then user should get display exisiting Plan get cancelled successfully
-    And user click on mat icon
+    #And user click on mat icon
+    Then user click on Cross icon
     And user click on logout
+    Then user click on LogOut button present on PopUp
     When enter the user name as "sid87@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login Button
     And user click on continue with free version
-    Then user display three pie chart
+    #Then user display three pie chart
     Then display as "individual plan" with upgrade button
     Then display as "professional plan" with Upgrade button
 
@@ -192,37 +225,48 @@ Feature: To Verify Dashboard
   Scenario: To Verify for the free trial user the Buy Now button is displayed on the Dashboard
     When enter the user name as "sid13@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     Then on Dashboard Buy Now button should get displayed
 
   @Dashboard10
   Scenario: To verify that For paid user Upgrade button is present or not on dashboard.
     When enter the user name as "sid02@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    Then Upgrade button should not display on dashboard to paid user as "Upgrade"
+    And user click on the Login button
+    #Then Upgrade button should not display on dashboard to paid user as "Upgrade"
+    Then Upgrade button should be display on dashboard to paid user as "Upgrade Plan"
 
   @Dashboard11
   Scenario: To verify that Document received count on dashboard
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     Then user should display the correct document received count
+    Then following get Elements display
+    |Signed |
+    |Pending |
+    |Rejected |
+    
 
   @Dashboard12
   Scenario: To verify that Document Sent count on dashboard
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     Then user should display the correct document sent count
+     Then following get Elements display
+    |Completed |
+    |Out for Signature |
+    |Draft  |
+    |Rejected  |
     
       @Dashboard013
   Scenario: To verify that user is  able to Draw/Type/Upload Signature on dashboard
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     Then user click on Signature edit
      And click on "TYPE"
@@ -234,7 +278,7 @@ Feature: To Verify Dashboard
   Scenario: To verify that the Signature upload file max size is 50 kb 
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     Then user click on Signature edit
     Then user click on upload
@@ -271,10 +315,10 @@ Feature: To Verify Dashboard
   Scenario: To verify that feedback option is present or not on Dashboard
     When enter the user name as "sid92@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
-    And dashboard window get display
     Then verify that Feedback rating UI should be present
+    Then clickable Smiley icon should be present
     
     
  
@@ -283,9 +327,9 @@ Feature: To Verify Dashboard
   Scenario: To verify Self sign and Group sign options are present or not on Dashboard
     When enter the user name as "sid92@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
-    And dashboard window get display
+    #And dashboard window get display
     Then user display self sign and group sign and it should be clickable
     
      @Dashboard18
@@ -293,20 +337,20 @@ Feature: To Verify Dashboard
     
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     Then dashboard window get display
     
     
 
   @Dashboard19
   Scenario: To Verify if the Account is Inactive, user should be able to purchase plan from Buy Now button present on Dashboard
-    When enter the user name as "sid103@mailinator.com"
+    When enter the user name as "sid09@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
-    And user click on continue with free version
-    And user click on Upgrade button
+    And user click on the Login button
+    #And user click on continue with free version
+    And user click on buy now button
     Then pop up should display only the higher plan than the exisiting
-    And user click on the BuyNow button
+    And user click on the Upgrade button
     Then user navigate to payment page
     And user enter name of the card as "Test"
     And enter card number as "4242424242424242"

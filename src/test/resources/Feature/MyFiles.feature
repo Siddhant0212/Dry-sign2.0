@@ -1,13 +1,13 @@
 Feature: To Verify My Files Tabs Functionality
 
   Background: 
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
     
      @MyFiles1
   Scenario: To verify functionality of sign on Pending document of DrySign
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+   And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
@@ -385,7 +385,7 @@ Feature: To Verify My Files Tabs Functionality
   Scenario: To verify generic Date display proper or not
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
@@ -406,7 +406,7 @@ Feature: To Verify My Files Tabs Functionality
     
     And user click on drafts tab
     Then user display Date&Time
-    Then user Display Date in format as "08/16/2022, 11:24:02 AM"
+    Then user Display Date in format as "09/1/2022, 4:46:43 AM"	
     
     And user click on rejected tab
     Then user display Assigned Date
@@ -416,7 +416,7 @@ Feature: To Verify My Files Tabs Functionality
   Scenario: To Verify the Expand and Collapse (+/-) document record functioanlity in Signed , Completed Documents, Out for Signature and Rejected Tab
       When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     And user click on completed documents tab
@@ -451,21 +451,26 @@ Feature: To Verify My Files Tabs Functionality
   Scenario: To Verify the Pagination functionality in all the Tabs in My Files Section
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then Previous and next icon should get display
     Then page numeric value display next to the previous icon
-    Then page default value is one
-    Then default page should be first as "Displaying item : 1 - 4 of 4"
+    #Then page default value is one
+    Then default page should be first as "1 - 8 of 8"
     Then on first page previous arrow icon should be disabled
     Then on last page next arror icon should be disabled
+    Then user get display pending tab
+    Then server time for assigned date
+      |09/02/2022 7:18:28 AM|        
+      |09/01/2022 3:37:46 AM|
+      |08/29/2022 10:39:17 PM|
     
         @MyFiles17
   Scenario: To Verify it takes Server time by  on the Assigned Date and Signed Date column in all Tabs
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
@@ -494,16 +499,17 @@ Feature: To Verify My Files Tabs Functionality
   Scenario: To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List.
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+   And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     And user click on out for signature tab
     Then user click on plus icon
+    Then user click on mat icon
     Then click in reassign 
     Then pop up get Display as "Are you sure you want to reassign eSign authority to another signatory?"
     Then user click on "YES" button
     Then another pop get display as "Reassign"
     Then enter name as "Sid"
-    Then enter email Address as "sid103@mailinator.com"
+    Then enter email Address as "sid101   @mailinator.com"
     Then user click on "CONFIRM"Button
     Then validation message get display as "This email address already exists in your previously assigned list."

@@ -677,7 +677,7 @@ public class DrySign {
 	public void user_click_on_upload_and_browser_option_as(String filename)  throws InterruptedException {
 	
 		Waits.waitUntilElementToClick(30, DashboardObject.Upload_Option);
-		Elements.click(DashboardObject.Upload_Option);
+		Elements.Mouseclick(DashboardObject.Upload_Option);
 		Thread.sleep(5000);
 	    uploadFile(filename, "chrome");
 		Thread.sleep(5000);

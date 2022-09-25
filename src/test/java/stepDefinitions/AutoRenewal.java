@@ -16,14 +16,15 @@ public class AutoRenewal {
 	
 	@When("user click on the Login button")
 	public void user_click_on_the_Login_button() throws InterruptedException  {
+		//Thread.sleep(5000);
 		Waits.waitUntilElementToClick(30, AutoRenewalObject.Login_btn);
 		Elements.click(AutoRenewalObject.Login_btn);
 		
-		Thread.sleep(5000);
+		
 		
 		
 	}
-	
+
 	@When("click on Upgrade Plan")
 	public void click_on_Upgrade_Plan() throws InterruptedException {
 		Thread.sleep(20000);
@@ -82,8 +83,12 @@ public class AutoRenewal {
 
 	@When("enter the Password as{string}")
 	public void enter_the_Password_as(String password) {
-		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.passWd);
-		Elements.TypeText(USAMobileNoMandateObject.passWd, password);
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.passWd);
+//		Elements.TypeText(USAMobileNoMandateObject.passWd, password);
 	
+	}
+	@When("enter the User name as {string}")
+	public void enter_the_User_name_as(String string) {
+		
 	}
 }

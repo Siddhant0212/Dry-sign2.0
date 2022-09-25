@@ -117,5 +117,17 @@ public class MFAObject {
 	@FindBy(xpath="//button[text()='Submit']")     
 	public static  WebElement Submit_Btn;
 	
-	//button[text()='Submit']
+	@FindBy(xpath="//button[text()='OK']")     
+	public static  WebElement OK;
+	
+	@FindBy(xpath="//button[text()='Logout']")     
+	public static  WebElement LogoutPopUp;
+	
+	@FindBy(xpath="//p[text()='The Secure Code provided is incorrect. Please enter the correct code and try again.']")     
+	public static  WebElement TheSecureCodeprovidedisincorrect;
+	
+	
+	
+	
+	
 }

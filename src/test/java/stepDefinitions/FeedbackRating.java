@@ -1,6 +1,9 @@
 package stepDefinitions;
 
+import java.util.List;
 import java.util.Map;
+
+import org.openqa.selenium.WebElement;
 
 import baseinit.Base;
 import framework.Elements;
@@ -59,13 +62,15 @@ public class FeedbackRating {
 		
 }
 		@When("user click on the smiley")
-		public void user_click_on_the_smiley() {
+		public void user_click_on_the_smiley() throws InterruptedException {
+			Thread.sleep(2000);
 			Waits.waitUntilElementToClick(30, FeedbackRatingObject.clickfiveEmoji);
 	    	Elements.click(FeedbackRatingObject.clickfiveEmoji);
 			
 			}
 		@When("user enter message as {string}")
-		public void user_enter_message_as(String message) {
+		public void user_enter_message_as(String message) throws InterruptedException {
+			Thread.sleep(3000);
 			Waits.waitUntilElementLocated(30, FeedbackRatingObject.entMessage);
 			Elements.TypeText(FeedbackRatingObject.entMessage, message);
 		}
@@ -75,6 +80,36 @@ public class FeedbackRating {
 	    	Elements.click(FeedbackRatingObject.clickOnSend);
 		
 		}
+		@Then("user click on Submit button")
+		public void user_click_on_Submit_button() throws InterruptedException {
+			Elements.scrollIntoView(FeedbackRatingObject.Submit);
+			Waits.waitUntilElementToClick(30, FeedbackRatingObject.Submit);
+	    	Elements.click(FeedbackRatingObject.Submit);
+		}
+		
+		@Then("user click On Cancel button")
+		public void user_click_On_Cancel_button() {
+			Waits.waitUntilElementToClick(30, FeedbackRatingObject.Cancel);
+	    	Elements.click(FeedbackRatingObject.Cancel);
+		}
+
+		@Then("Pop Up should get closed")
+		public void pop_Up_should_get_closed() {
+			
+			
+			Waits.setImplicitWait(10);
+			List<WebElement> tabs=FeedbackRatingObject.Pop_Up;
+
+			if(tabs.size()>0) {
+				Assert.assertTrue(false);
+				
+			}
+			else {
+				Assert.assertTrue(true);
+			}
+		}
+			
+		
 
 
 //		@When("user get displayed message as feedback submitted successfully")
@@ -199,15 +234,24 @@ public void user_should_get_display_Message_box() {
 		
 		}
 		@Then("user should get displayed message as feedback submitted successfully")
-		public void user_should_get_displayed_message_as_feedback_submitted_successfully() {
-			Waits.waitUntilElementToClick(30, FeedbackRatingObject.dispOnSuccessFeed);
+		public void user_should_get_displayed_message_as_feedback_submitted_successfully() throws InterruptedException {
+			Thread.sleep(1000);
+			Waits.waitUntilElementLocated(30, FeedbackRatingObject.dispOnSuccessFeed);
 			Elements.isDisplayed(FeedbackRatingObject.dispOnSuccessFeed);
 			Assert.assertEquals(Elements.getText(FeedbackRatingObject.dispOnSuccessFeed),"Feedback submitted successfully.");
+			
 		}
 
 		@Then("data along with the rating should be successfully saved in the Dashboard")
-		public void data_along_with_the_rating_should_be_successfully_saved_in_the_Dashboard() {
+		public void data_along_with_the_rating_should_be_successfully_saved_in_the_Dashboard() throws InterruptedException {
 			Waits.waitUntilElementLocated(30, FeedbackRatingObject.Emoji4);
 			Elements.isDisplayed(FeedbackRatingObject.Emoji4);
+			Thread.sleep(1000);
+		}
+		@Then("user click on Logout")
+		public void user_click_on_Logout() throws InterruptedException {
+			Thread.sleep(10000);
+			Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickLogOut);
+			Elements.jclick(USAMobileNoMandateObject.clickLogOut);
 		}
 }

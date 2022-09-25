@@ -35,7 +35,7 @@ public class XpathMyProfile {
 	@FindBy(xpath="//input[@class='uploadBtn-pointer']")
     public static WebElement Upload_Btn;
 	
-	@FindBy(xpath="//input[@placeholder='Name']")
+	@FindBy(xpath="//input[@placeholder='First Name']")
     public static WebElement Name_field;
 	
 	@FindBy(xpath="//span[text()='First name is required.']")
@@ -44,7 +44,7 @@ public class XpathMyProfile {
 	@FindBy(xpath="//div[text()='Payment Method']")
     public static WebElement Payment_Method;
 	
-	@FindBy(xpath="//span[text()=' Update payment method ']")
+	@FindBy(xpath="//button[text()=' Update payment method ']")
     public static WebElement Update_Payment_Method;
 	
 
@@ -53,6 +53,11 @@ public class XpathMyProfile {
 	
 	@FindBy(xpath="//a[text()='Go To Dashboard']")
     public static WebElement GoToDashboard;
+	
+	@FindBy(xpath="(//div[@role='group'])[6]")
+    public static WebElement NewPaymentDetails;
+	
+	
 	
 	@FindBy(xpath="//input[@value='Cancel']")
     public static WebElement CancelBtn;
@@ -68,6 +73,30 @@ public class XpathMyProfile {
 	
 	@FindBy(xpath="//div[text()='Personal Information']")
 	public static WebElement Personal_Information;
+	
+	@FindBy(xpath="//h2[text()='Unable to authorise payment:Payment cancelled by the user']")
+	public static WebElement Unabletoauthorisepayment;
+	
+	//h2[text()='Unable to authorise payment:Payment cancelled by the user']
+	
+	@FindBy(xpath="//button[text()=' Cancel ']")
+	public static WebElement Cancel_Btn;
+	
+	@FindBy(xpath="//div[@id='exela-ds-profile']")
+	public static WebElement Profile_Page;
+	
+	@FindBy(xpath="//i[@class='exela-icon-close']")
+	public static WebElement Iconclose;
+	
+	@FindBy(xpath="//div[@class='rightSidecontent']")
+	public static WebElement rightSideContent;
+	
+	@FindBy(xpath="//input[@title='Add Profile Image']")
+	public static WebElement AddProfileImage;
+	
+	//input[@title='Add Profile Image']
+	
+	
 	
 	public static WebElement basicInformation(String data)
 	{
@@ -92,7 +121,7 @@ public class XpathMyProfile {
 	@FindBy(xpath="//input[@placeholder='Email Address']")
 	public static  WebElement Email_Address;
 	
-	@FindBy(xpath="//span[text()='Last name is required.']")
+	@FindBy(xpath="//span[text()='Last name is required']")
 	public static  WebElement Lastnameisrequired;
 	
 	

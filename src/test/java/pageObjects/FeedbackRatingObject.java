@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -37,36 +40,42 @@ public class FeedbackRatingObject {
 	
 	//*[text()=' Share your feedback ']
 	
-	@FindBy(xpath="//*[@id='Ellipse_114']")
+	@FindBy(xpath="(//span[text()=' Very Happy '])[1]")
 	public static WebElement clickfiveEmoji;
 	
 	
+	
+	@FindBy(xpath="(//button[text()=' Submit '])[1]")
+	public static WebElement Submit;
+	
+	@FindBy(xpath="//button[text()='Cancel']")
+	public static WebElement Cancel;
 	
 	
 	
 	public static WebElement smileField(String data)
 	{
-	String Xpath = "//*[@xmlns='http://www.w3.org/2000/svg']";
+	String Xpath = "//a[@class='fs-12']";
 	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
 	return element;
 	}
 	
 	//TS2
-	@FindBy(xpath="//*[@placeholder='Message']")
+	@FindBy(xpath="//textarea[@placeholder='Message']")
 	public static WebElement entMessage;
 	
 	@FindBy(xpath="//*[text()='Send']")
 	public static WebElement clickOnSend;
 	
-	@FindBy(xpath="//div[text()=' Feedback submitted successfully. ']")
+	@FindBy(xpath="//p[text()='Feedback submitted successfully.']")
 	public static WebElement dispOnSuccessFeed;
 	
 	
 	//TS4 //*[@placeholder='Message']
-	@FindBy(xpath="(//div[@id='emoji'])[2]")
+	@FindBy(xpath="//div[@class='sub-section-wrap']")
 	public static WebElement smileyRatingBox;
 	
-	@FindBy(xpath="//*[@placeholder='Message']")
+	@FindBy(xpath="//div[@class='sub-section-wrap']")
 	public static WebElement boxMessage;
 	
 	
@@ -98,7 +107,18 @@ public class FeedbackRatingObject {
 	public static WebElement Please_EnterMsg;
 	
 	
-	@FindBy(xpath="//*[@id='Ellipse_141']")
+	@FindBy(xpath="(//div[@class='sub-section-wrap p-3 dashboard-outer-box'])[1]")
 	public static WebElement Emoji4;
-	//*[@id='Ellipse_141']
+	
+	@FindAll({
+		@FindBy(xpath="//tr[@ng-repeat='email in emails']")
+	})
+	public static List<WebElement> malinatorMail;
+	
+	
+	@FindAll({
+		@FindBy(xpath="//feedback-message-dialog[@class='ng-star-inserted']")
+	})
+	public static List<WebElement> Pop_Up;
+	
 }

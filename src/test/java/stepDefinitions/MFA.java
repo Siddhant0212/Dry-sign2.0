@@ -60,7 +60,8 @@ public void user_should_display_setup_secure_code() {
 }
 
 @Then("user select on checkbox for email OTP")
-public void user_select_on_checkbox_for_email_OTP() {
+public void user_select_on_checkbox_for_email_OTP() throws InterruptedException {
+	Thread.sleep(2000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.emailOtp);
 	Elements.click(USAMobileNoMandateObject.emailOtp);
 
@@ -78,7 +79,8 @@ public void user_click_on_ok_button_present_on_pop_up() throws InterruptedExcept
 }
 
 @Then("user select on checkbox for setup secure code")
-public void user_select_on_checkbox_for_setup_secure_code() {
+public void user_select_on_checkbox_for_setup_secure_code() throws InterruptedException {
+	Thread.sleep(5000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.setupSecureCode);
 	Elements.click(USAMobileNoMandateObject.setupSecureCode);
 
@@ -353,6 +355,13 @@ public void user_click_on_verify_button() {
 
 }
 
+@When("user click on Verify button")
+public void user_click_on_Verify_button() {
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.clickOnVerify);
+	 Elements.pressEnter(USAMobileNoMandateObject.clickOnVerify);
+	
+}
+
 @When("user enter confirm secure code as {string}")
 public void user_enter_confirm_secure_code_as(String confirmsecurecode) throws InterruptedException {
 	char[] confirmSecureCode =confirmsecurecode.toCharArray();
@@ -374,6 +383,10 @@ public void user_enter_confirm_secure_code_as(String confirmsecurecode) throws I
 
 	@Then("user click on ok button")
 	public void user_click_on_ok_button() {
+		
+		Waits.waitUntilElementLocated(30, MFAObject.TheSecureCodeprovidedisincorrect);
+		Elements.isDisplayed(MFAObject.TheSecureCodeprovidedisincorrect);
+		
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.ok);
 		Elements.click(USAMobileNoMandateObject.ok);
 	   
@@ -616,7 +629,7 @@ public void user_enter_confirm_secure_code_as(String confirmsecurecode) throws I
 		
 		@Then("User navigate to URL {string}")
 		public void user_navigate_to_URL(String string) {
-			Base.driver.navigate().to("https://drysign-qa.exela.global/#/login");
+			Base.driver.navigate().to("https://drysign-dev.exela.global/#/login");
 			USAMobileNoMandateObject obM = new USAMobileNoMandateObject(Base.driver);
 			
 			
@@ -692,6 +705,11 @@ public void user_click_on_send_one_time_password() throws InterruptedException {
 		
 
 	}
+	@Then("user once click on OK button")
+	public void user_once_click_on_OK_button() {
+		Waits.waitUntilElementToClick(30, MFAObject.OK);
+		Elements.click(MFAObject.OK);
+	}
 
 	
 	@Then("user click on resend one time password link")
@@ -754,7 +772,7 @@ public void user_click_on_send_one_time_password() throws InterruptedException {
 		USAMobileNoMandateObject obM = new USAMobileNoMandateObject(Base.driver);
 		
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
-		Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid28");
+		Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid31");
 		
 		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickGo);
 		Elements.click(USAMobileNoMandateObject.clickGo);
@@ -868,25 +886,37 @@ public void user_click_on_send_one_time_password() throws InterruptedException {
 //		Thread.sleep(1000);
 		
 	        Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code1);
-	 	    Elements.pressTab1(USAMobileNoMandateObject.code1);
+	 	    Elements.TypeText(USAMobileNoMandateObject.code1,enterSecureCode);
 		
 		    Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code2);
-			Elements.pressTab1(USAMobileNoMandateObject.code2);
+			Elements.TypeText(USAMobileNoMandateObject.code2,enterSecureCode);
 			
 	     	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code3);
-			Elements.pressTab1(USAMobileNoMandateObject.code3);
+			Elements.TypeText(USAMobileNoMandateObject.code3,enterSecureCode);
 			
 			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code4);
-			Elements.pressTab1(USAMobileNoMandateObject.code4);
+			Elements.TypeText(USAMobileNoMandateObject.code4,enterSecureCode);
 			
 			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code5);
-			Elements.pressTab1(USAMobileNoMandateObject.code5);
+			Elements.TypeText(USAMobileNoMandateObject.code5,enterSecureCode);
 			
 			Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.code6);
-			Elements.pressTab1(USAMobileNoMandateObject.code6);
+			Elements.TypeText(USAMobileNoMandateObject.code6,enterSecureCode);
 			
 			Thread.sleep(2000);
+		}
 		
+	
+	@Then("user click on LogOut button present on PopUp")
+	public void user_click_on_LogOut_button_present_on_PopUp() {
+		Waits.waitUntilElementToClick(30, MFAObject.LogoutPopUp);
+		Elements.click(MFAObject.LogoutPopUp);
+	}
+	@Given("user Navigate To URL {string}")
+	public void user_Navigate_To_URL(String string) {
+		Base.driver.switchTo().newWindow(WindowType.TAB);
+		Base.driver.navigate().to("https://drysign-dev.exela.global/#/");
+		USAMobileNoMandateObject obM = new USAMobileNoMandateObject(Base.driver);
 	}
 	}
 	
