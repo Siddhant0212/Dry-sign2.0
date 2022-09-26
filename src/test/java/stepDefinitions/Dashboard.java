@@ -82,9 +82,9 @@ public class Dashboard {
 		Elements.jclick(USAMobileNoMandateObject.confirmBtnOnRefund);
 		Thread.sleep(2000);
 		
-		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Yoursubscriptioniscancelledsuccessfully);
-		Elements.isDisplayed(USAMobileNoMandateObject.Yoursubscriptioniscancelledsuccessfully);
-		Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Yoursubscriptioniscancelledsuccessfully),"Your subscription is cancelled successfully. You can enjoy free version.");
+//		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Yoursubscriptioniscancelledsuccessfully);
+//		Elements.isDisplayed(USAMobileNoMandateObject.Yoursubscriptioniscancelledsuccessfully);
+//		Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Yoursubscriptioniscancelledsuccessfully),"Your subscription is cancelled successfully. You can enjoy free version.");
 		
 	}
 
@@ -138,8 +138,8 @@ public void click_on_cancel_subscription_button() {
 
 @Then("user get display Buy Now button")
 public void user_get_display_Buy_Now_button() {
-	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.buyNowNoActivePlan);
-	Elements.isDisplayed(USAMobileNoMandateObject.buyNowNoActivePlan);
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Upgrade5);
+	Elements.isDisplayed(USAMobileNoMandateObject.Upgrade5);
 	
 	}
 @Then("user click on the Buy Now button")

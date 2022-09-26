@@ -4,7 +4,7 @@ Feature: To Verify Free User functions
 
 
 
-  @FreeUser1
+  @DrySign
   Scenario: To Verify for paid user the "switch to free user" button text is changed to "Switch to free version"
    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid12@mailinator.com"
@@ -88,17 +88,17 @@ Feature: To Verify Free User functions
     Then display as "professional plan" with Upgrade button
     Then should display as "5" documents
   
-  @FreeUser5
+  @DrySign1
   Scenario: To Verify if the document count gets exhausted before 1month of time for the free user
     Given navigate to URL "https://drysign-dev.exela.global/#/"
-    When enter the user name as "sid25@mailinator.com"
+    When enter the user name as "sid211@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button
     And user click on continue with free version
     Then user should display document count zero
   
-  @FreeUser6
+  @DrySign
  Scenario: To Verify if the user clicks on the upgrade button present on pricing plan page or on the pie-chart he is able to upgrade the new Plan through banchub page.
    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid201@mailinator.com"
@@ -118,7 +118,7 @@ Feature: To Verify Free User functions
     #Then Verify approved plan and activated image is displayed
     Then confirmation message get display as "PAYMENT CONFIRMATION"
     
-    @FreeUser7
+    @DrySign2
  Scenario: To Verify on cancel subscription if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
     
   Given navigate to URL "https://drysign-dev.exela.global/#/"
@@ -136,12 +136,12 @@ Feature: To Verify Free User functions
     Then display as "Professional Plan" with Upgrade button
     Then should display as "5" documents
     
-     @FreeUser8
+     @DrySign
  Scenario: To Verify on Refund if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When user click on terms and conditions
     When user click on here link
-    When enter the user name as "sid87@mailinator.com"
+    When enter the user name as "sid213@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button
@@ -165,7 +165,7 @@ Feature: To Verify Free User functions
     Then display as "Professional Plan" with Upgrade button
     Then should display as "5" documents
   
-   @FreeUser9
+   @DrySign
  Scenario: To Verify for the active free user, the document count is set to 5 everymonth and template count to 1
   
    Given navigate to URL "https://drysign-dev.exela.global/#/"
@@ -180,7 +180,7 @@ Feature: To Verify Free User functions
     Then display as "Professional Plan" with Upgrade button
     Then should display as "5" documents
   
-   @FreeUser10
+   @DrySign
  Scenario: To Verify Validity is displayed or not on the Dashboard when login by the free user
   Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid103@mailinator.com"
@@ -190,7 +190,7 @@ Feature: To Verify Free User functions
     And user click on continue with free version
     Then user should not display as "validity" option
     
-   @FreeUser11
+   @DrySign
  Scenario: To Verify Dashboard for paid users, coporate users and enterprise users is not changed.
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid12@mailinator.com"
@@ -200,7 +200,7 @@ Feature: To Verify Free User functions
     Then Post login the Plan the pre dashboard pop up screen should not get displayed as "continue with free version"
     Then for paid user no change on dashboard
     
-    @FreeUser12
+    @DrySign
  Scenario: To verify that the plan pop up doesn't close unless "continue to free verison" or upgrade button is clicked.
   Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid103@mailinator.com"
@@ -213,7 +213,7 @@ Feature: To Verify Free User functions
     Then display as "Professional Plan" with Upgrade button
     Then should display as "5" documents
     
-    @FreeUser13
+    @DrySign
  Scenario: To Verify for the new free user, on login every time the pricing plan is displayed in the pop-up window 
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid103@mailinator.com"
@@ -227,7 +227,7 @@ Feature: To Verify Free User functions
     Then should display as "5" documents
     Then upgrade button should get display as "Upgrade Plan,Upgrade Plan"
   
-  @FreeUser14
+  @DrySign
  Scenario: To Verify for the new free user Dashboard Display
   Given navigate to URL "https://drysign-dev.exela.global/#/"
    When enter the user name as "sid103@mailinator.com"
@@ -256,10 +256,10 @@ Feature: To Verify Free User functions
       |Signature: Type,Draw and upload|
     
     
-      @FreeUser15
+      @DrySign
  Scenario: To verify for free user After 5 documents are utilized next document should not be allowed
    Given navigate to URL "https://drysign-dev.exela.global/#/"
-   When enter the user name as "sid25@mailinator.com"
+   When enter the user name as "sid211@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button
@@ -268,10 +268,10 @@ Feature: To Verify Free User functions
      Then user click on browser
      Then user get display error message as "You have reached the document upload count, please subscribe to upload more documents."
     
-         @FreeUser16
+         @DrySign
  Scenario: To verify If 1 template is utilized next template should not be allowed
    Given navigate to URL "https://drysign-dev.exela.global/#/"
-   When enter the user name as "sid25@mailinator.com"
+   When enter the user name as "sid211@mailinator.com"
    When enter the password as"Malin@555"
    And user click on the Login button
    #And user click on the sign in button

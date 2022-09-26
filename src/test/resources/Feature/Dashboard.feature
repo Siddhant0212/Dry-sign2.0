@@ -4,7 +4,7 @@ Feature: To Verify Dashboard
   Background: 
     Given navigate to URL "https://drysign-dev.exela.global/#/"
 
-  @Dashboard1
+  @DrySign
   Scenario: To Verify the UI elements present on the View Plan button pop-up present on the Dashboard
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
@@ -30,7 +30,7 @@ Feature: To Verify Dashboard
 
 
 
-  @Dashboard2
+  @DrySign
   Scenario: To Verify the Close icon functionality present on the View Plan pop-up screen present on the Dashboard
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
@@ -47,7 +47,7 @@ Feature: To Verify Dashboard
     #Then existing plan details of the user should get displayed with Upgrade Plan button
     Then user verify that close icon is present on the pop up
 
-  @Dashboard3
+  @DrySign
   Scenario: To Verify register user is able to view only the Higher Plan details than the exisiting plan through Upgrade Plan button present on the View Plan pop-up screen
     Hirarchy of plans:free trial<individual monthly <premium monthly<individual annual<premium annual<professional
 
@@ -74,9 +74,9 @@ Feature: To Verify Dashboard
       |Self Sign |         
       |Group Sign|
 
-  @Dashboard4
+  @DrySign
   Scenario: To Verify Subscribed Register user is able to Purchase the higher plan then the exisiting plan successfully through Upgrade Plan button present on View Plan pop-up
-    When enter the user name as "sid87@mailinator.com"
+    When enter the user name as "sid204@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #Then user click on View Details button
@@ -117,16 +117,16 @@ Feature: To Verify Dashboard
       
     
 
-  @Dashboard5
+  @DrySign
   Scenario: To Verify the View Plan or Buy now button is present or not on the Dashboard for the Premium/corporate registered users
     When enter the user name as "sid12@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     And user get displayed the View Plan or Buy Now button is present
 
-  @Dashboard6
+  @DrySign
   Scenario: To Verify on Cancel Subscription or Refund for existing register user Buy Now button is displayed on the Dashboard
-    When enter the user name as "sid87@mailinator.com"
+    When enter the user name as "sid204@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
    #And user click on mat icon
@@ -139,7 +139,7 @@ Feature: To Verify Dashboard
     Then user click on Cross icon
     And user click on logout
     Then user click on LogOut button present on PopUp
-    When enter the user name as "sid87@mailinator.com"
+    When enter the user name as "sid204@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login Button
     And user click on continue with free version
@@ -151,26 +151,26 @@ Feature: To Verify Dashboard
   #Then on Dashboard Buy Now button should get displayed
   #And user click on buy now button
   #Then all the available plan should get displayed to purchase for the user
-  @Dashboard7
+  @DrySign
   Scenario: To Verify on Refund for existing register user Buy Now button is displayed on the Dashboard
     When user click on terms and conditions
     When user click on here link
-    When enter the user name as "sid02@mailinator.com"
+    When enter the user name as "sid202@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     Then user should get display refund page
-    And user enter name as "Sid Ingole"
-    And user enter emai id as "sid02@mailinator.com"
-    And user enter subscription plan as "INDIVIDUAL"
-    And user enter subscription id as "3610"
+    #And user enter name as "Sid Ingole"
+    #And user enter emai id as "sid02@mailinator.com"
+    #And user enter subscription plan as "INDIVIDUAL"
+    #And user enter subscription id as "3610"
     And user click on confirm button
     Then refund pop up get display
     And user click on confirm button which present on pop up
-    #Then user should get display message as your refund has been successful
+    Then user should get display message as your refund has been successful
     Then click on ok button
-    When enter the user name as "sid09@mailinator.com"
+    When enter the user name as "sid202@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on sign in button
+    And user click on the Login Button
     #And user click on continue with free version
     #Then user display three pie chart
     #Then display as "individual plan" with upgrade button
@@ -221,14 +221,14 @@ Feature: To Verify Dashboard
   #Then user should get display the Screen with the current exisiting Plan details
   #And user click on the Go To Dashboard button present on the screen
   #Then user should navigate the user on the Dashboard Screen
-  @Dashboard9
+  @DrySign
   Scenario: To Verify for the free trial user the Buy Now button is displayed on the Dashboard
     When enter the user name as "sid13@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     Then on Dashboard Buy Now button should get displayed
 
-  @Dashboard10
+  @DrySign
   Scenario: To verify that For paid user Upgrade button is present or not on dashboard.
     When enter the user name as "sid02@mailinator.com"
     When enter the password as"Malin@555"
@@ -236,7 +236,7 @@ Feature: To Verify Dashboard
     #Then Upgrade button should not display on dashboard to paid user as "Upgrade"
     Then Upgrade button should be display on dashboard to paid user as "Upgrade Plan"
 
-  @Dashboard11
+  @DrySign
   Scenario: To verify that Document received count on dashboard
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -249,7 +249,7 @@ Feature: To Verify Dashboard
     |Rejected |
     
 
-  @Dashboard12
+  @DrySign
   Scenario: To verify that Document Sent count on dashboard
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -262,7 +262,7 @@ Feature: To Verify Dashboard
     |Draft  |
     |Rejected  |
     
-      @Dashboard013
+      @DrySign
   Scenario: To verify that user is  able to Draw/Type/Upload Signature on dashboard
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -274,7 +274,7 @@ Feature: To Verify Dashboard
      And user click Save button
      Then message get display as "Signature saved."
      
-       @Dashboard14
+       @DrySign
   Scenario: To verify that the Signature upload file max size is 50 kb 
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -311,7 +311,7 @@ Feature: To Verify Dashboard
     When user click on save and continue
     Then User drag and drop the signature
 
-  @Dashboard16
+  @DrySign
   Scenario: To verify that feedback option is present or not on Dashboard
     When enter the user name as "sid92@mailinator.com"
     When enter the password as"Malin@555"
@@ -323,7 +323,7 @@ Feature: To Verify Dashboard
     
  
 
-  @Dashboard17
+  @DrySign
   Scenario: To verify Self sign and Group sign options are present or not on Dashboard
     When enter the user name as "sid92@mailinator.com"
     When enter the password as"Malin@555"
@@ -342,7 +342,7 @@ Feature: To Verify Dashboard
     
     
 
-  @Dashboard19
+  @DrySign
   Scenario: To Verify if the Account is Inactive, user should be able to purchase plan from Buy Now button present on Dashboard
     When enter the user name as "sid09@mailinator.com"
     When enter the password as"Malin@555"

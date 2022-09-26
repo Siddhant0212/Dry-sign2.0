@@ -1,10 +1,10 @@
 @Delete
 Feature: To Verify Delete User Functionality
  
- @Delete1
+ @DrySign
   Scenario: To Verify the Delete Account button is present in Profile page under the Manage Account Tab
     Given navigate to URL "https://drysign-dev.exela.global/#/"
-    When enter the user name as "sid25@mailinator.com"
+    When enter the user name as "sid211@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button
@@ -14,10 +14,10 @@ Feature: To Verify Delete User Functionality
     And user click on manage account
     Then Delete Account button should be present
     
-  @Delete2
+  @DrySign
   Scenario: To Verify the Delete Account button functionality on the Manage Account Tab in Profile Page
     Given navigate to URL "https://drysign-dev.exela.global/#/"
-    When enter the user name as "sid25@mailinator.com"
+    When enter the user name as "sid211@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     And user click on continue with free version
@@ -49,7 +49,7 @@ Feature: To Verify Delete User Functionality
   #Then Confirmation screen should get displayed the you have successfully deleted the account
   
   
-  @Delete3
+  @DrySign
   Scenario: To Verify on Login by the same deleted user into the Drysign Application
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid203@mailinator.com"
@@ -59,7 +59,7 @@ Feature: To Verify Delete User Functionality
     #Then user should not be able to Login again into the application
     Then user should get display the validation message as "Not a registered user."
 
-  @Delete4
+  @DrySign
   Scenario: To Verify the Forgot password for the deleted user into the Drysign Application
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     And user click on forgot password
@@ -67,7 +67,7 @@ Feature: To Verify Delete User Functionality
     And user click on the send reset email
     Then user should get displayed message as "Invalid email or user does not exist"
 
-@Delete5
+@DrySign
   Scenario: To Verify re-registering again with the deleted user with the same email id and mobile no.
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
@@ -83,7 +83,7 @@ Feature: To Verify Delete User Functionality
     And click on signUp icon
     Then user display message as "YOUR ACCOUNT HAS BEEN CREATED!  You will soon receive an email with a link to activate your new account."
    
- @Delete6
+ @DrySign
   Scenario: To Verify the new re-register user is by default get register as Free user
    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When already deleted user enter the user name as "sid207@mailinator.com"

@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="127.492279">
-    <testcase classname="To Verify Dashboard" name="To Verify on Cancel Subscription or Refund for existing register user Buy Now button is displayed on the Dashboard" time="127.492279">
-        <system-out><![CDATA[Given navigate to URL "https://drysign-dev.exela.global/#/".................passed
-When enter the user name as "sid87@mailinator.com"..........................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="100.00201">
+<testcase classname="To Verify My Files Tabs Functionality" name="To verify functionality of View and Download the completed document of DrySign" time="100.00201">
+<system-out><![CDATA[Given navigate to URL "https://drysign-dev.exela.global/#/".................passed
+When enter the user name as "sid211@mailinator.com".........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the Login button..........................................passed
-And user click on profile icon..............................................passed
-And user click on manage account............................................passed
-And click on cancel subscription button.....................................passed
-And user click on confirm button............................................passed
-Then user click on Cross icon...............................................passed
-And user click on logout....................................................passed
-Then user click on LogOut button present on PopUp...........................passed
-When enter the user name as "sid87@mailinator.com"..........................passed
-When enter the password as"Malin@555".......................................passed
-And user click on the Login Button..........................................passed
 And user click on continue with free version................................passed
-Then display as "individual plan" with upgrade button.......................passed
-Then display as "professional plan" with Upgrade button.....................passed
+And user click on My Files..................................................passed
+And user click on completed documents tab...................................passed
+When user click on plus icon................................................passed
+Then user click on Mat icon.................................................passed
+And user click on View icon under Action column.............................passed
+And user should get display document........................................passed
+Then user click on Close icon...............................................passed
+Then user click on Mat icon.................................................passed
+When user click on Download icon............................................passed
+Then Document should get downloaded on local storage as "TimoManual"........passed
 ]]></system-out>
-    </testcase>
+</testcase>
 </testsuite>

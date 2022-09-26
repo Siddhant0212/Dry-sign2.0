@@ -11,6 +11,7 @@ Feature: To Verify My Files Tabs Functionality
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
+    Then user click on Mat icon
     Then user display action
     Then user click on action link 
     And user click on check box
@@ -29,7 +30,7 @@ Feature: To Verify My Files Tabs Functionality
   Scenario: To verify download functionality of signed document of DrySign
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     And user click on signed tab
@@ -48,10 +49,11 @@ Feature: To Verify My Files Tabs Functionality
   Scenario: To verify email functionality for sending completed documents of DrySign
    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     And user click on completed documents tab
+    Then user click on Mat icon
     And user click on Email icon for Completed Documents
     And user enter recipient email address as "sid103@mailinator.com"
     And user enter CC email address as "sid32@mailinator.com"
@@ -102,24 +104,26 @@ Feature: To Verify My Files Tabs Functionality
   
   @MyFiles4
   Scenario: To verify functionality of View and Download the completed document of DrySign
-    When enter the user name as "sid39@mailinator.com"
+    When enter the user name as "sid211@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     And user click on completed documents tab
     When user click on plus icon
+    Then user click on Mat icon
     And user click on View icon under Action column
     And user should get display document
     Then user click on Close icon
+    Then user click on Mat icon
     When user click on Download icon
-    Then Document should get downloaded on local storage as "Holidays List 2022 Updated.pdf" 
+    Then Document should get downloaded on local storage as "TimoManual" 
 
   @MyFiles5
   Scenario: To verify functionality of checking status of document which is Out for Signature of DrySign
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+   And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     And user click on out for signature tab
@@ -174,15 +178,17 @@ Feature: To Verify My Files Tabs Functionality
   Scenario: To verify functionality of draft documents
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+     And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     And user click on drafts tab
+     Then user click on Mat icon
     And user click on Edit icon to view Self sign or Group sign
     Then user should get redirect to same screen
     And user Click on Dashboard
     And user click on My Files
     And user click on drafts tab
+    Then user click on Mat icon
     When user click on Delete icon under Action column
     Then user should get displayed pop up as "Are you sure you wish to delete this document?"
     Then pop should contain confirm and cancel button
@@ -192,17 +198,19 @@ Feature: To Verify My Files Tabs Functionality
   #need account which contain 3-4 draft doc
   @MyFiles7
   Scenario: To verify download functionality of rejected document of DrySign
-    When enter the user name as "sid39@mailinator.com"
+    When enter the user name as "sid211@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     And user click on rejected tab
+    Then user click on Mat icon
     And user click on View icon under Action column
     And user get display document rejected
     Then user click on Close icon
+    Then user click on Mat icon
     When user click on Download icon
-    Then Document should get downloaded on Local storage as "TimoManual.pdf (1) (2).pdf"
+    Then Document should get downloaded on Local storage as "TimoManual"
     Then user click on plus icon
     Then details get Display 
     |Signatories:|
@@ -217,11 +225,11 @@ Feature: To Verify My Files Tabs Functionality
       @MyFiles08
   Scenario: To Verify the generic Search functionality present on all the Tabs in the My Files 
 
-  @MyFiles8
+  @DrySign
   Scenario: To Verify the generic Search functionality present on all the Tabs in the My Files
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
@@ -239,16 +247,16 @@ Feature: To Verify My Files Tabs Functionality
     
   
 
-  @MyFiles9
+  @DrySign
   Scenario: To Verify the column sorting functioanlity is working in MY Files
      When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
     Then user display requested by
-    Then user click on upward arrow 
+   #Then user click on upward arrow 
     Then Display ascending order
     |Ds5050 Test|
     |Ds5050 Test|
@@ -259,7 +267,7 @@ Feature: To Verify My Files Tabs Functionality
     |Sidd Ing|
     And user click on signed tab
     Then user is able to click on pending tab 
-    Then user click on downward arrow
+    #Then user click on downward arrow
     Then Display descending order
     |Sidd Ing|
     |Sidd Ing|
@@ -271,11 +279,11 @@ Feature: To Verify My Files Tabs Functionality
     
     
 
-  @MyFiles10
+  @DrySign
   Scenario: To Verify the individual column filter search functionality in My Files
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
@@ -293,11 +301,11 @@ Feature: To Verify My Files Tabs Functionality
     #And user should get display the correct searched data for every column
     
     
-          @MyFiles11
+          @DrySign
   Scenario: To verify When we send document to same User which is logged in 
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then document should present in pending tab
@@ -305,21 +313,26 @@ Feature: To Verify My Files Tabs Functionality
     
     
     
-      @MyFiles12
+      @DrySign
   Scenario: To Verify the generic Data should load immediatly in all tabs
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user is able to click on pending tab 
     Then user is able to click on Signed tab 
+    And user click on completed documents tab
+    And user click on out for signature tab
+    And user click on drafts tab
+    And user click on rejected tab
+    
     
        @MyFiles13
   Scenario: To verify that all field are displaying proper or not.
    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+     And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
@@ -381,7 +394,7 @@ Feature: To Verify My Files Tabs Functionality
       Then user display action
       
       
-       @MyFiles14
+       @DrySign
   Scenario: To verify generic Date display proper or not
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -412,7 +425,7 @@ Feature: To Verify My Files Tabs Functionality
     Then user display Assigned Date
     Then user Display Date in Format as "08/16/2022 11:06:55 AM"
     
-         @MyFiles15
+         @DrySign
   Scenario: To Verify the Expand and Collapse (+/-) document record functioanlity in Signed , Completed Documents, Out for Signature and Rejected Tab
       When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -447,7 +460,7 @@ Feature: To Verify My Files Tabs Functionality
       |Subject:|
       |Message:|
       
-       @MyFiles16
+       @DrySign
   Scenario: To Verify the Pagination functionality in all the Tabs in My Files Section
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -466,7 +479,7 @@ Feature: To Verify My Files Tabs Functionality
       |09/01/2022 3:37:46 AM|
       |08/29/2022 10:39:17 PM|
     
-        @MyFiles17
+        @DrySign
   Scenario: To Verify it takes Server time by  on the Assigned Date and Signed Date column in all Tabs
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -495,7 +508,7 @@ Feature: To Verify My Files Tabs Functionality
        
       
     
-       @MyFiles18
+       @DrySign
   Scenario: To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List.
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"

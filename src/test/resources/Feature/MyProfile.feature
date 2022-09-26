@@ -2,7 +2,7 @@
 
 Feature: To Verify My Profile Page
 
-  @MyProfile01
+  @DrySign
   Scenario: To verify View profile option availability on dashboard right most corner
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -13,7 +13,7 @@ Feature: To Verify My Profile Page
     #And user click on mat icon
     Then user Should display profile icon
     
-    @MyProfile02
+    @DrySign
   Scenario: To verify On click of view profile,  personal information tab is displayed or not
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -25,7 +25,7 @@ Feature: To Verify My Profile Page
     When user click on profile icon
     Then user should display personal information tab by default as "Personal Information" 
     
-     @MyProfile03
+     @DrySign
   Scenario: Verify personal information tab functionality
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -49,7 +49,7 @@ Feature: To Verify My Profile Page
       |City|
       |ZIP Code|
       
-      @MyProfile04
+      @DrySign
   Scenario: To verify Saved information is displayed properly on personal information page
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -78,7 +78,7 @@ Feature: To Verify My Profile Page
       |ZIP Code|
      
       
-        @MyProfile05
+        @DrySign
   Scenario: To Verify the UI elements present on the Edit profile pop-up screen
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -254,7 +254,7 @@ Feature: To Verify My Profile Page
     Then user click on save button
     Then error message should displayed as "ZiP code should be minimum of 4 digit."
     
-           @MyProfile09
+           @DrySign
   Scenario: To verify Update payment method functionality for free user 
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -271,7 +271,7 @@ Feature: To Verify My Profile Page
     Then update payment method should be disable
    
     
-         @MyProfile010
+         @DrySign
   Scenario: To verify update payment method functionality for paid user  
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid202@mailinator.com"
@@ -293,7 +293,7 @@ Feature: To Verify My Profile Page
     Then user display as "New Payment details has been updated"
     And user click on dashboard button
     
-         @MyProfile011
+         @DrySign
   Scenario: To verify update payment method functionality for paid user 
    Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid102@mailinator.com"

@@ -141,7 +141,7 @@ public class MyFilesObject {
 	
 	public static WebElement Rejectedorder(String data)
 	{
-	String Xpath = "//div[@class='ng-star-inserted']";
+	String Xpath = "//div[@class='column-collapse-data ng-star-inserted']";
 	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
 	return element;
 	}

@@ -1,7 +1,7 @@
 @Feedback
 Feature: To Verify Feedback Works
 
-  @Feedback1
+  @DrySign
   Scenario: To Verify new feedback rating UI is present or not on the Drysign Dashboard with smiley icon
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid202@mailinator.com"
@@ -13,7 +13,7 @@ Feature: To Verify Feedback Works
     Then verify that Feedback rating UI should be present
     Then clickable Smiley icon should be present
 
-  @Feedback2
+  @DrySign
   Scenario: To Verify the relevant ratings for the smiley is present on the Drysign Dashboard
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid202@mailinator.com"
@@ -45,7 +45,7 @@ Feature: To Verify Feedback Works
     # When user login for the first time
     Then rating should be by default highlighted to Very Good
 
-  @Feedback4
+  @DrySign
   Scenario: To Verify user is able to successfully send feedback along with rating from Drysign Dashboard
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid202@mailinator.com"
@@ -66,7 +66,7 @@ Feature: To Verify Feedback Works
     Then user click On Cancel button
 
   #Then Pop Up should get closed
-  @Feedback5
+  @DrySign
   Scenario: To Verify on re-login it displays the previous rating given by the user and relevant smiley icon is highlighted on the Dashboard by default
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid204@mailinator.com"

@@ -35,9 +35,11 @@ public class FeedbackRatingObject {
 	public static WebElement clickContinueWithFreeVersion;
 	
 
-	@FindBy(xpath="//h2[text()=' Share your feedback ']")
-	public static WebElement shareYourFeedback;
+	@FindBy(xpath="//div[@class='sub-section-content']")
+	public static WebElement Feedback;
 	
+	@FindBy(xpath="(//h2[text()=' Feedback '])[1]")
+	public static WebElement Feedback1;
 	//*[text()=' Share your feedback ']
 	
 	@FindBy(xpath="(//span[text()=' Very Happy '])[1]")

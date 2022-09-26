@@ -25,9 +25,9 @@ public class FeedbackRating {
 		
 		@Then("verify that Feedback rating UI should be present")
 		public void verify_that_Feedback_rating_UI_should_be_present() {
-			Waits.waitUntilElementToClick(30, FeedbackRatingObject.shareYourFeedback);
-			Elements.isDisplayed(FeedbackRatingObject.shareYourFeedback);
-			Assert.assertEquals(Elements.getText(FeedbackRatingObject.shareYourFeedback),"Share your feedback");
+			Waits.waitUntilElementToClick(30, FeedbackRatingObject.Feedback);
+			Elements.isDisplayed(FeedbackRatingObject.Feedback);
+			Assert.assertEquals(Elements.getText(FeedbackRatingObject.Feedback1),"Feedback");
 }
 		@Then("clickable Smiley icon should be present")
 		public void clickable_Smiley_icon_should_be_present() {

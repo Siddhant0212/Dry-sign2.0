@@ -4,7 +4,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
   Background: 
     Given navigate to URL "https://drysign-dev.exela.global/#/"
 
-  @MFA1
+  @DrySign
   Scenario: To verify set OTP option while login to drysign account from profile
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -134,7 +134,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     When user enter characters or special characters as "#@SRN$"
 
  
-  @MFA4
+  @DrySign
   Scenario: Login to the drysign application through drysign credentials after set the MFA as 'Secure Code' from profile section
     When enter the user name as "sid32@mailinator.com"
     When enter the password as"Malin@555"
@@ -174,7 +174,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
   
   
   
-  @MFA5
+  @DrySign
   Scenario: To verify set both OTP and Secure Code options while login to drysign account from profile
     When enter the user name as "sid37@mailinator.com"
     When enter the password as"Malin@555"
@@ -206,7 +206,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     And user click on logout
     Then user click on LogOut button present on PopUp
 
-  @MFA6
+  @DrySign
   Scenario: Login to the drysign application through drysign credentials and use OTP via Mail option for login after set the MFA as 'OTP via Mail' as well as 'Secure Code' from profile section
     When enter the user name as "sid11@mailinator.com"
     When enter the password as"Malin@555"
@@ -252,7 +252,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
   #Then user should get received Otp on email
   #Then user should able to enter four digit OTP
   
-  @MFA7
+  @DrySign
   Scenario: Login to the drysign application through drysign credentials and use Security Code option for login after set the MFA as 'OTP via Mail' as well as 'Secure Code' from profile section
     When enter the user name as "sid51@mailinator.com"
     When enter the password as"Malin@555"
@@ -288,7 +288,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     And user click on ok button
     
     
-    @MFA9
+    @DrySign
   Scenario: To verify the secure code box should get cleare on backspace and delete button from the keyboard.
     When enter the user name as "sid202@mailinator.com"
     When enter the password as"Malin@555"
@@ -309,7 +309,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     #And user enter confirm secure code as "222222"
     #Then user press delete button as "2"
     
-       @MFA10
+       @DrySign
   Scenario: To check that verify button get click on Keyboard Enter key
         When enter the user name as "sid32@mailinator.com"
         When enter the password as"Malin@555"
@@ -319,7 +319,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
         And user click on continue with free version
         
 
-  @MFA12
+  @DrySign
   Scenario: To verify functionality of Forgot Secure code on entering correct credientials
     When enter the user name as "sid31@mailinator.com"
     When enter the password as"Malin@555"
@@ -333,7 +333,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     Then user click on submit button
     Then user should get display pop up as "Successfully user Sidd secure code updated"
     
-    @MFA13
+    @DrySign
     Scenario: To verify Functionality of forgot Secure code if incorrect credentials are entered
     
     When enter the user name as "sid31@mailinator.com"

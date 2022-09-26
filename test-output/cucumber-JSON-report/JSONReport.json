@@ -1,9 +1,9 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 4,
+        "line": 3,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,10 @@
         "steps": [
           {
             "result": {
-              "duration": 8242244100,
+              "duration": 7442425300,
               "status": "passed"
             },
-            "line": 5,
+            "line": 4,
             "name": "navigate to URL \"https://drysign-dev.exela.global/#/\"",
             "match": {
               "arguments": [
@@ -28,7 +28,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 16322400,
+                  "duration": 37350801,
                   "status": "passed"
                 },
                 "match": {
@@ -41,11 +41,11 @@
         ]
       },
       {
-        "start_timestamp": "2022-09-25T18:41:25.065Z",
+        "start_timestamp": "2022-09-26T13:26:27.555Z",
         "before": [
           {
             "result": {
-              "duration": 14354128400,
+              "duration": 8019629601,
               "status": "passed"
             },
             "match": {
@@ -53,14 +53,14 @@
             }
           }
         ],
-        "line": 128,
-        "name": "To Verify on Cancel Subscription or Refund for existing register user Buy Now button is displayed on the Dashboard",
+        "line": 106,
+        "name": "To verify functionality of View and Download the completed document of DrySign",
         "description": "",
-        "id": "to-verify-dashboard;to-verify-on-cancel-subscription-or-refund-for-existing-register-user-buy-now-button-is-displayed-on-the-dashboard",
+        "id": "to-verify-my-files-tabs-functionality;to-verify-functionality-of-view-and-download-the-completed-document-of-drysign",
         "after": [
           {
             "result": {
-              "duration": 1422878600,
+              "duration": 1282744800,
               "status": "passed"
             },
             "match": {
@@ -73,15 +73,15 @@
         "steps": [
           {
             "result": {
-              "duration": 5367863700,
+              "duration": 5423233600,
               "status": "passed"
             },
-            "line": 129,
-            "name": "enter the user name as \"sid87@mailinator.com\"",
+            "line": 107,
+            "name": "enter the user name as \"sid211@mailinator.com\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"sid87@mailinator.com\"",
+                  "val": "\"sid211@mailinator.com\"",
                   "offset": 23
                 }
               ],
@@ -90,7 +90,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 6781100,
+                  "duration": 9200601,
                   "status": "passed"
                 },
                 "match": {
@@ -102,10 +102,10 @@
           },
           {
             "result": {
-              "duration": 143304400,
+              "duration": 206197500,
               "status": "passed"
             },
-            "line": 130,
+            "line": 108,
             "name": "enter the password as\"Malin@555\"",
             "match": {
               "arguments": [
@@ -119,7 +119,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 5502900,
+                  "duration": 4587300,
                   "status": "passed"
                 },
                 "match": {
@@ -131,10 +131,10 @@
           },
           {
             "result": {
-              "duration": 272379400,
+              "duration": 236006600,
               "status": "passed"
             },
-            "line": 131,
+            "line": 109,
             "name": "user click on the Login button",
             "match": {
               "location": "AutoRenewal.user_click_on_the_Login_button()"
@@ -142,7 +142,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 7050400,
+                  "duration": 6058600,
                   "status": "passed"
                 },
                 "match": {
@@ -154,252 +154,10 @@
           },
           {
             "result": {
-              "duration": 23882955300,
+              "duration": 36252447299,
               "status": "passed"
             },
-            "line": 133,
-            "name": "user click on profile icon",
-            "match": {
-              "location": "USAMobileNoMandate.user_click_on_profile_icon()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 5348600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 331426900,
-              "status": "passed"
-            },
-            "line": 134,
-            "name": "user click on manage account",
-            "match": {
-              "location": "USAMobileNoMandate.user_click_on_manage_account()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 6423100,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 321504500,
-              "status": "passed"
-            },
-            "line": 135,
-            "name": "click on cancel subscription button",
-            "match": {
-              "location": "Dashboard.click_on_cancel_subscription_button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 4869200,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 10814712500,
-              "status": "passed"
-            },
-            "line": 136,
-            "name": "user click on confirm button",
-            "match": {
-              "location": "Dashboard.user_click_on_confirm_button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 11533500,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 5358341200,
-              "status": "passed"
-            },
-            "line": 139,
-            "name": "user click on Cross icon",
-            "match": {
-              "location": "USAMobileNoMandate.user_click_on_Cross_icon()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 5362600,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5381608300,
-              "status": "passed"
-            },
-            "line": 140,
-            "name": "user click on logout",
-            "match": {
-              "location": "USAMobileNoMandate.user_click_on_logout()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 4076100,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 4770420000,
-              "status": "passed"
-            },
-            "line": 141,
-            "name": "user click on LogOut button present on PopUp",
-            "match": {
-              "location": "MFA.user_click_on_LogOut_button_present_on_PopUp()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 3798800,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5188796700,
-              "status": "passed"
-            },
-            "line": 142,
-            "name": "enter the user name as \"sid87@mailinator.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"sid87@mailinator.com\"",
-                  "offset": 23
-                }
-              ],
-              "location": "USAMobileNoMandate.enter_the_user_name_as(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 3962000,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 114018400,
-              "status": "passed"
-            },
-            "line": 143,
-            "name": "enter the password as\"Malin@555\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Malin@555\"",
-                  "offset": 21
-                }
-              ],
-              "location": "USAMobileNoMandate.enter_the_password_as(String)"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 3563100,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 5218449200,
-              "status": "passed"
-            },
-            "line": 144,
-            "name": "user click on the Login Button",
-            "match": {
-              "location": "AutoRenewal.user_click_on_the_Login_Button()"
-            },
-            "after": [
-              {
-                "result": {
-                  "duration": 3634500,
-                  "status": "passed"
-                },
-                "match": {
-                  "location": "Base.waitToPageRender(Scenario)"
-                }
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 34050876100,
-              "status": "passed"
-            },
-            "line": 145,
+            "line": 110,
             "name": "user click on continue with free version",
             "match": {
               "location": "USAMobileNoMandate.user_click_on_continue_with_free_version()"
@@ -407,7 +165,7 @@
             "after": [
               {
                 "result": {
-                  "duration": 5161500,
+                  "duration": 16385099,
                   "status": "passed"
                 },
                 "match": {
@@ -419,24 +177,87 @@
           },
           {
             "result": {
-              "duration": 2007059100,
+              "duration": 10255809800,
               "status": "passed"
             },
-            "line": 147,
-            "name": "display as \"individual plan\" with upgrade button",
+            "line": 111,
+            "name": "user click on My Files",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"individual plan\"",
-                  "offset": 11
-                }
-              ],
-              "location": "Freeuser.display_as_with_upgrade_button(String)"
+              "location": "MyFiles.user_click_on_My_Files()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 5063400,
+                  "duration": 4342000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2337887099,
+              "status": "passed"
+            },
+            "line": 112,
+            "name": "user click on completed documents tab",
+            "match": {
+              "location": "MyFiles.user_click_on_completed_documents_tab()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3733299,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3847045500,
+              "status": "passed"
+            },
+            "line": 113,
+            "name": "user click on plus icon",
+            "match": {
+              "location": "MyFiles.user_click_on_plus_icon()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4981401,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 330264900,
+              "status": "passed"
+            },
+            "line": 114,
+            "name": "user click on Mat icon",
+            "match": {
+              "location": "MyFiles.user_click_on_Mat_icon()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 4691300,
                   "status": "passed"
                 },
                 "match": {
@@ -448,24 +269,139 @@
           },
           {
             "result": {
-              "duration": 23513600,
+              "duration": 268642400,
               "status": "passed"
             },
-            "line": 148,
-            "name": "display as \"professional plan\" with Upgrade button",
+            "line": 115,
+            "name": "user click on View icon under Action column",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"professional plan\"",
-                  "offset": 11
-                }
-              ],
-              "location": "Freeuser.display_as_with_Upgrade_button(String)"
+              "location": "MyFiles.user_click_on_View_icon_under_Action_column()"
             },
             "after": [
               {
                 "result": {
-                  "duration": 4273300,
+                  "duration": 4314900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10702434799,
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "user should get display document",
+            "match": {
+              "location": "MyFiles.user_should_get_display_document()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 8538900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 446090300,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "user click on Close icon",
+            "match": {
+              "location": "MyFiles.user_click_on_Close_icon()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 6549600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 383681101,
+              "status": "passed"
+            },
+            "line": 118,
+            "name": "user click on Mat icon",
+            "match": {
+              "location": "MyFiles.user_click_on_Mat_icon()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3850899,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2327234999,
+              "status": "passed"
+            },
+            "line": 119,
+            "name": "user click on Download icon",
+            "match": {
+              "location": "MyFiles.user_click_on_Download_icon()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 3711700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "Base.waitToPageRender(Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10028301500,
+              "status": "passed"
+            },
+            "line": 120,
+            "name": "Document should get downloaded on local storage as \"TimoManual\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"TimoManual\"",
+                  "offset": 51
+                }
+              ],
+              "location": "MyFiles.document_should_get_downloaded_on_local_storage_as(String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 9579101,
                   "status": "passed"
                 },
                 "match": {
@@ -478,28 +414,16 @@
         ],
         "tags": [
           {
-            "name": "@Dashboard"
-          },
-          {
-            "name": "@Dashboard6"
+            "name": "@MyFiles4"
           }
         ]
       }
     ],
-    "name": "To Verify Dashboard",
+    "name": "To Verify My Files Tabs Functionality",
     "description": "",
-    "id": "to-verify-dashboard",
+    "id": "to-verify-my-files-tabs-functionality",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/Feature/Dashboard.feature",
-    "tags": [
-      {
-        "name": "@Dashboard",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/Feature/MyFiles.feature",
+    "tags": []
   }
 ]

@@ -111,7 +111,7 @@ public class MFAObject {
 	
 	
 
-	@FindBy(xpath="//p[text()='Successfully user Sidd secure code updated']")     
+	@FindBy(xpath="//p[@class='text strong ng-star-inserted']")     
 	public static  WebElement Successfully_secure_code_updated;
 	
 	@FindBy(xpath="//button[text()='Submit']")     

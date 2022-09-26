@@ -1,7 +1,7 @@
 @Mobile
 Feature: To Verify USA mobile number is Mandatory
 
-  @Mobile1
+  @DrySign
   Scenario: To Verify the contact no. field is mandatory field on the SignUp/Registration page for USA region
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
@@ -20,7 +20,7 @@ Feature: To Verify USA mobile number is Mandatory
  
  
  
-  @Mobile2
+  @DrySign
   Scenario: To Verify the contact no. is of max. 10 digit for the USA region
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
@@ -31,7 +31,7 @@ Feature: To Verify USA mobile number is Mandatory
  
  
  
-  @Mobile3
+  @DrySign
   Scenario: To Verify the alphabets and special characters cannot be entered in the contact no. field for the USA region
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
@@ -41,7 +41,7 @@ Feature: To Verify USA mobile number is Mandatory
   
  
  
-  @Mobile4
+  @DrySign
   Scenario: To Verify the Duplicate phone no is allowed during the registration of free and paid user
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When user click on the signUp link
@@ -57,7 +57,7 @@ Feature: To Verify USA mobile number is Mandatory
     And click on signUp icon
     Then user should not get registered should display Mobile number already Registered
 
-  @Mobile5
+  @DrySign
   Scenario: To Verify on the profile page the mobile no. and country information is saved or not  correctly.
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -106,7 +106,7 @@ Feature: To Verify USA mobile number is Mandatory
     #And dashboard window get display
  
  
-  @Mobile8
+  @DrySign
   Scenario: To Verify the field validation for the mobile no.
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When user click on the signUp link
@@ -117,7 +117,7 @@ Feature: To Verify USA mobile number is Mandatory
   
   
   
-  @Mobile9
+  @DrySign
   Scenario: To verify on the Success Document page the mobile no. field is mandatory or not
   #Given navigate to URL "https://drysign-qa.exela.global/#/login"
     #When enter the user name as "sid25@mailinator.com"

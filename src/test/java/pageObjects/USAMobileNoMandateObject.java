@@ -152,12 +152,12 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//span[text()='Dashboard']")
 	public static WebElement dashboard;
 	
-	@FindBy(xpath="(//span[text()='Dashboard'])[2]")
+	@FindBy(xpath="(//span[text()='Dashboard'])[3]")
 	public static WebElement dashboard2;
 
 	
 	
-	@FindBy(xpath="//*[text()='more_vert']")
+	@FindBy(xpath="(//i[@class='fs-32 exela-icon-action lineHeight'])[2]")
 	public static WebElement icon;
 
 	@FindBy(xpath="//span[text()=' account_circle']")
@@ -828,19 +828,22 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//mat-icon[text()='remove_red_eye']")     
 	public static  WebElement iconView;
 	
-	//div[@class='textLayer']
+	@FindBy(xpath="//i[@class='fs-32 exela-icon-action lineHeight']")     
+	public static  WebElement matIcon1;
+	
+	
 	
 	@FindBy(xpath="//div[@class='textLayer']")     
 	public static  WebElement viewRejectedDoc;
 	//mat-icon[text()='close']
 	
-	@FindBy(xpath="//div[@class='textLayer']")     
+	@FindBy(xpath="//pdf-viewer[@class='mt-5 ng-star-inserted']")     
 	public static  WebElement docCompleted;
 	
-	@FindBy(xpath="//mat-icon[text()='close']")     
+	@FindBy(xpath="//i[@class='exela-icon-close']")     
 	public static  WebElement clickCloseIcon;
 	
-	@FindBy(xpath="//mat-icon[text()='cloud_download']")     
+	@FindBy(xpath="//span[text()='Download']")     
 	public static  WebElement cloudDownload;
 	
 	@FindBy(xpath="//td[@id='accordian0']")     
@@ -857,34 +860,34 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//div[text()='Drafts']")     
 	public static  WebElement tabDrafts;
 	
-	@FindBy(xpath="//i[@class='ri-delete-bin-line']")     
+	@FindBy(xpath="//span[text()='Delete']")     
 	public static  WebElement iconDelete;
 	
 	@FindBy(xpath="//mat-icon[text()='edit']")     
 	public static  WebElement iconEdit;
 	
-	@FindBy(xpath="//div[@id='uploaded-doc-wrapper']")     
+	@FindBy(xpath="//div[@class='pdf-container pspdfkit-container']")     
 	public static  WebElement redirectScreen;
 	
 	@FindBy(xpath="//p[text()='Are you sure you wish to delete this document?']")     
 	public static  WebElement popUpDelete;
 	
-	@FindBy(xpath="//span[text()='Cancel']")     
+	@FindBy(xpath="//button[text()='Cancel']")     
 	public static  WebElement popUpDeleteCancel;;
 	
 	
 	
 	
-	@FindBy(xpath="//span[text()='Confirm']")     
+	@FindBy(xpath="//button[text()='Confirm']")     
 	public static  WebElement popUpDeleteConfirm;
 	
 	@FindBy(xpath="//div[text()=' Successfully deleted ']")     
 	public static  WebElement msgDeletedSuccessfully;
 	
-	@FindBy(xpath="//div[text()='Completed Documents']")     
+	@FindBy(xpath="//div[text()='Completed']")     
 	public static  WebElement tabCompletedDocument;
 	
-	@FindBy(xpath="//mat-icon[text()='mail_outline']")     
+	@FindBy(xpath="//a[@mattooltip='Mail']")     
 	public static  WebElement mailOutline;
 	
 	
@@ -893,6 +896,9 @@ public class USAMobileNoMandateObject {
 	
 	@FindBy(xpath="//input[@formcontrolname='email']")     
 	public static  WebElement recipientEmailAddress;
+	
+	@FindBy(xpath="//a[@mattooltip='Mail']")     
+	public static  WebElement mailAddress;
 	
 	@FindBy(xpath="//input[@formcontrolname='subject']")     
 	public static  WebElement addSubject;
@@ -904,10 +910,10 @@ public class USAMobileNoMandateObject {
 	public static  WebElement cCEmail;
 	
 	
-	@FindBy(xpath="//span[text()='Send']")     
+	@FindBy(xpath="//button[text()='Send']")     
 	public static  WebElement btnSend;
 
-	@FindBy(xpath="//div[text()=' Successfully Mail Sent ']")     
+	@FindBy(xpath="//p[text()='Successfully Mail Sent']")     
 	public static  WebElement successfullyMailSent;
 	
 	@FindBy(xpath="//a[text()='Out for Signature (1) ']")     
@@ -1016,7 +1022,7 @@ public static WebElement Successfully_Updated;
 @FindBy(xpath="//input[@placeholder='Street Address']")
 public static WebElement Stree_Address;
 
-@FindBy(xpath="//h2[text()=' Plans ']")
+@FindBy(xpath="(//div[@class='swiper-wrapper'])[3]")
 public static WebElement Plans_PopUp;
 
 @FindBy(xpath="(//h2[text()=' FREE VERSION '])[2]")
@@ -1062,7 +1068,7 @@ public static WebElement Upgrade_Plan;
 @FindBy(xpath="(//button[text()='Upgrade Plan'])[2]")
 public static WebElement Upgrade6;
 
-@FindBy(xpath="//h3[text()=' Individual Plan']")
+@FindBy(xpath="//h3[text()='Individual Plan']")
 public static WebElement INDIVIDUAL_Plan;
 
 @FindBy(xpath="//h3[text()='Professional Plan']")

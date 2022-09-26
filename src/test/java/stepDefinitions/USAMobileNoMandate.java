@@ -436,7 +436,7 @@ public void user_click_profile_icon() throws InterruptedException {
 @When("user click on manage account")
 public void user_click_on_manage_account()  {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.mangeAcc);
-	Elements.click(USAMobileNoMandateObject.mangeAcc);
+	Elements.jclick(USAMobileNoMandateObject.mangeAcc);
 	
 }
 @When("user click on edit button")
@@ -769,7 +769,7 @@ public void user_click_on_the_Upgrade_button() {
 @Then("user Click On upgrade plan button")
 public void user_Click_On_upgrade_plan_button() {
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.btnUpgradePlan);
-	Elements.click(USAMobileNoMandateObject.btnUpgradePlan);
+	Elements.jclick(USAMobileNoMandateObject.btnUpgradePlan);
 }
 @Then("user click on the BuyNow button")
 public void user_click_on_the_BuyNow_button() throws InterruptedException {
