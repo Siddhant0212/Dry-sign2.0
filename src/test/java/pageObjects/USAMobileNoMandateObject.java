@@ -831,6 +831,9 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//i[@class='fs-32 exela-icon-action lineHeight']")     
 	public static  WebElement matIcon1;
 	
+	@FindBy(xpath="(//i[@class='fs-32 exela-icon-action lineHeight'])[2]")     
+	public static  WebElement matIcon2;
+	
 	
 	
 	@FindBy(xpath="//div[@class='textLayer']")     
@@ -874,6 +877,9 @@ public class USAMobileNoMandateObject {
 	
 	@FindBy(xpath="//button[text()='Cancel']")     
 	public static  WebElement popUpDeleteCancel;;
+	
+	@FindBy(xpath="//p[text()='Reminder has been sent to Sid  (sid39@mailinator.com) successfully.']")     
+	public static  WebElement Reminderhasbeensent;;
 	
 	
 	
@@ -1074,7 +1080,7 @@ public static WebElement INDIVIDUAL_Plan;
 @FindBy(xpath="//h3[text()='Professional Plan']")
 public static WebElement PROFESSIONAL_Plan;
 
-@FindBy(xpath="(//div[@class='circle-count-length-1'])[3]")
+@FindBy(xpath="(//div[@class='circle-count-length-1'])[2]")
 public static WebElement Five_Documents;
 
 @FindBy(xpath="(//div[@class='px-4 mt-4 ng-star-inserted'])[4]")

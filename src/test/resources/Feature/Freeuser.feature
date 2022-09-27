@@ -40,16 +40,16 @@ Feature: To Verify Free User functions
   
    @FreeUser2
   Scenario: To Verify for the new free user, on login everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     Then user should get display pop up
     Then under free version "continue with free version" button present
     Then under individual "upgrade" button present
     Then under professional "upgrade" button present
     And user click on continue with free version
-    Then user display three pie chart
+    #Then user display three pie chart
     Then display as "individual plan" with upgrade button
     Then display as "professional plan" with Upgrade button
     Then should display as "5" documents
@@ -57,10 +57,10 @@ Feature: To Verify Free User functions
    @FreeUser3
   Scenario: To Verify for the new free user, on login everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
     
-    Given navigate to URL "https://drysign-qa.exela.global/#/"
+    Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     Then user should get display pop up
     Then under free version "continue with free version" button present
     Then under individual "upgrade" button present
@@ -74,10 +74,10 @@ Feature: To Verify Free User functions
     @FreeUser4
   Scenario: To Verify for the new free user, on login everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
   
-   Given navigate to URL "https://drysign-qa.exela.global/#/"
+   Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     Then user should get display pop up
     Then under free version "continue with free version" button present
     Then under individual "upgrade" button present
@@ -118,7 +118,7 @@ Feature: To Verify Free User functions
     #Then Verify approved plan and activated image is displayed
     Then confirmation message get display as "PAYMENT CONFIRMATION"
     
-    @DrySign2
+    @DrySign
  Scenario: To Verify on cancel subscription if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
     
   Given navigate to URL "https://drysign-dev.exela.global/#/"

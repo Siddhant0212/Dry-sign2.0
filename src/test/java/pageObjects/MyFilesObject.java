@@ -49,6 +49,9 @@ public class MyFilesObject {
 	@FindBy(xpath="//span[text()='Action']")
     public static WebElement Action;
 	
+	@FindBy(xpath="//a[text()=' Hello sign ']")
+    public static WebElement helloSign;
+	
 	@FindBy(xpath="//span[text()=' 08/17/2022 1:07:58 AM ']")
     public static WebElement TimingSign;
 	
@@ -169,13 +172,13 @@ public class MyFilesObject {
 			@FindBy(xpath="//h1[text()=' Recent Action ']")     
 			public static  WebElement Recent_Action;
 			
-			@FindBy(xpath="//td[@class='no-records ng-star-inserted']")     
+			@FindBy(xpath="(//tr[@class='ng-star-inserted'])[2]")     
 			public static  WebElement Records;
 			
 			@FindBy(xpath="(//a[@mattooltip='Notify'])[1]")     
 			public static  WebElement Notify;
 			
-			@FindBy(xpath="//mat-icon[text()='close']")     
+			@FindBy(xpath="//i[@class='exela-icon-close']")     
 			public static  WebElement Close;
 			
 			@FindBy(xpath="//p[@class='text strong ng-star-inserted']")     

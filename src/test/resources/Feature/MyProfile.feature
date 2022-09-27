@@ -126,9 +126,9 @@ Feature: To Verify My Profile Page
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
-    #And user click on the sign in button
+   
     And user click on continue with free version
-    #And user click on mat icon
+    
     When user click on profile icon
     Then user should display personal information
     Then user click on edit button
@@ -293,10 +293,10 @@ Feature: To Verify My Profile Page
     Then user display as "New Payment details has been updated"
     And user click on dashboard button
     
-         @DrySign
+         @DrySign12
   Scenario: To verify update payment method functionality for paid user 
    Given navigate to URL "https://drysign-dev.exela.global/#/login"
-    When enter the user name as "sid102@mailinator.com"
+    When enter the user name as "sid204@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button

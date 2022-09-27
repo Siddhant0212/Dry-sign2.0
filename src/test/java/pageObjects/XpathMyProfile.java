@@ -91,7 +91,7 @@ public class XpathMyProfile {
 	@FindBy(xpath="//div[@class='rightSidecontent']")
 	public static WebElement rightSideContent;
 	
-	@FindBy(xpath="//input[@title='Add Profile Image']")
+	@FindBy(xpath="//img[@class='rounded-circle profile-user']")
 	public static WebElement AddProfileImage;
 	
 	//input[@title='Add Profile Image']

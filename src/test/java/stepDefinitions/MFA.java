@@ -166,7 +166,7 @@ public void user_Navigate_to_URL(String string) {
 @Then("user enter email as {string}")
 public void user_enter_email_as(String string) {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
-	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid11");
+	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid39");
 }
 
 @Then("user click on OTP message")

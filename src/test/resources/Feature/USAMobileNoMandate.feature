@@ -127,7 +127,7 @@ Feature: To Verify USA mobile number is Mandatory
     #And user click on "out for signature"
     #And user click on plus icon
     Then user Navigate to URL "https://www.mailinator.com/v4/public/inboxes.jsp"
-    And User enter email as "sid103"
+    And User enter email as "sid39"
     Then user click on Go button
     Then user click on Mail 
     And user click on sign document

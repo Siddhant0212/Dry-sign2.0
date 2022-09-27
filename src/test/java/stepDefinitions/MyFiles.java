@@ -154,6 +154,21 @@ public void user_click_on_Mat_icon() {
 	Elements.click(USAMobileNoMandateObject.matIcon1);
 }
 
+@Then("user click On Mat icon")
+public void user_click_On_Mat_icon() throws InterruptedException {
+	//Thread.sleep(2000);
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.matIcon2);
+	Elements.jclick(USAMobileNoMandateObject.matIcon2);
+}
+@Then("message display as {string}")
+public void message_display_as(String string) throws InterruptedException {
+
+	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Reminderhasbeensent);
+	Elements.isDisplayed(USAMobileNoMandateObject.Reminderhasbeensent);
+	//Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Reminderhasbeensent),string);
+	Thread.sleep(2000);
+}
+
 @Then("Document should get downloaded on local storage as {string}")
 public void document_should_get_downloaded_on_local_storage_as(String string) throws InterruptedException, IOException, SAXException, TikaException {
 	  Thread.sleep(10000);
@@ -389,9 +404,9 @@ public void user_display_action() {
 }
 @Then("user click on action link")
 public void user_click_on_action_link() throws InterruptedException {
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	Waits.waitUntilElementToClick(30, MyFilesObject.sign);
-	Elements.click(MyFilesObject.sign);    
+	Elements.jclick(MyFilesObject.sign);    
 	
 	Waits.waitUntilElementToClick(30, MyFilesObject.Hello_sign);
 	Elements.click(MyFilesObject.Hello_sign);  
@@ -515,7 +530,7 @@ public void details_get_display(io.cucumber.datatable.DataTable dataTable) throw
 @Then("user clicking on minus icon recorded details should get closed")
 public void user_clicking_on_minus_icon_recorded_details_should_get_closed() throws InterruptedException {
 	Waits.waitUntilElementToClick(30, MyFilesObject.minusicon);
-	Elements.click(MyFilesObject.minusicon);
+	Elements.jclick(MyFilesObject.minusicon);
 	Thread.sleep(2000);
 }
 @When("user click on another details plus icon")
@@ -555,7 +570,7 @@ public void new_details_get_display(io.cucumber.datatable.DataTable dataTable) t
 	@Then("click in reassign")
 	public void click_in_reassign() {
 		Waits.waitUntilElementToClick(30, MyFilesObject.Reassign);
-		Elements.click(MyFilesObject.Reassign);
+		Elements.jclick(MyFilesObject.Reassign);
 	}
 
 	@Then("pop up get Display as {string}")
@@ -569,7 +584,7 @@ public void new_details_get_display(io.cucumber.datatable.DataTable dataTable) t
 	@Then("user click on {string} button")
 	public void user_click_on_button(String string) {
 		Waits.waitUntilElementToClick(30, MyFilesObject.Yes);
-		Elements.click(MyFilesObject.Yes);
+		Elements.jclick(MyFilesObject.Yes);
 	}
 
 	@Then("another pop get display as {string}")

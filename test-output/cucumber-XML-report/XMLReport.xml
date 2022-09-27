@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="100.00201">
-<testcase classname="To Verify My Files Tabs Functionality" name="To verify functionality of View and Download the completed document of DrySign" time="100.00201">
-<system-out><![CDATA[Given navigate to URL "https://drysign-dev.exela.global/#/".................passed
-When enter the user name as "sid211@mailinator.com".........................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="89.442732">
+<testcase classname="To Verify My Profile Page" name="To verify the Save button functionality present on the Edit Profile Screen" time="89.442732">
+<system-out><![CDATA[Given navigate to URL "https://drysign-dev.exela.global/#/login"............passed
+When enter the user name as "sid76@mailinator.com"..........................passed
 When enter the password as"Malin@555".......................................passed
 And user click on the Login button..........................................passed
 And user click on continue with free version................................passed
-And user click on My Files..................................................passed
-And user click on completed documents tab...................................passed
-When user click on plus icon................................................passed
-Then user click on Mat icon.................................................passed
-And user click on View icon under Action column.............................passed
-And user should get display document........................................passed
-Then user click on Close icon...............................................passed
-Then user click on Mat icon.................................................passed
-When user click on Download icon............................................passed
-Then Document should get downloaded on local storage as "TimoManual"........passed
+When user click on profile icon.............................................passed
+Then user should display personal information...............................passed
+Then user click on edit button..............................................passed
+Then user enter Fname as "sidd".............................................passed
+Then user enter Lname as "Ing"..............................................passed
+Then user click on save button..............................................passed
+Then user confirmation message get display as "Successfully Updated.".......passed
+Then user click on edit button..............................................passed
+Then user enter LName as "".................................................passed
+Then user click on save button..............................................passed
+Then user click on mail tab then error get display for mandatory field as "Last name is required".passed
+Then user click on save button..............................................passed
+Then user confirmation message get display as "Successfully Updated.".......passed
 ]]></system-out>
 </testcase>
 </testsuite>

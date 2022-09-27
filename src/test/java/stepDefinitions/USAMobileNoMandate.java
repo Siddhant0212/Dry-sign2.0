@@ -1058,15 +1058,15 @@ public void user_click_on_Mail() {
 	}
 	@Then("user click save button")
 	public void user_click_save_button() {
-		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Save_Doc);
-		Elements.click(USAMobileNoMandateObject.Save_Doc);
+//		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Save_Doc);
+//		Elements.jclick(USAMobileNoMandateObject.Save_Doc);
 	  
 	}
 
 	@Then("use click on {string}")
 	public void use_click_on(String finish) {
-		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Finish_Doc);
-		Elements.jclick(USAMobileNoMandateObject.Finish_Doc);
+//		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Finish_Doc);
+//		Elements.jclick(USAMobileNoMandateObject.Finish_Doc);
 		
 	}
 //	@Then("Successfully message get display as {string}")

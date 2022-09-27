@@ -661,12 +661,15 @@ public class DrySign {
 
 	@Then("user click on upload photo button browser as {string}")
 	public void user_click_on_upload_photo_button_browser_as(String filename)  throws InterruptedException {
+//		Waits.waitUntilElementToClick(30,XpathMyProfile.AddProfileImage);
+//		Elements.click(XpathMyProfile.AddProfileImage);
 		
-		Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.Upload_Btn);
-		Elements.pressEnter(USAMobileNoMandateObject.Upload_Btn);
+
 		Thread.sleep(5000);
 	    uploadFile(filename, "chrome");
 		Thread.sleep(5000);
+		
+		
 }
 	@Then("upload profile picture as {string}")
 	public void upload_profile_picture_as(String string) throws InterruptedException {
