@@ -187,30 +187,42 @@ Feature: To Verify Dashboard
   @Dashboard8
   Scenario: To Verify the Go To Dashboard button functionality when user comes from Buy now option present on the Microsite pricing page
     Given user navigate to URL "https://drysignmsqa.exela.global"
-    Then Enter Username "exelaGest" password "exl#Gest@01"
-    Then accept the cookies
+    #Then Enter Username "exelaGest" password "exl#Gest@01"
+    #Then accept the cookies
     And user click on the microsite click on the Pricing Tab
-    #Given user navigate to URL "https://drysignmsqa.exela.global/"
-    #And user click on accept all cookies
-    #And user click on the microsite click on the Pricing Tab
-    Then user should get display annual plan premium plan
-    And user click on the monthly plan
-    Then user should get display monthly plan
-    And user click on the annual plan
+    #Then user should get display annual plan premium plan
+    Then user should get display plans
+    |Individual|
+    |Professional|
+    |Premium|
+    #And user click on the monthly plan
+    #Then user should get display monthly plan
+    #And user click on the annual plan
     And user click on the Buy Now button of any Plan
-    Then user display message on pop up as "To proceed further, please Sign In or Sign Up to DrySign."
-    Then user should get display pop up with Cancel and Confirm button
-    And user click on the Confirm button
-    When user click on the signIn link
-    When enter the user name as "sid98@mailinator.com"
-    When enter the password as"Malin@555"
-    And user click on the sign in button
-    And user login via secure code as "2"
-    And user click on verify button
-    And user click on continue with free version
-    Then user display three pie chart
-    Then display as "individual plan" with upgrade button
-    Then display as "professional plan" with Upgrade button
+    #Then user display message on pop up as "To proceed further, please Sign In or Sign Up to DrySign."
+    #Then user should get display pop up with Cancel and Confirm button
+    #And user click on the Confirm button
+    #When user click on the signIn link
+    When user Enter First Name as "sid"
+    When user Enter Last Name as "ing"
+    When user Enter Phone Number as "2172172012"
+    When user Enter Email Id as "sid217@mailinator.com"
+    When user Enter Password as "Malin@555"
+    When user Enter Confirm Password as "Malin@555"
+    Then click on CheckBox 
+    Then click On Sign UP
+    Then popUp Display as "Your account has been created."
+    
+    
+    #When enter the user name as "sid215@mailinator.com"
+    #When enter the password as"Malin@555"
+    #And user click on the Login button
+    #And user login via secure code as "2"
+    #Then user click on verify button
+    #And user click on continue with free version
+    #Then user display three pie chart
+    #Then display as "individual plan" with upgrade button
+    #Then display as "professional plan" with Upgrade button
 
   #And user click om sign in link
   #When enter the user name as "dik12@mailinator.com"
@@ -298,18 +310,18 @@ Feature: To Verify Dashboard
     #And user click Save button
     Then Error message get display as "File size exceeds the maximum limit of 50KB."
 
-  @Dashboard13
-  Scenario: To verify that user is  able to Draw/Type/Upload Signature on dashboard
+  #@Dashboard13
+  #Scenario: To verify that user is  able to Draw/Type/Upload Signature on dashboard
     #When enter the user name as "sid02@mailinator.com"
-    When enter the user name as "sid92@mailinator.com"
-    When enter the password as"Malin@555"
-    And user click on the sign in button
-    And user click on continue with free version
-    Then user click on self sign
-    When user click on browser and upload "small.pdf"
-    Then user get display message as "File uploaded successfully"
-    When user click on save and continue
-    Then User drag and drop the signature
+    #When enter the user name as "sid92@mailinator.com"
+    #When enter the password as"Malin@555"
+    #And user click on the sign in button
+    #And user click on continue with free version
+    #Then user click on self sign
+    #When user click on browser and upload "small.pdf"
+    #Then user get display message as "File uploaded successfully"
+    #When user click on save and continue
+    #Then User drag and drop the signature
 
   @DrySign
   Scenario: To verify that feedback option is present or not on Dashboard

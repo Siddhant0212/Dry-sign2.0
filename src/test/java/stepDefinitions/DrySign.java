@@ -665,7 +665,7 @@ public class DrySign {
 //		Elements.click(XpathMyProfile.AddProfileImage);
 		
 
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	    uploadFile(filename, "chrome");
 		Thread.sleep(5000);
 		

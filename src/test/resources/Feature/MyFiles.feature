@@ -342,68 +342,91 @@ Feature: To Verify My Files Tabs Functionality
     
        @MyFiles13
   Scenario: To verify that all field are displaying proper or not.
-   When enter the user name as "sid39@mailinator.com"
+   When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
      And user click on the Login button
     And user click on continue with free version
     And user click on My Files
     Then user get display pending tab
-    Then user display subject
-    Then user display document name
-    Then user display assigned date
-    Then user display requested by
-    Then user display action
-    Then user click on action link 
-    And user click on check box
-    And user click on accept button
-    And user clcik on ok button present on pop up
-    Then document should get display
+
     
     And user click on signed tab
     Then user display subject
     Then user display document name
     Then user display Assigned Date
-    Then date Display in format as "08/17/2022 12:01:58 AM"
+    Then date Display in format as "09/26/2022 7:04:51 AM"
     Then user display requested by
     Then user display action
+    Then user click on Mat icon
     And user click on View icon 
     Then Document should get display
     Then user click on close icon
+    Then user click on Mat icon
     When user click on Download icon
+    Then Document should get downloaded on local storage as "TimoManual"
     
      And user click on completed documents tab
       Then user display subject
       Then user display Sign Type
       Then user display Completed Date
-      Then user display date in format as "08/09/2022 2:59:02 AM"
+      Then user display date in format as "09/26/2022 7:04:50 AM"
       Then user display action
+      Then user click on Mat icon
       And user click on View icon 
       Then Document should get display
       Then user click on close icon
+      Then user click on Mat icon
       When user click on Download icon
-      Then user click on mail icon
+     Then Document should get downloaded on local storage as "TimoManual"
+    Then user click on Mat icon
+    And user click on Email icon for Completed Documents
+    Then user click on close icon
+      
       
        And user click on out for signature tab
        Then user display subject
        Then user display Document Name
        Then user display Assigned Date
-       Then user Display date in format as "08/24/2022 2:55:23 AM"
+       Then user Display date in format as "09/02/2022 7:18:28 AM"
        Then user display action
-        When user click on Download icon
-      
+       Then user click on Mat icon
+       When user click on Download icon
+       Then Document should get downloaded on local storage as "TimoManual" 
+      #
       And user click on drafts tab
       Then user display title
       Then user display Sign Type
       Then user display Date&Time
+      Then user Display date in format as "09/19/2022, 12:22:16 AM"
       Then user display action
+      Then user click on Mat icon
+      And user click on Edit icon to view Self sign or Group sign
+      Then user should get redirect to same screen
+      And user Click on Dashboard
+      And user click on My Files
+      #
+      #
+      #And user click on rejected tab
+      #Then user display subject
+      #Then user display Document Name
+      #Then user display Assigned Date
+      #Then user display Rejected Date
+      #Then user display Rejected By
+      #Then user display action
+      #When user click on Download icon
+      #Then Document should get downloaded on local storage as "TimoManual" 
       
-      And user click on rejected tab
-      Then user display subject
-      Then user display Document Name
-      Then user display Assigned Date
-      Then user display Rejected Date
-      Then user display Rejected By
-      Then user display action
+     #And user click on pending tab
+    #Then user display subject
+    #Then user display document name
+    #Then user display assigned date
+    #Then user display requested by
+    #Then user display action
+    #Then user click on action link 
+    #And user click on check box
+    #And user click on accept button
+    #And user clcik on ok button present on pop up
+    #Then document should get display
       
       
        @DrySign

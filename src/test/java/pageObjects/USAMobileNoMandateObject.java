@@ -400,7 +400,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//a[text()='Confirm']")
 	public static  WebElement btnConfirm;
 	
-	@FindBy(xpath="//div[text()='Monthly Plans']")
+	@FindBy(xpath="(//a[text()='Buy Now'])[1]")
 	public static  WebElement planMonthly;
 	
 	@FindBy(xpath="//div[text()='Premium']")

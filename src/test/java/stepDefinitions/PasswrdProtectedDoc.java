@@ -172,7 +172,7 @@ public void enter_password_as(String password) {
 	@Given("user enter email id as {string}")
 	public void user_enter_email_id_as(String string) {
 		Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
-		Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid15");
+		Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid218");
 	   
 	}
 
@@ -184,8 +184,8 @@ public void enter_password_as(String password) {
 	}
 
 @Then("user click on drysign")
-public void user_click_on_drysign() {
-	
+public void user_click_on_drysign() throws InterruptedException {
+	Thread.sleep(2000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.clickOnDrySign);
 	Elements.click(USAMobileNoMandateObject.clickOnDrySign);
  
@@ -203,6 +203,7 @@ public void user_click_on_sign_document() throws InterruptedException {
 public void user_get_display_pop_up_with_message_as(String string) throws InterruptedException {
 	//Elements.switchToChild();
 	//Elements.switchToFrame(USAMobileNoMandateObject.IFrame1);
+	Thread.sleep(2000);
 	Waits.waitUntilElementLocated(30,USAMobileNoMandateObject.PleaseEnterThePassword);
 	Elements.isDisplayed(USAMobileNoMandateObject.PleaseEnterThePassword);
 	Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.PleaseEnterThePassword),string);

@@ -368,7 +368,7 @@ public void user_goto_the_dashboard_screen() {
 public void user_click_on_upload_plus_button() throws InterruptedException {
 	Thread.sleep(10000);
 	Waits.waitUntilElementToClick(30,XpathMyProfile.AddProfileImage);
-	Elements.mouseDoubleclick(XpathMyProfile.AddProfileImage);
+	Elements.click(XpathMyProfile.AddProfileImage);
 }
 }
 

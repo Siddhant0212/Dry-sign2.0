@@ -320,6 +320,70 @@ public void new_plan_details_and_its_related_features_should_get_Displayed(io.cu
 
 	
 }
+@Then("user should get display plans")
+public void user_should_get_display_plans(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+	for (Map<Object, Object> data : dataTable.asMaps(String.class, String.class)) {
+		Thread.sleep(5000);
+		
+		Waits.waitUntilElementLocated(30, DashboardObject.Plans("Individual"));
+		Elements.isDisplayed(DashboardObject.Plans("Individual"));
+
+		Waits.waitUntilElementLocated(30, DashboardObject.Plans("Professional"));
+		Elements.isDisplayed(DashboardObject.Plans("Professional"));
+
+		Waits.waitUntilElementLocated(30, DashboardObject.Plans("Premium"));
+		Elements.isDisplayed(DashboardObject.Plans("Premium"));
+	}
+	
+}
+@When("user Enter First Name as {string}")
+public void user_Enter_First_Name_as(String string) {
+	Elements.scrollIntoView(DashboardObject.entFirstName);
+	Waits.waitUntilElementLocated(30, DashboardObject.entFirstName);
+	Elements.TypeText(DashboardObject.entFirstName, string);
+}
+
+@When("user Enter Last Name as {string}")
+public void user_Enter_Last_Name_as(String string) {
+	Waits.waitUntilElementLocated(30, DashboardObject.entLastName);
+	Elements.TypeText(DashboardObject.entLastName, string);
+}
+
+@When("user Enter Phone Number as {string}")
+public void user_Enter_Phone_Number_as(String string) {
+	Waits.waitUntilElementLocated(30, DashboardObject.entPhoneNo);
+	Elements.TypeText(DashboardObject.entPhoneNo, string);
+}
+
+@When("user Enter Email Id as {string}")
+public void user_Enter_Email_Id_as(String string) {
+   
+}
+
+@When("user Enter Password as {string}")
+public void user_Enter_Password_as(String string) {
+  
+}
+
+@When("user Enter Confirm Password as {string}")
+public void user_Enter_Confirm_Password_as(String string) {
+    
+}
+
+@Then("click on CheckBox")
+public void click_on_CheckBox() {
+ 
+}
+
+@Then("click On Sign UP")
+public void click_On_Sign_UP() {
+  
+}
+
+@Then("popUp Display as {string}")
+public void popup_Display_as(String string) {
+	
+}
 
 }
 

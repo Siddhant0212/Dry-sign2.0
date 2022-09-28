@@ -56,7 +56,13 @@ public class DashboardObject {
 	}
 	
 	
-	
+
+	public static WebElement Plans(String data)
+	{
+	String Xpath = "//div[@class='pricing-title']";
+	WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+	return element;
+	}
 	
 	
 	
@@ -146,6 +152,34 @@ public class DashboardObject {
 			
 			@FindBy(xpath="//button[text()=' Cancel ']")
 			public static  WebElement Cancel;
+			
+			@FindBy(xpath="//input[@placeholder='First Name*']")
+			public static WebElement entFirstName;
+			
+			@FindBy(xpath="//input[@placeholder='Last Name*']")
+			public static WebElement entLastName;
+			
+			@FindBy(xpath="//*[@formcontrolname='companyName']")
+			public static WebElement entCompName;
+			
+
+			@FindBy(xpath="//input[@placeholder='Phone Number*']")
+			public static WebElement entPhoneNo;
+			
+			@FindBy(xpath="//input[@placeholder='Email ID*']")
+			public static WebElement entEmail;
+			
+			@FindBy(xpath="//input[@placeholder='Password *']")
+			public static WebElement entPassword;
+			
+			@FindBy(xpath="//input[@placeholder='Password Confirm *']")
+			public static WebElement entConfirmPassword;
+			
+			@FindBy(xpath="//input[@data-webform-required-error='Please accept terms and conditions']")
+			public static WebElement clickCheckBox;
+			
+			@FindBy(xpath="//button[text()='Sign Up']")
+			public static WebElement successOnSignUp;
 			
 }        
 

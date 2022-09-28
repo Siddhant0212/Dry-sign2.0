@@ -185,6 +185,11 @@ public void document_should_get_downloaded_on_local_storage_as(String string) th
       
       
 }
+@Then("user click on Close Icon")
+public void user_click_on_Close_Icon() {
+	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.iconPlus);
+	Elements.click(USAMobileNoMandateObject.iconPlus);
+}
 
 
 @When("user click on plus icon")
@@ -365,6 +370,12 @@ public void user_get_display_pending_tab() throws InterruptedException {
 	Thread.sleep(5000);
     
 }
+@Then("user click on pending tab")
+public void user_click_on_pending_tab() throws InterruptedException {
+	Thread.sleep(2000);
+	Waits.waitUntilElementToClick(30, MyFilesObject.Pending);
+	Elements.jclick(MyFilesObject.Pending); 
+}
 
 @Then("user display subject")
 public void user_display_subject() {
@@ -444,7 +455,8 @@ public void date_display_in_format_as(String string) {
 	//Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign),"08/17/2022 1:07:58 AM");
 }
 @Then("date Display in format as {string}")
-public void date_Display_in_format_as(String string) {
+public void date_Display_in_format_as(String string) throws InterruptedException {
+	Thread.sleep(2000);
 	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign1);
 	Elements.validateDateFormat(string);;
 	//Assert.assertEquals(Elements.getText(MyFilesObject.TimingSign1),"08/17/2022 12:01:58 AM");

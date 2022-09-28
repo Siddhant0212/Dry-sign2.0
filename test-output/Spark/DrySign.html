@@ -60,7 +60,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Sep 27, 2022 06:17:15</span>
+                    <span class="badge badge-primary">Sep 28, 2022 05:46:03</span>
                 </a>
             </li>
         </ul>
@@ -82,6 +82,14 @@
             <i class="fa fa-tag"></i>
           </span>
           <span class="title">Tags</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown" onclick="toggleView('exception-view')">
+        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
+          <span class="icon-holder">
+            <i class="fa fa-bug"></i>
+          </span>
+          <span class="title">Exception</span>
         </a>
       </li>
       <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -113,11 +121,11 @@
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
+						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
 						
 						
 						
-						
-						
+						<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning pull-right"></span></a>
 						<div class="dropdown-divider"></div>
 						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 					</ul>
@@ -127,39 +135,39 @@
 					<i class="fa fa-tag"></i>
 					</a>
 					<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-						<a class="dropdown-item" href="#">@MyProfile</a>
-						<a class="dropdown-item" href="#">@MyProfile06</a>
+						<a class="dropdown-item" href="#">@Password</a>
+						<a class="dropdown-item" href="#">@Password2</a>
 					</ul>
 				</li>
 			</ul>
 		</div>
 		<div class="test-list-wrapper scrollable">
 			<ul class="test-list-item">
-				<li class="test-item"  status="pass" test-id="1"
+				<li class="test-item"  status="fail" test-id="1"
 					author=""
-					tag="@MyProfile"
+					tag="@Password"
 					device="">
-					<div class="status-avatar pass-bg">
-						<i class="fa fa-check text-white"></i>
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">To Verify My Profile Page</p>
-							<p class="duration text-sm">0h 1m 18s+441ms</p>
-							<span class="datetime">06:17:26 AM</span>
+							<p class="name">To Verify Password Protected Document can be signed</p>
+							<p class="duration text-sm">0h 1m 14s+800ms</p>
+							<span class="datetime">05:47:08 AM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">To Verify My Profile Page</h5>
-									<span class='badge badge-success'>09.27.2022 06:17:26</span>
-									<span class='badge badge-danger'>09.27.2022 06:18:45</span>
-									<span class='badge badge-default'>0h 1m 18s+441ms</span>
+									<h5 class="test-status text-fail">To Verify Password Protected Document can be signed</h5>
+									<span class='badge badge-success'>09.28.2022 05:47:08</span>
+									<span class='badge badge-danger'>09.28.2022 05:48:22</span>
+									<span class='badge badge-default'>0h 1m 14s+800ms</span>
 								</div>
 								<div class="m-t-15">
-			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @MyProfile</span>
+			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @Password</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -171,140 +179,410 @@
 	<div class="card">
 		<div class="card-header" role="tab">
 			<div class="card-title pl-3">
-				<div class="node">To verify the Save button functionality present on the Edit Profile Screen</div>
-				<div class="status-avatar float-left pass-bg">
-					<i class="fa fa-check text-white"></i>
+				<div class="node">To verify that signatory is able to sign password protected document</div>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
 				</div>
+					<div class="status-avatar float-right mr-4">
+						<i class="fa fa-paperclip"></i>
+					</div>
 			</div>
 		</div>
 				<div class="collapse">
 					<div class="card-body">
-							<div class="d-flex align-items-center justify-content-start given" title="USAMobileNoMandate.navigate_to_URL(String)">
+							<div class="d-flex align-items-center justify-content-start given" title="PasswrdProtectedDoc.user_navigate_to(String)">
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>Given navigate to URL "https://drysign-dev.exela.global/#/login"</span>
+								<span>Given user navigate to "https://www.mailinator.com/v4/public/inboxes.jsp"</span>
 							</div>
 				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="USAMobileNoMandate.enter_the_user_name_as(String)">
+							<div class="d-flex align-items-center justify-content-start and" title="PasswrdProtectedDoc.user_enter_email_id_as(String)">
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>When enter the user name as "sid76@mailinator.com"</span>
+								<span>And user enter email id as "sid218@mailinator.com"</span>
 							</div>
 				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="USAMobileNoMandate.enter_the_password_as(String)">
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.user_click_on_Go_button()">
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>When enter the password as"Malin@555"</span>
+								<span>Then user click on Go button</span>
 							</div>
 				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start and" title="AutoRenewal.user_click_on_the_Login_button()">
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.user_click_on_drysign()">
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>And user click on the Login button</span>
+								<span>Then user click on drysign</span>
 							</div>
 				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start and" title="USAMobileNoMandate.user_click_on_continue_with_free_version()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+							<div class="d-flex align-items-center justify-content-start and" title="PasswrdProtectedDoc.user_click_on_sign_document()">
+								<span class="alert-icon fail-bg">
+									<i class="fa fa-times text-white"></i>
 								</span>
-								<span>And user click on continue with free version</span>
+								<span>And user click on sign document</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="USAMobileNoMandate.user_click_on_profile_icon()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[text()='Sign Document']' (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at framework.Waits.waitUntilElementToClick(Waits.java:49)
+	at stepDefinitions.PasswrdProtectedDoc.user_click_on_sign_document(PasswrdProtectedDoc.java:197)
+	at ?.user click on sign document(file:src/test/resources/Feature/PasswrdProtectedDoc.feature:47)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Sign Document']"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'INMH-PN-DT4253', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [230b0235b073f0208c3d72959e690640, findElement {using=xpath, value=//a[text()='Sign Document']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\SIDDHA~1.IN\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:61238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61238/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 230b0235b073f0208c3d72959e690640
+	at sun.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy38.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:660)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at framework.Waits.waitUntilElementToClick(Waits.java:49)
+	at stepDefinitions.PasswrdProtectedDoc.user_click_on_sign_document(PasswrdProtectedDoc.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:57)
+	at cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
+	at cucumber.runner.TestStep.run(TestStep.java:50)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)
+	at cucumber.runner.TestCase.run(TestCase.java:46)
+	at cucumber.runner.Runner.runPickle(Runner.java:50)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:144)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:174)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:95)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:91)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:60)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.user_get_display_pop_up_with_message_as(String)">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>When user click on profile icon</span>
+								<span>Then user get display pop up with message as "Please enter the password to proceed"</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="MyProfile.user_should_display_personal_information()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user should display personal information</span>
+								<span>Base.waitToPageRender(Scenario)</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="USAMobileNoMandate.user_click_on_edit_button()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start and" title="PasswrdProtectedDoc.user_enter_Password_as(String)">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user click on edit button</span>
+								<span>And user enter Password as "Sid@555"</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="MyProfile.user_enter_Fname_as(String)">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user enter Fname as "sidd"</span>
+								<span>Base.waitToPageRender(Scenario)</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="MyProfile.user_enter_Lname_as(String)">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.click_on_submit_button()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user enter Lname as "Ing"</span>
+								<span>Then click on submit button</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="USAMobileNoMandate.user_click_on_save_button()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user click on save button</span>
+								<span>Base.waitToPageRender(Scenario)</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="MyProfile.user_confirmation_message_get_display_as(String)">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start and" title="PasswrdProtectedDoc.user_enter_Password_as(String)">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user confirmation message get display as "Successfully Updated."</span>
+								<span>And user enter Password as "Sid@555"</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="USAMobileNoMandate.user_click_on_edit_button()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user click on edit button</span>
+								<span>Base.waitToPageRender(Scenario)</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="MyProfile.user_enter_LName_as(String)">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.click_on_submit_button()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user enter LName as ""</span>
+								<span>Then click on submit button</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="USAMobileNoMandate.user_click_on_save_button()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user click on save button</span>
+								<span>Base.waitToPageRender(Scenario)</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="MyProfile.user_click_on_mail_tab_then_error_get_display_for_mandatory_field_as(String)">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start and" title="PasswrdProtectedDoc.user_enter_Password_as(String)">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user click on mail tab then error get display for mandatory field as "Last name is required"</span>
+								<span>And user enter Password as "Sid@555"</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="USAMobileNoMandate.user_click_on_save_button()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user click on save button</span>
+								<span>Base.waitToPageRender(Scenario)</span>
 							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start then" title="MyProfile.user_confirmation_message_get_display_as(String)">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.click_on_submit_button()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
 								</span>
-								<span>Then user confirmation message get display as "Successfully Updated."</span>
+								<span>Then click on submit button</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Base.waitToPageRender(Scenario)</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.user_should_get_display_error_message_as(String)">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Then user should get display error message as "You have entered incorrect password"</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Base.waitToPageRender(Scenario)</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.user_correct_password_as(String)">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Then user correct password as "Sid@222"</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Base.waitToPageRender(Scenario)</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.user_should_display_in_asteric_symbol_or_circular_dots()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Then user should display in asteric symbol or circular dots</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Base.waitToPageRender(Scenario)</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.click_on_submit_button()">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Then click on submit button</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Base.waitToPageRender(Scenario)</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start then" title="PasswrdProtectedDoc.pop_up_get_display_as(String)">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Then Pop up get display as "Consent to Proceed Electronically"</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon skip-bg">
+									<i class="fa fa-long-arrow-right text-white"></i>
+								</span>
+								<span>Base.waitToPageRender(Scenario)</span>
+							</div>
+				<div class="details">Step skipped</div>
+							<div class="d-flex align-items-center justify-content-start asterisk" title="">
+								<span class="alert-icon fail-bg">
+									<i class="fa fa-times text-white"></i>
+								</span>
+								<span>Base.closeBrowser(Scenario)</span>
 							</div>
 				<div class="details"></div>
+				<div class="details"><img class='r-img' onerror='this.style.display="none"' data-featherlight='../embedded1.png' src='../embedded1.png'></div>
+				<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'INMH-PN-DT4253', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [230b0235b073f0208c3d72959e690640, quit {}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\SIDDHA~1.IN\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:61238}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61238/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 230b0235b073f0208c3d72959e690640
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:439)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:287)
+	at baseinit.Base.closeBrowser(Base.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)
+	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
+	at cucumber.runner.TestStep.run(TestStep.java:50)
+	at cucumber.runner.TestCase.run(TestCase.java:50)
+	at cucumber.runner.Runner.runPickle(Runner.java:50)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:144)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:174)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:95)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:91)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:60)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'INMH-PN-DT4253', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: unknown
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:128)
+	... 59 more
+Caused by: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'INMH-PN-DT4253', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:174)
+	at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:127)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$2(DriverCommandExecutor.java:122)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</textarea>
 					</div>
 				</div>
 	</div>
@@ -351,11 +629,11 @@
 				<li class="test-item">
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">@MyProfile</p>
+							<p class="name">@Password</p>
 							<p class="duration text-sm">2 tests</p>
 							<span class="datetime">
-							<span class='badge badge-success'>1</span>
 							
+							<span class='badge badge-danger'>1</span>
 							
 							
 							</span>
@@ -363,9 +641,9 @@
 					</div>
 					<div class="test-contents d-none">
 						<div class="info">
-							<h4>@MyProfile</h4>
-							<span status="pass" class='badge badge-success'>1 passed</span>
+							<h4>@Password</h4>
 							
+							<span status="fail" class='badge badge-danger'>1 failed</span>
 							
 							
 						</div>
@@ -378,28 +656,28 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>06:17:26 AM</td>
+									<td>05:47:08 AM</td>
 									<td class='linked' test-id='1'>
-										To Verify My Profile Page
+										To Verify Password Protected Document can be signed
 									</td>
 								</tr>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>06:17:26 AM</td>
+									<td>05:47:08 AM</td>
 									<td class='linked' test-id='2'>
-										To verify the Save button functionality present on the Edit Profile Screen
+										To verify that signatory is able to sign password protected document
 										<div class="">
-											<span class="badge badge-default">To Verify My Profile Page.To verify the Save button functionality present on the Edit Profile Screen</span>
+											<span class="badge badge-default">To Verify Password Protected Document can be signed.To verify that signatory is able to sign password protected document</span>
 										</div>
 									</td>
 								</tr>
@@ -410,11 +688,11 @@
 				<li class="test-item">
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">@MyProfile06</p>
+							<p class="name">@Password2</p>
 							<p class="duration text-sm">1 tests</p>
 							<span class="datetime">
-							<span class='badge badge-success'>1</span>
 							
+							<span class='badge badge-danger'>1</span>
 							
 							
 							</span>
@@ -422,9 +700,9 @@
 					</div>
 					<div class="test-contents d-none">
 						<div class="info">
-							<h4>@MyProfile06</h4>
-							<span status="pass" class='badge badge-success'>1 passed</span>
+							<h4>@Password2</h4>
 							
+							<span status="fail" class='badge badge-danger'>1 failed</span>
 							
 							
 						</div>
@@ -437,17 +715,130 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>06:17:26 AM</td>
+									<td>05:47:08 AM</td>
 									<td class='linked' test-id='2'>
-										To verify the Save button functionality present on the Edit Profile Screen
+										To verify that signatory is able to sign password protected document
 										<div class="">
-											<span class="badge badge-default">To Verify My Profile Page.To verify the Save button functionality present on the Edit Profile Screen</span>
+											<span class="badge badge-default">To Verify Password Protected Document can be signed.To verify that signatory is able to sign password protected document</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div><div class="test-wrapper row exception-view attributes-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Exception</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li>
+					<a href="#">
+					<span class="badge badge-primary">2</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">org.openqa.selenium.TimeoutException</p>
+							<p class="duration text-sm">1 tests</p>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>org.openqa.selenium.TimeoutException</h4>
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>05:47:26 AM</td>
+									<td class='linked' test-id='12'>
+										And user click on sign document
+										<div class="">
+											<span class="badge badge-default">To verify that signatory is able to sign password protected document</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">org.openqa.selenium.WebDriverException</p>
+							<p class="duration text-sm">1 tests</p>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>org.openqa.selenium.WebDriverException</h4>
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>05:47:57 AM</td>
+									<td class='linked' test-id='38'>
+										Base.closeBrowser(Scenario)
+										<div class="">
+											<span class="badge badge-default">To verify that signatory is able to sign password protected document</span>
 										</div>
 									</td>
 								</tr>
@@ -486,12 +877,12 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='100%'>
-						<b>1</b> features passed
+					<div><small data-tooltip='0%'>
+						<b>0</b> features passed
 						</small>
 					</div>
 					<div>
-						<small data-tooltip='0%'><b>0</b> features failed, 
+						<small data-tooltip='100%'><b>1</b> features failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -509,9 +900,9 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
+					<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
 					<div>
-						<small data-tooltip='0%'><b>0</b> scenarios failed, 
+						<small data-tooltip='100%'><b>1</b> scenarios failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -529,10 +920,10 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='100%'><b>18</b> steps passed</small></div>
+					<div><small data-tooltip='13.333%'><b>4</b> steps passed</small></div>
 					<div>
-						<small data-tooltip='0%'><b>0</b> steps failed, 
-						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						<small data-tooltip='6.667%'><b>2</b> steps failed, 
+						<b>24</b> skipped, <b data-tooltip='80%'>0</b> others
 						</small>
 					</div>
 				</div>
@@ -549,7 +940,7 @@
 							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>100.00%</span>
+							<span>.00%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -568,7 +959,7 @@
 							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>100.00%</span>
+							<span>.00%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -584,7 +975,7 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">Sep 27, 2022 06:17:15</h4>
+							<h4 class="font-weight-light mt-4">Sep 28, 2022 05:46:03</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -600,7 +991,7 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 1m 30s+745ms</h4>
+							<h4 class="font-weight-light mt-4">0h 2m 19s+647ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -644,21 +1035,21 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>@MyProfile</td>
+								<td>@Password</td>
+								<td>0</td>
 								<td>1</td>
 								<td>0</td>
-								<td>0</td>
 								<td>
-									50%
+									0%
 								</td>
 							</tr>
 							<tr>
-								<td>@MyProfile06</td>
+								<td>@Password2</td>
+								<td>0</td>
 								<td>1</td>
 								<td>0</td>
-								<td>0</td>
 								<td>
-									100%
+									0%
 								</td>
 							</tr>
 						</tbody>
@@ -671,48 +1062,48 @@
 <script>
 	var statusGroup = {
 	    parentCount: 1,
-		passParent: 1,
-		failParent: 0,
+		passParent: 0,
+		failParent: 1,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 0,
+		exceptionsParent: 1,
 		childCount: 1,
-		passChild: 1,
-		failChild: 0,
+		passChild: 0,
+		failChild: 1,
 		fatalChild: 0,
 		errorChild: 0,
 		warningChild: 0,
 		skipChild: 0,
 		infoChild: 0,
 		debugChild: 0,
-		exceptionsChild: 0,
-		grandChildCount: 18,
-		passGrandChild: 18,
-		failGrandChild: 0,
+		exceptionsChild: 1,
+		grandChildCount: 30,
+		passGrandChild: 4,
+		failGrandChild: 2,
 		fatalGrandChild: 0,
 		errorGrandChild: 0,
 		warningGrandChild: 0,
-		skipGrandChild: 0,
+		skipGrandChild: 24,
 		infoGrandChild: 0,
 		debugGrandChild: 0,
-		exceptionsGrandChild: 0,
-		eventsCount: 18,
-		passEvents: 18,
-		failEvents: 0,
+		exceptionsGrandChild: 26,
+		eventsCount: 31,
+		passEvents: 4,
+		failEvents: 2,
 		fatalEvents: 0,
 		errorEvents: 0,
 		warningEvents: 0,
-		skipEvents: 0,
-		infoEvents: 0,
+		skipEvents: 24,
+		infoEvents: 1,
 		debugEvents: 0,
 		exceptionsEvents: 0
 	};
 </script>
 <script>
 	var timeline = {
-	        "To Verify My Profile Page":78.441
+	        "To Verify Password Protected Document can be signed":74.8
 	};
 </script>
                 </div>

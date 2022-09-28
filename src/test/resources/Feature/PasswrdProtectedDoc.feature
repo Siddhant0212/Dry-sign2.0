@@ -41,7 +41,7 @@ Feature: To Verify Password Protected Document can be signed
   @Password2
   Scenario: To verify that signatory is able to sign password protected document
     Given user navigate to "https://www.mailinator.com/v4/public/inboxes.jsp"
-    And user enter email id as "sid15@mailinator.com"
+    And user enter email id as "sid218@mailinator.com"
     Then user click on Go button
     Then user click on drysign
     And user click on sign document

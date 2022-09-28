@@ -72,20 +72,20 @@ public class MyFilesObject {
 	@FindBy(xpath="//tr[@id='accordion0']")
     public static WebElement Doc_Present;
 	
-	@FindBy(xpath="//span[text()=' 08/17/2022 12:01:58 AM ']")
+	@FindBy(xpath="(//span[@class='data-el ng-star-inserted'])[3]")
     public static WebElement TimingSign1;
 	
 	@FindBy(xpath="//span[text()=' Completed Date ']")
     public static WebElement Completed_Date;
 	
 	
-	@FindBy(xpath="//span[text()=' 08/09/2022 2:59:02 AM ']")
+	@FindBy(xpath="(//span[@class='data-el ng-star-inserted'])[3]")
     public static WebElement TimingSign3;
 	
 	@FindBy(xpath="//div[text()='Out for Sign']")
 	public static  WebElement OutforSignature;
 	
-	@FindBy(xpath="//span[text()=' 08/24/2022 2:55:23 AM ']")
+	@FindBy(xpath="(//span[@class='data-el ng-star-inserted'])[3]")
 	public static  WebElement TimingSign4;
 	
 	@FindBy(xpath="//span[text()=' Date & Time ']")
@@ -227,7 +227,7 @@ public class MyFilesObject {
 	@FindBy(xpath="//*[@class='canvasWrapper']")     
 	public static  WebElement Doc_Display1;
 	
-	@FindBy(xpath="//mat-icon[text()='close']")     
+	@FindBy(xpath="//i[@class='exela-icon-close']")     
 	public static  WebElement closeIcon;
 	
 	@FindBy(xpath="//span[text()=' Sign Type ']")     
