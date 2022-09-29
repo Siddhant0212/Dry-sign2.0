@@ -312,6 +312,11 @@ public class USAMobileNoMandateObject {
 		@FindBy(xpath="//span[text()='Submit']")
 		public static  WebElement clickSubmit;
 		
+		@FindBy(xpath="//button[text()='Submit']")
+		public static  WebElement clickSubmit1;
+		
+		
+		
 		@FindBy(xpath="//span[text()='You have entered incorrect password']")
 		public static  WebElement YouHaveEnteredIncorrectPassword;
 		

@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","json:test-output/cucumber-JSON-report/JSONReport.json","junit:test-output/cucumber-XML-report/XMLReport.xml"},
 		 monochrome = true,
 		 dryRun = false 
-		,tags = {"@Yes"}
+		//,tags = {"@Yes"}
  )
 
 

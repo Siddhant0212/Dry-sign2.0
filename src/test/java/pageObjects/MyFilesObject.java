@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -35,6 +38,11 @@ public class MyFilesObject {
 	@FindBy(xpath="(//input[@placeholder='Filter'])[4]")
     public static WebElement Subject_Search4;
 	
+	@FindAll({
+		@FindBy(xpath="//span[text()=' TimoManual.pdf.pdf ']")
+	})
+	public static List<WebElement> TimoManual;
+	
 	
 	
 	@FindBy(xpath="//span[text()=' Document Name ']")
@@ -52,7 +60,7 @@ public class MyFilesObject {
 	@FindBy(xpath="//a[text()=' Hello sign ']")
     public static WebElement helloSign;
 	
-	@FindBy(xpath="//span[text()=' 08/17/2022 1:07:58 AM ']")
+	@FindBy(xpath="(//span[@class='data-el ng-star-inserted'])[3]")
     public static WebElement TimingSign;
 	
 	@FindBy(xpath="//i[@class='fs-32 exela-icon-action lineHeight']")
@@ -245,6 +253,9 @@ public class MyFilesObject {
 	
 	@FindBy(xpath="//span[text()=' Rejected By ']")     
 	public static  WebElement Rejected_By;
+	
+	@FindBy(xpath="//button[text()='Ok']")     
+	public static  WebElement Ok;
 	
 	
 	

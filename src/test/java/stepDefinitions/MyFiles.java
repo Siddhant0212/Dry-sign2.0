@@ -1,9 +1,11 @@
 package stepDefinitions;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.tika.exception.TikaException;
+import org.openqa.selenium.WebElement;
 import org.xml.sax.SAXException;
 
 import framework.Elements;
@@ -623,6 +625,33 @@ public void new_details_get_display(io.cucumber.datatable.DataTable dataTable) t
 		Waits.waitUntilElementToClick(30, MyFilesObject.Confirm);
 		Elements.click(MyFilesObject.Confirm);
 	}
+	@Then("success message display")
+	public void success_message_display() {
+		Waits.waitUntilElementLocated(30, MyFilesObject.This_email_addressal_ready_exists);
+		Elements.isDisplayed(MyFilesObject.This_email_addressal_ready_exists);
+	}
+	
+	@Then("click On Ok button")
+	public void click_On_Ok_button() {
+		Waits.waitUntilElementToClick(30, MyFilesObject.Ok);
+		Elements.click(MyFilesObject.Ok);
+	}
+	
+	@Then("Document is not present for old signatory")
+	public void document_is_not_present_for_old_signatory() {
+		Waits.setImplicitWait(10);
+		List<WebElement> tabs=MyFilesObject.TimoManual;
+
+		if(tabs.size()>0) {
+			Assert.assertTrue(false);
+			
+		}
+		else {
+			Assert.assertTrue(true);
+		}
+	}
+		
+	
 
 	@Then("validation message get display as {string}")
 	public void validation_message_get_display_as(String string) {
