@@ -349,7 +349,7 @@ public void user_email_id_as(String string) {
 @Given("user Enter email id as {string}")
 public void user_Enter_email_id_as(String string) {
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.mailinatorInPut1);
-	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid231");
+	Elements.TypeText(USAMobileNoMandateObject.mailinatorInPut1,"sid221");
 	
 }
 @Then("user get display Error Message as {string}")

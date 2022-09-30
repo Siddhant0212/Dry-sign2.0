@@ -286,14 +286,13 @@ public void message_get_display_as(String string) {
 }
 @Then("user click on upload")
 public void user_click_on_upload() throws InterruptedException {
-	//Elements.switchToFrame(DashboardObject.iFrame_Type);
-	Elements.switchToChild();
+	
 	Waits.waitUntilElementToClick(30,DashboardObject.Upload_Button);
 	Elements.jclick(DashboardObject.Upload_Button);
 }
 @Then("Error message get display as {string}")
 public void error_message_get_display_as(String string) throws InterruptedException {
-	Thread.sleep(2000);
+	//Thread.sleep(10000);
 	Waits.waitUntilElementLocated(30,DashboardObject.Filesizeexceedsthemaximum);
 	Elements.isDisplayed(DashboardObject.Filesizeexceedsthemaximum);
 	Assert.assertEquals(Elements.getText(DashboardObject.Filesizeexceedsthemaximum),string);

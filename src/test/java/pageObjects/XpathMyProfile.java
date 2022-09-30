@@ -130,13 +130,14 @@ public class XpathMyProfile {
 	
 	
 	
-	//input[@placeholder='Email Address']
-	//span[text()='Last name is required.']
-	//input[@placeholder='Email Address']
-	//input[@placeholder='Last Name']
-	//h1[text()='PAYMENT FAILED']
-	//a[text()='Go To Home']
-	//h2[text()='New Payment details has been updated']
-	//a[text()='Go To Dashboard']
-	//input[@value='Cancel']
+	@FindBy(xpath="//p[text()='Profile Picture Uploaded']")     
+	public static  WebElement profilePictureUploaded;
+	
+	@FindBy(xpath="//p[text()='Successfully image removed']")     
+	public static  WebElement successfullyImageRemoved;
+	
+	@FindBy(xpath="//p[text()='Image size should be less than 2MB']")     
+	public static  WebElement Image_Sizes_less;
+	
+	
 }

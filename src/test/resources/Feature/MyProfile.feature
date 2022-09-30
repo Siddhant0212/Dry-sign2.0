@@ -157,10 +157,33 @@ Feature: To Verify My Profile Page
     And user click on continue with free version
     #And user click on mat icon
     When user click on profile icon
+    When user should display personal information
+    When user click on edit button
+    When user click on upload plus button
+    When user click on upload photo button browser as "profile.png"
+    Then success message should be Displayed "Profile Picture Uploaded"
+    #Then success message should be displayed "Profile Picture Uploaded"
+    Then user click on remove minus button
+    Then success message Should be Displayed "Successfully image removed"
+    
+     @MyProfile08
+  Scenario: To Verify the Profile image upload size is more than 2MB in Edit profile
+  
+    Given navigate to URL "https://drysign-dev.exela.global/#/login"
+    When enter the user name as "sid76@mailinator.com"
+    When enter the password as"Malin@555"
+    And user click on the Login button
+    #And user click on the sign in button
+    And user click on continue with free version
+    #And user click on mat icon
+    When user click on profile icon
     Then user should display personal information
     Then user click on edit button
     Then user click on upload plus button
-    Then user click on upload photo button browser as "img.jpg"
+    Then user click on upload photo button browser as "sid.png"
+    Then display validation message as "Image size should be less than 2MB"
+    Then click on ok button
+    
     
      @MyProfile2
   Scenario: To verify  if user is able to see and click profile on dashboard top right corner after login.

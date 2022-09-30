@@ -74,11 +74,12 @@ Feature: To Verify Dashboard
       |Self Sign |         
       |Group Sign|
 
-  @DrySign
+  @DrySign15
   Scenario: To Verify Subscribed Register user is able to Purchase the higher plan then the exisiting plan successfully through Upgrade Plan button present on View Plan pop-up
-    When enter the user name as "sid204@mailinator.com"
+    When enter the user name as "sid06@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
+    #And user click on continue with free version
     #Then user click on View Details button
      #Then Pop Up get displayed with Elements
       #|Self Sign |        
@@ -299,16 +300,16 @@ Feature: To Verify Dashboard
     Then message get display as "Signature saved."
     
      @Dashboard15
-  Scenario: To verify that the Signature upload file size is more than 50 kb 
+  Scenario: To verify that the Signature upload file size is more than 10 mb 
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
-    And user click on the sign in button
+    And user click on the Login button
     And user click on continue with free version
     Then user click on Signature edit
     Then user click on upload
-    Then user click on upload and browser option as "signature-scan.png"
+    Then user click on upload and browser option as "signa.png"
     #And user click Save button
-    Then Error message get display as "File size exceeds the maximum limit of 50KB."
+    Then Error message get display as "File size exceeds the maximum limit of 10MB."
 
   #@Dashboard13
   #Scenario: To verify that user is  able to Draw/Type/Upload Signature on dashboard

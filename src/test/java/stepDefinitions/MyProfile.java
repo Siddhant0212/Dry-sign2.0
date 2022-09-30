@@ -18,6 +18,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.framework.Assert;
+import pageObjects.DashboardObject;
 import pageObjects.MyFilesObject;
 import pageObjects.USAMobileNoMandateObject;
 import pageObjects.XpathMyProfile;
@@ -368,7 +369,39 @@ public void user_goto_the_dashboard_screen() {
 public void user_click_on_upload_plus_button() throws InterruptedException {
 	Thread.sleep(10000);
 	Waits.waitUntilElementToClick(30,XpathMyProfile.AddProfileImage);
-	Elements.click(XpathMyProfile.AddProfileImage);
+	Elements.Mouseclick(XpathMyProfile.AddProfileImage);
+}
+
+@Then("success message should be displayed {string}")
+public void success_message_should_be_displayed(String string) {
+	Waits.waitUntilElementToClick(30,DashboardObject.verifyMessageOnPopUp(string));
+	Elements.isDisplayed(DashboardObject.verifyMessageOnPopUp(string));
+}
+@Then("success message should be Displayed {string}")
+public void success_message_should_be_Displayed(String string) {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.profilePictureUploaded);
+	Elements.isDisplayed(XpathMyProfile.profilePictureUploaded);
+	Assert.assertEquals(Elements.getText(XpathMyProfile.profilePictureUploaded),string);
+}
+@Then("user click on remove minus button")
+public void user_click_on_remove_minus_button() throws InterruptedException {
+	Thread.sleep(5000);
+	Waits.waitUntilElementToClick(30,XpathMyProfile.AddProfileImage);
+	Elements.Mouseclick(XpathMyProfile.AddProfileImage);
+}
+
+@Then("success message Should be Displayed {string}")
+public void success_message_Should_be_Displayed(String string) {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.successfullyImageRemoved);
+	Elements.isDisplayed(XpathMyProfile.successfullyImageRemoved);
+	Assert.assertEquals(Elements.getText(XpathMyProfile.successfullyImageRemoved),string);
+}
+
+@Then("display validation message as {string}")
+public void display_validation_message_as(String string) {
+	Waits.waitUntilElementToClick(30,XpathMyProfile.Image_Sizes_less);
+	Elements.isDisplayed(XpathMyProfile.Image_Sizes_less);
+	Assert.assertEquals(Elements.getText(XpathMyProfile.Image_Sizes_less),string);
 }
 }
 

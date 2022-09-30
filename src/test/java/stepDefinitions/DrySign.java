@@ -76,6 +76,7 @@ public class DrySign {
 				x.winWait("[Title:Open]", "", 15);
 				x.controlFocus("[Title:Open]", "", "Edit1");
 				File url = null;
+				
 				url = new File(System.getProperty("user.dir") + "\\Uploadfiles\\" + uploadfileName);
 				String name = FilenameUtils.getExtension(uploadfileName);
 				if (url.exists() && (name.equalsIgnoreCase("png") || name.equals("pdf") || name.equals("tiff"))) {
@@ -665,9 +666,9 @@ public class DrySign {
 //		Elements.click(XpathMyProfile.AddProfileImage);
 		
 
-		//Thread.sleep(5000);
-	    uploadFile(filename, "chrome");
 		Thread.sleep(5000);
+	    uploadFile(filename, "chrome");
+		//Thread.sleep(10000);
 		
 		
 }
@@ -676,6 +677,7 @@ public class DrySign {
 		  uploadFile(string, "chrome");
 			Thread.sleep(5000);
 	}
+	
 	@Then("user click on upload and browser option as {string}")
 	public void user_click_on_upload_and_browser_option_as(String filename)  throws InterruptedException {
 	
@@ -683,7 +685,7 @@ public class DrySign {
 		Elements.Mouseclick(DashboardObject.Upload_Option);
 		Thread.sleep(5000);
 	    uploadFile(filename, "chrome");
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	}
 	
 

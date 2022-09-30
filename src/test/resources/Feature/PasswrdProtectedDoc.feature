@@ -195,7 +195,7 @@ Feature: To Verify Password Protected Document can be signed
     Then click OK button 
     
     Given user navigate to "https://www.mailinator.com/v4/public/inboxes.jsp"
-    And user Enter email id as "sid231"
+    And user Enter email id as "sid221"
     Then user click on Go button
     Then user click on drysign
     And user click on sign document

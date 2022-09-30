@@ -119,6 +119,14 @@ public class DashboardObject {
 			return element;
 			}
 			
+			public static WebElement verifyMessageOnPopUp(String data)
+			{
+			String Xpath = "//p[text()='$']";
+			WebElement element = Base.driver.findElement(By.xpath(Xpath.replace("$", data)));
+			return element;
+			}
+			
+			
 			
 
 			
@@ -144,7 +152,7 @@ public class DashboardObject {
 			public static  WebElement iFrame_Type;
 			
 			
-			@FindBy(xpath="//div[text()=' File size exceeds the maximum limit of 50KB. ']")     
+			@FindBy(xpath="//p[text()='File size exceeds the maximum limit of 10MB.']")     
 			public static  WebElement Filesizeexceedsthemaximum;
 			
 			@FindBy(xpath="//button[text()='View Details']")

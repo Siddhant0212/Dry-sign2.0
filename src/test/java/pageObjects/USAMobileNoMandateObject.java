@@ -163,7 +163,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//span[text()=' account_circle']")
 	public static WebElement profile;
   
-	@FindBy(xpath="//span[@class='exela-icon-profile d-flex fs-24 ng-star-inserted']")
+	@FindBy(xpath="//a[@mattooltip='View Profile']")
 	public static WebElement Profile1;
 
 	@FindBy(xpath="//span[text()='MANAGE ACCOUNT']")
