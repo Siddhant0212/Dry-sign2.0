@@ -383,6 +383,11 @@ public void click_On_Sign_UP() {
 public void popup_Display_as(String string) {
 	
 }
+@Then("user should get display exisiting Plan get cancelled successfully as {string}")
+public void user_should_get_display_exisiting_Plan_get_cancelled_successfully_as(String string) {
+	Waits.waitUntilElementLocated(30,DashboardObject.subCancelSuccessfully);
+	Elements.isDisplayed(DashboardObject.subCancelSuccessfully);
+}
 
 }
 

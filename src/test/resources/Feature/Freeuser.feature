@@ -118,7 +118,7 @@ Feature: To Verify Free User functions
     #Then Verify approved plan and activated image is displayed
     Then confirmation message get display as "PAYMENT CONFIRMATION"
     
-    @DrySign
+    @DrySign1
  Scenario: To Verify on cancel subscription if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
     
   Given navigate to URL "https://drysign-dev.exela.global/#/"
@@ -136,7 +136,7 @@ Feature: To Verify Free User functions
     Then display as "Professional Plan" with Upgrade button
     Then should display as "5" documents
     
-     @DrySign
+     @DrySign1
  Scenario: To Verify on Refund if we login by that user, everytime the pricing plan is displayed in the pop-up window (i.e. free version, Individual, professional (monthly and annual))
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When user click on terms and conditions
@@ -155,7 +155,7 @@ Feature: To Verify Free User functions
     And user click on confirm button which present on pop up
     Then user should get display message as your refund has been successful
     Then click on ok button
-    When enter the user name as "sid87@mailinator.com"
+    When enter the user name as "sid213@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button
@@ -165,7 +165,7 @@ Feature: To Verify Free User functions
     Then display as "Professional Plan" with Upgrade button
     Then should display as "5" documents
   
-   @DrySign
+   @DrySign1
  Scenario: To Verify for the active free user, the document count is set to 5 everymonth and template count to 1
   
    Given navigate to URL "https://drysign-dev.exela.global/#/"
@@ -256,7 +256,7 @@ Feature: To Verify Free User functions
       |Signature: Type,Draw and upload|
     
     
-      @DrySign
+      @DrySign1
  Scenario: To verify for free user After 5 documents are utilized next document should not be allowed
    Given navigate to URL "https://drysign-dev.exela.global/#/"
    When enter the user name as "sid211@mailinator.com"
@@ -268,7 +268,7 @@ Feature: To Verify Free User functions
      Then user click on browser
      Then user get display error message as "You have reached the document upload count, please subscribe to upload more documents."
     
-         @DrySign
+         @DrySign1
  Scenario: To verify If 1 template is utilized next template should not be allowed
    Given navigate to URL "https://drysign-dev.exela.global/#/"
    When enter the user name as "sid211@mailinator.com"

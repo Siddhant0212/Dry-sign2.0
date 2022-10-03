@@ -3,7 +3,7 @@ Feature: To Verify My Files Tabs Functionality
   Background: 
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     
-     @DrySign
+     @DrySign1
   Scenario: To verify functionality of sign on Pending document of DrySign
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -27,7 +27,7 @@ Feature: To Verify My Files Tabs Functionality
     Then successfully signed document page get display as"You have successfully signed this document."
     Then verify contact number field needs to be mandatory field with the asterix symbol
 
-  @DrySign
+  @DrySign1
   Scenario: To verify download functionality of signed document of DrySign
     When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
@@ -48,7 +48,7 @@ Feature: To Verify My Files Tabs Functionality
     #And check signature details
     #Then All signature details and document should display correctly
 
-  @DrySign
+  @DrySign1
   Scenario: To verify email functionality for sending completed documents of DrySign
    When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -105,7 +105,7 @@ Feature: To Verify My Files Tabs Functionality
   #Then Received document should have same content as in Completed Documents
   
   
-  @DrySign
+  @DrySign1
   Scenario: To verify functionality of View and Download the completed document of DrySign
     When enter the user name as "sid211@mailinator.com"
     When enter the password as"Malin@555"
@@ -122,7 +122,7 @@ Feature: To Verify My Files Tabs Functionality
     When user click on Download icon
     Then Document should get downloaded on local storage as "TimoManual" 
 
-  @MyFiles5
+  @DrySign1
   Scenario: To verify functionality of checking status of document which is Out for Signature of DrySign
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -130,7 +130,7 @@ Feature: To Verify My Files Tabs Functionality
     And user click on continue with free version
     And user click on My Files
     And user click on out for signature tab
-    #Then user click On Mat icon
+   
     When user click on plus icon
     Then user get display status as "Pending"
     Then user click On Mat icon
@@ -139,7 +139,7 @@ Feature: To Verify My Files Tabs Functionality
     Then user click On Mat icon
     And user click on notify icon
     Then user click on confirm
-    #Then message display as "Reminder has been sent to Sid  (sid39@mailinator.com) successfully."
+    Then message display as "Reminder has been sent to Sid  (sid39@mailinator.com) successfully."
    
     Then user click On Mat icon
     Then click in reassign
@@ -147,19 +147,22 @@ Feature: To Verify My Files Tabs Functionality
     Then user click on "YES" button
     Then another pop get display as "Reassign"
     Then enter name as "Sid"
-    Then enter email Address as "sid103@mailinator.com"
+    Then enter email Address as "sid218@mailinator.com"
     Then user click on "CONFIRM"Button
     Then success message get display as "Email has been sent to sid (sid12@mailinator.com) successfully."
     Then click on ok button
-    Then user click On Mat icon
-    And user click on remove icon
-    Then user click on confirm
-    Then succefully remove message display as "The signatory (sid103@mailinator.com) has been removed successfully."
-    Then click OK button 
+    
+    
+    
+    #Then user click On Mat icon
+    #And user click on remove icon
+    #Then user click on confirm
+    #Then succefully remove message display as "The signatory (sid103@mailinator.com) has been removed successfully."
+    #Then click OK button 
     And user clicking on minus icon recorded details should get closed
     Then user click on Mat icon
     When user click on Download icon
-    Then Document should get downloaded on local storage as "Holidays List 2022 Updated.pdf" 
+    Then Document should get downloaded on local storage as "TimoManual" 
     
     
 
@@ -186,7 +189,7 @@ Feature: To Verify My Files Tabs Functionality
   #When user click on the Download icon
   #Then document should get downloaded successfully from the Out for Signature Tab
   
-  @DrySign
+  @DrySign1
   Scenario: To verify functionality of draft documents
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -208,7 +211,7 @@ Feature: To Verify My Files Tabs Functionality
     Then user should be displayed message as deleted successfully
 
   #need account which contain 3-4 draft doc
-  @DrySign
+  @DrySign1
   Scenario: To verify download functionality of rejected document of DrySign
     When enter the user name as "sid211@mailinator.com"
     When enter the password as"Malin@555"
@@ -340,7 +343,7 @@ Feature: To Verify My Files Tabs Functionality
     And user click on rejected tab
     
     
-       @MyFiles13
+       @DrySign1
   Scenario: To verify that all field are displaying proper or not.
    When enter the user name as "sid76@mailinator.com"
     When enter the password as"Malin@555"
@@ -392,41 +395,47 @@ Feature: To Verify My Files Tabs Functionality
        Then user click on Mat icon
        When user click on Download icon
        Then Document should get downloaded on local storage as "TimoManual" 
-      #
+       
+      And user click on rejected tab
+      Then user display subject
+      Then user display Document Name
+      Then user display Assigned Date
+      Then user display Rejected Date
+      Then user display Rejected By
+      Then user display action
+      Then user click on Mat icon
+      When user click on Download icon
+      Then Document should get downloaded on local storage as "TimoManual" 
+      
       And user click on drafts tab
       Then user display title
       Then user display Sign Type
       Then user display Date&Time
       Then user Display date in format as "09/19/2022, 12:22:16 AM"
       Then user display action
-      Then user click on Mat icon
-      And user click on Edit icon to view Self sign or Group sign
-      Then user should get redirect to same screen
-      And user Click on Dashboard
-      And user click on My Files
-      #
-      #
-      #And user click on rejected tab
-      #Then user display subject
-      #Then user display Document Name
-      #Then user display Assigned Date
-      #Then user display Rejected Date
-      #Then user display Rejected By
-      #Then user display action
-      #When user click on Download icon
-      #Then Document should get downloaded on local storage as "TimoManual" 
+      #Then user click on Mat icon
+      #And user click on Edit icon to view Self sign or Group sign
+      #Then user should get redirect to same screen
+      #And user Click on Dashboard
+      #And user click on My Files
       
-     #And user click on pending tab
-    #Then user display subject
-    #Then user display document name
-    #Then user display assigned date
-    #Then user display requested by
-    #Then user display action
-    #Then user click on action link 
-    #And user click on check box
-    #And user click on accept button
-    #And user clcik on ok button present on pop up
-    #Then document should get display
+     Then user click on forward arrow 
+    And user click on pending tab
+    Then user display subject
+    Then user display document name
+    Then user display assigned date
+    Then user display requested by
+    Then user display action
+    Then user click on action link 
+    And user click on check box
+    And user click on accept button
+    And user clcik on ok button present on pop up
+    Then document should get display
+      
+  
+
+      
+    
       
       
        @DrySign
@@ -543,7 +552,7 @@ Feature: To Verify My Files Tabs Functionality
        
       
     
-       @DrySign
+       @DrySign1
   Scenario: To Verify on re-assign in Out for Signature Tab, the record cannot be re-assigned to the same signatory who is already in the List.
     When enter the user name as "sid39@mailinator.com"
     When enter the password as"Malin@555"
@@ -558,6 +567,6 @@ Feature: To Verify My Files Tabs Functionality
     Then user click on "YES" button
     Then another pop get display as "Reassign"
     Then enter name as "Sid"
-    Then enter email Address as "sid101   @mailinator.com"
+    Then enter email Address as "sid101@mailinator.com"
     Then user click on "CONFIRM"Button
     Then validation message get display as "This email address already exists in your previously assigned list."

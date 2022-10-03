@@ -19,7 +19,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     Then user should display setup secure code
     And user select on checkbox for email OTP
 
-  @MFA2
+  @DrySign1
   Scenario: Login to the drysign application through drysign credentials after set the MFA as 'OTP via Mail' from profile section
     When enter the user name as "sid11@mailinator.com"
     When enter the password as"Malin@555"
@@ -69,7 +69,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
     
  
  
-  @MFA3
+  @DrySign1
   Scenario: To verify set Secure code option while login to drysign account from profile
     When enter the user name as "sid49@mailinator.com"
     When enter the password as"Malin@555"
@@ -319,7 +319,7 @@ Feature: To Check MFA(OTP/Secure Code) functionality
         And user click on continue with free version
         
 
-  @DrySign
+  @DrySign1
   Scenario: To verify functionality of Forgot Secure code on entering correct credientials
     When enter the user name as "sid31@mailinator.com"
     When enter the password as"Malin@555"

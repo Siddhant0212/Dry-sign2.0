@@ -1,10 +1,10 @@
 @Feedback
 Feature: To Verify Feedback Works
 
-  @DrySign
+  @DrySign1
   Scenario: To Verify new feedback rating UI is present or not on the Drysign Dashboard with smiley icon
     Given navigate to URL "https://drysign-dev.exela.global/#/"
-    When enter the user name as "sid202@mailinator.com"
+    When enter the user name as "sid92@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button

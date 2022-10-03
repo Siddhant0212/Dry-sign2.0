@@ -120,7 +120,7 @@ Feature: To Verify My Profile Page
     
 
     
-            @MyProfile06
+            @DrySign1
   Scenario: To verify the Save button functionality present on the Edit Profile Screen
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -147,7 +147,7 @@ Feature: To Verify My Profile Page
     
     
     
-  @MyProfile07
+  @DrySign1
   Scenario: To verify  if user is able to see and click profile on dashboard top right corner after login.
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
     When enter the user name as "sid76@mailinator.com"
@@ -166,7 +166,7 @@ Feature: To Verify My Profile Page
     Then user click on remove minus button
     Then success message Should be Displayed "Successfully image removed"
     
-     @MyProfile08
+     @DrySign1
   Scenario: To Verify the Profile image upload size is more than 2MB in Edit profile
   
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
@@ -294,10 +294,10 @@ Feature: To Verify My Profile Page
     Then update payment method should be disable
    
     
-         @DrySign
+         @DrySign1
   Scenario: To verify update payment method functionality for paid user  
     Given navigate to URL "https://drysign-dev.exela.global/#/login"
-    When enter the user name as "sid202@mailinator.com"
+    When enter the user name as "sid232@mailinator.com"
     When enter the password as"Malin@555"
     And user click on the Login button
     #And user click on the sign in button

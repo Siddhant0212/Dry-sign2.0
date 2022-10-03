@@ -38,7 +38,7 @@ Feature: To Verify Password Protected Document can be signed
   # Then there should be a prompt message on popup
   #When user clicks on Ok button
   #Then user should redirect to success page
-  @Password2
+  @DrySign1
   Scenario: To verify that signatory is able to sign password protected document
     #Given user navigate to "https://www.mailinator.com/v4/public/inboxes.jsp"
     #And user enter email id as "sid218@mailinator.com"
@@ -89,7 +89,7 @@ Feature: To Verify Password Protected Document can be signed
     #And user clcik on ok button present on pop up
     #Then document should get display
 
-  @Password3
+  @DrySign1
   Scenario: To verify that signatory is able to sign password protected document after reassign the document
     #Given user navigate to "https://www.mailinator.com/v4/public/inboxes.jsp"
     #And user enter email id as "sid15"
@@ -173,7 +173,7 @@ Feature: To Verify Password Protected Document can be signed
     Then Document is not present for old signatory
 
   #Then Blank page should get display
-  @Password4
+  @DrySign1
   Scenario: To verify that signatory is able to sign password protected document after delete signatory if document is not priority
     
     Given navigate to URL "https://drysign-dev.exela.global/#/"

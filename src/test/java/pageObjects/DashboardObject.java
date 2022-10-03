@@ -158,6 +158,9 @@ public class DashboardObject {
 			@FindBy(xpath="//button[text()='View Details']")
 			public static  WebElement View_Details;
 			
+			@FindBy(xpath="//p[@class='text strong ng-star-inserted']")
+			public static  WebElement subCancelSuccessfully;
+			
 			@FindBy(xpath="//button[text()=' Cancel ']")
 			public static  WebElement Cancel;
 			

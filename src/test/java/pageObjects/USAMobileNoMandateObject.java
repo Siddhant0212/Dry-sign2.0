@@ -565,7 +565,7 @@ public class USAMobileNoMandateObject {
     @FindBy(xpath="//img[@id='logo']")
     public static WebElement drySignLogo;
     
-    @FindBy(xpath="//button[text()=' Upgrade ']")
+    @FindBy(xpath="//button[text()=' Buy Now ']")
     public static WebElement buyNowGeneralPlan;
     
     @FindBy(xpath="//span[text()='Buy Now']")
@@ -883,7 +883,7 @@ public class USAMobileNoMandateObject {
 	@FindBy(xpath="//button[text()='Cancel']")     
 	public static  WebElement popUpDeleteCancel;;
 	
-	@FindBy(xpath="//p[text()='Reminder has been sent to Sid  (sid39@mailinator.com) successfully.']")     
+	@FindBy(xpath="//p[@class='text strong ng-star-inserted']")     
 	public static  WebElement Reminderhasbeensent;;
 	
 	

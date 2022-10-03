@@ -1,7 +1,7 @@
 @Delete
 Feature: To Verify Delete User Functionality
  
- @DrySign
+ @DrySign1
   Scenario: To Verify the Delete Account button is present in Profile page under the Manage Account Tab
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid211@mailinator.com"
@@ -14,7 +14,7 @@ Feature: To Verify Delete User Functionality
     And user click on manage account
     Then Delete Account button should be present
     
-  @DrySign
+  @DrySign1
   Scenario: To Verify the Delete Account button functionality on the Manage Account Tab in Profile Page
     Given navigate to URL "https://drysign-dev.exela.global/#/"
     When enter the user name as "sid211@mailinator.com"

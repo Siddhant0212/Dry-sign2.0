@@ -95,7 +95,7 @@ public void user_should_get_display_the_correct_searched_data_for_every_column()
 public void user_click_on_rejected_tab() throws InterruptedException {
 	Thread.sleep(5000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.nextarrow);
-	Elements.click(USAMobileNoMandateObject.nextarrow);
+	Elements.jclick(USAMobileNoMandateObject.nextarrow);
 	
 	
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.tabRejected);
@@ -137,9 +137,9 @@ public void user_click_on_Close_icon() {
 
 @When("user click on Download icon")
 public void user_click_on_Download_icon() throws IOException, SAXException, TikaException, InterruptedException {
-	Thread.sleep(2000);
+	Thread.sleep(5000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.cloudDownload);
-	Elements.click(USAMobileNoMandateObject.cloudDownload);
+	Elements.jclick(USAMobileNoMandateObject.cloudDownload);
 //	
 //	  String content=Elements.readPDFInURL();
 //      if (content.contains("TimoManual")) {
@@ -164,11 +164,11 @@ public void user_click_On_Mat_icon() throws InterruptedException {
 }
 @Then("message display as {string}")
 public void message_display_as(String string) throws InterruptedException {
-
+	Thread.sleep(2000);
 	Waits.waitUntilElementLocated(30, USAMobileNoMandateObject.Reminderhasbeensent);
 	Elements.isDisplayed(USAMobileNoMandateObject.Reminderhasbeensent);
 	//Assert.assertEquals(Elements.getText(USAMobileNoMandateObject.Reminderhasbeensent),string);
-	Thread.sleep(2000);
+	
 }
 
 @Then("Document should get downloaded on local storage as {string}")
@@ -216,7 +216,8 @@ public void user_Click_on_Dashboard() throws InterruptedException {
 	
 }
 @When("user click on drafts tab")
-public void user_click_on_drafts_tab() {
+public void user_click_on_drafts_tab() throws InterruptedException {
+	Thread.sleep(5000);
 	Waits.waitUntilElementToClick(30, USAMobileNoMandateObject.tabDrafts);
 	Elements.jclick(USAMobileNoMandateObject.tabDrafts);
 
@@ -394,10 +395,10 @@ public void user_display_document_name() {
 }
 
 @Then("user display assigned date")
-public void user_display_assigned_date() {
+public void user_display_assigned_date() throws InterruptedException {
 	Waits.waitUntilElementLocated(30, MyFilesObject.Assigned_Date);
 	Elements.isDisplayed(MyFilesObject.Assigned_Date);
-    
+	Thread.sleep(2000);
 	Waits.waitUntilElementLocated(30, MyFilesObject.TimingSign);
 	Elements.isDisplayed(MyFilesObject.TimingSign);
 }
@@ -881,7 +882,8 @@ public void user_click_on_upward_arrow() throws InterruptedException {
 			
 		}
 		@Then("user click on notify icon")
-		public void user_click_on_notify_icon() {
+		public void user_click_on_notify_icon() throws InterruptedException {
+			Thread.sleep(2000);
 			Waits.waitUntilElementToClick(30, MyFilesObject.Notify);
 			Elements.click(MyFilesObject.Notify);
 			
@@ -966,6 +968,12 @@ public void user_click_on_upward_arrow() throws InterruptedException {
 				Elements.isDisplayed(MyFilesObject.Assigneddate("08/17/2022, 7:44:29 AM"));
 		}
 			
+		}
+		@Then("user click on forward arrow")
+		public void user_click_on_forward_arrow() throws InterruptedException {
+			Thread.sleep(5000);
+			Waits.waitUntilElementToClick(30, MyFilesObject.forwardArrow);
+			Elements.click(MyFilesObject.forwardArrow);
 		}
 }
 

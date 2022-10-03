@@ -91,4 +91,9 @@ public class AutoRenewal {
 	public void enter_the_User_name_as(String string) {
 		
 	}
+	
+	@Then("User should get display details according to purchased plan")
+	public void user_should_get_display_details_according_to_purchased_plan() {
+		
+	}
 }

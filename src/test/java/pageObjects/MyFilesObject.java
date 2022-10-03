@@ -274,55 +274,8 @@ public class MyFilesObject {
 	@FindBy(xpath="//span[text()='Pending']")     
 	public static  WebElement Pending_Status ;
 	
-	//span[text()='Pending']
+	@FindBy(xpath="(//div[@aria-hidden='true'])[5]")     
+	public static  WebElement forwardArrow ;
 	
 	
-	
-	//div[text()=' Displaying item : 1 - 4 of 4 ']
-	//span[text()='1']
-	//span[text()='Next']
-	//span[text()='Prev']
-	//span[text()=' Rejected By ']
-	//span[text()=' Rejected Date ']
-	//span[text()=' Title ']
-	//span[text()=' Document Name ']
-	//mat-icon[text()='mail_outline']
-	//span[text()=' Sign Type ']
-	//mat-icon[text()='close']
-	
-	//*[@class='canvasWrapper']
-	//span[text()='This email address already exists in your previously assigned list.']
-	//p[text()='Are you sure you want to reassign eSign authority to another signatory?']
-	//mat-label[text()='Email Address']
-	//mat-label[text()='Enter Name']
-	//span[text()='Confirm']
-	//h1[text()=' Reassign ']
-	//span[text()='Yes']
-	//a[@mattooltip='Reassign']
-	//td[@id='accordian1']
-	//(//div[text()=' Message: '])[1]
-	//(//div[text()=' Subject: '])[1]
-	
-	//(//div[text()=' Signatories: '])[1]
-	//(//div[text()=' Requested By: '])[1]
-	//(//div[text()=' Document Name: '])[1]
-	//div[@class='in p-3 collapse show']
-	//span[text()=' 08/16/2022 11:06:55 AM ']
-	//span[text()=' 08/16/2022, 11:24:02 AM ']
-	//span[text()=' Date & Time ']
-	//span[text()=' 08/24/2022 2:55:23 AM ']
-	
-	//span[text()=' 08/09/2022 2:59:02 AM ']
-	//span[text()=' Completed Date ']
-	//tr[@id='accordion0']
-	
-	//span[text()=' 08/23/2022 11:05:06 PM ']
-	//span[text()=' Subject ']
-	//span[text()=' Document Name ']
-	//span[text()=' Assigned Date ']
-	//span[text()=' Requested By ']
-	//span[text()='Action']
-	//a[text()=' sign ']
-	//div[@class='PSPDFKit-56n1nqnnrb1vp96tz5hfxdeh29']
-	//iframe[@title='PSPDFKit']
 }
